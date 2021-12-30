@@ -1,0 +1,153 @@
+@import 'variables.sass'
+
+body
+  font-family: Montserrat, sans-serif
+
+
+
+/* ANIMATION */
+a,button
+  transition: color .2s
+  &:hover
+    color: $text-color-dark
+.show
+  top: 75px !important
+  visibility: visible !important
+  opacity: 1 !important
+.rotate
+  transform: translateX(-10px) rotate(180deg) !important
+.open
+  display: block !important
+
+
+
+.title
+  font-family: Pattaya
+  font-size: 80px
+  font-weight: 400
+  text-align: center
+  &_color-w
+    color: $text-color-light
+  &_color-b
+    color: $alternative-title-color
+
+
+
+button
+  cursor: pointer
+
+.button
+  &-callback
+    padding: 15px 30px
+    font-family: Montserrat
+    font-size: 18px
+    font-weight: 500
+    color: $text-color-light
+    background-color: transparent
+    border: 2px solid $headings-button-color
+    border-radius: 30px
+    &_color-black
+      color: #000
+    &__img
+      display: none
+      width: 20px
+      height: 20px
+      transition: .3s
+  &-ordering
+    margin-bottom: 278px
+    background-image: linear-gradient(to top, #36a5eb 0%, #1f71e1 100%)
+    border: none
+    font-size: 36px
+    font-weight: 700
+    border-radius: 36px
+
+
+.form
+  padding: 57px 49px 0px 49px
+  display: flex
+  flex-direction: column
+  align-items: center
+  max-width: 460px
+  font-family: Montserrat, sans-serif
+  background-color: #f7f7fc
+  border-radius: 30px
+  &__title
+    margin-bottom: 26px
+    text-align: center
+    font-size: 28px
+    font-weight: 700
+    color: #070707
+  &__subtitle
+    margin-bottom: 37px
+    text-align: center
+    font-size: 16px
+    font-weight: 500
+    color: #070707
+  &__input
+    margin-bottom: 20px
+    padding: 20px 50px 20px 20px
+    max-width: 215px
+    font-size: 20px
+    font-weight: 500
+    color: #0a0a0a
+    border: 2px solid $headings-button-color
+    border-radius: 50px
+  &__button
+    margin:
+      top: 16px
+      bottom: 94px
+    padding: 20px 48px
+    font-size: 20px
+    font-weight: 500
+    color: $text-color-light
+
+
+
+/* SLICK */
+.slick-initialized
+  .slick-slide
+    display: flex
+    align-items: center
+.slider-arrow
+  position: absolute
+  width: 48px
+  height: 48px
+  top: 115%
+  cursor: pointer
+  &__left
+    left: 38%
+    background: url('../img/reviews/arrow-left.png') center no-repeat
+    background-size: cover
+  &__right
+    left: 55%    
+    background: url('../img/reviews/arrow-right.png') center no-repeat
+    background-size: cover
+
+.border
+  &_gradient
+    background: linear-gradient(#fff, #fff),linear-gradient(to right, #4f01bc, #29abe2)
+    background-repeat: no-repeat
+    background-origin: padding-box, border-box
+    position: relative
+    border: 2px solid transparent
+    border-width: 10px
+    &:before
+      content: ""
+      position: absolute
+      top: -8.4px
+      bottom: -7.8px
+      left: -7.7px
+      right: -7.7px
+      border: 11px solid #fff
+      border-radius: 50px
+
+
+
+@import 'headings.sass'
+@import 'section-main.sass'
+@import 'products.sass'
+@import 'about-us.sass'
+@import 'feedbacks.sass'
+@import 'contacts.sass'
+@import 'modals.sass'
+@import 'media.sass'

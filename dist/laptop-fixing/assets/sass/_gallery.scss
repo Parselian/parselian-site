@@ -1,0 +1,119 @@
+.gallery {
+  width: 49%;
+  &__title {
+    font-size: 32px;
+    text-align: left;
+    &:after {
+      left: 0;
+      transform: unset;
+    }
+  }
+  &__slide {
+    &r {
+      &-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999999;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      position: relative;
+      top: 50%;
+      left: 50%;
+      max-width: 600px;
+      transform: translate(-50%, -50%);
+      &_show {
+        display: block;
+      }
+      &-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        fill: #FFFFFF;
+        cursor: pointer;
+        transition: .2s;
+        &:hover {
+          fill: $accent-color;
+        }
+      }
+      &-arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        width: 40px;
+        height: 40px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        fill: #FFFFFF;
+        &_prev {
+          left: -70px;
+          transform: translateY(-50%) rotate(180deg);
+        }
+        &_next {
+          right: -70px;
+        }
+      }
+    }
+
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
+  &__image {
+    &s {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 15px;
+      grid-template-areas:
+        'firs second third'
+        'fourth fifth sixth';
+      picture {
+        &:first-child {
+          grid-area: firs;
+        }
+        &:nth-child(2) {
+          grid-area: second
+        }
+        &:nth-child(3) {
+          grid-area: third
+        }
+        &:nth-child(4) {
+          grid-area: fourth
+        }
+        &:nth-child(5) {
+          grid-area: fifth
+        }
+        &:nth-child(6) {
+          grid-area: sixth
+        }
+
+      }
+    }
+
+    width: 100%;
+    height: 135px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.15);
+    overflow: hidden;
+    object-fit: cover;
+    transition: .2s;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}

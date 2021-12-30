@@ -1,0 +1,143 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  &_active {
+    display: flex;
+  }
+  &-discount {
+    .text_accent {
+      color: $interaction-color;
+    }
+    .popup {
+      &-form {
+        &__button{
+          background-color: $interaction-color;
+        }
+        &__footnote {
+          &-link {
+            color: $interaction-color;
+          }
+        }
+        &__phone {
+          color: $interaction-color;
+        }
+      }
+    }
+  }
+  &__bg {
+    position: fixed;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+      background-color: rgba(0, 0, 0, 0.7);
+    //@supports (backdrop-filter: blur(11px) brightness(0.6)) {
+    //  backdrop-filter: blur(11px) brightness(0.6);
+    //}
+    //@supports not (backdrop-filter: blur(20px) opacity(0.5)) {
+    //}
+  }
+  &-form {
+    position: relative;
+    z-index: 1;
+    padding: 30px 35px;
+    max-width: 750px;
+    width: 100%;
+    background-color: #FFFFFF;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    &_thanks {
+      max-width: 450px;
+    }
+    &__title {
+      margin-bottom: 15px;
+      font-size: 32px;
+      font-weight: 500;
+      text-align: center;
+      color: darken($border-color, 10%);
+    }
+    &__subtitle {
+      margin-bottom: 35px;
+      text-align: center;
+      font-size: 18px;
+      color: darken($border-color, 10%);
+    }
+    &__close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 20px;
+      height: 20px;
+      fill: $border-color;
+      transition: .2s;
+      cursor: pointer;
+      &:hover {
+        fill: #000000;
+      }
+    }
+    &__row {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__col {
+      position: relative;
+      width: 45%;
+    }
+    &__input {
+      &-wrap {
+        margin-bottom: 15px;
+      }
+      &-label {
+        margin-bottom: 3px;
+        font-size: 14px;
+        color: $border-color;
+      }
+      width: 100%;
+      padding: 10px 20px;
+      border: 2px solid $border-color;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+    }
+    &__button {
+      margin-bottom: 15px;
+      &_thanks {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+    }
+    &__footnote {
+      font-size: 12px;
+      &-link {
+        color: $accent-color;
+      }
+    }
+    &__phone {
+      &-label {
+        margin-bottom: -3px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      font-size: 24px;
+      font-weight: 600;
+      color: $accent-color;
+    }
+    &__img {
+      position: absolute;
+      bottom: -60px;
+      right: -90px;
+      min-width: 370px;
+    }
+  }
+}

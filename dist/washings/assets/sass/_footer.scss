@@ -1,0 +1,134 @@
+.footer {
+  padding: 40px 0;
+  color: $alt-text-color;
+  background-color: $footer-bg-color;
+  &__wrap {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__col {
+  }
+  &__logo {
+    width: 150px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+  &__policy {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: none;
+    color: $alt-text-color;
+  }
+  &__billings {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 130px;
+    &-label {
+      position: absolute;
+      top: -25px;
+      left: 0;
+      font-size: 14px;
+      font-weight: 300;
+    }
+    &-icon {
+      width: 60px;
+      height: 40px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      &:nth-child(-n+2) {
+        margin-bottom: 5px;
+      }
+      &:nth-child(even) {
+        margin-right: 5px;
+      }
+    }
+  }
+  &__nav {
+    &-title {
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    &-link {
+      display: block;
+      font-size: 16px;
+      font-weight: 300;
+      color: $alt-text-color;
+      text-decoration: none;
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+    &-info {
+      text-align: right;
+      margin-right: 15px;
+      &-block {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+        &-icon {
+          margin-right: 5px;
+          width: 15px;
+          height: 15px;
+          fill: $alt-text-color;
+          opacity: 0.4;
+        }
+        &-title {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          font-weight: 300;
+          font-size: 14px;
+          opacity: 0.5;
+        }
+        &-text {
+          font-size: 14px;
+        }
+      }
+    }
+    &-callback {
+      &-button {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      &-phone {
+        &-label {
+          margin-bottom: 5px;
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $alt-text-color;
+        font-size: 18px;
+        font-weight: 700;
+        &-icon {
+          margin-right: 5px;
+          width: 13px;
+          height: 13px;
+          opacity: 0.4;
+          fill: $alt-text-color;
+        }
+      }
+    }
+  }
+  &__footnote {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    opacity: 0.5;
+  }
+}

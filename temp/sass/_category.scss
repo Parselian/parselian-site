@@ -1,0 +1,142 @@
+.category {
+  &-devices {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    .tile {
+      &:not(:last-child) {
+        margin-right: 2%;
+      }
+      &[data-device="macbook"] {
+        background: rgb(180,64,236);
+        background: linear-gradient(117deg, rgba(180,64,236,1) 0%, rgba(224,49,223,1) 100%);
+      }
+      &_small-active[data-device="macbook"] {
+        padding: 13px;
+        background: #ffffff;
+        border: 2px solid rgb(180, 64, 236);
+      }
+      &[data-device="imac"] {
+        background: rgb(63,207,69);
+        background: linear-gradient(117deg, rgba(63,207,69,1) 0%, rgba(165,255,21,1) 100%);
+      }
+      &_small-active[data-device="imac"] {
+        padding: 13px;
+        background: #ffffff;
+        border: 2px solid rgb(63,207,69);
+      }
+      &[data-device="iphone"] {
+        background: rgb(63,87,207);
+        background: linear-gradient(117deg, rgba(63,87,207,1) 0%, rgba(21,191,255,1) 100%);
+      }
+      &_small-active[data-device="iphone"] {
+        padding: 13px;
+        background: #ffffff;
+        border: 2px solid rgb(63,87,207);
+      }
+      &[data-device="ipad"] {
+        background: rgb(207,146,63);
+        background: linear-gradient(117deg, rgba(207,146,63,1) 0%, rgba(255,255,21,1) 100%);
+      }
+      &_small-active[data-device="ipad"] {
+        padding: 13px;
+        background: #ffffff;
+        border: 2px solid rgb(207,146,63);
+      }
+      &[data-device="watch"] {
+        background: rgb(190,136,62);
+        background: linear-gradient(117deg, rgba(190,136,62,1) 0%, rgba(203,21,149,1) 100%);
+      }
+      &_small-active[data-device="watch"] {
+        padding: 13px;
+        background: #ffffff;
+        border: 2px solid rgb(190,136,62);
+      }
+    }
+  }
+
+  &-parts {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    .tile {
+      max-width: 150px;
+      &__icon {
+        max-width: 70px;
+        max-height: 50px;
+      }
+      &:not(:last-child) {
+        margin-right: 2%;
+      }
+      &[data-device="macbook"] {
+        background: rgb(180,64,236);
+        background: linear-gradient(117deg, rgba(180,64,236,1) 0%, rgba(224,49,223,1) 100%);
+      }
+      &[data-device="imac"] {
+        background: rgb(63,207,69);
+        background: linear-gradient(117deg, rgba(63,207,69,1) 0%, rgba(165,255,21,1) 100%);
+      }
+      &[data-device="iphone"] {
+        background: rgb(63,87,207);
+        background: linear-gradient(117deg, rgba(63,87,207,1) 0%, rgba(21,191,255,1) 100%);
+      }
+      &[data-device="ipad"] {
+        background: rgb(207,146,63);
+        background: linear-gradient(117deg, rgba(207,146,63,1) 0%, rgba(255,255,21,1) 100%);
+      }
+      &[data-device="apple-watch"] {
+        background: rgb(190,136,62);
+        background: linear-gradient(117deg, rgba(190,136,62,1) 0%, rgba(203,21,149,1) 100%);
+      }
+    }
+
+    &__mobile {
+      margin-bottom: 30px;
+      display: none;
+      &-btn {
+        position: relative;
+        padding: 7px 20px;
+        z-index: 10;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 600;
+        color: $accent-catalog-color;
+        background-color: $alt-text-color;
+        border: 2px solid $accent-catalog-color;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        border-radius: 100px;
+      }
+
+      &-list {
+        padding-top: 25px !important;
+        width: 100%;
+        overflow: hidden;
+        transform: translateY(-25px);
+        border: 2px solid $accent-catalog-color;
+        border-top: none;
+        &-item {
+          padding: 7px 15px;
+          border-bottom: 1px solid $border-color;
+        }
+        &-link {
+          text-decoration: none;
+          color: $search-input-color;
+        }
+      }
+    }
+  }
+
+  &-common-parts {
+    display: flex;
+    flex-wrap: wrap;
+    .tile {
+      padding: 25px;
+      margin-bottom: 40px;
+      width: 49%;
+      &:nth-child(odd) {
+        margin-right: 2%;
+      }
+    }
+  }
+}

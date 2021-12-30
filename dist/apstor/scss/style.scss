@@ -1,0 +1,95 @@
+@import './variables';
+@import './keyframes';
+
+body {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+input {
+  &:focus {
+    border-color: $attention-color;
+  }
+}
+
+picture {
+  img {
+    width: inherit;
+    min-width: inherit;
+    min-height: inherit;
+    max-width: inherit;
+    max-height: inherit;
+  }
+}
+
+.text_accent {
+  color: $attention-color;
+}
+
+.text_bold {
+  font-weight: 700;
+}
+
+.line-break {
+  display: block;
+}
+
+.logo {
+  height: 40px;
+  width: 210px;
+}
+
+.request__button {
+  margin-right: 15px;
+  padding: 5px 30px;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: $alt-text-color;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: $attention-color;
+  border-radius: 10px;
+}
+
+.burger-btn {
+  display: none;
+}
+
+.section__title {
+  margin-bottom: 80px;
+  font-size: 52px;
+  font-weight: 500;
+  text-align: center;
+  color: $main-text-color;
+}
+
+.section__subtitle {
+  font-size: 36px;
+  font-weight: 500;
+  text-align: center;
+  color: $main-text-color;
+}
+
+@import './slick-custom';
+@import './burger';
+@import './header';
+@import './promo';
+@import './features';
+@import './prices';
+@import './causes';
+@import './request';
+@import './team';
+@import './steps';
+@import './faq';
+@import './contacts';
+@import './footer';
+@import './popups';
+@import './media';

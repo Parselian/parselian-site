@@ -1,0 +1,24 @@
+<script>
+
+    var mapForm = document.createElement("form");
+    mapForm.target = "_blank";
+    mapForm.method = "POST";
+    mapForm.action = "/snos_zakaza";
+
+    // Create an input
+    var mapInput = document.createElement("input");
+    mapInput.type = "text";
+    mapInput.name = "variable";
+    mapInput.value = "lalalalala";
+
+    // Add the input to the form
+    mapForm.appendChild(mapInput);
+
+    // Add the form to dom
+    document.body.appendChild(mapForm);
+
+    // Just submit
+    mapForm.submit();
+
+
+</script>

@@ -1,0 +1,16 @@
+@keyframes do-levitation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) skew(-4deg, 0);
+    -webkit-transform: translate(-50%, -50%) rotate(0deg) skew(-4deg, 0); /* Safari & Chrome */
+   -moz-transform: translate(-50%, -50%) rotate(0deg) skew(-4deg, 0); /* Firefox */
+   -ms-transform: translate(-50%, -50%) rotate(0deg) skew(-4deg, 0); /* Internet Explorer */
+   -o-transform: translate(-50%, -50%) rotate(0deg) skew(-4deg, 0); /* Opera */
+  }
+  100% {
+    transform: translate(-50%, calc(-50%  + 20px)) rotate(0deg) skew(-4deg, 3deg);
+    -webkit-transform: translate(-50%, calc(-50%  + 20px)) rotate(0deg) skew(-4deg, 3deg); /* Safari & Chrome */
+   -moz-transform: translate(-50%, calc(-50%  + 20px)) rotate(0deg) skew(-4deg, 3deg); /* Firefox */
+   -ms-transform: translate(-50%, calc(-50%  + 20px)) rotate(0deg) skew(-4deg, 3deg); /* Internet Explorer */
+   -o-transform: translate(-50%, calc(-50%  + 20px)) rotate(0deg) skew(-4deg, 3deg); /* Opera */
+  }
+}

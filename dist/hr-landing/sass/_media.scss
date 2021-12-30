@@ -1,0 +1,503 @@
+@media (max-width: 1200px) {
+  section {
+    padding-bottom: 100px;
+  }
+
+  .promo {
+    margin-bottom: 100px;
+    height: 660px;
+    overflow: hidden;
+    &__wrap {
+      position: relative;
+    }
+    &__title {
+      //font-size: 46px;
+    }
+    &__subtitle {
+      //font-size: 28px;
+    }
+    &__img {
+      position: absolute;
+      right: -40px;
+      width: 520px;
+    }
+  }
+
+  .employees {
+    margin-bottom: 100px;
+  }
+
+  .team {
+    &__title {
+      font-size: 30px;
+    }
+  }
+
+  .steps {
+    &__block {
+      &s {
+        &:before {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .button {
+    &_alt {
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .burger {
+    &-btn {
+      display: block;
+    }
+  }
+
+  .header {
+    &__menu {
+      display: none;
+    }
+    &__phone-btn {
+      margin-right: 20px;
+    }
+  }
+
+  .promo {
+    &-info {
+      padding-top: 70px;
+      z-index: 1;
+    }
+    &__img {
+      filter: brightness(0.6);
+      z-index: 0;
+    }
+  }
+
+  .about {
+    &__row {
+      display: flex;
+      flex-direction: column;
+    }
+    &__subtitle {
+      margin-bottom: 20px;
+    }
+    &__info {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    &__img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+  }
+
+  .advantages {
+    &__block {
+      &s {
+        justify-content: space-between;
+      }
+      width: 47%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      &:not(:nth-child(3n)) {
+        margin-right: unset;
+      }
+      &:not(:nth-child(2n)) {
+        margin-right: 2%;
+      }
+    }
+  }
+
+  .vacancy-info {
+    &__row {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+      &:last-child {
+        .vacancy-info {
+          &__info {
+            order: -1
+          }
+        }
+      }
+    }
+  }
+
+  .employees {
+    &-slider {
+      &__slide {
+        text-align: center;
+        &-img {
+          left: 50%;
+          transform: translateX(-50%)
+        }
+      }
+    }
+
+    &-button {
+      margin-top: 50px;
+    }
+  }
+
+  .team {
+    &__title {
+      font-size: 42px;
+    }
+
+    &__slider {
+      &-arrow {
+        &_prev {
+          left: calc(50% - 55px);
+          right: unset;
+          bottom: -40px;
+        }
+        &_next {
+          left: calc(50% + 15px);
+          right: unset;
+          bottom: -40px;
+        }
+      }
+
+      .slick {
+        &-list {
+          padding-left: 60px;
+          padding-right: 60px;
+          &:after {
+            display: none;
+          }
+        }
+
+        &-slide {
+          opacity: 0.3;
+        }
+        &-active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .contacts {
+    &__info {
+      &-title, &-subtitle {
+        text-align: center;
+      }
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-footnote {
+        text-align: center;
+      }
+    }
+  }
+
+  .footer {
+    &__wrap {
+      flex-direction: column;
+    }
+    &__logo {
+      margin-bottom: 30px;
+    }
+    &__contacts {
+      margin-bottom: 50px;
+    }
+
+    &__misc {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  section {
+    padding-bottom: 80px;
+  }
+
+  .promo {
+    margin-bottom: 80px;
+    height: 540px;
+    &-info {
+      padding-top: 10px;
+      z-index: 1;
+    }
+    &__title {
+      font-size: 48px;
+    }
+    &__subtitle {
+      font-size: 28px;
+    }
+    &__img {
+      right: -80px;
+      bottom: -85%;
+      width: 420px;
+      filter: brightness(0.7);
+    }
+  }
+
+  .about {
+    text-align: center;
+    &__wrap {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .employees {
+    margin-bottom: 80px;
+  }
+
+  .team {
+    &__slider {
+      .slick {
+        &-list {
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+
+        &-slide {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .steps {
+    margin-bottom: 80px;
+  }
+
+  .contacts {
+    &__form {
+      &-footnote {
+        a {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+
+  .section {
+      &__title {
+        font-size: 28px;
+      }
+  }
+
+  .promo {
+    text-align: center;
+    &__wrap {
+      justify-content: center;
+    }
+    &__title {
+      font-size: 45px;
+    }
+    &__subtitle {
+      font-size: 26px;
+    }
+    &__img {
+      right: -20px;
+      bottom: -100%;
+      width: 380px;
+    }
+  }
+
+  .team {
+    &__slider {
+      .slick {
+        &-list {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        &-slide {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .steps {
+    &__block {
+      &s {
+        flex-direction: column;
+        align-items: unset;
+        &:before {
+          left: 25px;
+          width: 0;
+          height: 90%;
+          top: 0;
+          transform: translateX(-50%);
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+
+      margin-left: 20px;
+      flex-direction: row;
+      align-items: center;
+      max-width: 100%;
+      width: auto;
+      &-icon {
+        margin-right: 40px;
+        margin-bottom: 0;
+      }
+      &-text {
+        text-align: left;
+      }
+    }
+  }
+
+  .footer {
+    &__contact {
+      &s {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      &:not(:last-child) {
+        margin-bottom: 20px;
+        margin-right: 0px;
+      }
+    }
+  }
+
+  .popup {
+    &__form {
+      padding: 30px 20px 20px;
+      max-width: 100%;
+      &-subtitle {
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+      &-button {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    &__logo {
+      display: none;
+    }
+    .logo_mobile {
+      display: block;
+    }
+  }
+  .advantages {
+    &__block {
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+      &:not(:nth-child(2n)) {
+        margin-right: unset;
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .header {
+    &__phone-btn {
+      font-size: 16px;
+    }
+  }
+
+  .promo {
+    padding-bottom: 70px;
+    height: auto;
+    &__img {
+      display: none;
+    }
+  }
+
+  .about {
+    &__title {
+      margin-bottom: 5px;
+      font-size: 32px;
+    }
+  }
+
+  .team {
+    &__title {
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .contacts {
+    &__info {
+      &-title {
+        font-size: 40px;
+      }
+    }
+    &__form {
+      &-input {
+        &s {
+          display: flex;
+          flex-direction: column;
+        }
+        &:not(:last-child) {
+          margin-bottom: 10px;
+          margin-right: 0;
+        }
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 405px) {
+  .burger {
+    &-menu {
+      padding-top: 0;
+      overflow: auto;
+      &__list {
+        margin-bottom: 30px;
+      }
+      &__block {
+        &:first-child {
+          margin-bottom: 30px;
+        }
+        &-text {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+
+  .header {
+    &__logo {
+      width: 80px;
+    }
+    &__phone-btn {
+      margin-right: 10px;
+      padding: 7px;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .burger {
+    &-menu {
+      padding-bottom: 30px;
+      &__button {
+        width: 100%;
+        font-size: 18px;
+      }
+    }
+  }
+}

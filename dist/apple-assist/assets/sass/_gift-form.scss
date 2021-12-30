@@ -1,0 +1,71 @@
+.gift {
+  margin-bottom: 120px;
+  padding-bottom: 80px;
+  &__wrap {
+    padding-left: 80px;
+    position: relative;
+  }
+  &__border {
+    position: absolute;
+    content: '';
+    height: 2px;
+    background-color: $accent-color;
+    &_top {
+      width: 150px;
+      top: -100px;
+      right: 10px;
+      &-right {
+        top: 0;
+        right: -90px;
+        width: 200px;
+        transform: rotate(90deg);
+      }
+    }
+    &_bottom {
+      width: 150px;
+      bottom: -80px;
+      left: 14px;
+      &-left {
+        bottom: 20px;
+        left: -85px;
+        width: 200px;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 35px;
+    .text_accent {
+      font-weight: 700;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 50px;
+    font-size: 16px;
+  }
+  &__img {
+    &-wrap {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      transform: translateY(-50%);
+      z-index: -1;
+      &:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(246,246,246);
+        background: linear-gradient(90deg, rgba(246,246,246,1) 20%, rgba(246, 246, 246,0) 100%);
+      }
+    }
+  }
+  &__form {
+    &-input {
+      margin-right: 20px;
+      width: 190px;
+    }
+  }
+}

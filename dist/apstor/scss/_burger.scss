@@ -1,0 +1,191 @@
+.burger {
+  &-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    // right: -60px;
+    right: -50px;
+    // width: 40px;
+    width: 25px;
+    cursor: pointer;
+    span {
+      display: block;
+      width: 100%;
+      box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);
+      border-radius: 3px;
+      // height: 4px;
+      height: 1px;
+      background: #fff;
+      transition: all .3s;
+      position: relative;
+    }
+    span + span {
+      margin-top: 8px;
+    }
+  }
+  &-menu {
+    position: fixed;
+    display: none;
+    left: 50%;
+    z-index: 99999999;
+    // padding-top: 30px;
+    width: 100%;
+    height: 100vh;
+    color: $alt-text-color;
+    transform: translateX(-50%);
+    background-color: #000000;
+    overflow: hidden;
+    .header {
+      position: sticky;
+      display: block;
+    }
+    &__list {
+      margin-bottom: 40px;
+      &-item {
+        padding: 10px 5px;
+        display: block;
+        font-family: 'SF UI Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        color: $alt-text-color;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+      }
+    }
+    &__contacts {
+      margin-bottom: 40px;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+    }
+    &__block {
+      &:first-child {
+        margin-bottom: 40px;
+      }
+      &-title {
+        font-family: 'SF UI Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 300;
+        font-size: 14px;
+      }
+      &-text {
+        font-size: 24px;
+        font-weight: 700;
+        color: $alt-text-color;
+      }
+    }
+    &__button {
+      padding: 15px 70px;
+      font-size: 22px;
+    }
+  }
+}
+
+
+.active span:nth-child(1) {
+  animation: ease .7s top forwards;
+}
+
+.not-active span:nth-child(1) {
+  animation: ease .7s top-2 forwards;
+}
+
+.active span:nth-child(2) {
+  animation: ease .7s scaled forwards;
+}
+
+.not-active span:nth-child(2) {
+  animation: ease .7s scaled-2 forwards;
+}
+
+.active span:nth-child(3) {
+  animation: ease .7s bottom forwards;
+}
+
+.not-active span:nth-child(3) {
+  animation: ease .7s bottom-2 forwards;
+}
+
+@keyframes top {
+  0% {
+    top: 0;
+    transform: rotate(0);
+  }
+  50% {
+    // top: 11px;
+    top: 6px;
+    transform: rotate(0);
+  }
+  100% {
+    // top: 13px;
+    top: 7px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes top-2 {
+  0% {
+    // top: 11px;
+    top: 7px;
+    transform: rotate(45deg);
+  }
+  50% {
+    // top: 11px;
+    top: 7px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bottom {
+  0% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+  50% {
+    bottom: 11px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 11px;
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes bottom-2 {
+  0% {
+    bottom: 11px;
+    transform: rotate(135deg);
+  }
+  50% {
+    bottom: 11px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes scaled {
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes scaled-2 {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

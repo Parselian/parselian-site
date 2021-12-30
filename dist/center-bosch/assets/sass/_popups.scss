@@ -1,0 +1,51 @@
+.popup {
+  position: fixed;
+  top: 0;
+  z-index: 999999;
+  height: 100%;
+  width: 100%;
+  display: none;
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #000;
+    opacity: 0.5;
+  }
+  &-form {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    &__close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
+    &__title {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+    &__subtitle {
+      margin-bottom: 25px;
+    }
+    &__input {
+      &-wrap {
+        margin-bottom: 20px;
+        width: 100%;
+      }
+    }
+  }
+}

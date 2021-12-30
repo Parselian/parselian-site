@@ -1,0 +1,35 @@
+.vacancy-info {
+  &__row {
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+    &:last-child {
+      .vacancy-info {
+        &__list {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+  &__info {
+    margin-bottom: 35px !important;
+  }
+  &__title {
+    padding-top: 15px;
+    margin-bottom: 10px;
+  }
+  &__list {
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    border-radius: 7px;
+    -webkit-box-shadow: $image-shadow;
+    -moz-box-shadow: $image-shadow;
+    box-shadow: $image-shadow;
+  }
+}

@@ -1,0 +1,49 @@
+.products
+  padding: 100px 0
+  overflow: hidden
+  position: relative
+  &__title
+    margin-bottom: 75px
+  &__bg
+    position: absolute
+    z-index: -1
+    &-left
+      left: -18%
+      top: 23%
+    &-right
+      top: -14%
+      left: 82%
+  &-list
+    display: flex
+    flex-direction: column
+  &-card
+    display: flex
+    width: 550px
+    font-family: Montserrat
+    font-size: 24px
+    font-weight: 500
+    background-color: #fff
+    border-radius: 0 60px 60px 0
+    box-shadow: 4px 4px 15px -3px rgba(0,0,0,0.37)
+    &-info
+      margin:
+        top: 47px
+        right: 50px
+        left: 25px
+    &__img
+      width: 270px
+      height: 280px
+    &__title
+      margin-bottom: 22px
+      font-size: 30px
+      font-weight: 700
+    &__weight
+      margin-bottom: 5px
+    &__price
+      margin-bottom: 28px
+    &__button
+      padding: 2px 40px
+      color: #000000
+      font-weight: 700
+    &:nth-child(2n)
+      align-self: flex-end

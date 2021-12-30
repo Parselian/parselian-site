@@ -1,0 +1,41 @@
+.reviews
+  padding: 
+    top: 67px
+    bottom: 70px
+  background-color: $feedback-bg-color
+  &__wrap
+    margin:
+      top: 70px
+      left: auto
+      right: auto
+    width: 940px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  &__review
+    margin-bottom: 20px
+    padding: 20px 40px 20px 20px
+    max-width: 460px
+    display: flex
+    background-color: $attraction-color
+    border: 1px solid #e8e8e8
+    &:nth-child(-n+6)
+      margin-bottom: 20px
+    &-img
+      margin-right: 20px
+      width: 100px
+      height: 100px
+      border-radius: 50px
+    &-title
+      margin:
+        top: 10px
+        bottom: 18px
+      font-family: "Muller Regular", sans-serif
+      font-size: 16px
+      font-weight: 700
+    &-text
+      font-family: "Muller Light", sans-serif
+      font-size: 13px
+      font-weight: 400
+      color: #4a4a4a
+      line-height: 16px

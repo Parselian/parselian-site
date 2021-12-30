@@ -1,0 +1,356 @@
+@media (max-width: 1600px)
+  .promo
+    &__button
+      &-content
+        &::after
+          right: -60%
+    &__card
+      width: 600px
+      &-btn
+        width: 65px
+        height: 65px
+      &-text
+        font-size: 0.75vw
+        width: 115px
+        height: 120px
+        top: 3%
+      &-mask
+        width: 170px
+    &__scroll
+      &-btn
+        bottom: 5.6%
+      &::before
+        bottom: 2.5vw
+      &::after
+        bottom: 1.2vw
+  .popup
+    &-form
+      &__button
+        &-content
+          padding: 1.9vw 6.5vw 1.9vw 2.5vw
+          font-size: 1.1vw
+          &::after
+            max-height: 38px
+            right: -10%
+    &-thanks
+      .popup
+        &-block
+          &__img
+            margin-bottom: 10px
+            width: 160px
+          &__title
+            font-size: 2vw
+          &__subtitle
+            font-size: 1.7vw
+
+
+@media (max-width: 1300px)
+  .header
+    &__contacts
+      &-icon
+        padding: 8px
+        width: 14px
+        height: 12px
+  .promo
+    &__card
+      top: 44%
+      &-text
+        font-size: 0.9vw
+    &__scroll
+      &-btn
+        bottom: 6.8%
+      &::before
+        bottom: 3.2vw
+      &::after
+        bottom: 1.5vw
+  .popup
+    &-form
+      &__button
+        &-content
+          padding: 1.9vw 6.5vw 1.9vw 2.5vw
+          font-size: 1.4vw
+    &-thanks
+      .popup
+        &-block
+          &__title
+            font-size: 2.4vw
+          &__subtitle
+            font-size: 2.2vw
+
+@media (max-width: 1100px)
+  .promo
+    &__card
+      width: 500px
+      &-btn
+        width: 55px
+        height: 55px
+        top: 32%
+        left: 35%
+      &-text
+        width: 105px
+        height: 110px
+        top: -6%
+        font-size: 1vw
+      &-mask
+        width: 160px
+    &__scroll
+      &-btn
+        bottom: 7.5%
+      &::before
+        bottom: 3.5vw
+      &::after
+        bottom: 1.5vw
+
+@media (max-width: 992px)
+  .burger
+    display: block
+  .container
+    max-width: 740px
+  .header
+    &__logo
+      &-img
+        width: 140px
+      &-text
+        display: none
+    &__location
+      &-icon
+        margin-right: 12px
+        width: 44px
+        height: 44px
+      &-link
+        font-size: 10px
+    &__contacts
+      &-icon
+        width: 20px
+        height: 18px
+        padding: 12px
+      &-info
+        font-size: 14px
+      &-text
+        font-size: 12px
+    &__phone
+      &-text
+        font-size: 10px
+      &-link
+        font-size: 18px
+    &__menu
+      display: none
+    &__worktime
+      display: none
+    &__contacts
+      &-button
+        display: none
+        &:hover
+          background-color: #fff
+          color: $main-text-color
+          svg
+            fill: #ee858c
+  .promo
+    padding-top: 0
+    padding-bottom: 203px
+    &::before
+      height: 430px
+      width: 480px
+    &__wrap
+      margin-top: 60px
+    &__title
+      margin-bottom: 30px
+      font-size: 36px
+    &__list
+      margin-bottom: 40px
+      font-size: 16px
+      &-item
+        margin-bottom: 10px
+    &__button
+      &-content
+        padding: 20px 50px
+        font-size: 14px
+        &::after
+          display: none
+    &__card
+      top: 85%
+      left: 15%
+      &-img
+        display: none
+      &-text
+        top: -110px
+        font-size: 11px
+    &__scroll
+      &-btn
+        bottom: 6.5%
+      &:before
+        bottom: 40px
+      &:after
+        bottom: 20px
+  .burger
+    &__request
+      &-button
+        padding: 14px 20px
+        display: flex
+        font-size: 14px
+  .popup
+    &-block
+      width: 100%
+      max-width: 500px
+      &__title
+        font-size: 32px
+    &-thanks
+      .popup
+        &-block
+          width: 380px
+          &__img
+            margin-bottom: 10px
+            width: 160px
+          &__title
+            font-size: 30px
+          &__subtitle
+            font-size: 30px
+
+@media (max-width: 768px)
+  .container
+    max-width: 540px
+  .header
+    &__wrap
+      flex-direction: column
+    &__logo
+      margin-bottom: 20px
+  .promo
+    padding-bottom: 180px
+    &::before
+      display: none
+    &__title
+      font-size: 32px
+    &__card
+      left: 20%
+    &__scroll
+      &-btn
+        bottom: 6%
+      &::before
+        bottom: 38px
+      &::after
+        bottom: 17px
+  .popup
+    &-block
+      max-width: 360px
+
+@media (max-width: 576px)
+  .container
+    width: 90%
+  .header
+    &__contacts
+      &-text
+        font-size: 10px
+    &__phone
+      &-text
+        letter-spacing: 0.3px
+      &-link
+        font-size: 16px
+  .promo
+    &__title
+      width: 100%
+      max-width: 350px
+    &__list
+      max-width: 370px
+    &__button
+      &-content
+        padding: 15px 30px
+        font-size: 12px
+    &__card
+      width: 600px
+      top: 88%
+      left: 3%
+    &__scroll
+      &::before
+        bottom: 41px
+      &::after
+        bottom: 20px
+  .popup
+    &-block
+      padding: 30px 30px
+      max-width: 70%
+      border-radius: 30px
+      &__close
+        font-size: 32px
+        top: 8px
+        right: 15px
+      &__title
+        font-size: 22px
+      &__subtitle
+        font-size: 14px
+    &-form
+      width: 80%
+      &__input
+        font-size: 12px
+        padding: 30px 35px
+        height: 0
+    &-thanks
+      .popup
+        &-block
+          width: 90%
+          &::before
+            width: 80px
+            height: 137px
+          &__img
+            margin-bottom: 10px
+            width: 160px
+          &__title
+            font-size: 24px
+            z-index: 1
+          &__subtitle
+            font-size: 24px
+            z-index: 1
+
+@media (max-width: 480px)
+  .header
+    &__wrap
+      flex-direction: row
+    &__logo
+      &-img
+        display: none
+        &_mobile
+          display: block
+          height: 100px
+    &__contacts
+      flex-direction: column
+      align-items: flex-start
+      &-col
+        margin-right: 0
+    &__location
+      margin-bottom: 15px
+      order: 1
+  .promo
+    &__card
+      &-text
+        left: 13%
+        top: -115px
+      &-mask
+        top: -7px
+        left: -7px
+  .popup
+    &-block
+      &__subtitle
+        margin-bottom: 30px
+    &-form
+      width: 100%
+
+@media (max-width: 400px)
+  .header
+    &__contacts
+      &-text
+        font-size: 10px
+    &__phone
+      &-text
+        letter-spacing: 0
+        font-size: 9px
+      &-link
+        font-size: 14px
+  .promo
+    &__title
+      max-width: 100%
+      font-size: 26px
+    &__list
+      font-size: 14px
+  .popup
+    &-form
+      &::before
+        display: none

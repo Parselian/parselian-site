@@ -1,0 +1,177 @@
+#darts > path {
+  transform: translate(150px, -150px);
+}
+
+#darts-fat-ring {
+  animation-name: darts-fat-ring;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+#darts-arrow {
+  animation-name: darts-arrow;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes darts-dot {
+  40%, 100% {
+    r: 9.59544
+  }
+}
+
+@keyframes darts-fat-ring {
+  20%, 100% {
+    stroke-width: 28;
+    r: 14;
+  }
+  0%{
+    r: 26;
+    stroke-width: 5;
+  }
+}
+
+@keyframes darts-arrow {
+  20%, 100% {
+    transform: translate(-3px, 8px);
+  }
+}
+
+#pie path:first-child {
+  transform: translate(10px, 20px)
+}
+
+#pie path:last-child {
+  /* transform: translate(17px, 12px); */
+}
+
+#pie {
+  width: 170px;
+  height: 170px;
+  cursor: pointer;
+}
+
+#diagram {
+  animation-name: animate-piechart;
+  animation-duration: 2s;
+  animation-fill-mode: forwards
+}
+
+#diagram > path:nth-child(-n+3) {
+  transform: translateY(100%);
+}
+#diagram > rect {
+  height: 0;
+  width: 4px;
+}
+
+.first-diagram-column,
+.second-diagram-column,
+.third-diagram-column {
+  animation-name: seek-diagram-columns;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.second-diagram-column {
+  animation-delay: 1s;
+}
+
+.third-diagram-column {
+  animation-delay: 2s;
+}
+
+.first-diagram-column_reverse,
+.second-diagram-column_reverse,
+.third-diagram-column_reverse {
+  animation-name: hide-diagram-columns;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.diagram-stick {
+  position: absolute;
+  animation-name: seek-diagram-corona;
+  animation-duration: 1s;
+  animation-delay: 3.5s;
+  animation-fill-mode: forwards;
+}
+
+.diagram-stick_reverse {
+  position: absolute;
+  animation-name: hide-diagram-corona;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes seek-diagram-columns {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes hide-diagram-columns {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes seek-diagram-corona {
+  to {
+    height: 22px;
+  }
+}
+
+@keyframes hide-diagram-corona {
+  from {
+    height: 22px;
+  }
+  to {
+    height: 0;
+  }
+}
+
+#chat > path:nth-child(4), 
+#chat > path:first-child,
+.chat_mobile>path:nth-child(4),
+.chat_mobile>path:first-child {
+  transform: translate(100%, 80px);
+}
+
+#chat > path:nth-child(2),
+#chat > path:nth-child(3),
+.chat_mobile>path:nth-child(2),
+.chat_mobile>path:nth-child(3){
+  transform: translateX(-100%);
+}
+
+.chat-question {
+  animation-name: seek-chat-question;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.chat-answer {
+  animation-name: seek-chat-answer;
+  animation-duration: 1.3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes seek-chat-question {
+  50% {
+    transform: translate(0, 80px);
+  }
+  100% {
+    transform: translate(0, 0)
+  }
+}
+
+@keyframes seek-chat-answer {
+  to {
+    transform: translateX(0)
+  }
+}

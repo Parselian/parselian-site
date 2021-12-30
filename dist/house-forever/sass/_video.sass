@@ -1,0 +1,48 @@
+.video
+  &__columns
+    display: flex
+    justify-content: center
+    align-items: center
+  &__mediaplayer
+    margin-right: 130px
+    width: 470px
+    height: 300px
+    position: relative
+    &::before
+      position: absolute
+      display: block
+      content: ''
+      top: 50%
+      left: 50%
+      width: 150%
+      height: 100%
+      transform: translate(-50%, -50%)
+      background: url('../img/video-review/video-bg.png') center no-repeat
+      background-size: cover
+      z-index: -1
+    video 
+      height: 100%
+      width: 100%
+    &-playbutton
+      position: absolute
+      top: 50%
+      left: 50%
+      opacity: 1
+      width: 40px
+      height: 40px
+      transform: translate(-20px, -20px)
+      background: url('../img/video-review/play-button.png') center no-repeat
+      background-size: contain
+      cursor: pointer
+  &__text
+    max-width: 250px
+    &-title
+      margin-bottom: 30px
+    &-subtitle
+      margin-bottom: 80px
+    &-info
+      margin-bottom: 30px
+    &-phone
+      font-size: 18px
+      font-weight: 700
+      color: $text-color

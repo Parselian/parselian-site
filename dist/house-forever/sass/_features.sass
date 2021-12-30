@@ -1,0 +1,35 @@
+.features
+  background: url(../img/features/bg.jpg) center no-repeat
+  background-size: cover
+  &__wrap
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      width: 470px
+      height: 250px
+      top: -100px
+      left: -15%
+      background: url(../img/features/leaves.png) center no-repeat
+      background-size: contain
+  &__list
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__feature
+    margin-bottom: 80px
+    display: flex
+    align-items: center
+    max-width: 775px
+    width: 100%
+    &:last-child
+      margin-bottom: 0
+    &-img
+      margin-right: 30px
+      max-width: 170px
+    &-title
+      margin-bottom: 30px
+      font-family: 'Geometria Medium', sans-serif
+      font-size: 18px
+    &-subtitle
+      font-size: 14px

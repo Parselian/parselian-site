@@ -1,0 +1,43 @@
+.promo {
+  padding-top: 0;
+  position: relative;
+  padding-bottom: 120px;
+  color: $alt-text-color;
+  background: url('../images/promo-bg.jpg') center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  &__wrap {
+    padding-top: 100px;
+    position: relative;
+    z-index: 1;
+  }
+  &__title {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 48px;
+  }
+  &__list {
+    margin-bottom: 80px;
+    font-size: 26px;
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &__button {
+    font-size: 24px;
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+}

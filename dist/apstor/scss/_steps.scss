@@ -1,0 +1,127 @@
+.steps {
+  overflow: hidden;
+  &__block {
+    &s {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 1000px;
+      &:before {
+        position: absolute;
+        content: '';
+        top: 140px;
+        left: 300px;
+        width: 70%;
+        height: 60%;
+        background: url('../images/svg/steps-line.svg') center no-repeat;
+        background-size: contain;
+      }
+    }
+    // position: relative;
+    position: absolute;
+    z-index: 1;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // width: 32%;
+    width: 45%;
+    min-height: 250px;
+    text-align: center;
+    font-size: 28px;
+    background-color: #ffffff;
+    border-radius: 26px;
+    box-shadow: $common-shadow;
+    &:before {
+      width: 100px;
+      height: 100px;
+    }
+    &:first-child {
+      top: 0;
+      left: 130px;
+      &:before {
+        position: absolute;
+        content: '';
+        top: 30px;
+        left: -140px;
+        transform: rotate(-10deg);
+        background: url('../images/steps-backup.png') center no-repeat;
+        background-size: contain;
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        top: 0px;
+        right: -500px;
+        width: 160px;
+        height: 180px;
+        background: url('../images/animoji-thinking.png') center no-repeat;
+        background-size: contain;
+      }
+    }
+    &:nth-child(2) {
+      // top: 310px;
+      top: 400px;
+      right: 100px;
+      &:before {
+        position: absolute;
+        content: '';
+        top: 40px;
+        right: -140px;
+        background: url('../images/steps-find.png') center no-repeat;
+        background-size: contain;
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        top: 40px;
+        left: -420px;
+        width: 160px;
+        height: 180px;
+        background: url('../images/animoji-ok.png') center no-repeat;
+        background-size: contain;
+      }
+    }
+    &:last-child {
+      top: 740px;
+      left: 250px;
+      &:before {
+        position: absolute;
+        content: '';
+        top: 30px;
+        left: -140px;
+        background: url('../images/steps-call.png') center no-repeat;
+        background-size: contain;
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        // top: -40px;
+        top: 20px;
+        // right: -380px;
+        right: -310px;
+        width: 160px;
+        height: 180px;
+        background: url('../images/animoji-like.png') center no-repeat;
+        background-size: contain;
+      }
+    }
+    &-text {
+      z-index: 2;
+    }
+    &-button {
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 15px 40px;
+      display: block;
+      font-size: 18px;
+    }
+    &-img {
+      position: absolute;
+      fill: #f0f0f0;
+      z-index: 1;
+    }
+  }
+}

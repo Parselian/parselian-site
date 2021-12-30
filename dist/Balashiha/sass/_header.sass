@@ -1,0 +1,71 @@
+.header
+  height: 82px
+  background-color: $header-bg-color
+  font-family: Roboto
+  &-wrap
+    height: inherit
+    display: flex
+    justify-content: space-between
+  &-title
+    display: flex
+    &__logo
+      margin-top: -6px
+    &__text
+      margin-top: 21px
+      margin-left: 19px
+      font-family: 'Cuprum Bold'
+      font-size: 30px
+      text-transform: uppercase
+      &_subtitle
+        margin-top: -5px
+        display: block
+        font-family: 'Roboto'
+        font-size: 9px
+        color: $focus-color
+  &-contacts
+    margin-top: 15px
+    &__phone
+      font-family: 'Roboto', sans-serif
+      font-size: 24px
+      color: $text-color-dark
+      &_small
+        font-size: 16px
+    &__text
+      margin-top: 3px
+      text-align: right
+      a
+        position: relative
+        font-size: 15px
+        color: $focus-color
+        border-bottom: 1px dashed $focus-color
+        &:before
+          content: ''
+          position: absolute
+          top: 6px
+          left: -23px
+          width: 18px
+          height: 5px
+          background-image: url('../img/header/header-arrow.png')
+        &:after
+          content: ''
+          position: absolute
+          top: 2px
+          left: -43px
+          width: 15px
+          height: 15px
+          background-image: url('../img/header/header-phone.png')
+    &__button
+      position: relative
+      width: 100%
+      height: 23px
+      background-color: $focus-color
+      border-radius: 20px
+      &:after
+        content: ''
+        position: absolute
+        top: 15%
+        left: 43%
+        width: 16px
+        height: 16px
+        background-image: url('../img/header/telephone.png')
+        background-repeat: no-repeat

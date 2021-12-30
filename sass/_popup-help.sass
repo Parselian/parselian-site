@@ -1,0 +1,14 @@
+.popup-help
+  opacity: 0
+  transition: .3s
+  z-index: 9999999
+  &__list
+    &_item
+      margin-bottom: 10px
+      position: relative
+      &:before
+        content: '●'
+        padding-right: 10px
+        color: $accent-color
+      &:last-child
+        margin-bottom: 0

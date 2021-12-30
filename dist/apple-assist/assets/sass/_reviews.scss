@@ -1,0 +1,146 @@
+.reviews {
+  position: relative;
+  margin-bottom: 90px;
+  padding-top: 100px;
+  padding-bottom: 75px;
+  &__wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__col {
+      //width: 60%;
+    width: 100%;
+    //&:last-child {
+    //  width: 40%;
+    //}
+  }
+  &__bg {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: $alt-bg-color;
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+  }
+  &__collage {
+    position: absolute;
+    z-index: -1;
+    &_left {
+      bottom: -50px;
+      left: -100px;
+      &-quote {
+        width: 275px;
+        height: 275px;
+        fill: #FFFFFF;
+        opacity: 0.35;
+      }
+    }
+    &_right {
+      top: 0;
+      right: -100px;
+      &-quote {
+        width: 240px;
+        height: 240px;
+        fill: #FFFFFF;
+        opacity: 0.35;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 55px;
+  }
+  &__slide {
+    &r {
+      //margin-right: 120px;
+      margin-bottom: 110px;
+      &-arrow {
+        position: absolute;
+        bottom: -50px;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        fill: $inactive-text-color;
+        cursor: pointer;
+        transition: .2s;
+        &:hover {
+          fill: $accent-color;
+        }
+        &_prev {
+          left: 50%;
+          transform: translateX(calc(-50% - 30px))
+          //right: 60px;
+        }
+        &_next {
+          left: 50%;
+          transform: translateX(calc(-50% + 30px)) rotate(180deg);
+        }
+      }
+    }
+
+    margin-right: 40px;
+    padding-top: 3px;
+    &-row {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-col {
+      display: flex;
+      align-items: center;
+    }
+    &-photo {
+      margin-right: 20px;
+      width: 60px;
+      -webkit-border-radius: 10000px;
+      -moz-border-radius: 10000px;
+      border-radius: 10000px;
+    }
+    &-reviewer {
+      font-weight: 700;
+      font-size: 18px;
+    }
+    &-problem {
+      display: block;
+      font-size: 14px;
+      font-weight: 300;
+    }
+    &-rating {
+      position: relative;
+      margin-right: 20px;
+      font-size: 28px;
+      color: $alt-text-color;
+      &:before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        width: 75px;
+        height: 45px;
+        background-color: $accent-color;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  &__button {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 25px;
+    display: block;
+    width: fit-content;
+    font-size: 22px;
+  }
+  &__img {
+    width: 300px;
+  }
+}

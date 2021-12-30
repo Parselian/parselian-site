@@ -1,0 +1,40 @@
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes gift_shake {
+  10%, 90% {
+    transform: rotate(9deg);
+  }
+
+  20%, 80% {
+    transform: rotate(11deg);
+  }
+
+  30%, 50%, 70% {
+    transform: rotate(8deg);
+  }
+
+  40%, 60% {
+    transform: rotate(7deg);
+  }
+}
+
+@keyframes pulse_gift {
+  0% {
+    transform: rotate(10deg) scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: rotate(10deg) scale(1);
+    box-shadow: 0 0 0 20px rgba(255, 0, 0, 0);
+  }
+
+  100% {
+    transform: rotate(10deg) scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}

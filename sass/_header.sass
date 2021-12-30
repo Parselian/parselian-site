@@ -1,0 +1,44 @@
+.header 
+  padding-top: 20px
+  min-width: 100%
+  min-height: 100vh
+  color: #ffffff
+  position: relative
+  &:after
+    position: absolute
+    content: ''
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: -1
+    background-color: rgba(56, 56, 56, 0.6)
+  &-fullbg
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: -2
+    background: url('../img/header/mirage.jpg') center no-repeat
+    background-size: cover
+    display: none
+  &-info
+    margin-top: 132px
+    &__title
+      max-width: 700px
+      font-size: 64px
+      font-weight: bold
+    &__subtitle
+      margin-top: 30px
+      font-size: 24px
+      font-weight: 300
+    &__buttons
+      margin-top: 40px
+      &_button
+        &:first-child
+          margin-right: 20px
+        border: 1px solid #fff
+        &:hover
+          color: #c2c2c2
+          border: 1px solid #c2c2c2

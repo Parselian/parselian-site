@@ -1,0 +1,34 @@
+.reviews
+  color: $text-color
+  &-title
+    margin-bottom: 50px
+  .review
+    display: flex
+    justify-content: center
+    align-items: center
+    display: none
+    &__img
+      margin-right: 20px
+      width: 260px
+      height: 220px
+      background-color: #565656
+    &-information
+      max-width: 370px
+      &__title
+        margin-bottom: 5px
+      &__link
+        font-style: italic
+        color: $text-color
+        transition: .2s
+        &:hover
+          color: $accent-color
+      &__text
+        margin-top: 10px
+        margin-bottom: 15px
+      &__more
+        color: $text-color
+        font-style: italic
+        transition: .2s
+        &:hover
+          color: $accent-color
+    

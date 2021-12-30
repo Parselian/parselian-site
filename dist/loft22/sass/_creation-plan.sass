@@ -1,0 +1,59 @@
+.creation
+  padding: 
+    top: 61px
+    bottom: 30px
+  .wrap
+    flex-direction: column
+  &__plan
+    display: flex
+    flex-direction: column
+    width: 926px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      height: 100%
+      width: 1px
+      background-image: linear-gradient(to top, rgba(230,230,230,0) 5%, rgba(230,230,230,1) 27%)
+    &-step
+      display: flex
+      justify-content: space-between
+      &:nth-child(2)
+        flex-direction: row-reverse
+        text-align: right
+    &-info
+      max-width: 397px
+      font-family: 'Muller Light', sans-serif
+    &-img
+      margin: 
+        left: auto
+        right: auto
+        bottom: 30px
+      display: block
+      margin:
+        top: 31px
+        bottom: 60px
+    &-subtitle
+      margin-bottom: 10px
+      font-size: 14px
+      font-weight: 400
+      text-transform: uppercase
+      color: $interactive-color
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        width: 5px
+        height: 5px
+        left: -53.4px
+        background-color: $interactive-color
+        border-radius: 5px
+      &-two
+        &:before
+          left: 445px
+    &-text
+      font-size: 18px
+      line-height: 22px

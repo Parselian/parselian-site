@@ -1,0 +1,60 @@
+.our-location
+  padding: 
+    top: 60px
+    bottom: 66px
+  &__title
+    margin-bottom: 40px  
+    display: inline-block
+    margin-left: 50%
+    transform: translateX(-50%)
+    &:before
+      right: 152px
+      bottom: 50%
+    &:after
+      left: 152px
+      bottom: 50%
+  &__wrap
+    display: flex
+    justify-content: center
+  &__information
+    margin-right: 30px
+    padding: 
+      top: 50px
+      bottom: 40px
+    width: 460px
+    text-align: center
+    color: $text-color-light
+    background-color: #005e93
+    &_titles
+      margin-bottom: 10px
+      font-size: 24px
+      font-weight: 700
+    &_texts
+      margin-bottom: 10px
+      font-size: 14px
+      font-weight: 300
+    &_socials
+      &_items
+        justify-content: center
+        display: flex
+        .social-icon
+          margin-right: 20px
+          display: block
+          position: relative
+          width: 54px
+          height: 54px
+          border: 2px solid $text-color-light
+          border-radius: 50%
+          &:hover
+            cursor: pointer
+          &:last-child
+            margin-right: 0
+          i
+            position: absolute
+            top: 50%
+            right: 50%
+            transform: translateY(-50%) translateX(50%)
+            font-size: 21px
+  &__map
+    width: 460px
+    height: 381px

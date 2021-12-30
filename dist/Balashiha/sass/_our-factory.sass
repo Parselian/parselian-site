@@ -1,0 +1,45 @@
+.factory
+  padding-top: 44px
+  padding-bottom: 26px
+  background-color: $section-bg-color
+  &-title
+    margin-bottom: 26px
+  &-wrap
+    display: flex
+    justify-content: center
+    align-items: center
+  &-slider
+    margin-top: 10px
+    margin-right: 48px
+    margin-left: 8px
+    position: relative
+    width: 566px
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      top: 31%
+      right: 56.8%
+      width: 525px
+      height: 261px
+      background-image: url(../img/slider/background.png)
+      background-repeat: no-repeat
+    &:after
+      content: ''
+      position: absolute
+      display: block
+      bottom: 8%
+      right: -5.6%
+      width: 32px
+      height: 79px
+      background-image: url(../img/slider/background-slider.png)
+  &-text
+    margin-top: 25px
+    font-family: Roboto
+    font-size: 16px
+    font-weight: 300
+    color: $text-color-dark
+    &_block
+      margin-bottom: 34px
+      display: block
+      font-weight: 300

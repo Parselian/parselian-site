@@ -1,0 +1,72 @@
+$buttonWidth: 35px;
+$buttonHeight: 20px;
+$buttonColor: darken(#000, 15%);
+$lineThickness: 2px;
+$transitionSpeed: .1s;
+$transitionEasing: ease-in-out;
+
+// Demo
+.menu-toggle {
+  margin-left: 15px;
+  position: relative;
+  display: none;
+  width: $buttonWidth;
+  height: $buttonHeight;
+
+  background: transparent;
+  border-top: $lineThickness solid;
+  border-bottom: $lineThickness solid;
+
+  color: $buttonColor;
+  font-size: 0;
+
+  transition: all $transitionSpeed $transitionEasing;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: $lineThickness;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    background: currentColor;
+
+    transform: translate(-50%, -50%);
+    transition: transform $transitionSpeed $transitionEasing;
+  }
+  &__border {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: $buttonWidth + 30px;
+    height: $buttonHeight + 25px;
+    border: 1px solid $buttonColor;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  &:hover {
+    color: lighten($buttonColor, 15%);
+  }
+
+  &.is-active {
+    border-color: transparent;
+
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
+
+
+

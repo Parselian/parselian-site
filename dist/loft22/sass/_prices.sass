@@ -1,0 +1,49 @@
+.prices
+  padding: 
+    top: 71px
+    bottom: 82px
+  background-color: $proposal-bg-color
+  &__list
+    margin:
+      left: auto
+      right: auto
+      top: 60px
+    max-width: 822px
+    display: flex
+    justify-content: space-around
+    &-item
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      align-items: center
+      text-transform: uppercase
+    &-img
+      margin-bottom: 35px
+      &_small
+        max-height: 300px
+      &_medium
+        max-height: 350px
+      &_big
+        max-height: 410px
+    &-size
+      margin-bottom: 14px
+      font-family: 'Muller Regular', sans-serif
+      font-size: 16px
+      font-weight: 400
+    &-cost
+      margin-bottom: 29px
+      font-family: 'Muller Bold', sans-serif
+      font-size: 28px
+    &-button
+      padding: 14px 22px
+      font-family: 'Muller Bold', sans-serif
+      font-size: 14px
+      font-weight: 700
+      text-transform: uppercase
+      color: $prices-button-color
+      background-color: transparent
+      border: 2px solid $prices-bd-button-color
+      transition: all .2s 
+      &:hover
+        color: $attraction-color
+        background-color: $prices-bd-button-color

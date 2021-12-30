@@ -1,0 +1,1 @@
+CBHCore.lang.addLang({"en":{}});

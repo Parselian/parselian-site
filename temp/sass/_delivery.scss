@@ -1,0 +1,64 @@
+.delivery {
+  &__row {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__card {
+    width: 27%;
+    &:not(:last-child) {
+      margin-right: 3%;
+    }
+    &-title {
+      margin-bottom: 5px;
+      font-size: 26px;
+      font-weight: 400;
+    }
+    &-img {
+      margin: 15px auto;
+      width: 100%;
+      max-width: 250px;
+    }
+    &-text {
+      margin-bottom: 15px;
+      font-size: 16px;
+      text-align: justify;
+      &_notice {
+        text-decoration: underline;
+        &:nth-child(1) {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+
+  &__payment {
+    &-title {
+      margin-bottom: 30px;
+      font-size: 20px;
+      text-align: center;
+    }
+    &-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      &-img {
+        max-width: 300px;
+        width: 100%;
+        margin-right: 30%;
+      }
+      &-info {
+        width: 60%;
+      }
+      &-title {
+        margin-bottom: 5px;
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+      &-text {
+        font-size: 16px;
+      }
+    }
+  }
+}

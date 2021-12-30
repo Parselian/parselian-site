@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Appetite New";
+  src: url("../fonts/Appetite_New.otf") format("opentype");
+}
+@font-face {
+  font-family: 'Museo Sans Light';
+  src: url('../fonts/MuseoSansCyrl-300.eot');
+  src: url('../fonts/MuseoSansCyrl-300.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MuseoSansCyrl-300.woff') format('woff'),
+    url('../fonts/MuseoSansCyrl-300.ttf') format('truetype');
+  src: url("../fonts/MUSEOSANSCYRL_300.OTF") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Museo Sans Medium';
+  src: url('../fonts/MuseoSansCyrl-500.eot');
+  src: url('../fonts/MuseoSansCyrl-500.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MuseoSansCyrl-500.woff') format('woff'),
+    url('../fonts/MuseoSansCyrl-500.ttf') format('truetype');
+  src: url("../fonts/MUSEOSANSCYRL_500.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Museo Sans Bold';
+  src: url('../fonts/MuseoSansCyrl-700.eot');
+  src: url('../fonts/MuseoSansCyrl-700.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MuseoSansCyrl-700.woff') format('woff'),
+    url('../fonts/MuseoSansCyrl-700.ttf') format('truetype');
+  src: url("../fonts/MUSEOSANSCYRL_700.OTF") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

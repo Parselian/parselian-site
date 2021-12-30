@@ -1,0 +1,93 @@
+.footer {
+  padding: 30px 0;
+  background-color: #000000;
+  &__wrap {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__col {
+    display: flex;
+    align-items: center;
+  }
+  &__nav {
+    &-link {
+      position: relative;
+      margin-right: 40px;
+      color: $alt-text-color;
+      font-size: 16px;
+      font-weight: 300;
+      text-decoration: none;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        left: unset;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 2px;
+        background-color: $accent-color;
+        transition: .3s;
+      }
+      &:hover {
+        &:after {
+          left: 0;
+          right: unset;
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__logo {
+    margin-right: 20px;
+    width: 180px;
+    height: 60px;
+  }
+  &__billing {
+    &s {
+      width: 200px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    width: 90px;
+    height: 26px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    object-fit: contain;
+    &:nth-child(odd) {
+      margin-right: 10px;
+    }
+    &:nth-last-child(-n+2) {
+      margin-top: 10px;
+      padding: 3px;
+    }
+  }
+  &__contacts {
+    flex-direction: column;
+    align-items: center;
+  }
+  &__phone {
+    display: block;
+    font-size: 23px;
+    width: 100%;
+    text-align: right;
+    text-decoration: none;
+    color: $alt-text-color;
+  }
+  &__worktime {
+    margin-top: -5px;
+    font-size: 16px;
+    color: $accent-color;
+  }
+  &__footnote {
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+    color: $alt-text-color;
+    opacity: 0.5;
+  }
+}

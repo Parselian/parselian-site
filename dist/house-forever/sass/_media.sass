@@ -1,0 +1,365 @@
+@media (min-width: 1200px)
+  .container
+    max-width: 1170px
+
+@media (max-width: 1199px)
+  .slider
+    &__slide
+      width: 31.2%
+      min-width: 290px
+  .header
+    &__time
+      margin-right: 100px
+  .main
+    background-position-x: 38%
+    &__features
+      width: 400px
+  .projects
+    background-position-x: 64%
+  .features
+    background-position-x: 75%
+    &__wrap
+      &::before
+        left: -22%
+    &__feature
+      margin-bottom: 60px
+  .contacts
+    &__title
+      font-size: 20px
+
+@media (max-width: 991px)
+  .title
+    font-size: 26px
+  .slider
+    &__slide
+      width: 30.4%
+      min-width: 330px
+  .header
+    &__time
+      text-align: right
+      margin-right: 25px
+      &-icon
+        right: -30px
+    &__contacts
+      &-text
+        display: none
+  .main
+    background-position-x: 28%
+  .portfolio
+    &__card
+      flex: 0 0 47%
+  .projects
+    background-position-x: 72%
+    &-form
+      padding: 50px 80px
+      &__title
+        margin-bottom: 30px
+        font-size: 18px
+      &__input
+        &s
+          flex-wrap: wrap
+          justify-content: center
+        margin-bottom: 20px
+        &:nth-child(2)
+          margin-right: 0
+      &__button
+        flex: 0 0 42%
+  .materials
+    &__card
+      &s
+        flex-wrap: wrap
+        justify-content: center
+      width: 50%
+      &:nth-child(-n+2)
+        margin-bottom: 40px
+      &:nth-child(even)
+        margin-right: 0  
+      &-img
+        margin-bottom: 20px
+      &-title
+        margin-bottom: 20px
+  .features
+    background-position-x: 67%
+    &__wrap
+      &::before
+        left: -30%
+  .video
+    &__mediaplayer
+      margin-right: 70px
+      max-width: 370px
+      &::before
+        width: 130%
+        height: 80%
+    &__text
+      font-size: 14px
+      &-title
+        margin-bottom: 15px
+      &-subtitle
+        margin-bottom: 30px
+      &-info
+        margin-bottom: 15px
+  .team
+    &__card
+      &s
+        justify-content: center
+        flex-wrap: wrap
+      margin-right: 0
+      width: 45%
+      &:first-child
+        margin-right: 30px
+      &:last-child
+        margin-top: 140px
+      &::before
+        width: 133px
+        height: 146px
+        transform: translateX(-67px)
+      &-img
+        width: 94px
+        height: 110px
+  .request
+    .form
+      &__title
+        text-align: center
+      &__subtitle
+        text-align: center
+  .contacts
+    &__block
+      margin-left: 50px
+    &__list
+      &-item
+        margin-bottom: 30px
+
+@media (max-width: 767px)
+  section
+    padding: 60px 0
+  .title
+    margin-bottom: 40px
+    font-size: 22px
+  .subtitle
+    font-size: 16px
+  .slider
+    &__slide
+      width: 47%
+      min-width: 240px
+  .header
+    &__contacts
+      .button
+        &__text
+          display: none
+        &__icon
+          display: block
+  .main
+    background-position-x: 20%
+    &__info
+      flex-direction: column
+      align-items: center
+    &__text
+      text-align: center
+      &-title, &-subtitle, &-text
+        margin-bottom: 30px
+    &-form
+      margin-bottom: 40px
+    &__features
+      width: auto
+  .portfolio
+    &__card
+      flex: 0 0 47%
+      &-title
+        margin-bottom: 25px
+        font-size: 18px
+  .projects
+    background-position-x: 77%
+    &::before
+      height: 60px
+      background-size: contain
+    &__title
+      margin-bottom: 40px
+    &__subtitle
+      margin-bottom: 40px
+      text-align: center
+    &-form
+      &__input
+        padding: 18px 26px
+        margin-right: 0
+        flex: 0 0 80%
+      &__button
+        flex: 0 0 60%
+  .materials
+    &__card
+      width: 47%
+  .features
+    background-position-x: 67%
+    &__wrap
+      &::before
+        width: 440px
+        height: 200px
+        top: -60px
+        left: -60%
+    &__feature
+      margin-bottom: 40px
+      &-title
+        margin-bottom: 20px
+  .video
+    &__columns
+      flex-direction: column
+    &__mediaplayer
+      margin:
+        right: 0
+        bottom: 30px
+      height: 240px
+      &::before
+        width: 140%
+        height: 90%
+  .team
+    &__card
+      &s
+        flex-direction: column
+        align-items: center
+      &:first-child
+        margin:
+          top: 100px
+          right: 0
+      margin-top: 130px
+      width: 100%
+  .faq
+    z-index: 1
+    background-position: 56% 50%
+    &::before
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background-color: rgba(0, 0, 0, 0.5)
+      z-index: -1
+  .contacts
+    height: auto
+    flex-direction: column
+    &__map
+      width: 100%
+      order: 2
+    &__block
+      margin:
+        left: auto
+        right: auto
+      padding: 60px 15px
+      max-width: 540px
+      width: 100%
+      order: 1
+
+
+@media (max-width: 576px)
+  .title
+    font-size: 20px
+  .subtitle
+    font-size: 14px
+  .slider
+    margin: 0 auto 40px auto
+    width: 360px
+    &__slide
+      min-width: 100%
+  .logo
+    &__text
+      display: none
+  .portfolio
+    &__card
+      &s
+        width: 370px
+      max-width: unset
+      flex: 0 0 100%
+  .projects
+    &-form
+      padding: 35px 30px
+      text-align: center
+      &__title
+        font-size: 15px
+      &__subtitle
+        margin-bottom: 40px
+      &__button
+        max-width: 200px
+        flex: 0 0 100%
+  .materials
+    &__card
+      width: 45%
+  .features
+    background-position-x: 67%
+    &__wrap
+      &::before
+        display: none
+    &__feature
+      &-img
+        max-width: 120px
+  .video
+    &__mediaplayer
+      width: 100%
+      height: 100%
+  .faq
+    background-position: 61% 50%
+
+@media (max-width: 460px)
+  .main
+    &__features
+      flex-wrap: wrap
+      justify-content: center
+      align-items: center
+      &-feature
+        text-align: center
+        min-width: 180px
+        margin-bottom: 30px
+        &:last-child
+          margin-bottom: 0
+  .materials
+    &__card
+      &s
+        flex-wrap: nowrap
+        flex-direction: column
+        align-items: center
+      margin:
+        right: 0
+        bottom: 40px
+      width: 100%
+      &:last-child
+        margin-bottom: 0
+  .features
+    background-position-x: 72%
+    &__feature
+      flex-direction: column
+      align-items: center
+      text-align: center
+      &-img
+        margin:
+          right: 0
+          bottom: 20px
+
+@media (max-width: 400px)
+  .portfolio
+    &__cards
+      width: 100%
+  .slider
+    width: 100%
+
+@media (max-width: 380px)
+  .header
+    &__time
+      display: none
+  .main
+    &__text
+      margin-bottom: 60px
+    &-form
+      margin-bottom: 100px
+      height: auto
+      &__bg
+        width: 320px
+        height: 370px
+        transform: translate(-160px, -185px)
+      &__title
+        margin-top: 0px
+        font-size: 14px
+      &__input
+        padding: 10px
+      &__button
+        padding: 14px 26px
+  .portfolio
+    &__menu
+      width: 100%

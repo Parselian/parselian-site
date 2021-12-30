@@ -1,0 +1,58 @@
+.promo {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 70px;
+  background: linear-gradient(130deg, rgba(246,246,246,1) 20%, rgba(255,255,255,0) 100%);
+  overflow-x: hidden;
+  &__bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__wrap {
+    position: relative;
+  }
+  &__title, &__price, &__common, &__form {
+    position: relative;
+    z-index: 1;
+  }
+  &__title {
+    margin-bottom: 40px;
+    max-width: 500px;
+    font-size: 48px;
+    font-weight: 400;
+  }
+  &__price {
+    margin-left: 40px;
+    margin-bottom: 50px;
+    font-size: 32px;
+    font-weight: 600;
+    color: $inactive-color;
+    &-label {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+  &__common {
+    max-width: 570px;
+    &-item {
+      margin-right: 20px;
+      margin-bottom: 15px;
+    }
+  }
+  &__form {
+    margin: auto;
+    display: none;
+    width: fit-content;
+  }
+  &__collage {
+    position: absolute;
+    bottom: -70px;
+    right: -80px;
+    z-index: 0;
+  }
+}

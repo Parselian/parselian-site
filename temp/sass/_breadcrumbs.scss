@@ -1,0 +1,20 @@
+.breadcrumbs {
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $border-color;
+  &__title {
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 400;
+  }
+  &__list {
+    &-item {
+      text-decoration: none;
+      font-weight: 500;
+      color: lighten($main-text-color, 50%);
+      &_current {
+        font-weight: 300;
+      }
+    }
+  }
+}

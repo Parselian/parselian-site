@@ -1,0 +1,138 @@
+.reviews {
+  background-color: $accent-bg-color;
+  &__slide {
+    &r {
+      position: relative;
+      max-width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+      &-arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        width: 40px;
+        height: 40px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        &_prev {
+          left: -30px;
+          transform: translateY(-50%) rotate(180deg);
+        }
+        &_next {
+          right: -30px;
+        }
+      }
+      &-dots {
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li {
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+
+          width: 20px;
+          height: 20px;
+          button {
+            background-color: white;
+            width: 20px;
+            height: 20px;
+            font-size: 0;
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            border-radius: 100px;
+          }
+        }
+        .slick-active {
+          button {
+            background-color: $accent-color;
+          }
+        }
+      }
+    }
+
+    margin: 30px;
+    padding: 35px 35px 40px;
+    //width: 100%;
+    background-color: #FFFFFF;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.15);
+    &-text {
+      position: relative;
+      margin-bottom: 65px;
+      font-size: 18px;
+      &:after {
+        position: absolute;
+        content: '';
+        left: 50%;
+        bottom: -30px;
+        transform: translateX(-50%);
+        width: 95%;
+        height: 1px;
+        background-color: $border-color;
+      }
+    }
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-rating {
+      display: flex;
+      align-items: center;
+      &-title {
+        margin-right: 20px;
+        font-size: 22px;
+      }
+      &-number {
+        position: relative;
+        z-index: 1;
+        color: $alt-text-color;
+        font-size: 28px;
+        &:before {
+          position: absolute;
+          content: '';
+          width: 60px;
+          height: 60px;
+          top: 50%;
+          left: 50%;
+          z-index: -1;
+          background-color: $accent-color;
+          transform: translate(-50%, -50%);
+          -webkit-border-radius: 100px;
+          -moz-border-radius: 100px;
+          border-radius: 100px;
+        }
+      }
+    }
+    &-reviewer {
+      display: flex;
+      align-items: center;
+      &-info {
+        margin-right: 15px;
+      }
+      &-name {
+        text-align: right;
+        font-size: 22px;
+        margin-bottom: -3px;
+      }
+      &-problem {
+        font-size: 16px;
+        font-weight: 300;
+        color: $border-color;
+      }
+      &-img {
+        width: 60px;
+        height: 60px;
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        border-radius: 100px;
+      }
+    }
+  }
+}

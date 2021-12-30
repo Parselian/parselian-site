@@ -1,0 +1,40 @@
+.header
+  padding: 15px 0
+  &__wrap
+    display: flex
+    justify-content: space-between
+  &__info
+    display: flex
+    align-items: center
+  &__time
+    margin-right: 200px
+    position: relative
+    &-icon
+      position: absolute
+      width: 18px
+      height: 18px
+      top: 50%
+      right: -35px
+      transform: translateY(-9px) 
+      fill: url(#icon-gradient)
+  &__contacts
+    display: flex
+    align-items: center
+    &-text
+      font-family: 'Geometria Medium', sans-serif
+      font-size: 12px
+      line-height: 19px
+      letter-spacing: 0.12px
+    &-phone
+      display: block
+      font-family: 'Geometria Bold', sans-serif
+      color: $text-color
+    &-button
+      margin-left: 30px
+      display: block
+  &__text
+    font-size: 12px
+    line-height: 19px
+    letter-spacing: 0.12px
+    &-time
+      display: block

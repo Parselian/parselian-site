@@ -1,0 +1,21 @@
+.prices {
+  position: relative;
+  overflow: hidden;
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 54%;
+    height: 100%;
+    background-color: #f7f7f7;
+    clip-path: polygon(11% 0, 100% 0, 100% 100%, 0% 100%);
+    &-img {
+      position: absolute;
+      right: -10%;
+      width: 700px;
+      bottom: -400px;
+      filter: opacity(0.3);
+    }
+  }
+}

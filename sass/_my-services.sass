@@ -1,0 +1,40 @@
+.my-services
+  padding-bottom: 128px
+  &-title
+    margin-bottom: 100px
+  &-wrap
+    display: flex
+  .service-card
+    margin: auto
+    margin-right: 20px
+    position: relative
+    display: inline-block
+    width: 242px
+    text-align: center
+    &:last-child
+      margin-right: 0
+    &__bg
+      content: ''
+      position: absolute
+      width: 250px
+      height: 270px
+      top: 50%
+      left: 50%
+      transform: translate(-125px, -135px)
+      background-color: rgba(86, 86, 86, 0.15)
+      border-radius: 10px
+    &__img
+      margin: auto
+      margin-bottom: 14px
+      width: 60px
+      height: 60px
+      img
+        width: inherit
+        height: inherit
+    &__title
+      margin-bottom: 10px
+      text-align: center
+      color: $accent-color
+    &__text
+      font-size: 15px
+      color: $text-color

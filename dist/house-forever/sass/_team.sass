@@ -1,0 +1,59 @@
+.team
+  background-color: $bg-color
+  &__title
+    margin-bottom: 135px
+  &__card
+    &s
+      display: flex
+      justify-content: space-between
+    margin-right: 30px
+    position: relative
+    max-width: 370px
+    width: 33%
+    text-align: center
+    font-size: 14px
+    font-weight: 400
+    &-img
+      margin: 
+        left: auto
+        right: auto
+      position: relative
+      width: 114px
+      height: 130px
+      z-index: 1
+    &::before
+      position: absolute
+      content: ''
+      width: 153px
+      height: 166px
+      left: 50%
+      top: -99px
+      transform: translateX(-77px)
+      background: url('../img/team/hexagon.svg') center no-repeat
+      background-size: cover !important
+    &-title
+      margin:
+        top: 50px
+        bottom: 10px
+      font-size: 18px
+      font-weight: 700
+    &-subtitle
+      margin-bottom: 35px
+    &-info
+      position: relative
+      padding: 30px
+      background-color: $alt-text-color
+      border-radius: 10px
+      &::before
+        position: absolute
+        content: ''
+        width: 25px
+        height: 25px
+        top: 0
+        left: 50%
+        background-color: $alt-text-color
+        transform: rotate(45deg) translateX(-50%)
+      .line-break
+        margin-bottom: 15px
+        &:last-child
+          margin-bottom: 0

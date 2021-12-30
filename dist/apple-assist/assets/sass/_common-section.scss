@@ -1,0 +1,142 @@
+.common {
+  position: relative;
+  margin-bottom: 120px;
+  padding-top: 120px;
+  padding-bottom: 100px;
+  overflow: hidden;
+  &__bg {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $alt-bg-color;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+  }
+  &__wrap {
+    display: flex;
+  }
+  &__filter {
+    width: 45%;
+    margin-right: 60px;
+  }
+  &__info {
+    margin-top: 115px;
+    width: 55%;
+    &-text {
+      position: relative;
+      font-size: 16px;
+      margin-bottom: 60px;
+      &:after {
+        position: absolute;
+        content: '';
+        bottom: -25px;
+        left: 0;
+        width: 80px;
+        height: 2px;
+        background-color: $alt-text-color;
+      }
+    }
+    &-row {
+      display: flex;
+      align-items: flex-end;
+    }
+    &-price {
+      position: relative;
+      margin-right: 35px;
+      font-size: 22px;
+      color: $inactive-text-color;
+      text-shadow: 0 0 6px white;
+      &:before {
+        position: absolute;
+        content: 'Цена:';
+        top: -15px;
+        left: 0;
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+    &-button {
+      margin-bottom: 5px;
+      padding: 6px 20px;
+      font-size: 18px;
+    }
+  }
+  &__block {
+    &s {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    padding: 16px 20px 16px 15px;
+    width: 49%;
+    display: flex;
+    align-items: center;
+    border: 2px solid $accent-color;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+    &:hover, &_active {
+      background-color: $accent-color;
+      color: $alt-text-color;
+    }
+    &:not(:nth-child(2n)) {
+      margin-right: 2%;
+    }
+    &:not(:nth-last-child(-n+2)) {
+      margin-bottom: 20px;
+    }
+    &-icon {
+      margin-right: 10px;
+      width: 25px;
+      height: 25px;
+      min-width: 25px;
+      min-height: 25px;
+    }
+    &-text {
+      font-size: 14px;
+      font-weight: 300;
+    }
+    &-title {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+  &__select {
+    width: 100%;
+    padding: 10px 10px;
+    background: transparent;
+    border: 2px solid $accent-color;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    appearance: none;
+    &-wrap {
+      position: relative;
+      display: none;
+    }
+    &-arrow {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      z-index: -1;
+      width: 10px;
+      height: 10px;
+      fill: $inactive-text-color;
+      transform: translateY(-50%) rotate(-90deg);
+    }
+  }
+  &__img {
+    position: absolute;
+    width: 380px;
+    bottom: -60%;
+    right: 10%;
+    z-index: -1;
+    filter: grayscale(1);
+    opacity: .1;
+  }
+}

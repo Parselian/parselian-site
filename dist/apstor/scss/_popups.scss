@@ -1,0 +1,179 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // width: 100vw;
+  // height: 100vh;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  z-index: 9999999999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  &:before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+  }
+  &_open {
+    display: flex;
+  }
+  &__wrap {
+    height: 100%;
+  }
+  &__form {
+    position: relative;
+    top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    max-width: 680px;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    border-radius: 26px;
+    box-shadow: $common-shadow;
+    overflow: hidden;
+    &-title {
+      margin-bottom: 10px;
+      font-size: 32px;
+      font-weight: 600;
+      text-align: center;
+    }
+    &-subtitle {
+      margin-bottom: 50px;
+      font-family: 'SF UI Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      text-align: center;
+    }
+    &-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 18px;
+      font-weight: 600;
+      color: $attention-color;
+      cursor: pointer;
+    }
+    &-gift {
+      &s {
+        margin-top: 40px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      position: relative;
+      padding: 15px 10px 0 10px;
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      box-shadow: $common-shadow;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: .4s;
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+      &_active {
+        border-color: $attention-color;
+        box-shadow: $attention-shadow;
+      }
+      &-input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+      }
+      &-name {
+        font-size: 18px;
+      }
+      &-img {
+        position: absolute;
+        width: 100px;
+        bottom: 0;
+        right: 0;
+        &:nth-child(2), &:nth-child(3) {
+          top: 50%;
+          right: 10%;
+        }
+      }
+    }
+    &-col {
+      display: inline-block;
+      width: 49%;
+      vertical-align: top;
+    }
+    &-label {
+      margin-bottom: 3px;
+      font-family: 'SF UI Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    &-input {
+      padding: 7px 10px;
+      display: block;
+      width: 250px;
+      font-size: 16px;
+      border: 2px solid $border-color;
+      border-radius: 5px;
+      &-wrap {
+        margin-bottom: 10px;
+        &_gift {
+          margin-left: 45px;
+          margin-right: 15px;
+          display: inline-block;
+        }
+      }
+    }
+    &-button {
+      margin-top: 10px;
+      padding: 10px 40px;
+    }
+    &-phone {
+      text-decoration: none;
+      color: $attention-color;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    &-img {
+      position: absolute;
+      bottom: -240px;
+      right: 40px;
+      width: 310px;
+    }
+    &-footnote {
+      margin-top: 5px;
+      font-size: 12px;
+      a {
+        color: $attention-color;
+        text-decoration: underline;
+      }
+    }
+  }
+  &-thanks {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__button {
+      margin-right: 0;
+      padding: 15px 40px;
+      font-size: 22px;
+    }
+  }
+}

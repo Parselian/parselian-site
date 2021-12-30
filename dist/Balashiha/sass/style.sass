@@ -1,0 +1,123 @@
+@import 'variables'
+
+*
+  box-sizing: border-box
+
+html
+  width: 100%
+  overflow-x: hidden
+
+body
+  margin: 0
+  max-width: 100% 
+  overflow-x: hidden
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none 
+  user-select: none
+a
+  text-decoration: none
+  color: #000
+  &:hover
+    color: $darker-color !important
+
+input, button
+  outline: none
+  border: none
+
+form
+  display: flex
+  flex-direction: column
+  .section
+    &-form
+      &__input
+        margin-bottom: 6px
+        padding-top: 15px
+        padding-bottom: 13px
+        padding-left: 15px
+        font-family: 'Roboto', sans-serif
+        font-size: 14px
+        border: none
+        border-radius: 3px
+        &_name
+          background: #fff url(../img/main/main-form__name.png) 95% 53% no-repeat
+        &_email
+          background: #fff url(../img/main/main-form__email.png) 95% 53% no-repeat
+        &_phone
+          background: #fff url(../img/main/main-form__phone.png) 95% 53% no-repeat
+      &__button
+        padding: 18px 60px
+        font-family: 'Roboto', sans-serif
+        font-size: 18px
+        color: #ffffff
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.09)
+        background-image: linear-gradient(to top, #03c9a9 0%, #13efcb 100%)
+        border: none
+        border-radius: 5px
+        text-transform: uppercase
+        &:active
+          cursor: pointer
+          background-image: linear-gradient(to top, #03c9a9 0%, #21D2B5 100%)
+.wrap
+  margin-left: auto
+  margin-right: auto
+
+.section
+  &-title
+    position: relative
+    text-align: center
+    font-family: "Roboto Condensed"
+    font-size: 32px
+    font-weight: 400
+    color: #1b1b1b
+    text-transform: uppercase
+    &:after
+      content: ''
+      position: absolute
+      display: block
+      width: 38px
+      height: 20px
+      top: 40px
+      left: 50%
+      transform: translateX(-50%)
+      background-image: url(../img/general-features/tail.png)
+.slider
+  &-arrow
+    position: absolute
+    width: 7px
+    height: 13px
+    bottom: 8.7%
+    &:hover
+      cursor: pointer
+    &_left
+      left: 41.6%
+      background-image: url(../img/slider/arrow-left.png)
+      background-size: contain
+      background-repeat: no-repeat
+      z-index: 1
+    &_right
+      right: 41.6%
+      background-image: url(../img/slider/arrow-right.png)
+      background-size: contain
+      background-repeat: no-repeat
+      z-index: 1
+
+.slick-dots
+  background-color: rgba(0, 0, 0, 0.7)
+  border-radius: 5px
+
+@import 'header'
+@import 'main'
+@import 'our-factory'
+@import 'general-features'
+@import 'features'
+@import 'goods'
+@import 'about-us'
+@import 'personal-proposal'
+@import 'photogallery'
+@import 'yandex-maps'
+@import 'footer'
+@import 'modal'
+@import 'media'

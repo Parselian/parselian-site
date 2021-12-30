@@ -1,0 +1,62 @@
+.contacts
+  padding: 0
+  height: 550px
+  display: flex
+  align-items: center
+  background-color: $bg-color
+  &__map
+    // max-width: 975px
+    width: 60%
+    min-height: 550px
+    height: inherit
+    background: url('../img/map.jpg') center no-repeat
+    background-size: cover
+  &__block
+    margin-left: 100px
+    padding: 
+      top: 100px 
+      right: 40px
+      bottom: 100px
+    // max-width: 406px
+    width: 40%
+  &__title
+    margin-bottom: 40px
+    font-size: 22px
+    font-weight: 700
+  &__subtitle
+    margin-bottom: 50px
+    font-size: 16px
+  &__list
+    list-style: none
+    &-item
+      padding-left: 50px
+      margin-bottom: 40px
+      position: relative
+      font-size: 14px
+      &::before
+        position: absolute
+        content: ''
+        left: 0
+      &_address
+        &::before
+          width: 15px
+          height: 20px
+          background: url('../img/svg/placeholder.svg') center no-repeat
+          background-size: contain
+      &_phone
+        &::before
+          width: 15px
+          height: 15px
+          background: url('../img/svg/phone.svg') center no-repeat
+          background-size: contain
+      &_worktime
+        &::before
+          width: 15px
+          height: 15px
+          background: url('../img/svg/clock.svg') center no-repeat
+          background-size: cover
+      &:last-child
+        margin-bottom: 0
+    &-phone
+      font-weight: 700
+      color: $text-color

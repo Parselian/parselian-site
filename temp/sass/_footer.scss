@@ -1,0 +1,91 @@
+.footer {
+  padding-top: 30px;
+  background-color: $footer-bg-color;
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__menu {
+    padding-bottom: 40px;
+  }
+  &__col {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+    &-title {
+      margin-bottom: 10px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        transform: translate(-50%, -50%) rotate(90deg);
+        fill: $alt-text-color;
+        transition: .3s;
+        &_active {
+          fill: $main-text-color;
+          transform: translate(-50%, -50%) rotate(-90deg);
+        }
+        &-wrap {
+          margin-right: 15px;
+          display: none;
+          width: fit-content;
+          position: relative;
+          &:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            transform: translate(-50%, -50%);
+            background-color: transparent;
+            transition: .2s;
+          }
+          &_active {
+            &:before {
+              background-color: rgba(255, 255, 255, 0.2);
+            }
+          }
+        }
+      }
+    }
+  }
+  &__list {
+    font-weight: 300;
+    &-item {
+      margin-bottom: 5px;
+    }
+  }
+  &__link {
+    color: $main-text-color;
+  }
+
+  &__misc {
+    padding: 15px 0;
+    background-color: $footer-alt-bg-color;
+    .container {
+      align-items: center;
+    }
+  }
+  &__copyright {
+    font-weight: 300;
+    color: $alt-text-color;
+  }
+  &__billing {
+    &s {
+      display: flex;
+    }
+
+    width: 40px;
+    height: 40px;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

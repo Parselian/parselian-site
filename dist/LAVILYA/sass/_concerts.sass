@@ -1,0 +1,30 @@
+.concerts
+  padding:
+    top: 200px
+    bottom: 200px
+  &-wrap
+    padding: 10px 0
+    width: 990px
+    border-radius: 30px
+    box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.1)
+  &-concert
+    padding: 30px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3)
+    &_miss
+      justify-content: center
+    &:last-child
+      border-bottom: none
+    &-info
+      text-transform: uppercase
+    &__date
+      font-size: 14px
+      opacity: 0.7
+    &__place
+      font-size: 24px
+      text-align: center
+      &_bold
+        font-size: 30px
+        font-weight: 700

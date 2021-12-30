@@ -1,0 +1,19 @@
+.privacy {
+  &__title {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+  &__text, &__list {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  &__text {
+    margin-bottom: 15px;
+  }
+  &__list {
+    padding-left: 15px !important;
+    margin-bottom: 40px !important;
+    list-style: decimal !important;
+  }
+}

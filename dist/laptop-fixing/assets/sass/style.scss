@@ -1,0 +1,116 @@
+@import "variables";
+
+body {
+  color: $main-text-color;
+  font-family: 'SF UI Display', sans-serif, -apple-system;
+}
+
+section {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.section {
+  &__title {
+    position: relative;
+    text-align: center;
+    margin-bottom: 48px;
+    font-size: 36px;
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: -24px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+      height: 10px;
+      background: url('../images/svg/tail_dark.svg') center no-repeat;
+      background-size: cover;
+    }
+    &_alt {
+      &:after {
+        background: url('../images/svg/tail_light.svg') center no-repeat;
+      }
+      color: $alt-text-color;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.button {
+  padding: 9px 24px;
+  border: 2px solid transparent;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  transition: .2s;
+  &_callback {
+    color: $alt-text-color;
+    background-color: $accent-color;
+    &:hover {
+      color: $accent-color;
+      background-color: transparent;
+      border-color: $accent-color
+    }
+  }
+  &_accent {
+    background-color: $interaction-color;
+    color: $alt-text-color;
+    &:hover {
+      background-color: transparent;
+      color: $interaction-color;
+      border-color: $interaction-color;
+    }
+    &-transparent {
+      padding: 8px 25px;
+      color: $interaction-color;
+      background-color: transparent;
+      border: 2px solid $interaction-color;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      &:hover {
+        background-color: $interaction-color;
+        color: $alt-text-color;
+      }
+    }
+  }
+}
+
+.line-break {
+  display: block;
+}
+
+.text {
+  &_accent {
+    color: $accent-color;
+  }
+}
+
+@import "burger";
+@import "header";
+@import "promo";
+@import "features";
+@import "prices";
+@import "delivery-form";
+@import "advantages";
+@import "reviews";
+@import "steps";
+@import "team";
+@import "misc";
+@import "faq";
+@import "gallery";
+@import "questions";
+@import "contacts";
+@import "footer";
+@import "popups";
+@import "media";

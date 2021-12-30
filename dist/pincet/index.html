@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Студия депиляции | Pincet</title>
+</head>
+<body>
+
+  <div class="burger">
+    <svg class="burger__button">
+      <use xlink:href="./sprites/sprite.svg#burger-arrow"></use>
+    </svg>
+    <ul class="burger__menu">
+      <li class="burger__menu-item">Главная</li>
+      <!-- /.burger__menu-item -->
+      <li class="burger__menu-item">Шугаринг и депиляция воском</li>
+      <!-- /.burger__menu-item -->
+      <li class="burger__menu-item">Антицеллюлитный массаж</li>
+      <!-- /.burger__menu-item -->
+      <li class="burger__menu-item">Классический массаж</li>
+      <!-- /.burger__menu-item -->
+      <li class="burger__menu-item">Обучение</li>
+      <!-- /.burger__menu-item -->
+      <li class="burger__menu-item">Косметика для мастеров</li>
+      <!-- /.burger__menu-item -->
+      <li class="burger__menu-item">Статьи</li>
+      <!-- /.burger__menu-item -->
+      <li class="burger__menu-item">О студии</li>
+      <!-- /.burger__menu-item -->
+      <li class="burger__menu-item">Контакты</li>
+      <!-- /.burger__menu-item -->
+    </ul>
+    <!-- /.meurger__menu -->
+
+    <button type="submit" class="request__button header__contacts-button burger__request-button">
+      <svg class="button-icon">
+        <use xlink:href="./sprites/sprite.svg#calendar"></use>
+      </svg>
+      Записаться онлайн
+    </button>
+    <!-- /.header__contacts-button -->
+  </div>
+  <!-- /.burger -->
+  <section class="promo">
+    <header class="header">
+      <div class="header__wrap container container_big">
+        <div class="header__logo">
+          <img src="./img/logo.png" alt="логотип" class="header__logo-img">
+          <img src="./img/logo-mobile.png" alt="логотип" class="header__logo-img_mobile">
+          <div class="header__logo-text">
+            Студия депиляции и
+            <span class="line_break">массажный кабинет</span>
+            в Бресте
+          </div>
+          <!-- /.header__logo-text -->
+        </div>
+        <!-- /.header__logo -->
+
+        <div class="header__contacts">
+          <div class="header__location header__contacts-col">
+            <img src="./img/icon-map.png" alt="карта" class="header__location-icon">
+            <div class="header__contacts-info">
+              <div class="header__contacts-text">
+                <span class="line_break text_bold">Мы находимся в центре:</span>
+                г. Брест, ул. Гоголя, д.65
+              </div>
+              <!-- /.header__contacts-text -->
+              <div class="header__location-link">
+                смотреть на карте
+                
+                <div id="map" class="header__location-map"></div>
+                <!-- /.header__location-map -->
+              </div>
+              <!-- /.header__location-link -->
+            </div>
+            <!-- /.header__contacts-info -->
+          </div>
+          <!-- /.header__location.header__contacts-col -->
+
+          <div class="header__contacts-col">
+            <div class="header__phone">
+              <svg class="header__contacts-icon">
+                <use xlink:href="./sprites/sprite.svg#phone"></use>
+              </svg>
+              <div class="header__contacts-info">
+                <div class="header__phone-text header__contacts-text">
+                  Звоните, мы сейчас работаем
+                </div>
+                <!-- /.header__contacts-text -->
+                <a href="tel:+375333822499" class="header__phone-link">
+                  +375 33 382 24 99
+                </a>
+                <!-- /.header__phone-link -->
+              </div>
+              <!-- /.header__contacts-info -->
+            </div>
+            <!-- /.header__phone -->
+            <div class="header__worktime header__contacts-info">
+              <svg class="header__contacts-icon">
+                <use xlink:href="./sprites/sprite.svg#clock"></use>
+              </svg>
+              <div class="header__contacts-text">
+                Пн-Вс <span class="text_bold">9:00-21:00</span> 
+              </div>
+              <!-- /.header__contacts-text -->
+            </div>
+            <!-- /.header__worktime .header__contacts-info -->
+          </div>
+          <!-- /.header__contacts-col -->
+
+          <button type="submit" class="request__button header__contacts-button">
+            <svg class="button-icon">
+              <use xlink:href="./sprites/sprite.svg#calendar"></use>
+            </svg>
+            Записаться онлайн
+          </button> 
+          <!-- /.header__contacts-button -->
+        </div>
+        <!-- /.header__contacts -->
+      </div>
+      <!-- /.container container_big -->
+
+      <nav class="header__menu container container_big">
+        <a href="#" class="header__menu-item header__menu-item_active">
+          Главная
+        </a>
+        <!-- /.header__menu-item -->
+        <a href="#" class="header__menu-item">
+          Шугаринг и депиляция воском
+        </a>
+        <!-- /.header__menu-item -->
+        <a href="#" class="header__menu-item">
+          Антицеллюлитный массаж
+        </a>
+        <!-- /.header__menu-item -->
+        <a href="#" class="header__menu-item">
+          Классический массаж
+        </a>
+        <!-- /.header__menu-item -->
+        <a href="#" class="header__menu-item">
+          Обучение
+        </a>
+        <!-- /.header__menu-item -->
+        <a href="#" class="header__menu-item">
+          Косметика для мастеров
+        </a>
+        <!-- /.header__menu-item -->
+        <a href="#" class="header__menu-item">
+          Статьи
+        </a>
+        <!-- /.header__menu-item -->
+        <a href="#" class="header__menu-item">
+          О студии
+        </a>
+        <!-- /.header__menu-item -->
+        <a href="#" class="header__menu-item">
+          Контакты
+        </a>
+        <!-- /.header__menu-item -->
+      </nav>
+      <!-- /.header__menu container -->
+    </header>
+    <!-- /.header -->
+
+    <div class="promo__scene  promo__scene_left" data-relative-input="false">
+      <div data-depth="1.7">
+        <img src="./img/parallax-left.png" alt="клякса">
+        <!-- /.promo__scene promo__scene_left -->
+      </div>
+    </div>
+
+    <div class="promo__scene promo__scene_right" data-relative-input="false">
+      <div data-depth="1.7">
+        <img src="./img/parallax-right.png" alt="клякса">
+        <!-- /.promo__scene promo__scene_left -->
+      </div>
+    </div>
+
+    <div class="promo__wrap container container_def">
+      <h1 class="promo__title">
+        <span class="line_break">Хотите избавиться от</span>
+        <span class="text_bold">нежелательных волос</span>
+        <span class="line_break">или нужен сеанс</span>
+        <span class="text_bold">антицеллюлитного массажа?</span>
+      </h1>
+      <!-- /.promo__title -->
+      <ul class="promo__list">
+        <li class="promo__list-item">Депиляция воском и шугаринг;</li>
+        <!-- /.promo__list-item -->
+        <li class="promo__list-item">
+          Профессиональные сертифицированные мастера;
+        </li>
+        <!-- /.promo__list-item -->
+        <li class="promo__list-item">работаем и с женщинами и с мужчинами;</li>
+        <!-- /.promo__list-item -->
+        <li class="promo__list-item">Результат уже после первой процедуры.</li>
+        <!-- /.promo__list-item -->
+      </ul>
+      <!-- /.promo__list -->
+      <button class="request__button promo__button">
+        <div class="promo__button-content">
+          <span class="line_break">Получить карту</span> 
+          клиента бесплатно
+        </div>
+      </button>
+      <!-- /.promo__button -->
+      
+      <div class="promo__card">
+        <img src="./img/client-card.png" alt="карта клиента" class="promo__card-img">
+
+        <div class="promo__card-btn">
+        </div>
+        <!-- /.promo__card-btn -->
+        <div class="promo__card-text">
+          <div class="promo__card-mask"></div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+        </div>
+        <!-- /.promo__card-info -->
+      </div>
+      <!-- /.promo__card -->
+    </div>
+    <!-- /.promo__wrap container container_def -->
+
+    <div class="promo__scroll">
+      <svg class="promo__scroll-btn">
+        <use xlink:href="./sprites/sprite.svg#arrow"></use>
+      </svg>
+    </div>
+
+    <div class="promo__edging"></div>
+  </section>
+  <!-- /.promo -->
+
+  <div class="popup popup-request">
+    <div class="popup-block">
+      <h2 class="popup-block__title">
+        <span class="text_bold">Получите</span> 
+        программу обучения
+      </h2>
+      <!-- /.popup-form__title -->
+      <div class="popup-block__subtitle">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+      </div>
+      <!-- /.popup-form__subtitle -->
+      <div class="popup-block__close">&times;</div>
+      <!-- /.popup__close -->
+      <form class="popup-form">
+        <input name="name" type="text" class="popup-form__input" placeholder="Повышение квалификации" required>
+        <input name="name" type="text" class="popup-form__input" placeholder="Ваше имя" required>
+        <input name="phone" type="text" class="popup-form__input" placeholder="Ваш телефон" required>
+
+        <button type="submit" class="promo__button popup__button popup-form__button">
+          <div class="promo__button-content popup-form__button-content">
+              Получить программу
+          </div> 
+        </button>
+        <!-- /.popup-form__button -->
+      </form>
+    </div>
+    <!-- /.popup-form -->
+  </div>
+  <!-- /.popup popup-program -->
+
+  <div class="popup popup-thanks">
+    <div class="popup-block popup-thanks__block">
+      <div class="popup-block__close">&times;</div>
+      <!-- /.popup-block__close -->
+      <div class="popup-block__img"></div>
+      <h2 class="popup-block__title">Ваш заказ принят.</h2>
+      <!-- /.popup-block__title -->
+      <div class="popup-block__subtitle">Ожидайте звонка</div>
+      <!-- /.popup-block__subtile -->
+    </div>
+    <!-- /.popup-block -->
+  </div>
+  <!-- /.popup popup-thanks -->
+
+  <script>
+    setTimeout(() => {
+      let elem = document.createElement('script');
+      elem.src = 'https://api-maps.yandex.ru/2.1/?apikey=22ecd435-25c5-4482-abf3-fd1a0dade7be&lang=ru_RU&onload=getYaMap';
+      document.getElementsByTagName('body')[0].appendChild(elem);
+    }, 2000);
+
+    function getYaMap() {
+      let myMap = new ymaps.Map("map", {
+      // Координаты центра карты.
+      // Порядок по умолчанию: «широта, долгота».
+      center: [55.684183, 37.412783],
+      // Уровень масштабирования. Допустимые значения:
+      // от 0 (весь мир) до 19.
+      zoom: 15
+      });
+
+      let mapPlacemark = new ymaps.GeoObject({
+      geometry: {
+      type: 'Point',
+      coordinates: [55.684183, 37.412783]
+      }
+      });
+
+      myMap.geoObjects.add(mapPlacemark);
+      myMap.controls.remove('geolocationControl');
+      myMap.controls.remove('searchControl');
+      myMap.controls.remove('trafficControl');
+      myMap.controls.remove('typeSelector');
+      myMap.controls.remove('fullscreenControl');
+      myMap.controls.remove('zoomControl');
+      myMap.controls.remove('routeButtonControl');
+      myMap.controls.remove('rulerControl');
+
+      myMap.behaviors.disable(['drag']);
+    }
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+.tile {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  &_big {
+    width: 100%;
+    height: 400px;
+    .tile {
+      &__title {
+        padding: 100px 50px 20px 50px
+      }
+    }
+  }
+  &_medium {
+    width: 50%;
+    height: 300px;
+    .tile {
+      &__title {
+        position: relative;
+        top: calc(100% - 30px);
+        display: block;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 600;
+        color: $alt-text-color;
+      }
+    }
+  }
+  &_small {
+    padding: 15px;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    filter: hue-rotate(0);
+    transition: .3s, 0s border, 0s padding;
+    background: rgb(115,115,115);
+    background: linear-gradient(300deg, rgba(115,115,115,1) 0%, rgba(222,222,222,1) 100%);
+    &-active {
+      padding: 13px;
+      background: #ffffff;
+      border: 2px solid $inactive-color;
+    }
+    &:hover {
+      filter: hue-rotate(30deg);
+    }
+  }
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    filter: brightness(0.6);
+  }
+  &__title {
+    z-index: 1;
+    text-align: center;
+  }
+  &__icon {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    display: block;
+    width: 100%;
+    max-width: 80px;
+    max-height: 50px;
+  }
+  &__text {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    color: $main-text-color;
+  }
+}

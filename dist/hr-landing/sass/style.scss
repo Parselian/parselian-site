@@ -1,0 +1,129 @@
+@import 'variables';
+
+body {
+  font-family: "Roboto", sans-serif, -apple-system;
+}
+
+section {
+  padding-bottom: 150px;
+}
+
+.section {
+  &__title {
+    position: relative;
+    margin-bottom: 70px;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    &:after {
+      position: absolute;
+      content: '';
+      left: 50%;
+      bottom: -10px;
+      width: 40px;
+      height: 2px;
+      transform: translateX(-50%);
+      background-color: $accent-color;
+    }
+
+    &_alt {
+      margin-bottom: 20px;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 70px;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+.line-break {
+  display: block;
+}
+
+.text {
+  &_bold {
+    font-weight: 700;
+    color: $inactive-color;
+  }
+}
+
+.logo {
+  width: 200px;
+  height: 50px;
+  &_mobile {
+    width: 60px;
+    height: 60px;
+    display: none;
+  }
+}
+
+.slider {
+  &-arrow {
+    position: absolute;
+    bottom: -20px;
+    width: 30px;
+    height: 15px;
+    transition: .2s;
+    fill: $inactive-color;
+    cursor: pointer;
+    &:hover, &:focus {
+      fill: $accent-color;
+    }
+
+    &_prev {
+      left: calc(50% - 55px);
+      transform: rotate(-180deg) translateX(-50%);
+    }
+
+    &_next {
+      left: calc(50% + 15px);
+    }
+  }
+}
+
+.button {
+  padding: 12px 15px;
+  font-size: 18px;
+  font-weight: 500;
+  color: $main-text-color;
+  background-color: $alt-text-color;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: .3s;
+  &:hover {
+    color: $alt-text-color;
+    background-color: $accent-color;
+    border-color: $alt-text-color;
+  }
+  &_alt {
+    background-color: $accent-color;
+    color: $alt-text-color;
+    &:hover {
+      color: $accent-color;
+      background-color: $alt-text-color;
+      border-color: $accent-color;
+    }
+  }
+}
+
+
+@import 'burger';
+@import 'header';
+@import 'promo';
+@import 'about';
+@import 'advantages';
+@import 'vacancy-info';
+@import 'vacancies';
+@import 'employees';
+@import 'team';
+@import 'steps';
+@import 'contacts';
+@import 'footer';
+@import 'popup';
+@import 'media';
+
+

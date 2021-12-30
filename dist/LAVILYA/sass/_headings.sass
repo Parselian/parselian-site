@@ -1,0 +1,62 @@
+.heading
+  padding-top: 40px
+  position: relative
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &_light
+    color: $header-color
+  &__logo
+    font-family: 'Arial', sans-serif
+    font-size: 36px
+    font-weight: 900
+    color: $header-color
+    cursor: pointer
+    transition: color .2s
+    &:hover
+      color: $header-darken-color
+    &_dark
+      color: $alt-text-color
+      &:hover
+        color: $alt-text-lighten-color
+  &-menu
+    display: flex
+    font-size: 18px
+    font-weight: 400
+    list-style: none
+    &__item
+      margin-right: 52px
+      position: relative
+      cursor: pointer
+      &_dark
+        a
+          color: $alt-text-color !important
+      &:before
+        position: absolute
+        content: ''
+        width: 100%
+        height: 2px
+        top: 100%
+        background-color: $active-color
+        transform: rotateY(90deg)
+        transition: transform .4s
+      &:hover
+        &:before
+          transform: rotateY(0)
+      &:last-child
+        margin-right: 0
+      a
+        color: $header-color
+  &__phone
+    color: $header-color
+    transition: color .2s
+    &:hover
+      color: $header-darken-color
+  &__sign
+    text-transform: uppercase
+    font-size: 14px
+    font-weight: 700
+    color: $alt-text-color
+    transition: .2s
+    &:hover
+      color: $alt-text-lighten-color

@@ -1,0 +1,36 @@
+.popup
+  padding: 0
+  position: relative
+  overflow: hidden
+  opacity: 0
+  z-index: -999999
+  transition: .3s
+  will-change: opacity, z-index
+  &:before
+    position: fixed
+    content: ''
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background-color: rgba(0,0,0,0.5)
+  &_show
+    z-index: 999999
+    opacity: 1
+  &__block
+    padding: 30px 40px
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background-color: $alt-text-color
+    border-radius: 10px
+    z-index: 1
+  &__title
+    margin-bottom: 15px
+  &__subtitle
+    font-size: 16px
+    margin-bottom: 30px
+  &__button
+    margin: 0 auto
+    display: block

@@ -1,0 +1,41 @@
+.projects
+  position: relative
+  background: url(../img/projects/bg.jpg) center no-repeat
+  background-size: cover
+  background-position-x: 53%
+  &::before 
+    content: ''
+    position: absolute
+    width: 470px
+    height: 80px
+    left: 50%
+    top: 0
+    transform: translateX(-235px)
+    background: url(../img/projects/title-decor.png) center no-repeat
+    background-size: cover
+  &__subtitle
+    margin-bottom: 60px
+  &-slider
+    margin-bottom: 60px
+  &-form
+    padding: 70px 100px
+    width: 100%
+    background-color: $alt-text-color
+    border-radius: 5px
+    &__title
+      margin-bottom: 40px
+      font-size: 22px
+    &__subtitle
+      margin-bottom: 47px
+      font-size: 16px
+    &__input
+      &s
+        display: flex
+        max-width: 870px
+      margin-right: 17px
+      padding: 25px 26px
+      flex: 0 0 32%
+      border-radius: 10px
+    &__button
+      flex: 0 0 32%
+      border-radius: 10px

@@ -1,0 +1,631 @@
+@media (min-width: 992px)
+  .button
+    &:hover
+      cursor: pointer
+      background-color: lighten($active-color, 10%)
+    &:active
+      cursor: pointer
+      background-color: darken($active-color, 15%)
+  a
+    &:hover
+      color: lighten($text-color-grey, 30%)
+      text-decoration: none
+  .header
+    &-title
+      &__burger
+        display: none
+  .main
+    &-arrow
+      display: block
+      position: absolute
+      bottom: -39%
+      left: 49.3%
+      width: 21px
+      height: 12px
+      &:hover
+        cursor: pointer
+@media (max-width: 991px)
+  .main
+    &-arrow
+      display: none
+@media (min-width: 992px) and (max-width: 1199px)
+  .header
+    .container
+      padding: 0 30px
+    &-title
+      &__img
+        margin-right: 25px
+        img
+          width: 90%
+      &__text
+        font-size: 16px
+  .main
+    position: relative
+    &-text
+      &__title
+        font-size: 41px
+      &__descr
+        font-size: 17px
+  .aboutUs
+    .container
+      flex-direction: column
+    &-descr
+      margin-right: 0
+      margin-bottom: 30px
+      text-align: justify
+      text-align-last: center
+  .feedback
+    .container
+      &:before
+        width: 90%  
+  .service
+    .container
+    &-block
+      width: 33%
+      &__img
+        img
+          width: 100%
+  .contacts
+    .container
+      align-items: center
+    &-map
+      width: 528px
+      height: 350px
+    &-block
+      padding-top: 0
+@media (min-width: 768px) and (max-width: 991px)
+  .header
+    padding-bottom: 65px
+    .container
+      justify-content: space-around
+    &-title
+      &__img
+        img
+          width: 90%
+      &__text
+        display: none
+  .main
+    margin-top: 55px
+    .container
+      flex-direction: column
+      justify-content: center
+    &-text
+      margin: 0
+      margin-bottom: 40px
+      width: 70%
+      text-align: justify
+      text-align-last: center
+      order: 1
+      &__descr
+        font-size: 18px
+    &-form
+      order: 2
+  .aboutUs
+    .container
+      flex-direction: column
+    &-descr
+      margin-right: 0
+      margin-bottom: 30px
+      text-align: justify
+      text-align-last: center
+  .study
+    .container
+      flex-direction: column
+      align-items: center
+    &-block
+      margin-right: 0
+      width: 360px
+    &-subtext
+      width: 90%
+  .feedback
+    .container
+      &:before
+        display: none
+  .service
+    .container
+      flex-direction: column
+      align-items: center
+    &-block
+      margin-right: 0
+      margin-bottom: 30px
+      width: 360px
+      &__img
+        img
+          width: 100%
+  .contacts
+    .container
+      align-items: center
+      flex-direction: column
+      justify-content: center
+    &-map
+      margin-right: 0
+      width: 528px
+      height: 350px
+      order: 2
+    &-block
+      text-align: center
+      padding-top: 0
+      order: 1
+      &__address
+        &_text
+          padding-left: 23px
+          &:before
+            left: 8px
+          &:after
+            left: 18px
+      &__phone
+        &_text
+          padding-left: 0
+          &:before
+            left: 33px
+          &:after
+            left: 42px
+      &__button
+        margin-bottom: 40px
+@media (min-width: 576px) and (max-width: 768px)
+  .header
+    padding-bottom: 65px
+    .container
+      justify-content: space-around
+    &-title
+      &__img
+        img
+          width: 100%
+      &__text
+        display: none
+    &-contacts
+      display: flex
+      flex-direction: column
+      &__text
+        margin-right: 0
+        order: 2
+        a
+          display: block
+      &__hidden
+        display: none
+      &__button
+        padding: 10px 25px
+        order: 1
+  .main
+    margin-top: 55px
+    .container
+      flex-direction: column
+      justify-content: center
+    &-text
+      margin: 0
+      margin-bottom: 60px
+      width: 80%
+      text-align: center
+      order: 1
+      &__title
+        font-size: 42px
+      &__subtitle
+        font-size: 22px
+      &__descr
+        font-size: 18px
+    &-form
+      order: 2
+  .aboutUs
+    .container
+      flex-direction: column
+    &-descr
+      margin-right: 0
+      margin-bottom: 30px
+      text-align: justify
+      text-align-last: center
+  .features
+    &-subtitle
+      font-size: 16px
+    &-descr
+      font-size: 16px
+    .feature
+      &-block
+        &s
+          margin-bottom: 0
+        &__descr
+          font-size: 15px
+  .study
+    &-title
+      font-size: 23px
+    .container
+      flex-direction: column
+      align-items: center
+    &-block
+      margin-right: 0
+      width: 360px
+    &-subtext
+      width: 90%
+      font-size: 16px
+  .reservation
+    padding-top: 50px
+    padding-bottom: 50px
+    .container
+      flex-direction: column
+    &-text
+      margin-right: 0
+      margin-bottom: 30px
+      &__subtitle
+        font-size: 16px
+        text-align: center
+  .feedback
+    padding-top: 45px
+    .container
+      &:before
+        display: none
+    &-slider
+      &__bottom
+        width: 90%
+    &-slide
+      &_text
+        p
+          font-size: 14px
+  .service
+    padding-top: 55px
+    .container
+      flex-direction: column
+      align-items: center
+    &-block
+      margin-right: 0
+      margin-bottom: 30px
+      width: 360px
+      &__img
+        img
+          width: 100%
+  .questions
+    &-form
+      margin: auto
+      width: 90%
+      &__input
+        &_name
+          margin-bottom: 20px
+  .contacts
+    .container
+      align-items: center
+      flex-direction: column
+      justify-content: center
+    &-map
+      margin-right: 0
+      width: 528px
+      height: 350px
+      order: 2
+    &-block
+      text-align: center
+      padding-top: 0
+      order: 1
+      &__address
+        &_text
+          padding-left: 23px
+          &:before
+            left: 8px
+          &:after
+            left: 18px
+      &__phone
+        &_text
+          padding-left: 0
+          &:before
+            left: 33px
+          &:after
+            left: 42px
+      &__button
+        margin-bottom: 40px
+  .footer
+    padding-bottom: 25px
+    .container
+      margin-bottom: 38px
+      justify-content: space-around
+    &-title
+      &__img
+        img
+          width: 100%
+      &__text
+        display: none
+    &-contacts
+      display: flex
+      flex-direction: column
+      &__text
+        margin-right: 0
+        order: 2
+        a
+          display: block
+          font-size: 18px
+      &__hidden
+        display: none 
+      &__button
+        padding: 10px 21px
+        order: 1
+        img
+          display: none
+@media (min-width: 320px) and (max-width: 575px)
+  .header
+    padding-top: 30px
+    padding-bottom: 65px
+    .container
+      padding-left: 10px
+      padding-right: 10px
+      justify-content: space-around
+    &-title
+      &__img
+        img
+          width: 100%
+      &__text
+        display: none
+    &-contacts
+      display: flex
+      flex-direction: column
+      &__text
+        margin-right: 0
+        order: 2
+        a
+          display: block
+          font-size: 16px
+      &__hidden
+        display: none
+      &__button
+        padding: 5px 60px
+        order: 1
+        img
+          display: block
+          width: 20px
+          height: 20px
+        span
+          display: none
+  .main
+    margin-top: 55px
+    .container
+      flex-direction: column
+      justify-content: center
+    &-text
+      margin: 0
+      margin-bottom: 60px
+      width: 80%
+      text-align: center
+      order: 1
+      &__title
+        font-size: 38px
+      &__subtitle
+        margin-bottom: 15px
+        font-size: 18px
+      &__descr
+        font-size: 16px
+      &__button
+        font-size: 14px
+    &-form
+      order: 2
+      &__subtitle
+        font-size: 14px
+      &__input
+        width: 250px
+        &-phone
+          margin-bottom: 38px
+      &__button
+        padding-left: 14px
+        padding-right: 14px
+        font-size: 13px
+  .aboutUs
+    padding-top: 50px
+    padding-bottom: 40px
+    .container
+      flex-direction: column
+    &-descr
+      margin-right: 0
+      margin-bottom: 30px
+      width: 90%
+      text-align: center
+      &__images
+        flex-direction: column
+        .photo-1
+          margin-bottom: 60px
+          &:before
+            left: 50%
+            transform: translateX(-50%)
+          img
+            margin: auto
+            margin-bottom: -1px
+          p
+            width: 100%
+            text-align: center
+        .photo-2
+          margin-bottom: 20px
+          &:before
+            left: 50%
+            transform: translateX(-50%)
+          img
+            margin: auto
+            margin-bottom: -1px
+          p
+            width: 100%
+            text-align: center
+    &-video
+      padding: 0px 10px
+      video
+        width: 300px
+        height: 260px
+  .features
+    &-title
+      margin: auto
+      margin-bottom: 32px
+      width: 97%
+      font-size: 26px
+    &-subtitle
+      margin: auto
+      margin-bottom: 20px
+      width: 90%
+      text-align: justify
+      text-align-last: center
+      font-size: 16px
+    &-descr
+      margin: auto
+      margin-bottom: 35px
+      width: 90%
+      text-align: justify
+      text-align-last: center
+      font-size: 16px
+    .feature
+      &-block
+        &s
+          margin: 0
+        padding: 0
+        &__descr
+          margin: auto
+          width: 290px
+  .study
+    padding-top: 40px
+    &-title
+      font-size: 23px
+    .container
+      flex-direction: column
+      align-items: center
+    &-block
+      margin-right: 0
+      width: 300px
+    &-subtext
+      width: 90%
+      font-size: 14px
+  .reservation
+    padding-top: 50px
+    padding-bottom: 50px
+    .container
+      flex-direction: column
+    &-text
+      margin-right: 0
+      margin-bottom: 30px
+      font-size: 22px
+      text-align: center
+      &__subtitle
+        font-size: 14px
+        text-align: center
+  .feedback
+    padding-top: 45px
+    .container
+      &:before
+        display: none
+    &-title
+      margin-left: auto
+      margin-right: auto
+      width: 90%
+      font-size: 23px
+    &-slider
+      &__bottom
+        width: 90%
+    &-slide
+      &_text
+        p
+          font-size: 14px
+  .slider-arrow
+    &_left
+      left: 5%
+    &_right
+      right: 5%
+  .service
+    padding-top: 55px
+    .container
+      flex-direction: column
+      align-items: center
+    &-block
+      margin-right: 0
+      margin-bottom: 30px
+      width: 300px
+      &__img
+        img
+          width: 100%
+  .questions
+    &-title
+      margin: auto
+      margin-bottom: 26px
+      width: 90%
+      font-size: 25px
+    &-subtitle
+      margin: auto
+      margin-bottom: 30px 
+      width: 90%
+    &-form
+      margin: auto
+      width: 90%
+      &__input
+        width: 288px
+        &_name
+          margin-bottom: 20px
+  .contacts
+    padding-top: 50px
+    padding-bottom: 50px
+    .container
+      align-items: center
+      flex-direction: column
+      justify-content: center
+    &-map
+      margin-right: 0
+      width: 90%
+      height: 350px
+      order: 2
+    &-block
+      text-align: center
+      padding-top: 0
+      order: 1
+      &__address
+        &_text
+          padding-left: 23px
+          &:before
+            left: 8px
+          &:after
+            left: 18px
+      &__phone
+        &_text
+          padding-left: 10px
+          &:before
+            left: 38px
+          &:after
+            left: 47px
+      &__button
+        margin-bottom: 40px
+  .footer
+    padding-top: 30px
+    padding-bottom: 25px
+    .container
+      margin-bottom: 25px
+      padding-left: 10px
+      padding-right: 10px
+      justify-content: space-around
+    &-title
+      &__img
+        img
+          width: 90%
+      &__text
+        display: none
+        a
+          display: block
+    &-contacts
+      display: flex
+      flex-direction: column
+      &__text
+        margin-right: 0
+        display: block
+        order: 2
+        a
+          font-size: 16px
+      &__hidden
+        display: none
+      &__button
+        padding: 5px 60px
+        order: 1
+        img
+          width: 20px
+          height: 20px
+          display: block
+        span
+          display: none
+    &-subtext
+      font-size: 12px
+  .popup
+    &-form
+      width: 300px
+      &__subtitle
+        font-size: 14px !important
+      &__input
+        width: 242px
+        &-phone
+          margin-bottom: 38px !important
+      &__button
+        padding: 16px 13px !important
+        font-size: 12px !important
+  .thanks
+    width: 300px !important

@@ -1,0 +1,207 @@
+.preloader {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ebf3fa;
+  overflow: hidden;
+  opacity: 0;
+  z-index: -9999;
+  transition: .5s
+}
+
+.preloader_visible {
+  z-index: 99999999;
+  opacity: 1
+}
+
+.item-1 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  -webkit-animation: right-1 4s infinite cubic-bezier(0, 0, .49, 1.02);
+  animation: right-1 4s infinite cubic-bezier(0, 0, .49, 1.02);
+  -webkit-animation-delay: 100ms;
+  animation-delay: 100ms;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.item-1>* {
+  width: 20px;
+  height: 20px;
+  background: #f583a1;
+  border-radius: 50%;
+  background-color: #99bce2
+}
+
+.item-2 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  -webkit-animation: right-2 4s infinite cubic-bezier(0, 0, .49, 1.02);
+  animation: right-2 4s infinite cubic-bezier(0, 0, .49, 1.02);
+  -webkit-animation-delay: 200ms;
+  animation-delay: 200ms;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.item-2>* {
+  width: 20px;
+  height: 20px;
+  background: #f583a1;
+  border-radius: 50%;
+  background-color: #99bce2
+}
+
+.item-3 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  -webkit-animation: right-3 4s infinite cubic-bezier(0, 0, .49, 1.02);
+  animation: right-3 4s infinite cubic-bezier(0, 0, .49, 1.02);
+  -webkit-animation-delay: 300ms;
+  animation-delay: 300ms;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.item-3>* {
+  width: 20px;
+  height: 20px;
+  background: #f583a1;
+  border-radius: 50%;
+  background-color: #99bce2
+}
+
+.item-4 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  -webkit-animation: right-4 4s infinite cubic-bezier(0, 0, .49, 1.02);
+  animation: right-4 4s infinite cubic-bezier(0, 0, .49, 1.02);
+  -webkit-animation-delay: 400ms;
+  animation-delay: 400ms;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.item-4>* {
+  width: 20px;
+  height: 20px;
+  background: #f583a1;
+  border-radius: 50%;
+  background-color: #99bce2
+}
+
+.item-5 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  -webkit-animation: right-5 4s infinite cubic-bezier(0, 0, .49, 1.02);
+  animation: right-5 4s infinite cubic-bezier(0, 0, .49, 1.02);
+  -webkit-animation-delay: 500ms;
+  animation-delay: 500ms;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.item-5>* {
+  width: 20px;
+  height: 20px;
+  background: #f583a1;
+  border-radius: 50%;
+  background-color: #99bce2
+}
+
+.item-6 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  -webkit-animation: right-6 4s infinite cubic-bezier(0, 0, .49, 1.02);
+  animation: right-6 4s infinite cubic-bezier(0, 0, .49, 1.02);
+  -webkit-animation-delay: 600ms;
+  animation-delay: 600ms;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.item-6>* {
+  width: 20px;
+  height: 20px;
+  background: #f583a1;
+  border-radius: 50%;
+  background-color: #99bce2
+}
+
+.item-7 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  -webkit-animation: right-7 4s infinite cubic-bezier(0, 0, .49, 1.02);
+  animation: right-7 4s infinite cubic-bezier(0, 0, .49, 1.02);
+  -webkit-animation-delay: 700ms;
+  animation-delay: 700ms;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.item-7>* {
+  width: 20px;
+  height: 20px;
+  background: #f583a1;
+  border-radius: 50%;
+  background-color: #99bce2
+}
+
+.item-8 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  -webkit-animation: right-8 4s infinite cubic-bezier(0, 0, .49, 1.02);
+  animation: right-8 4s infinite cubic-bezier(0, 0, .49, 1.02);
+  -webkit-animation-delay: 800ms;
+  animation-delay: 800ms;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.item-8>* {
+  width: 20px;
+  height: 20px;
+  background: #f583a1;
+  border-radius: 50%;
+  background-color: #99bce2
+}
+
+.item-9 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  -webkit-animation: right-9 4s infinite cubic-bezier(0, 0, .49, 1.02);
+  animation: right-9 4s infinite cubic-bezier(0, 0, .49, 1.02);
+  -webkit-animation-delay: 900ms;
+  animation-delay: 900ms;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.item-9>* {
+  width: 20px;
+  height: 20px;
+  background: #f583a1;
+  border-radius: 50%;
+  background-color: #99bce2
+}

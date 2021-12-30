@@ -1,0 +1,48 @@
+.features {
+  padding: 80px 0;
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__card {
+    position: relative;
+    padding: 18px 20px 15px;
+    width: 23%;
+    min-height: 130px;
+    background-color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+    &:not(:last-child) {
+      margin-right: 2%;
+    }
+    &-icon {
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: 40px;
+      height: 40px;
+    }
+    &-title {
+      position: relative;
+      margin-bottom: 10px;
+      font-size: 16px;
+      &:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: -5px;
+        width: 35px;
+        height: 2px;
+        background-color: $inactive-color;
+      }
+    }
+    &-text {
+      font-size: 14px;
+    }
+  }
+}

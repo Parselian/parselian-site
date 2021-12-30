@@ -1,0 +1,89 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  // transition: .3s;
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  &_active {
+    opacity: 1;
+    visibility: visible;
+    transition: .3s;
+  }
+  &__form {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    max-width: 520px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    &-title {
+      margin-bottom: 10px;
+      font-weight: 700;
+      font-size: 24px;
+    }
+    &-subtitle {
+      margin-bottom: 40px;
+      font-size: 18px;
+    }
+    &-close {
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      font-size: 32px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    &-label {
+      margin-bottom: 5px;
+      font-weight: 700;
+      font-size: 14px;
+      text-align: left;
+    }
+    &-input {
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      font-size: 20px;
+      background-color: #efefef;
+      border: none;
+      border-radius: 5px;
+      &-wrap {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &-button {
+      margin-top: 20px;
+      padding: 10px 40px;
+      font-size: 18px;
+      font-weight: 500;
+      background-color: $accent-color;
+      color: #ffffff;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+  &__footnote {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+}

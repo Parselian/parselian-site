@@ -1,0 +1,197 @@
+@import 'variables.sass'
+
+body
+  position: relative
+  font-family: 'Geometria', sans-serif
+  color: $text-color
+
+section
+  padding: 100px 0
+
+/** Customize videoplayer`s interface **/
+video::-webkit-media-controls-volume-slider-container,
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-timeline-container,
+video::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-seek-back-button,
+video::-webkit-media-controls-seek-forward-button,
+video::-webkit-media-controls-fullscreen-button,
+video::-webkit-media-controls-picture-in-picture-button,
+video::-webkit-media-controls-rewind-button,
+video::-webkit-media-controls-return-to-realtime-button,
+video::-webkit-media-controls-toggle-closed-captions-button,
+  display: none !important
+
+video::-webkit-media-controls-panel
+  position: absolute
+  width: 100%
+  height: 100%
+  top: -50%
+  transform: translateY(20px)
+  background: none
+
+video::-webkit-media-controls-play-button
+  position: absolute
+  top: 50%
+  left: 50%
+  opacity: 1
+  width: 40px
+  height: 40px
+  transform: translate(-20px, -20px)
+  // background: url('../img/video-review/play-button.png') center no-repeat
+  background-size: contain
+  &:hover
+    &:after
+      display: none
+
+/** Customize scrollbar **/
+::-webkit-scrollbar
+  width: 6px
+::-webkit-scrollbar-track
+  border-radius: 3px
+::-webkit-scrollbar-thumb 
+  border-radius: 3px
+  background-color: #f86826
+
+.text
+  &_bold
+    font-family: 'Geometria Bold', sans-serif
+  &_light
+    font-family: 'Geometria', sans-serif
+
+.line-break
+  display: block
+
+.title
+  margin:
+    left: auto
+    right: auto
+    bottom: 60px
+  max-width: 770px
+  font-family: 'Geometria Bold', sans-serif
+  font-size: 30px
+  text-align: center
+
+.subtitle
+  font-size: 20px
+  text-align: center
+
+.button
+  padding: 18px 30px
+  position: relative
+  font-family: 'Geometria Bold', sans-serif
+  font-size: 12px
+  letter-spacing: 0.12px
+  color: $alt-text-color
+  border-radius: 5px
+  background-image: linear-gradient(-221deg, $gradient-color-1 0%, $gradient-color-2 100%)
+  cursor: pointer
+  &__icon
+    display: none
+    width: 18px
+    height: 18px
+    fill: $alt-text-color
+
+.logo
+  display: flex
+  align-items: center
+  &__img
+    margin-right: 20px
+    width: 80px
+    height: 50px
+    background-size: cover
+  &__text
+    font-family: 'Geometria', sans-serif
+    font-size: 16px
+    text-transform: uppercase
+    letter-spacing: 0.16px
+
+.form
+  position: relative
+  &__title
+    font-family: 'Geometria Medium', sans-serif
+  &__input
+    border: 1px solid $border-color
+    border-radius: 5px
+
+.slider
+  position: relative
+  overflow: hidden
+  position: relative
+  &__wrap
+    display: flex
+    transition: transform .3s
+    will-change: transform
+  &__arrow
+    padding: 10px 14px
+    position: absolute
+    width: 40px
+    height: 40px
+    top: 50%
+    transform: translateY(-20px)
+    background-color: $alt-text-color
+    cursor: pointer
+    z-index: 99999
+    user-select: none
+    &_left
+      left: 0
+    &_right
+      right: 0
+  &__slide
+    margin-right: 30px
+    display: block
+    min-width: 360px
+    width: 32%
+    &:last-child
+      margin-right: 0
+
+.hexagon
+  width: 200px
+  height: 400px
+  margin: -80px 0 0 20px
+  overflow: hidden
+  visibility: hidden
+  -webkit-transform: rotate(120deg)
+  -moz-transform: rotate(120deg)
+  -ms-transform: rotate(120deg)
+  -o-transform: rotate(120deg)
+  transform: rotate(120deg)
+  .hexagon-in1 
+    overflow: hidden
+    width: 100%
+    height: 100%
+    -webkit-transform: rotate(-60deg)
+    -moz-transform: rotate(-60deg)
+    -ms-transform: rotate(-60deg)
+    -o-transform: rotate(-60deg)
+    transform: rotate(-60deg)
+  .hexagon-in2 
+    display: block
+    width: 100%
+    height: 100%
+    visibility: visible
+    -webkit-transform: rotate(-60deg)
+    -moz-transform: rotate(-60deg)
+    -ms-transform: rotate(-60deg)
+    -o-transform: rotate(-60deg)
+    transform: rotate(-60deg)
+
+@import 'preloader.sass'
+@import 'burger.sass'
+@import 'header.sass'
+@import 'main.sass'
+@import 'portfolio.sass'
+@import 'projects.sass'
+@import 'guarranty.sass'
+@import 'materials.sass'
+@import 'features.sass'
+@import 'video.sass'
+@import 'team.sass'
+@import 'faq.sass'
+@import 'request.sass'
+@import 'contacts.sass'
+@import 'popup.sass'
+@import 'media.sass'

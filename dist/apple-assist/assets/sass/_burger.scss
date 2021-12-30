@@ -1,0 +1,120 @@
+.burger {
+  &-btn {
+    z-index: 999;
+    width: 20px;
+    position: relative;
+    &:before, &:after, &-center {
+      background: #fff;
+      content: "";
+      display: block;
+      height: 3px;
+      border-radius: 3px;
+      margin: 3px 0;
+      transition: 0.5s;
+    }
+    &__bg {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+      width: 45px;
+      height: 45px;
+      background-color: $accent-color;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      border-radius: 100px;
+      transform: translate(-50%, -50%);
+    }
+    &_active {
+      &:before {
+        transform: translateY(6px) rotate(135deg);
+      }
+      &:after {
+        transform: translateY(-5px) rotate(-135deg);
+      }
+      .burger {
+        &-btn {
+          &-center {
+            transform: scale(0);
+          }
+        }
+      }
+    }
+  }
+  &-menu {
+    position: fixed;
+    right: -100%;
+    z-index: 999999;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    transition: .5s;
+    &:before {
+      position: fixed;
+      content: '';
+      top: 0;
+      right: -100%;
+      bottom: 0;
+      z-index: -1;
+      width: 100%;
+      max-width: 400px;
+      background-color: $alt-bg-color;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 16% 100%);
+      transition: .5s;
+    }
+    &_active {
+      right: 0;
+          &:before {
+            right: 0;
+          }
+    }
+    .burger {
+      &-btn {
+        position: absolute;
+        top: 28px;
+        right: 28px;
+        z-index: 9999;
+        &:before, &:after, &-center {
+          background-color: $alt-text-color;
+        }
+      }
+    }
+    &__list {
+      position: relative;
+      top: 30%;
+      right: -40%;
+      width: fit-content;
+      &-link {
+        position: relative;
+        display: block;
+        width: fit-content;
+        font-size: 22px;
+        font-weight: 600;
+        color: $inactive-text-color;
+        text-decoration: none;
+        &:after {
+          position: absolute;
+          content: '';
+          left: auto;
+          bottom: 0px;
+          right: 0;
+          width: 0%;
+          height: 2px;
+          background-color: $accent-color;
+          transition: .3s;
+        }
+        &:hover {
+          &:after {
+            width: 100%;
+            left: 0;
+            right: auto;
+          }
+        }
+        &:not(:last-child) {
+          margin-bottom: 14px;
+        }
+      }
+    }
+  }
+}

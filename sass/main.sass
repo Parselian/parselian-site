@@ -1,0 +1,150 @@
+@import 'variables.sass'
+
+body 
+  font-family: PT Sans, sans-serif
+  cursor: default
+a
+  color: $link-color
+button, .button
+  padding: 14px 20px
+  font-size: 17px
+  color: #fff
+  background-color: transparent
+  border-radius: 6px
+  cursor: pointer
+section
+  padding: 80px 0
+.section
+  &-title
+    margin-bottom: 70px
+    text-align: center
+    position: relative
+    font-size: 36px
+    font-weight: 700
+    color: $title-color
+    transform-style: inherit
+    &:before
+      position: absolute
+      content: ''
+      width: 100px
+      height: 3px
+      top: 50px
+      left: 50%
+      transform: translateX(-50%)
+      background-color: $accent-color
+  &-contacts
+    display: flex
+    justify-content: center
+    &__list
+      &_item
+        display: inline-block
+        margin-right: 20px
+        width: 30px
+        height: 30px
+        &:last-child
+          margin-right: 0
+        a
+          img
+            width: 100%
+    &__phone
+      margin-right: 0
+      font-size: 20px
+
+.slick-dots
+  position: relative
+  li.slick-active
+    button
+      &:hover
+        &:before
+          color: $accent-color
+      &:before
+        color: $accent-color
+  li
+    width: 10px
+    height: 10px
+    button
+      width: 10px
+      height: 10px
+      color: #c4c4c4
+      &:hover
+        &:before
+          color: #c4c4c4
+      &:before
+        width: 10px
+        height: 10px
+        font-size: 10px
+
+.popup
+  display: flex
+  justify-content: center
+  align-items: center
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(56, 56, 56, 0.5)
+  visibility: hidden
+  opacity: 0
+  transition: .3s
+  z-index: 99999
+  &-wrap
+    padding: 30px 40px
+    position: relative
+    max-width: 520px
+    background-color: #fff
+  &-title
+    margin-bottom: 40px
+    font-size: 30px
+    &:before
+      top: 44px
+  &-close
+    position: absolute
+    top: 0
+    right: 13px
+    font-size: 30px
+    color: $title-color
+    cursor: pointer
+    transition: .2s
+    &:hover
+      color: $accent-color
+
+.ATTENTION
+  margin: 
+    left: auto  
+    right: auto
+  color: #ffffff
+  text-align: center
+  font-size: 40px
+  color: #565656
+  width: 90%
+
+.accent
+  color: $accent-color
+.show
+  visibility: visible !important
+  opacity: 1 !important
+
+.mixitup-control-active
+  color: $accent-color !important
+
+#works
+  .mix 
+    display: none
+
+
+@import 'preloader.sass'
+@import 'header.sass'
+@import 'navbar.sass'
+@import 'burger.sass'
+@import 'about-me.sass'
+@import 'my-services.sass'
+@import 'portfolio.sass'
+@import 'reviews.sass'
+@import 'calculator.sass'
+@import 'contacts.sass'
+@import 'footer.sass'
+@import 'popup-help.sass'
+@import 'popup-order.sass'
+@import 'thanks-popup.sass'
+@import 'media.sass'

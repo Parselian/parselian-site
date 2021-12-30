@@ -1,0 +1,78 @@
+.request {
+  &_alt {
+    padding-bottom: 160px;
+  } 
+  &__wrap {
+    position: relative;
+  }
+  &__form {
+    padding: 40px 60px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 26px;
+    box-shadow: $common-shadow;
+    // background: linear-gradient(-71deg, rgba(0, 113, 227, .3) 0%, rgba(4, 203, 255, 0) 90%);
+    background: linear-gradient(54deg, rgba(0, 113, 227, .3) 0%, rgba(4, 203, 255, 0) 90%);
+    &-col {
+      width: 45%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &-feature {
+      display: flex;
+      align-items: center;
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+      &-icon {
+        margin-right: 30px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+    &-title {
+      margin-bottom: 10px;
+      font-size: 32px;
+      z-index: 1;
+    }
+    &-subtitle {
+      margin-bottom: 30px;
+      font-size: 28px;
+      z-index: 1;
+      &_alt {
+        font-size: 22px;
+      }
+    }
+    &-input {
+      padding: 10px 10px;
+      width: 200px;
+      border: 2px solid $border-color;
+      border-radius: 5px 0 0 5px;
+    }
+    &-submit {
+      margin-left: -5px;
+      margin-right: 0;
+      padding: 12px 30px;
+      border-radius: 0 5px 5px 0;
+    }
+    &-gift {
+      position: absolute;
+      top: -80px;
+      right: 0px;
+      width: 160px;
+      height: 160px;
+      transform: rotate(10deg) scale(1);
+      border-radius: 300px;
+      box-shadow: 0 0 0 0 rgba(52, 172, 224, 1);
+      animation: pulse_gift 2s infinite;
+      cursor: pointer;
+    }
+    &-img {
+      position: absolute;
+      top: 0;
+      right: 80px;
+      // right: 180px;
+      width: 500px;
+    }
+  }
+}

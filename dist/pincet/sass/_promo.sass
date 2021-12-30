@@ -1,0 +1,220 @@
+.promo
+  padding-bottom: 7.2vw
+  position: relative
+  width: 100vw
+  background: url('../img/background.jpg') center no-repeat
+  background-size: cover
+  &::before
+    position: absolute
+    content: ''
+    height: 39vw
+    width: 44vw
+    bottom: 0
+    right: 0
+    background: url('../img/woman.png') center no-repeat
+    background-size: contain
+    z-index: 0
+  &__scene
+    position: absolute
+    &_left
+      top: 26%
+      left: 0
+      width: 20vw
+      img
+        width: inherit
+    &_right
+      top: 6%
+      left: 90%
+      width: 14vw
+      img
+        width: inherit
+  &__wrap
+    margin-top: 5.4vw
+    position: relative
+  &__title
+    margin-bottom: 3vw
+    font-family: 'Museo Sans Light', sans-serif
+    font-weight: 300
+    font-size: 2.4vw
+  &__list
+    margin-bottom: 3vw
+    font-family: 'Museo Sans Light', sans-serif
+    font-size: 0.9vw
+    letter-spacing: 0.45px
+    &-item
+      margin:
+        left: 30px
+        bottom: 0.9vw
+      position: relative
+      &::before
+        position: absolute
+        content: ''
+        width: 7px
+        height: 7px
+        top: 50%
+        left: -27px
+        transform: translateY(-50%)
+        background-color: #ef9499
+        border: 4px solid #f7f7fb
+        border-radius: 50%
+        box-shadow: 0 1px 13px rgba(239, 148, 153, 0.38)
+      &:last-child
+        margin-bottom: 0
+  &__button
+    padding: 0
+    position: relative
+    font-family: "Museo Sans Bold"
+    font-size: 0.7vw
+    text-transform: uppercase
+    letter-spacing: 1.68px
+    color: $button-alt-text-color
+    background-color: transparent
+    &::before
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      left: 50%
+      top: 4px
+      transform: translateX(-50%)
+      background-color: #d7747a
+      border-radius: 43px
+      box-shadow: 0 7px 27px rgba(241, 131, 131, 0.57)
+      z-index: 0
+    &-content
+      position: relative
+      // padding: 26px 141px 24px 31px
+      padding: 1.5vw 7.2vw 1.4vw 2.3vw
+      border-radius: 43px
+      background: linear-gradient(to top,$first-gradient-color 0,$second-gradient-color 100%)
+      text-shadow: 0 1px 5px rgba(210, 110, 116, 0.49)
+      transition: .3s
+      &:hover
+        background: linear-gradient(to left,$first-gradient-color 0,$second-gradient-color 100%)
+      &::after
+        position: absolute
+        content: ''
+        width: 100%
+        height: 100%
+        max-width: 300px
+        max-height: 70px
+        top: 50%
+        right: -170px
+        transform: translateY(-50%)
+        background: url('../img/button-leaves.png') center no-repeat
+        background-size: contain
+  &__card
+    position: absolute
+    width: 800px
+    left: 26%
+    top: 50%
+    &-img
+      width: inherit
+    &-btn
+      position: absolute
+      width: 75px
+      height: 75px
+      top: 35%
+      left: 36%
+      background: url('../img/icon-info.png') center no-repeat
+      background-size: cover
+      z-index: 1
+      cursor: pointer
+    &-text
+      padding: 0 27px 29px 27px
+      position: absolute
+      width: 125px
+      height: 150px
+      left: 40%
+      top: 6%
+      font-family: 'Museo Sans Light', sans-serif
+      letter-spacing: 1.68px
+      font-size: 14px
+      text-align: center
+      background-color: #fff
+      border-radius: 0 0 4px 4px
+      opacity: 0
+      visibility: hidden
+      z-index: 0
+      transition: .3s
+      &_visible
+        opacity: 1
+        visibility: visible
+      &::after
+        position: absolute
+        content: ''
+        top: -28px
+        width: 100%
+        height: 30px
+        left: 50%
+        background-color: #ffffff
+        transform: translateX(-50%)
+        border-radius: 50% 50% 0 0
+        z-index: 0
+    &-mask
+      position: absolute
+      width: 180px
+      height: 100%
+      top: -10px
+      left: 10px
+      background-color: #ffffff
+      border-radius: 0 0 4px 4px
+      opacity: 0.5
+      z-index: -1
+      &::after
+        position: absolute
+        content: ''
+        top: -28px
+        width: 100%
+        height: 30px
+        left: 50%
+        background-color: #ffffff
+        transform: translateX(-50%)
+        border-radius: 50% 50% 0 0
+        z-index: 0
+  &__scroll
+    &-btn
+      position: absolute
+      left: 50%
+      bottom: 2.6vw
+      transform: translateX(-50%)
+      display: block
+      padding: 5px
+      width: 11px
+      height: 11px
+      border: 3px solid #fabcbc
+      background-color: #ffffff
+      border-radius: 50%
+      z-index: 1
+      cursor: pointer
+    &::before
+      position: absolute
+      content: ''
+      height: 2px
+      width: 23px
+      left: 50%
+      bottom: 2.1vw
+      background-color: #fabcbc
+      transform: rotate(90deg) translateY(12px)
+      z-index: 1
+    &::after
+      position: absolute
+      content: ''
+      width: 9px
+      height: 9px
+      left: 50%
+      bottom: 0.9vw
+      background-color: #ffffff
+      transform: rotate(90deg) translateY(7.1px)
+      border: 2px solid #fabcbc
+      border-radius: 50%
+      z-index: 1
+  &__edging
+    position: absolute
+    width: 100%
+    height: 155px
+    bottom: -70px
+    left: 50%
+    transform: translateX(-50%)
+    background: url('../img/edging.png') center no-repeat
+    background-size: cover

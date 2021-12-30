@@ -1,0 +1,80 @@
+@import 'variables.sass'
+
+body
+  overflow: hidden
+  color: $main-text-color
+
+.freezed
+  overflow: hidden
+
+.visible
+  opacity: 1 !important
+  visibility: visible !important
+
+.container
+  margin: 0 auto
+  &_def
+    max-width: 85vw
+  &_big
+    max-width: 90vw
+
+.text
+  &_bold
+    font-family: 'Museo Sans Bold', sans-serif
+
+.line_break
+  display: block
+
+button
+  cursor: pointer
+.button
+  display: block
+  &_alt
+    padding: 0
+    position: relative
+    font-family: "Museo Sans Bold"
+    font-size: 0.7vw
+    text-transform: uppercase
+    letter-spacing: 1.68px
+    color: $button-alt-text-color
+    background-color: transparent
+    &::before
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      left: 50%
+      top: 4px
+      transform: translateX(-50%)
+      background-color: #d7747a
+      border-radius: 43px
+      box-shadow: 0 7px 27px rgba(241, 131, 131, 0.57)
+      z-index: 0
+    &-content
+      position: relative
+      // padding: 26px 141px 24px 31px
+      padding: 1.5vw 7.2vw 1.4vw 2.3vw
+      border-radius: 43px
+      background: linear-gradient(to top,$first-gradient-color 0,$second-gradient-color 100%)
+      text-shadow: 0 1px 5px rgba(210, 110, 116, 0.49)
+      transition: .3s
+      &:hover
+        background: linear-gradient(to left,$first-gradient-color 0,$second-gradient-color 100%)
+      &::after
+        position: absolute
+        content: ''
+        width: 100%
+        height: 100%
+        max-width: 300px
+        max-height: 70px
+        top: 50%
+        right: -170px
+        transform: translateY(-50%)
+        background: url('../img/button-leaves.png') center no-repeat
+        background-size: contain
+
+@import 'burger.sass'
+@import 'header.sass'
+@import 'promo.sass'
+@import 'popup.sass'
+@import 'media.sass'

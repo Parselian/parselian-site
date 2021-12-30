@@ -1,0 +1,32 @@
+.faq
+  position: relative
+  background: url('../img/FAQ/bg.jpg') center no-repeat
+  background-size: cover
+  color: $alt-text-color
+  &__subtitle
+    margin-bottom: 68px
+  &__wrap
+    max-width: 510px
+    &-item
+      margin-bottom: 40px
+      padding-left: 30px
+      position: relative
+      &::before
+        position: absolute
+        content: ''
+        display: block
+        width: 30px
+        height: 30px
+        left: -28px
+        top: -5px
+        border: 1px solid $alt-text-color
+        border-radius: 15px
+    &-question
+      text-decoration: underline
+      cursor: pointer
+    &-answer
+      height: 0
+      text-decoration: none !important
+      overflow: hidden
+      &_show
+        height: auto

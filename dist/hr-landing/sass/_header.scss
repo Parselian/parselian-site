@@ -1,0 +1,51 @@
+.header {
+  position: sticky;
+  top: 0;
+  //margin-bottom: 140px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  z-index: 999;
+  color: $alt-text-color;
+  background-color: $accent-color;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__menu {
+    &-item {
+      position: relative;
+      font-size: 18px;
+      color: $alt-text-color;
+      text-decoration: none;
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        right: 0;
+        left: auto;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background-color: $alt-text-color;
+        transition: .3s width
+      }
+      &:hover {
+        &:after {
+          width: 100%;
+          right: auto;
+          left: 0;
+        }
+      }
+    }
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+  }
+  &__phone-btn {
+    text-decoration: none;
+  }
+}

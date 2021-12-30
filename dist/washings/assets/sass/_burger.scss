@@ -1,0 +1,91 @@
+.burger {
+  &-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 99999999;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-left: 20%;
+    justify-content: center;
+    background-color: $alt-bg-color;
+    overflow-x: hidden;
+    opacity: 0;
+    transition: ease-in-out .3s;
+    &_visible {
+      opacity: 1;
+      left: 0;
+    }
+    &__nav {
+      margin-bottom: 30px;
+      &-link {
+        display: block;
+        width: fit-content;
+        color: $inactive-color;
+        font-weight: 700;
+        font-size: 24px;
+        text-decoration: none;
+        &:not(:last-child) {
+          margin-bottom: 5px;
+
+        }
+      }
+    }
+    &__phone {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      text-decoration: none;
+      color: $inactive-color;
+      font-weight: 600;
+      &-icon {
+        margin-right: 5px;
+        width: 15px;
+        height: 15px;
+        fill: $inactive-color;
+      }
+    }
+    &__button {
+      max-width: fit-content;
+    }
+  }
+  &-btn {
+    cursor: pointer;
+    display: none;
+    .line {
+      width: 40px;
+      height: 4px;
+      background-color: $inactive-color;
+      display: block;
+      margin: 7px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+    }
+    &.is-active {
+      .line {
+        &:nth-child(1) {
+          -webkit-transform: translateY(11px) rotate(45deg);
+          -ms-transform: translateY(11px) rotate(45deg);
+          -o-transform: translateY(11px) rotate(45deg);
+          transform: translateY(11px) rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          -webkit-transform: translateY(-11px) rotate(-45deg);
+          -ms-transform: translateY(-11px) rotate(-45deg);
+          -o-transform: translateY(-11px) rotate(-45deg);
+          transform: translateY(-11px) rotate(-45deg);
+        }
+      }
+    }
+  }
+}

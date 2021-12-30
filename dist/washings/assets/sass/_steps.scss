@@ -1,0 +1,157 @@
+.steps {
+  padding: 60px 0;
+  overflow: hidden;
+  position: relative;
+  background-color: $alt-bg-color;
+  &__nav {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    &-button {
+      padding: 13px 25px;
+      font-size: 18px;
+      font-weight: 600;
+      color: $inactive-color;
+      background-color: transparent;
+      border-bottom: 2px solid $inactive-color;
+      transition: .2s;
+      &:hover {
+        color: $active-color;
+      }
+      &_active {
+        color: $active-color;
+        border-color: $active-color;
+      }
+    }
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__graphics {
+    width: 40%;
+    position: relative;
+  }
+  &__img {
+    width: 360px;
+    position: absolute;
+    bottom: -270px;
+  }
+  &__icon {
+    &-wrap {
+      position: absolute;
+      top: 20px;
+      right: 50px;
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+      -webkit-border-radius: 200px;
+      -moz-border-radius: 200px;
+      border-radius: 200px;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+      .slick-track {
+        display: flex;
+        align-items: center;
+        height: 100px;
+      }
+    }
+
+    //position: absolute;
+    //top: 50%;
+    //left: 50%;
+    display: none;
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    min-height: 55px;
+    //transform: translate(-50%, -50%);
+    transition: .2s;
+    &:hover {
+      fill: $active-color;
+    }
+    &_visible {
+      display: block;
+    }
+  }
+  &__info {
+    width: 60%;
+    &-block {
+      position: relative;
+      margin-bottom: 60px;
+      &-icon {
+        display: none;
+        width: 80px;
+        height: 80px;
+        svg {
+          width: 45px;
+          height: 45px;
+          min-height: 45px;
+          min-width: 45px;
+        }
+      }
+      &-title {
+        margin-top:0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      &-text {
+        position: relative;
+        font-size: 16px;
+        &:after {
+          position: absolute;
+          content: '';
+          left: 0;
+          bottom: -30px;
+          width: 60px;
+          height: 2px;
+          background-color: $inactive-color;
+        }
+      }
+    }
+    &-contacts {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+    &-button {
+      margin-right: 20px;
+      font-size: 22px;
+    }
+    &-phone {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      font-size: 22px;
+      font-weight: 600;
+      color: $main-text-color;
+      text-decoration: none;
+      &-label {
+        font-size: 16px;
+        font-weight: 300;
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        bottom: 0px;
+        right: 0;
+        left: auto;
+        width: 0;
+        height: 2px;
+        background-color: $active-color;
+        transition: .2s;
+      }
+      &:hover:after {
+        right: auto;
+        left: 0;
+        width: 100%;
+      }
+    }
+    &-footnote {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+}

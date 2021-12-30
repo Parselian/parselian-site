@@ -1,0 +1,53 @@
+.heading
+  background-image: linear-gradient(11deg, #8e78ff 0%, #fc7d7b 100%)
+  &-top
+    padding-top: 18px
+  &__wrap
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__logo
+    img
+      width: 77px
+      height: 77px
+  &__menu
+    z-index: 1
+    display: flex
+    list-style: none
+    &-item
+      margin-right: 40px
+      &:last-child
+        margin-right: 0
+    &-link
+      font-family: Montserrat
+      font-size: 24px
+      font-weight: 400
+      color: $text-color-light
+  &__burger
+    &-button
+      position: relative
+      font-family: Montserrat
+      font-size: 24px
+      font-weight: 400
+      color: $text-color-light
+      display: none
+    &-arrow
+      display: block
+      position: absolute
+      width: 20px
+      height: 20px
+      top: 100%
+      left: 50%
+      transform: translateX(-10px)
+      transform-origin: 50% 50%
+      transition: .3s
+      background: url('../img/headings/down-arrow.svg') center no-repeat
+      background-size: cover
+  &-bottom
+    padding: 60px 0
+    background: url('../img/headings/footer-bg.png') center no-repeat
+    background-size: cover
+    &__menu
+      &-link
+        color: #000

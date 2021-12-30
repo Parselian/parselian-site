@@ -1,0 +1,38 @@
+.burger
+  padding: 
+    top: 10px
+  position: fixed
+  right: -200px
+  width: 200px
+  height: 100vh
+  background-color: rgba(0, 0, 0, 0.9)
+  z-index: 999999
+  transition: .5s
+  will-change: right
+  &_show
+    right: 0
+  &__button
+    position: fixed
+    width: 30px
+    height: 30px
+    top: 50%
+    right: 10px
+    transform: translateY(-15px)
+    fill: #f86c26
+    cursor: pointer
+    transition: .5s
+    will-change: transform
+    will-change: right
+    user-select: none
+    &_show
+      right: 210px
+      transform-origin: 50% 50%
+      transform: translateY(-15px) scale(-1, 1)
+  &__menu
+    text-align: right
+    &-item
+      padding: 10px 20px
+      border-bottom: 1px solid $alt-text-color
+    &-link
+      font-size: 16px
+      color: $alt-text-color

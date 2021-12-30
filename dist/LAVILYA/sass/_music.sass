@@ -1,0 +1,43 @@
+.music
+  padding-top: 200px
+  &-wrap
+    display: flex
+    flex-direction: column
+    align-items: center
+  &-tracks
+    &__track
+      margin-bottom: 50px
+      display: flex
+      align-items: center
+      &:last-child
+        margin-bottom: 0
+    &__player
+      margin-right: 25px
+      position: relative
+      &-title
+        display: none
+        left: 5px
+        top: -30px
+        position: absolute
+        color: #000000
+    &__title
+      margin-right: 50px
+      &_uppercase
+        font-weight: 700
+        text-transform: uppercase
+    &-share
+      padding: 10px
+      position: relative
+      background-color: #ffffff
+      border-radius: 10px
+      box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.1)
+      &:before
+        position: absolute
+        content: 'Послушать музыку:'
+        top: -20px
+        font-size: 12px
+        font-weight: 700
+      &__link
+        margin-right: 25px
+        &:last-child
+          margin-right: 0

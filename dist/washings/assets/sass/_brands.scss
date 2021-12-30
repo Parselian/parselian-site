@@ -1,0 +1,44 @@
+.brands {
+  padding: 80px 0;
+  &__card {
+    &s {
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    width: 13%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $inactive-color;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    &:not(:nth-child(7n)) {
+      margin-right: 1%;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &-img {
+      width: 100%;
+      max-height: 40px;
+      object-fit: contain;
+    }
+  }
+  &__more {
+    display: block;
+    margin: auto;
+    color: $active-color;
+    //border-color: $inactive-color;
+    background-color: $alt-text-color;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  }
+}

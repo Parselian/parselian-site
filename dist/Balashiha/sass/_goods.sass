@@ -1,0 +1,57 @@
+.goods
+  padding-top: 53px
+  &-title
+    margin-bottom: 25px
+  &-wrap
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &-card
+    margin-bottom: 22px
+    position: relative
+    width: 292px
+    text-align: center
+    font-family: Roboto
+    color: $text-color-dark
+    &:before
+      content: ''
+      position: absolute
+      padding-left: 23px
+      padding-right: 23px
+      display: none
+      left: 50%
+      transform: translateX(-50%)
+      width: 295px
+      height: 100%
+      border: 1px solid #d6d6d6
+      z-index: -1
+    &:hover
+      &:before
+        display: block
+    &_img
+      min-height: 134px
+      display: flex
+      justify-content: center
+      align-items: center
+    &_title
+      margin-bottom: 13px
+      font-size: 18px
+      font-weight: bold
+      text-transform: uppercase
+    &_descr
+      margin-bottom: 23px
+      font-size: 15px
+      font-weight: 300
+    &_button
+      margin-bottom: 24px
+      padding: 11px 23px
+      font-size: 14px
+      font-weight: 700
+      color: $active-color
+      text-transform: uppercase
+      background-color: transparent
+      border: 1px solid $active-color
+      &:hover
+        cursor: pointer
+        color: $text-color-light
+        background-color: $active-color

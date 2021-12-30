@@ -1,0 +1,42 @@
+.delivery-form {
+  position: relative;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-bottom: 40px;
+  width: 100%;
+  max-width: 750px;
+  transform: translateX(-70px);
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $delivery-feature-bg-color;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  &__title {
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: 600;
+  }
+  &__subtitle {
+    margin-bottom: 50px;
+    font-size: 16px;
+  }
+  &__input {
+    margin-right: 15px;
+    padding: 10px 20px;
+    width: 180px;
+    font-size: 16px;
+    text-align: center;
+    color: $border-color;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  &__img {
+    position: absolute;
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    right: -200px;
+  }
+}

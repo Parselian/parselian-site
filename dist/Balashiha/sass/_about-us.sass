@@ -1,0 +1,45 @@
+.about-us
+  padding-top: 34px
+  padding-bottom: 66px
+  background-color: $section-bg-color
+  &-title
+    margin-bottom: 24px
+  &-wrap
+    display: flex
+    flex-direction: column
+    align-items: center
+  &-text
+    font-family: Roboto
+    &_paragraph
+      font-size: 15px
+      font-weight: 300
+      line-height: 20px
+    &_bold
+      margin: 13px 0
+      font-weight: 700
+  &-slider
+    position: relative
+    margin: auto
+    margin-top: 10px
+    width: 419px
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      width: 898px
+      height: 213px
+      top: 50%
+      left: 50%
+      transform: translateX(-50%) translateY(-50%)
+      background-image: url(../img/about-us/background.png)
+      background-repeat: no-repeat
+  .slider
+    &-arrow
+      position: absolute
+      bottom: -12.4%
+      &_left
+        left: 38.6%
+      &_right
+        right: 38.6%
+  .slick-dots
+    bottom: -14.9%

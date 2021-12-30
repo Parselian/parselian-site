@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/preloader.css">
+  <title>Дома Навека</title>
+</head>
+<body>
+
+  <div class="preloader preloader_visible">
+    <div class="item-1">
+      <div></div>
+    </div>
+    <div class="item-2">
+      <div></div>
+    </div>
+    <div class="item-3">
+      <div></div>
+    </div>
+    <div class="item-4">
+      <div></div>
+    </div>
+    <div class="item-5">
+      <div></div>
+    </div>
+    <div class="item-6">
+      <div></div>
+    </div>
+    <div class="item-7">
+      <div></div>
+    </div>
+    <div class="item-8">
+      <div></div>
+    </div>
+    <div class="item-9">
+      <div></div>
+    </div>
+  </div>
+  <!-- /.preloader -->
+
+  <div class="burger">
+    <svg class="burger__button">
+      <use xlink:href="sprites/sprite.svg#arrow-left"></use>
+    </svg>
+
+    <ul class="burger__menu">
+      <li class="burger__menu-item">
+        <a href="#portfolio" class="burger__menu-link">Портфолио</a>
+      </li>
+      <!-- /.burger__menu-item -->
+      <li class="burger__menu-item">
+        <a href="#projects" class="burger__menu-link">Проекты</a>
+      </li>
+      <!-- /.burger__menu-item -->
+      <li class="burger__menu-item">
+        <a href="#guarranty" class="burger__menu-link">Гарантия</a>
+      </li>
+      <!-- /.burger__menu-item -->
+      <li class="burger__menu-item">
+        <a href="#materials" class="burger__menu-link">Материалы </a>
+      </li>
+      <!-- /.burger__menu-item -->
+      <li class="burger__menu-item">
+        <a href="#features" class="burger__menu-link">Преимущества</a>
+      </li>
+      <!-- /.burger__menu-item -->
+      <li class="burger__menu-item">
+        <a href="#video" class="burger__menu-link">Образование</a>
+      </li>
+      <!-- /.burger__menu-item -->
+      <li class="burger__menu-item">
+        <a href="#team" class="burger__menu-link">Команда</a>
+      </li>
+      <!-- /.burger__menu-item -->
+      <li class="burger__menu-item">
+        <a href="#faq" class="burger__menu-link">ЧаВО</a>
+      </li>
+      <!-- /.burger__menu-item -->
+      <li class="burger__menu-item">
+        <a href="#request" class="burger__menu-link">Оставить заявку</a>
+      </li>
+      <!-- /.burger__menu-item -->
+    </ul>
+    <!-- /.burger__menu -->
+  </div>
+  <!-- /.burger -->
+
+  <header class="header">
+    <div class="header__wrap container">
+      <div class="logo">
+        <img src="./img/header/logo.png" alt="logo" class="logo__img">
+
+        <div class="logo__text">
+          <span class="text_bold">Дома</span>Навека
+        </div>
+        <!-- /.logo__text -->
+      </div>
+      <!-- /.logo -->
+
+      <div class="header__info">
+        <div class="header__time">
+          <div class="header__text">
+            <span class="header__text-time text_bold">с 9:00 до 21:00</span>
+            без выходных
+          </div>
+          <!-- /.header__text -->
+          <svg class="header__time-icon">
+            <use xlink:href="./sprites/sprite.svg#clock"></use>
+          </svg>
+        </div>
+        <!-- /.header__time -->
+
+        <div class="header__contacts">
+          <div class="header__contacts-text">
+            Есть вопросы? Звоните!
+            <a href="tel:+74952042376" class="header__contacts-phone text_bold">
+              +7 (495) 204-23-76
+            </a> 
+          </div>
+          <!-- /.header__contacts-text -->
+          <a href="#request" class="button header__contacts-button">
+            <span class="button__text">Заказать звонок</span>
+            <svg class="button__icon">
+              <use xlink:href="./sprites/sprite.svg#phone"></use>
+            </svg>
+          </a>
+          <!-- /.button header__contacts-button -->
+        </div>
+        <!-- /.header__contacts -->
+      </div>
+      <!-- /.header__info -->
+    </div>
+    <!-- /.header__wrap container -->
+  </header>
+  <!-- /.header -->
+
+  <section class="main">
+    <div class="main__wrap container">
+      <div class="main__info">
+        <div class="main__text">
+          <h1 class="main__text-title">Строим Дома</h1>
+          <!-- /.main__info-title -->
+          <div class="main__text-subtitle">
+            из бетона, кирпича, поризованных 
+            <span class="line-break">блоков и пеноблоков</span>
+          </div>
+          <!-- /.main__info-subtitle -->
+          <div class="main__text-text">
+            в Москве и МО
+            <span class="line-break">с гарантией 20 лет</span>
+          </div>
+          <!-- /.main__info-text -->
+        </div>
+        <!-- /.main__info -->
+
+        <form id="main-form" action="server.php" method="POST" class="form main-form">
+          <svg class="main-form__bg">
+            <use xlink:href="./sprites/sprite.svg#hexagon"></use>
+          </svg>
+          <div class="main-form__title">
+            Бесплатно составим
+            <span class="line-break">смету на строительство</span>
+            вашего дома уже сегодня!
+          </div>
+          <!-- /.main-form__title -->
+          <input id="main__input-name" type="text" name="main-form__name" class="form__input main-form__input" placeholder="Ваше имя" required>
+          <input id="main__input-phone" type="text" name="main-form__phone" class="form__input main-form__input" placeholder="Ваш телефон" required>
+          <button class="button main-form__button">Заказать смету</button>
+          <!-- /.button main-form__button -->
+        </form>
+        <!-- /.form main-form -->
+      </div>
+      <!-- /.main__text -->
+
+      <div class="main__features">
+        <div class="main__features-feature">
+          У нас 7 бригад
+          <span class="line-break">строителей</span>
+        </div>
+        <!-- /.main__features-feature -->
+        <div class="main__features-feature">
+          Опыт работы
+          <span class="line-break">19 лет</span>
+        </div>
+        <!-- /.main__features-feature -->
+        <div class="main__features-feature">
+          Создаем дома
+          <span class="line-break">"под ключ",</span>
+      
+          <span class="text_light">
+            реконструируем
+            <span class="line-break">или достраиваем</span>
+          </span>
+        </div>
+        <!-- /.main__features-feature -->
+      </div>
+      <!-- /.main__features -->
+    </div>
+    <!-- /.main__wrap container -->
+  </section>
+  <!-- /.main -->
+
+  <section id="portfolio" class="portfolio">
+    <div class="portfolio__wrap container">
+      <h2 class="portfolio__title title">
+        У нас есть уже готовые проекты
+      </h2>
+      <!-- /.portfolio__title title -->
+
+      <ul class="portfolio__menu">
+        <li class="portfolio__menu-item portfolio__menu-item_active" data-cat="economical">Эконом</li>
+        <!-- /.portfolio__menu-item -->
+        <li class="portfolio__menu-item" data-cat="middle">Средний</li>
+        <!-- /.portfolio__menu-item -->
+        <li class="portfolio__menu-item" data-cat="premium">Премиум</li>
+        <!-- /.portfolio__menu-item -->
+      </ul>
+      <!-- /.portfolio__menu -->
+
+      <div class="portfolio__cards">
+        <div class="portfolio__cards-wrap">
+          <div class="portfolio__card" data-cat="economical">
+            <img src="./img/portfolio/card-img.jpg" alt="Дом" class="portfolio__card-img">
+          
+            <div class="portfolio__card-info">
+              <h3 class="portfolio__card-title">
+                Проект Дома Навека 1
+              </h3>
+              <!-- /.portfolio__card-title -->
+              <div class="portfolio__card-square">Площадь: 102 м2</div>
+              <!-- /.portfolio__card-square -->
+              <div class="portfolio__card-sizes">Размеры: 10х23х5</div>
+              <!-- /.portfolio__card-sizes -->
+              <button type="submit" class="portfolio__card-button button">
+                Подробнее о проекте
+              </button>
+              <!-- /.portfolio__button button -->
+            </div>
+            <!-- /.portfolio__card-info -->
+          </div>
+          <!-- /.portfolio__card -->
+          
+          <div class="portfolio__card" data-cat="middle">
+            <img src="./img/portfolio/card-img.jpg" alt="Дом" class="portfolio__card-img">
+          
+            <div class="portfolio__card-info">
+              <h3 class="portfolio__card-title">
+                Проект Дома Навека 2
+              </h3>
+              <!-- /.portfolio__card-title -->
+              <div class="portfolio__card-square">Площадь: 102 м2</div>
+              <!-- /.portfolio__card-square -->
+              <div class="portfolio__card-sizes">Размеры: 10х23х5</div>
+              <!-- /.portfolio__card-sizes -->
+              <button type="submit" class="portfolio__card-button button">
+                Подробнее о проекте
+              </button>
+              <!-- /.portfolio__button button -->
+            </div>
+            <!-- /.portfolio__card-info -->
+          </div>
+          <!-- /.portfolio__card -->
+          
+          <div class="portfolio__card" data-cat="premium">
+            <img src="./img/portfolio/card-img.jpg" alt="Дом" class="portfolio__card-img">
+          
+            <div class="portfolio__card-info">
+              <h3 class="portfolio__card-title">
+                Проект Дома Навека 3
+              </h3>
+              <!-- /.portfolio__card-title -->
+              <div class="portfolio__card-square">Площадь: 102 м2</div>
+              <!-- /.portfolio__card-square -->
+              <div class="portfolio__card-sizes">Размеры: 10х23х5</div>
+              <!-- /.portfolio__card-sizes -->
+              <button type="submit" class="portfolio__card-button button">
+                Подробнее о проекте
+              </button>
+              <!-- /.portfolio__button button -->
+            </div>
+            <!-- /.portfolio__card-info -->
+          </div>
+          <!-- /.portfolio__card -->
+
+          <div class="portfolio__card" data-cat="premium">
+            <img src="./img/portfolio/card-img.jpg" alt="Дом" class="portfolio__card-img">
+          
+            <div class="portfolio__card-info">
+              <h3 class="portfolio__card-title">
+                Проект Дома Навека 4
+              </h3>
+              <!-- /.portfolio__card-title -->
+              <div class="portfolio__card-square">Площадь: 102 м2</div>
+              <!-- /.portfolio__card-square -->
+              <div class="portfolio__card-sizes">Размеры: 10х23х5</div>
+              <!-- /.portfolio__card-sizes -->
+              <button type="submit" class="portfolio__card-button button">
+                Подробнее о проекте
+              </button>
+              <!-- /.portfolio__button button -->
+            </div>
+            <!-- /.portfolio__card-info -->
+          </div>
+          <!-- /.portfolio__card -->
+
+          <div class="portfolio__card" data-cat="premium">
+            <img src="./img/portfolio/card-img.jpg" alt="Дом" class="portfolio__card-img">
+          
+            <div class="portfolio__card-info">
+              <h3 class="portfolio__card-title">
+                Проект Дома Навека 5
+              </h3>
+              <!-- /.portfolio__card-title -->
+              <div class="portfolio__card-square">Площадь: 102 м2</div>
+              <!-- /.portfolio__card-square -->
+              <div class="portfolio__card-sizes">Размеры: 10х23х5</div>
+              <!-- /.portfolio__card-sizes -->
+              <button type="submit" class="portfolio__card-button button">
+                Подробнее о проекте
+              </button>
+              <!-- /.portfolio__button button -->
+            </div>
+            <!-- /.portfolio__card-info -->
+          </div>
+          <!-- /.portfolio__card -->
+          
+          <div class="portfolio__card" data-cat="premium">
+            <img src="./img/portfolio/card-img.jpg" alt="Дом" class="portfolio__card-img">
+          
+            <div class="portfolio__card-info">
+              <h3 class="portfolio__card-title">
+                Проект Дома Навека 6
+              </h3>
+              <!-- /.portfolio__card-title -->
+              <div class="portfolio__card-square">Площадь: 102 м2</div>
+              <!-- /.portfolio__card-square -->
+              <div class="portfolio__card-sizes">Размеры: 10х23х5</div>
+              <!-- /.portfolio__card-sizes -->
+              <button type="submit" class="portfolio__card-button button">
+                Подробнее о проекте
+              </button>
+              <!-- /.portfolio__button button -->
+            </div>
+            <!-- /.portfolio__card-info -->
+          </div>
+          <!-- /.portfolio__card -->
+
+          <div class="portfolio__card" data-cat="middle">
+            <img src="./img/portfolio/card-img.jpg" alt="Дом" class="portfolio__card-img">
+          
+            <div class="portfolio__card-info">
+              <h3 class="portfolio__card-title">
+                Проект Дома Навека 7
+              </h3>
+              <!-- /.portfolio__card-title -->
+              <div class="portfolio__card-square">Площадь: 102 м2</div>
+              <!-- /.portfolio__card-square -->
+              <div class="portfolio__card-sizes">Размеры: 10х23х5</div>
+              <!-- /.portfolio__card-sizes -->
+              <button type="submit" class="portfolio__card-button button">
+                Подробнее о проекте
+              </button>
+              <!-- /.portfolio__button button -->
+            </div>
+            <!-- /.portfolio__card-info -->
+          </div>
+          <!-- /.portfolio__card -->
+
+          <div class="portfolio__card" data-cat="middle">
+            <img src="./img/portfolio/card-img.jpg" alt="Дом" class="portfolio__card-img">
+          
+            <div class="portfolio__card-info">
+              <h3 class="portfolio__card-title">
+                Проект Дома Навека 8
+              </h3>
+              <!-- /.portfolio__card-title -->
+              <div class="portfolio__card-square">Площадь: 102 м2</div>
+              <!-- /.portfolio__card-square -->
+              <div class="portfolio__card-sizes">Размеры: 10х23х5</div>
+              <!-- /.portfolio__card-sizes -->
+              <button type="submit" class="portfolio__card-button button">
+                Подробнее о проекте
+              </button>
+              <!-- /.portfolio__button button -->
+            </div>
+            <!-- /.portfolio__card-info -->
+          </div>
+          <!-- /.portfolio__card -->
+          
+          <div class="portfolio__card" data-cat="economical">
+            <img src="./img/portfolio/card-img.jpg" alt="Дом" class="portfolio__card-img">
+          
+            <div class="portfolio__card-info">
+              <h3 class="portfolio__card-title">
+                Проект Дома Навека 9
+              </h3>
+              <!-- /.portfolio__card-title -->
+              <div class="portfolio__card-square">Площадь: 102 м2</div>
+              <!-- /.portfolio__card-square -->
+              <div class="portfolio__card-sizes">Размеры: 10х23х5</div>
+              <!-- /.portfolio__card-sizes -->
+              <button type="submit" class="portfolio__card-button button">
+                Подробнее о проекте
+              </button>
+              <!-- /.portfolio__button button -->
+            </div>
+            <!-- /.portfolio__card-info -->
+          </div>
+          <!-- /.portfolio__card -->
+        </div>
+        <!-- /.portfolio__cards-wrap -->
+      </div>
+      <!-- /.portfolio__cards -->
+
+      <div class="portfolio__controls">
+        <svg class="portfolio__controls-arrow portfolio__controls-arrow_left">
+          <use xlink:href="./sprites/sprite.svg#arrow-left"></use>
+        </svg>
+
+        <ul class="portfolio__controls-dots">
+          <li class="portfolio__controls-dot portfolio__controls-dot_active"></li>
+          <li class="portfolio__controls-dot"></li>
+        </ul>
+        <!-- /.portolio__controls-dots -->
+
+        <svg class="portfolio__controls-arrow portfolio__controls-arrow_right">
+          <use xlink:href="./sprites/sprite.svg#arrow-right"></use>
+        </svg>
+        <!-- /.portfolio__controls-arrow -->
+      </div>
+      <!-- /.portfolio__controls -->
+    </div>
+    <!-- /.portfolio__wrap container -->
+  </section>
+  <!-- /.portfolio -->
+
+  <section id="projects" class="projects">
+    <div class="projects__wrap container">
+      <h2 class="projects__title title">
+        Мы построим Вам дом по индивидуальному плану
+        разработанному в нашем проектном бюро
+      </h2>
+      <!-- /.projects__title title -->
+
+      <div class="subtitle projects__subtitle">
+        За 19 лет мы разработали более 500 индивидуальных проектов
+      </div>
+      <!-- /.projects__subtitle -->
+
+      <div id="carousel-1" class="projects-slider slider">
+        <svg class="slider__arrow slider__arrow_left">
+          <use xlink:href="./sprites/sprite.svg#arrow-left"></use>
+        </svg>
+        <!-- /.slider__arrow slider__arrow_left -->
+
+        <div class="slider__wrap">
+          <img src="./img/projects/house-1.jpg" alt="Дом" class="slider__slide">
+          <img src="./img/projects/house-2.jpg" alt="Дом" class="slider__slide">
+          <img src="./img/projects/house-3.jpg" alt="Дом" class="slider__slide">
+          <img src="./img/projects/house-1.jpg" alt="Дом" class="slider__slide">
+          <img src="./img/projects/house-2.jpg" alt="Дом" class="slider__slide">
+          <img src="./img/projects/house-3.jpg" alt="Дом" class="slider__slide">
+        </div>
+
+        <svg class="slider__arrow slider__arrow_right">
+          <use xlink:href="./sprites/sprite.svg#arrow-right"></use>
+        </svg>
+    <!-- /.slider__wrap -->
+      </div>
+      <!-- /.slider -->
+      
+      <div class="projects__subtitle">
+        За 19 лет мы разработали более 500 индивидуальных проектов
+      </div>
+      <!-- /.projects__subtitle -->
+
+      <div id="carousel-2" class="projects-slider slider">
+        <svg class="slider__arrow slider__arrow_left">
+          <use xlink:href="./sprites/sprite.svg#arrow-left"></use>
+        </svg>
+        <!-- /.slider__arrow slider__arrow_left -->
+
+        <div class="slider__wrap">
+          <img src="./img/projects/house-4.jpg" alt="Дом" class="slider__slide">
+          <img src="./img/projects/house-5.jpg" alt="Дом" class="slider__slide">
+          <img src="./img/projects/house-6.jpg" alt="Дом" class="slider__slide">
+          <img src="./img/projects/house-4.jpg" alt="Дом" class="slider__slide">
+          <img src="./img/projects/house-5.jpg" alt="Дом" class="slider__slide">
+          <img src="./img/projects/house-6.jpg" alt="Дом" class="slider__slide">
+        </div>
+        <!-- /.slider__wrap -->
+
+        <svg class="slider__arrow slider__arrow_right">
+          <use xlink:href="./sprites/sprite.svg#arrow-right"></use>
+        </svg>
+      </div>
+      <!-- /.slider -->
+
+      <form id="projects-form" action="server.php" method="POST" class="projects-form form">
+        <h2 class="projects-form__title form__title">
+          Мы готовы разработать для Вас индивидуальный проект дома по Вашим пожеланиям
+          Либо использовать для строительства Ваш собственный проект
+        </h2>
+        <!-- /.projects-form__title form__title -->
+        <div class="projects-form__subtitle form__subtitle">
+          Заполните форму ниже - мы свяжемся с Вами для обсуждения деталей проекта
+        </div>
+        <!-- /.projects-form__subtitle form__subtitle -->
+        <div class="projects-form__inputs form__inputs">
+          <input id="projects__input-name" type="text" name="projects__input-name" class="projects-form__input form__input" placeholder="Ваше имя" required>
+          <input id="projects__input-phone" type="text" name="projects__input-phone" class="projects-form__input form__input" placeholder="Ваш телефон" required>
+          <button class="projects-form__button button">
+            Заказать <span class="line-break">обратный звонок</span>
+          </button>
+          <!-- /.projects-form__button button -->
+        </div>
+        <!-- /.projects-form__inputs form__inputs -->
+      </form>
+      <!-- /.projects-form form -->
+    </div>
+    <!-- /.projects__wrap container -->
+  </section>
+  <!-- /.projects -->
+
+  <section id="guarranty" class="guarranty">
+    <div class="container guarranty__wrap">
+      <h2 class="title guarranty__title">
+        Гарантия 20 лет на качество строительства дома
+        прописана в договоре
+      </h2>
+      <!-- /.title guarranty__title -->
+      <div class="subtitle guarranty__subtitle">
+        Мы контролируем процесс строительства на каждом этапе
+        от его начала до момента сдачи объекта заказчику
+      </div>
+      <!-- /.subtitle guarranty__subtitle -->
+      <img src="img/house-details/house.png" alt="дом" class="guarranty__img">
+    </div>
+    <!-- /.container guarranty__wrap -->
+  </section>
+  <!-- /.guarranty -->
+
+  <section id="materials" class="materials">
+    <div class="materials__wrap container">
+      <h2 class="materials__title title">
+        Мы построим для Вас дом
+        <span class="line-break">из выбранного Вами материала</span>
+      </h2>
+      <!-- /.materials__title title -->
+
+      <div class="materials__cards">
+        <div class="materials__card">
+          <img src="./img/materials/concrete.jpg" alt="бетон" class="materials__card-img">
+          <div class="materials__card-title">Из бетона</div>
+          <!-- /.materials__card-title -->
+          <a href="#" class="materials__card-link">Подробнее</a>
+          <!-- /.materials__card-link -->
+        </div>
+        <!-- /.materials__card -->
+
+        <div class="materials__card">
+          <img src="./img/materials/brick.jpg" alt="кирпич" class="materials__card-img">
+          <div class="materials__card-title">Из кирпича</div>
+          <!-- /.materials__card-title -->
+          <a href="" class="materials__card-link">Подробнее</a>
+          <!-- /.materials__card-link -->
+        </div>
+        <!-- /.materials__card -->
+
+        <div class="materials__card">
+          <img src="./img/materials/big-brick.jpg" alt="Поризованный блок" class="materials__card-img">
+          <div class="materials__card-title">Из поризованных блоков</div>
+          <!-- /.materials__card-title -->
+          <a href="" class="materials__card-link">Подробнее</a>
+          <!-- /.materials__card-link -->
+        </div>
+        <!-- /.materials__card -->
+
+        <div class="materials__card">
+          <img src="./img/materials/stone.jpg" alt="Пеноблок" class="materials__card-img">
+          <div class="materials__card-title">Из пеноблоков</div>
+          <!-- /.materials__card-title -->
+          <a href="" class="materials__card-link">Подробнее</a>
+          <!-- /.materials__card-link -->
+        </div>
+        <!-- /.materials__card -->
+      </div>
+      <!-- /.materials__cards -->
+    </div>
+    <!-- /.materials__wrap container -->
+  </section>
+  <!-- /.materials -->
+
+  <section id="features" class="features">
+    <div class="features__wrap container">
+      <h2 class="features__title title">
+        Мы всегда укладываемся в сроки
+        <span class="line-break">прописанные в договоре на строительство</span>
+      </h2>
+      <!-- /.features__title title -->
+
+      <div class="features__list">
+        <div class="features__feature">
+          <img src="./img/features/excavator.png" alt="Экскаватор" class="features__feature-img">
+          <div class="features__features-text">
+            <div class="features__feature-title">
+              Мы используем современную технику и инструмент
+              при производстве работ
+            </div>
+            <!-- /.features__feature-title -->
+            <div class="features__feature-subtitle">
+              Это в разы сокращает сроки строительства
+            </div>
+            <!-- /.features__feature-subtitle -->
+          </div>
+          <!-- /.features__features-text -->
+        </div>
+        <!-- /.features__feature -->
+
+        <div class="features__feature">
+          <img src="./img/features/person.png" alt="Человек" class="features__feature-img">
+          <div class="features__features-text">
+            <div class="features__feature-title">
+              У нас в штате 7 бригад опытных специалистов
+              своего дела
+            </div>
+            <!-- /.features__feature-title -->
+            <div class="features__feature-subtitle">
+              Мы имеем конкурентное преимущество в качестве выполняемых работ
+            </div>
+            <!-- /.features__feature-subtitle -->
+          </div>
+          <!-- /.features__features-text -->
+        </div>
+        <!-- /.features__feature -->
+
+        <div class="features__feature">
+          <img src="./img/features/directory.png" alt="Папка" class="features__feature-img">
+          <div class="features__features-text">
+            <div class="features__feature-title">
+              Отдел технического контроля нашей компании
+              проверяет каждый этап строительства
+            </div>
+            <!-- /.features__feature-title -->
+            <div class="features__feature-subtitle">
+              Это позволяет исключить производственный брак на каждом этапе строительства
+            </div>
+            <!-- /.features__feature-subtitle -->
+          </div>
+          <!-- /.features__features-text -->
+        </div>
+        <!-- /.features__feature -->
+      </div>
+      <!-- /.features__wrap -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.features -->
+
+  <section id="video" class="video">
+    <div class="container">
+      <h2 class="title">
+        Все сотрудники в нашем штате имеют высшее инженерно-строительное образование
+      </h2>
+      <!-- /.title -->
+      
+      <div class="video__columns">
+        <div class="video__mediaplayer">
+          <video poster="img/video-review/preview.jpg" preload="none">
+            <source src="videos/video.webm" type="video/webm">
+            <source src="videos/video.mp4" type="video/mp4">
+            <source src="videos/video.ogg" type="video/ogv">
+          </video>
+
+          <div class="video__mediaplayer-playbutton"></div>
+        </div>
+        <!-- /.video__mediaplayer -->
+
+        <div class="video__text">
+          <h3 class="video__text-title">
+            Евтушенко Дмитрий
+          </h3>
+          <!-- /.video__text-title -->
+          <div class="video__text-subtitle">
+            Генеральный директор
+            ООО "Дома Навека"
+          </div>
+          <!-- /.video__text-subtitle -->
+          <div class="video__text-info">
+            Вы можете напрямую связаться
+            с директором по телефону:
+          </div>
+          <!-- /.video__text-info -->
+          <a href="tel:+74952042376" class="video__text-phone">
+            +7 (495) 204-23-76
+          </a>
+          <!-- /.video__text-phone -->
+        </div>
+        <!-- /.video__text -->
+      </div>
+      <!-- /.video__columns -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.video -->
+
+  <section id="team" class="team">
+    <div class="container">
+      <h2 class="title team__title">
+        Ключевые лица нашей компании
+      </h2>
+      <!-- /.title team__title -->
+
+      <div class="team__cards">
+        <div class="team__card">
+          <div class="hexagon team__card-img">
+            <div class="hexagon-in1">
+              <img src="img/team/photo.jpg" alt="фото" class="hexagon-in2">
+            </div>
+            <!-- /.hexagon-in1 -->
+          </div>
+          <!-- /.hexagon team__card-img -->
+          <h3 class="team__card-title">Григорян Алексей</h3>
+          <!-- /.team__card-title -->
+          <div class="team__card-subtitle">Главный инженер</div>
+          <!-- /.team__card-subtitle -->
+          <p class="team__card-info">
+            <span class="line-break">Образование - БГТУ.</span> 
+            <span class="line-break">Стаж с 2004 года.</span> 
+            <span class="line-break">
+              Принимал участие в проектировании и монтаже более 200 объектов в России и за рубежом.
+            </span>
+            <span class="line-break">
+              Внештатный консультант пяти действующих строительных компаний Москвы
+            </span>
+          </p>
+          <!-- /.team__card-info -->
+        </div>
+        <!-- /.team__card -->
+
+        <div class="team__card">
+          <div class="hexagon team__card-img">
+            <div class="hexagon-in1">
+              <img src="img/team/photo-2.jpg" alt="фото" class="hexagon-in2">
+            </div>
+
+          </div>
+          <!-- /.hexagon team__card-img -->
+          <h3 class="team__card-title">Григорян Алексей</h3>
+          <!-- /.team__card-title -->
+          <div class="team__card-subtitle">Главный инженер</div>
+          <!-- /.team__card-subtitle -->
+          <p class="team__card-info">
+            <span class="line-break">Образование - БГТУ.</span>
+            <span class="line-break">Стаж с 2004 года.</span>
+            <span class="line-break">
+              Принимал участие в проектировании и монтаже более 200 объектов в России и за рубежом.
+            </span>
+            <span class="line-break">
+              Внештатный консультант пяти действующих строительных компаний Москвы
+            </span>
+          </p>
+          <!-- /.team__card-info -->
+        </div>
+        <!-- /.team__card -->
+
+        <div class="team__card">
+          <div class="hexagon team__card-img">
+            <div class="hexagon-in1">
+              <img src="img/team/photo.jpg" alt="фото" class="hexagon-in2">
+            </div>
+          </div>
+          <!-- /.hexagon team__card-img -->
+          <h3 class="team__card-title">Григорян Алексей</h3>
+          <!-- /.team__card-title -->
+          <div class="team__card-subtitle">Главный инженер</div>
+          <!-- /.team__card-subtitle -->
+          <p class="team__card-info">
+            <span class="line-break">Образование - БГТУ.</span>
+            <span class="line-break">Стаж с 2004 года.</span>
+            <span class="line-break">
+              Принимал участие в проектировании и монтаже более 200 объектов в России и за рубежом.
+            </span>
+            <span class="line-break">
+              Внештатный консультант пяти действующих строительных компаний Москвы
+            </span>
+          </p>
+          <!-- /.team__card-info -->
+        </div>
+        <!-- /.team__card -->
+      </div>
+      <!-- /.team__cards -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.team -->
+
+  <section id="faq" class="faq">
+    <div class="container">
+      <h2 class="title faq__title">Часто задаваемые вопросы</h2>
+      <!-- /.title faq__title -->
+      <div class="subtitle faq__subtitle">На Ваши вопросы ответит Евтушенко Дмитрий</div>
+      <!-- /.faq__subtitle -->
+
+      <ol class="faq__wrap">
+        <li class="faq__wrap-item">
+          <div class="faq__wrap-question">Как заказать деталь правильно?</div>
+          <!-- /.faq__wrap-question -->
+          <p class="faq__wrap-answer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nam qui ut harum beatae veritatis alias fugiat cum dicta facere quos id maxime delectus quas voluptates eius, perferendis soluta fuga!</p>
+          <!-- /.faq__wrap-answer -->
+        </li>
+        <!-- /.faq__wrap-item -->
+        <li class="faq__wrap-item">
+          <div class="faq__wrap-question">Что делать, если запчасть не понадобилась?</div>
+          <!-- /.faq__wrap-question -->
+          <p class="faq__wrap-answer">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nam qui ut harum beatae veritatis alias fugiat cum dicta facere quos id maxime delectus quas voluptates eius, perferendis soluta fuga!
+          </p>
+          <!-- /.faq__wrap-answer -->
+        </li>
+        <!-- /.faq__wrap-item -->
+        <li class="faq__wrap-item">
+          <div class="faq__wrap-question">Как долго доставляется деталь?</div>
+          <!-- /.faq__wrap-question -->
+          <p class="faq__wrap-answer">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nam qui ut harum beatae veritatis alias fugiat cum dicta facere quos id maxime delectus quas voluptates eius, perferendis soluta fuga!
+          </p>
+          <!-- /.faq__wrap-answer -->
+        </li>
+        <!-- /.faq__wrap-item -->
+        <li class="faq__wrap-item">
+          <div class="faq__wrap-question">Можете ли Вы установить деталь?</div>
+          <!-- /.faq__wrap-question -->
+          <p class="faq__wrap-answer">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nam qui ut harum beatae veritatis alias fugiat cum dicta facere quos id maxime delectus quas voluptates eius, perferendis soluta fuga!
+          </p>
+          <!-- /.faq__wrap-answer -->
+        </li>
+        <!-- /.faq__wrap-item -->
+        <li class="faq__wrap-item">
+          <div class="faq__wrap-question">Какой транспортной компанией доставляется деталь?</div>
+          <!-- /.faq__wrap-question -->
+          <p class="faq__wrap-answer">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nam qui ut harum beatae veritatis alias fugiat cum dicta facere quos id maxime delectus quas voluptates eius, perferendis soluta fuga!
+          </p>
+          <!-- /.faq__wrap-answer -->
+        </li>
+        <!-- /.faq__wrap-item -->
+        <li class="faq__wrap-item">
+          <div class="faq__wrap-question">Как долго доставляется деталь?</div>
+          <!-- /.faq__wrap-question -->
+          <p class="faq__wrap-answer">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nam qui ut harum beatae veritatis alias fugiat cum dicta facere quos id maxime delectus quas voluptates eius, perferendis soluta fuga!
+          </p>
+          <!-- /.faq__wrap-answer -->
+        </li>
+        <!-- /.faq__wrap-item -->
+        <li class="faq__wrap-item">
+          <div class="faq__wrap-question">Что делать, если запчасть не понадобилась?</div>
+          <!-- /.faq__wrap-question -->
+          <p class="faq__wrap-answer">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nam qui ut harum beatae veritatis alias fugiat cum dicta facere quos id maxime delectus quas voluptates eius, perferendis soluta fuga!
+          </p>
+          <!-- /.faq__wrap-answer -->
+        </li>
+        <!-- /.faq__wrap-item -->
+      </ol>
+      <!-- /.faq__wrap -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.faq -->
+
+  <section id="request" class="request">
+    <div class="container">
+      <form id="request-form" action="server.php" method="POST" class="projects-form form">
+        <h2 class="projects-form__title form__title">
+          Вы не нашли ответа на свой вопрос? Наши специалисты дадут
+          Вам профессиональную консультацию абсолютно бесплатно!
+        </h2>
+        <!-- /.projects-form__title form__title -->
+        <div class="projects-form__subtitle form__subtitle">
+          Для этого оставьте свой номер телефона в форме ниже - мы перезвоним Вам в течение 3 минут
+        </div>
+        <!-- /.projects-form__subtitle form__subtitle -->
+        <div class="projects-form__inputs form__inputs">
+          <input id="request__input-name" type="text" name="request__input-name" class="projects-form__input form__input" placeholder="Ваше имя" required>
+          <input id="request__input-phone" type="text" name="request__input-phone" class="projects-form__input form__input" placeholder="Ваш телефон" required>
+          <button class="projects-form__button button">
+            Заказать <span class="line-break">обратный звонок</span>
+          </button>
+          <!-- /.projects-form__button button -->
+        </div>
+        <!-- /.projects-form__inputs form__inputs -->
+      </form>
+      <!-- /.projects-form form -->
+    </div>
+  </section>
+
+  <section id="contacts" class="contacts">
+    <div id="map" class="contacts__map"></div>
+    <!-- /#map.contacts__map -->
+
+    <div class="contacts__block">
+      <h3 class="contacts__title">
+        Мы можем показать Вам
+        еще больше проектов у нас в офисе!
+      </h3>
+      <!-- /.contacts__title -->
+
+      <div class="contacts__subtitle">Приезжайте к нам в гости по адресу:</div>
+      <!-- /.contacts__subtitle -->
+
+      <ul class="contacts__list">
+        <li class="contacts__list-item contacts__list-item_address">
+          <span class="line-break">МКАД 51 км. ТВК </span>
+          <span class="line-break">“Элит Строй Материалы”</span>
+          павильон L23
+        </li>
+        <!-- /.contacts__list-item -->
+        <li class="contacts__list-item contacts__list-item_phone">
+          <span class="line-break">Звоните прямо сейчас:</span>
+          <a href="tel:+74952042376" class="contacts__list-phone">
+            +7 (495) 204-23-76
+          </a>
+        </li>
+        <!-- /.contacts__list-item -->
+        <li class="contacts__list-item contacts__list-item_worktime">
+          <span class="line-break">с 9:00 до 21:00</span>
+          без выходных
+        </li>
+        <!-- /.contacts__list-item -->
+      </ul>
+      <!-- /.contacts__list -->
+    </div>
+    <!-- /.contacts__block -->
+  </section>
+  <!-- /.contacts -->
+
+  <footer class="header">
+    <div class="header__wrap container">
+      <div class="logo">
+        <img src="./img/header/logo.png" alt="logo" class="logo__img">
+  
+        <div class="logo__text">
+          <span class="text_bold">Дома</span>Навека
+        </div>
+        <!-- /.logo__text -->
+      </div>
+      <!-- /.logo -->
+    </div>
+    <!-- /.header__wrap container -->
+  </footer>
+  <!-- /.footer -->
+
+  <section class="popup popup-thanks">
+    <div class="popup__block">
+      <h2 class="title popup__title">Спасибо!</h2>
+      <!-- /.title popup__title -->
+
+      <div class="subtitle popup__subtitle">
+        Наш менеджер с вами свяжется в течении 15 минут.
+      </div>
+      <!-- /.subtitle popup__subtitle -->
+      <button class="button popup__button">Закрыть</button>
+      <!-- /.popup__button -->
+    </div>
+    <!-- /.popup__block -->
+  </section>
+  <!-- /.popup popup-thanks -->
+
+  <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+    <linearGradient id="icon-gradient" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fb2b2b" />
+      <stop offset="100%" stop-color="#f86c26" />
+    </linearGradient>
+  </svg>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="preload" href="css/fonts.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    setTimeout(() => {
+      let elem = document.createElement('script');
+      elem.src = 'https://api-maps.yandex.ru/2.1/?apikey=22ecd435-25c5-4482-abf3-fd1a0dade7be&lang=ru_RU&onload=getYaMap';
+      document.getElementsByTagName('body')[0].appendChild(elem);
+    }, 2000);
+
+    function getYaMap() {
+      let myMap = new ymaps.Map("map", {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        center: [55.684183, 37.412783],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 15
+      });
+
+      let mapPlacemark = new ymaps.GeoObject({
+        geometry: {
+          type: 'Point',
+          coordinates: [55.684183, 37.412783]
+        }
+      });
+
+      myMap.geoObjects.add(mapPlacemark);
+      myMap.controls.remove('geolocationControl');
+      myMap.controls.remove('searchControl');
+      myMap.controls.remove('trafficControl');
+      myMap.controls.remove('typeSelector');
+      myMap.controls.remove('fullscreenControl');
+      myMap.controls.remove('zoomControl');
+      myMap.controls.remove('routeButtonControl');
+      myMap.controls.remove('rulerControl');
+
+      myMap.behaviors.disable(['drag']);
+    }
+  </script>
+  <script src="js/maskPhone.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+.features {
+  padding-bottom: 0;
+  color: $alt-text-color;
+  background-color: $alt-bg-color;
+  &__wrap {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $border-color;
+  }
+  &__feature {
+    display: flex;
+    align-items: center;
+    &-icon {
+      margin-right: 15px;
+      width: 60px;
+      height: 60px;
+      fill: $accent-color;
+    }
+    &-title {
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import 'variables';
+
+body {
+  font-family: 'Arial', sans-serif, -apple-system;
+  overflow-x: hidden;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  width: 1200px;
+}
+
+.button {
+  padding: 5px 35px;
+  font-size: 16px;
+  color: $alt-text-color;
+  background: rgb(68,136,187);
+  background: linear-gradient(180deg, rgba(68,136,187,1) 0%, rgba(46,93,128,1) 100%);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  transition: .2s;
+  &_alt {
+    color: $inactive-text-color;
+    background: transparent;
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+
+@import 'form-component';
+@import 'promo-screen';
+@import 'posts-section';
+@import 'steps-section';
+@import 'footer-section';
+@import 'popup-component';
+@import 'media';

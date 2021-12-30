@@ -1,0 +1,54 @@
+@import "variables";
+
+body {
+  font-family: 'Open Sans', sans-serif, -apple-system;
+}
+
+.section {
+  &__title {
+    margin-bottom: 60px;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $accent-color;
+  }
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 18px;
+  &_accent {
+    color: $alt-text-color;
+    background-color: $active-color;
+  }
+}
+
+.text {
+  &_accent {
+    color: $active-color;
+  }
+  &_bold {
+    font-weight: 700;
+  }
+}
+
+.line-break {
+  display: block;
+}
+
+select, input, button {
+  cursor: pointer;
+}
+
+@import "burger";
+@import "header";
+@import "promo";
+@import "features";
+@import "steps";
+@import "devices";
+@import "errors";
+@import "contacts";
+@import "request";
+@import "footer";
+@import "popups";
+@import "media";

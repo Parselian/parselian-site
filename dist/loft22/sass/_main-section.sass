@@ -1,0 +1,43 @@
+.main
+  &__slide
+    padding:
+      top: 113px
+      bottom: 108px
+    min-height: 620px
+    background: $bg-color url('../img/main/slide.jpg') center no-repeat
+    background-size: cover
+    .wrap
+      justify-content: unset
+  &__text
+    max-width: 518px
+    color: $attraction-color
+    &-title
+      margin-bottom: 59px
+      font-family: 'Muller Regular', sans-serif
+      font-size: 40px
+      letter-spacing: 1px
+      line-height: 48px
+      text-transform: uppercase
+    &-subtitle
+      margin-bottom: 76px
+      max-width: 371px
+      font-family: 'Muller Light', sans-serif
+      font-size: 24px
+      font-weight: 400
+  &__price
+    position: relative
+    top: 50px
+    left: 100px
+    &-hexagon
+      width: 120px
+      height: 136px
+    &-price
+      width: 100%
+      position: absolute
+      top: 47%
+      left: 50%
+      transform: translate(-50%, -50%)
+      font-size: 18px
+      text-align: center
+      font-family: 'Muller Regular', sans-serif
+      color: $attraction-color

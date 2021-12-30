@@ -1,0 +1,79 @@
+.features {
+  padding-bottom: 80px;
+  &__wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__col {
+    &:first-child {
+      max-width: 490px;
+    }
+  }
+  &__title {
+    display: flex;
+    &-icon {
+      margin-left: 10px;
+      width: 35px;
+      height: 35px;
+    }
+  }
+  &__list {
+    margin-bottom: 30px;
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+      &-icon {
+        min-width: 40px;
+        width: 40px;
+        min-height: 40px;
+        height: 40px;
+        margin-right: 10px;
+        fill: $inactive-text-color;
+      }
+      &-title {
+        font-size: 18px;
+        margin-bottom: 3px;
+      }
+      &-text {
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__form {
+    &-input {
+      margin-right: 15px;
+      max-width: 190px;
+    }
+  }
+
+  &__iphone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 430px;
+    height: auto;
+    transform: translate(-50%, -50%);
+    animation: do-levitation 1.2s alternate ease-in-out infinite;
+  }
+  &__collage {
+    &-wrap {
+      right: 0;
+      position: absolute;
+    }
+    width: 480px;
+    height: auto;
+
+    &-blob {
+      position: absolute;
+      top: -4%;
+      left: 30px;
+      width: 200px;
+    }
+  }
+}

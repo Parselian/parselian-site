@@ -1,0 +1,93 @@
+1592641315a:1:{s:14:"header-alt.htm";a:6:{s:8:"fileName";s:14:"header-alt.htm";s:7:"content";s:2167:"[simpleMenu]
+main-li-class = "burger-menu__item"
+active-class = "active"
+==
+<header class="header header_bordered">
+  <ul class="burger-menu">
+    <svg id="burger-menu-btn" class="ham hamRotate ham4 burger-menu__close" viewBox="0 0 100 100" width="60">
+      <path class="line top" d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+      <path class="line middle" d="m 70,50 h -40" />
+      <path class="line bottom"
+        d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+    </svg>
+    {% component 'simpleMenu' %}
+    <!-- /.burger-menu__item -->
+    <li class="burger-menu__item">
+      <a href="https://jellar-web.ru/dist/abiturient/index.php" class="burger-menu__link burger-menu-button">
+        <img src="{{ 'assets/images/log-in.svg'|theme }}" alt="вход" class="burger-menu-button__img">
+        <span class="burger-menu-button__text">Войти</span>
+      </a>
+    </li>
+    <!-- /.burger-menu__item -->
+  </ul>
+  <!-- /.burger-menu -->
+
+  <div class="container header-wrap">
+    <a href="{{ 'home'|page }}" class="header-logo">
+      <img src="{{ 'assets/images/logo.png'|theme }}" alt="лого ВУЗа" class="header-logo__img">
+    </a>
+    <!-- /.header__link -->
+
+
+    <svg id="burger-btn" class="ham hamRotate ham4 header-burger__btn" viewBox="0 0 100 100" width="60">
+      <path class="line top" d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+      <path class="line middle" d="m 70,50 h -40" />
+      <path class="line bottom"
+        d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+    </svg>
+
+    <div class="buttons-wrap">
+      <a href="https://jellar-web.ru/dist/abiturient/index.php" class="button button-authorization">
+        <span class="button-authorization__text">Войти</span>
+        <img src="{{ 'assets/images/log-in.svg'|theme }}" alt="log-in" class="button-authorization__img">
+      </a>
+      <!-- /.authoriation__button -->
+    </div>
+    <!-- /.buttons-wrap -->
+  </div>
+  <!-- /.container -->
+</header>";s:5:"mtime";i:1592561768;s:6:"markup";s:2091:"<header class="header header_bordered">
+  <ul class="burger-menu">
+    <svg id="burger-menu-btn" class="ham hamRotate ham4 burger-menu__close" viewBox="0 0 100 100" width="60">
+      <path class="line top" d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+      <path class="line middle" d="m 70,50 h -40" />
+      <path class="line bottom"
+        d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+    </svg>
+    {% component 'simpleMenu' %}
+    <!-- /.burger-menu__item -->
+    <li class="burger-menu__item">
+      <a href="https://jellar-web.ru/dist/abiturient/index.php" class="burger-menu__link burger-menu-button">
+        <img src="{{ 'assets/images/log-in.svg'|theme }}" alt="вход" class="burger-menu-button__img">
+        <span class="burger-menu-button__text">Войти</span>
+      </a>
+    </li>
+    <!-- /.burger-menu__item -->
+  </ul>
+  <!-- /.burger-menu -->
+
+  <div class="container header-wrap">
+    <a href="{{ 'home'|page }}" class="header-logo">
+      <img src="{{ 'assets/images/logo.png'|theme }}" alt="лого ВУЗа" class="header-logo__img">
+    </a>
+    <!-- /.header__link -->
+
+
+    <svg id="burger-btn" class="ham hamRotate ham4 header-burger__btn" viewBox="0 0 100 100" width="60">
+      <path class="line top" d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+      <path class="line middle" d="m 70,50 h -40" />
+      <path class="line bottom"
+        d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+    </svg>
+
+    <div class="buttons-wrap">
+      <a href="https://jellar-web.ru/dist/abiturient/index.php" class="button button-authorization">
+        <span class="button-authorization__text">Войти</span>
+        <img src="{{ 'assets/images/log-in.svg'|theme }}" alt="log-in" class="button-authorization__img">
+      </a>
+      <!-- /.authoriation__button -->
+    </div>
+    <!-- /.buttons-wrap -->
+  </div>
+  <!-- /.container -->
+</header>";s:4:"code";N;s:10:"simpleMenu";a:2:{s:13:"main-li-class";s:17:"burger-menu__item";s:12:"active-class";s:6:"active";}}}

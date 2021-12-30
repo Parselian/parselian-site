@@ -1,0 +1,52 @@
+.faq {
+  // padding-bottom: 150px;
+  overflow: hidden;
+  &__wrap {
+    position: relative;
+  }
+  &__animoji {
+    position: absolute;
+    top: 50%;
+    width: 200px;
+    z-index: 1;
+    &_left {
+      top: 20%;
+      left: -5%;
+    }
+    &_right {
+      right: -5%;
+      top: 70%;
+      transform: scale(-1, 1) rotate(-10deg);
+    }
+  }
+  &__block {
+    &s {
+      // margin-left: auto;
+      margin-right: auto;
+      // width: 95%;
+      .slick-list {
+        padding-right: 400px;
+      }
+      .slick-active {
+        opacity: 1 !important;
+      }
+      .slick-slide {
+        opacity: 0.3;
+        transition: .5s;
+      }
+    }
+    margin: 40px 40px;
+    padding: 40px 50px;
+    text-align: center;
+    border-radius: 26px;
+    box-shadow: $common-shadow;
+    &-title { 
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    &-text {
+      font-family: 'SF UI Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+  }
+}

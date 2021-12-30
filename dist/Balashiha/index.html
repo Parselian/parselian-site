@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Балашиха хлеб</title>
+</head>
+<body>
+  
+  <header class="header">
+    <div class="wrap header-wrap">
+      <div class="header-title">
+        <div class="header-title__logo">
+          <img src="img/header/header-logo.svg" alt="логотип">
+        </div>
+        <!-- /.header-title__logo -->
+      
+        <div class="header-title__text">
+          Балашиха Хлеб
+          <span class="header-title__text_subtitle">хлебобулочные и кондитерские изделия</span>
+        </div>
+        <!-- /.header-title__text -->
+      </div>
+      <!-- /.header-title -->
+      
+      <div class="header-contacts">
+        <div class="header-contacts__phone">
+            <span class="header-contacts__phone_small">8(495)</span>777-11-00
+        </div>
+        <!-- /.header-contacts__phone -->
+        <div class="header-contacts__text">
+          <a href="tel:+4957771100">Перезвоните мне!</a>
+        </div>
+        <!-- /.header-contacts__text -->
+        <button class="header-contacts__button"></button> <!-- /.header-contacts__button -->
+      </div>
+      <!-- /.header-contacts -->
+    </div>
+  </header>
+  <!-- /.header -->
+
+  <section class="main">
+    <div class="main-text">
+      <h1 class="main-text__title">Уникальные коммерческие условия</h1>
+      <!-- /.main-text__title -->
+      
+      <div class="main-text__subtitle">
+        по поставкам хлебобулочных и кандитерских изделей от крупнейшего хлебзавода в МО
+      </div>
+      <!-- /.main-text__subtitle -->
+    </div>
+    <!-- /.main-text -->
+    
+    <div class="wrap main-wrap">
+      <div class="main-features">
+        <div class="main-features__item wow fadeInUp" data-wow-delay="0.1s">
+          <div class="main-features__item_text">60 тонн хлебобулочных изделий в день</div>
+          <!-- /.main-features__item_text -->
+        </div>
+        <!-- /.main-feature -->
+
+        <div class="main-features__item wow fadeInUp" data-wow-delay="0.2s">
+          <div class="main-features__item_text">Старейший хлебзавод в Москве</div>
+          <!-- /.main-features__item_text -->
+        </div>
+        <!-- /.main-feature -->
+
+        <div class="main-features__item wow fadeInUp" data-wow-delay="0.3s">
+          <div class="main-features__item_text">Уникальная система тройного контроля качества</div>
+          <!-- /.main-features__item_text -->
+        </div>
+        <!-- /.main-feature -->
+      </div>
+      <!-- /.main-features -->
+
+      <div class="main-form">
+        <div class="main-form__title">Получите персональное коммерческое предложение</div>
+        <!-- /.main-form__title -->
+
+        <form action="mailer/smart.php" method="POST">
+          <input type="text" name="user_name" class="section-form__input section-form__input_name" placeholder="Ваше имя" required>
+          <input type="email" name="user_email" class="section-form__input section-form__input_email" placeholder="Ваш e-mail">
+          <input type="text" name="user_phone" class="section-form__input section-form__input_phone" placeholder="Ваш номер телефона" required>
+          <button type="submit" class="section-form__button" onclick="ym(51690335, 'reachGoal', 'formBtn'); return true;">Получить КП!</button>
+          <!-- /.section-form__button -->
+        </form>
+
+        <div class="main-form__undertext">
+          Ваши данные не будут переданны <br>
+          третьим лицам, согласно законам РФ
+        </div>
+        <!-- /.main-form__undertext -->
+      </div>
+      <!-- /.main-form -->
+    </div>
+    <!-- /.wrap -->
+  </section>
+  <!-- /.main -->
+
+  <section class="factory">
+    <h2 class="section-title factory-title">фотографии нашего завода</h2>
+    <!-- /.section-title -->
+    <div class="wrap factory-wrap">
+    
+    <div class="factory-slider">
+        <img src="img/slider/slide.jpg" alt="фото завода">
+        <img src="img/slider/slide.jpg" alt="фото завода">
+        <img src="img/slider/slide.jpg" alt="фото завода">
+        <img src="img/slider/slide.jpg" alt="фото завода">
+        <img src="img/slider/slide.jpg" alt="фото завода">
+    </div>
+    <!-- /.factory-slider -->
+
+    <div class="factory-text">
+      <p class="factory-text_block">
+        Мы изготавливаем хлеб на ОАО «Балашиха Хлеб». Это одно из крупнейших предприятий пищевой промышленности Московского
+        региона, входящее в тройку ведущих производителей хлебобулочной продукции.
+      </p>
+      Мощности комбината изо дня в день модернизируются, позволяя сохранять неизменно высокий уровень качества. Наше
+      оборудование - из России, Чехии, Германии, Голландии и Франции. Наша гордость – наша продукция, которая давно стала
+      визитной карточкой края.
+      А это – более 100 видов хлебобулочных изделий, которые ежедневно попадают на стол наших покупателей
+    </div>
+    <!-- /.factory-text -->
+    </div>
+    <!-- /.wrap -->
+  </section>
+  <!-- /.factory -->
+
+  <section class="video">
+    <h2 class="section-title video-title">Главные преимущества за минуту</h2>
+    <!-- /.section-title -->
+    <div class="wrap video-wrap">
+      <div class="video-bg"></div>
+      <video class="video-feature" src="feature.mp4" width="621" height="396" poster="img/general-features/preview.png" controls></video>
+    </div>
+  </section>
+  <!-- /.video -->
+
+  <section class="features">
+    <h2 class="section-title">Наши преимущества</h2>
+    <!-- /.section-title -->
+
+    <div class="wrap features-wrap">
+      <div class="features-block wow fadeInLeft" data-wow-delay="0.1s">
+        <div class="features-block__img features-block__img-1"></div>
+        <!-- /.features-block__img -->
+        <div class="features-block__text">
+          <div class="features-block__text_title">Честность</div>
+          <!-- /.features-block__text_title -->
+          <div class="features-block__text_descr">
+            - в мыслях, суждениях и делах – это наше кредо. Мы считаем своим долгом поддерживать надежность и прямоту во
+            взаимоотношениях с клиентами и партнерами по бизнесу.
+          </div>
+          <!-- /.features-block__text_descr -->
+        </div>
+        <!-- /.features-block__text -->
+      </div>
+      <!-- /.features-block -->
+
+      <div class="features-block wow fadeInRight" data-wow-delay="0.1s">
+        <div class="features-block__img features-block__img-2"></div>
+        <!-- /.features-block__img -->
+        <div class="features-block__text">
+          <div class="features-block__text_title">Профессионализм</div>
+          <!-- /.features-block__text_title -->
+          <div class="features-block__text_descr">
+            в нашем понимании - это не только доскональное знание всех тонкостей любимой работы, но и непрерывное движение вперед,
+            к новым знаниям и достижениям.
+          </div>
+          <!-- /.features-block__text_descr -->
+        </div>
+        <!-- /.features-block__text -->
+      </div>
+      <!-- /.features-block -->
+
+      <div class="features-block wow fadeInLeft" data-wow-delay="0.2s">
+        <div class="features-block__img features-block__img-3"></div>
+        <!-- /.features-block__img -->
+        <div class="features-block__text">
+          <div class="features-block__text_title">Новаторство</div>
+          <!-- /.features-block__text_title -->
+          <div class="features-block__text_descr">
+            - основа деятельности компании. Внедряя в производство новейшие технологии и программы, отслеживая последние инновации,
+            занимаясь поиском нестандартных путей.
+          </div>
+          <!-- /.features-block__text_descr -->
+        </div>
+        <!-- /.features-block__text -->
+      </div>
+      <!-- /.features-block -->
+
+      <div class="features-block wow fadeInRight" data-wow-delay="0.2s">
+        <div class="features-block__img features-block__img-4"></div>
+        <!-- /.features-block__img -->
+        <div class="features-block__text">
+          <div class="features-block__text_title">
+            Уникальные технологии
+          </div>
+          <!-- /.features-block__text_title -->
+          <div class="features-block__text_descr">
+            Несмотря на свои уникальные качества, этот хлеб является «линейным», то есть его цена ненамного выше цены обыкновенных
+            ржано-пшеничных сортов типа «Дарницкого».
+          </div>
+          <!-- /.features-block__text_descr -->
+        </div>
+        <!-- /.features-block__text -->
+      </div>
+      <!-- /.features-block -->
+
+      <div class="features-block wow fadeInLeft" data-wow-delay="0.3s">
+        <div class="features-block__img features-block__img-5"></div>
+        <!-- /.features-block__img -->
+        <div class="features-block__text">
+          <div class="features-block__text_title">
+            Друзья и партнеры
+          </div>
+          <!-- /.features-block__text_title -->
+          <div class="features-block__text_descr">
+            Недорогой, так называемый, «социальный», хлеб также отличается высоким качеством. Его с удовольствием едят защитники
+            нашего Отечества самых разных родов войск.
+          </div>
+          <!-- /.features-block__text_descr -->
+        </div>
+        <!-- /.features-block__text -->
+      </div>
+      <!-- /.features-block -->
+
+      <div class="features-block wow fadeInRight" data-wow-delay="0.3s">
+        <div class="features-block__img features-block__img-6"></div>
+        <!-- /.features-block__img -->
+        <div class="features-block__text">
+          <div class="features-block__text_title">
+            Социальные программы
+          </div>
+          <!-- /.features-block__text_title -->
+          <div class="features-block__text_descr">
+            Мы не можем пройти мимо тех, кому нужна помощь. Мимо тех, кто в силу ряда обстоятельств много лишен. Потому мы помогаем
+            Ногинскому Благочинию, Богоявленскому собору.
+          </div>
+          <!-- /.features-block__text_descr -->
+        </div>
+        <!-- /.features-block__text -->
+      </div>
+      <!-- /.features-block -->
+    </div>
+    <!-- /.wrap -->
+  </section>
+  <!-- /.features -->
+
+  <section class="goods">
+    <h2 class="section-title goods-title">Каталог продукции</h2>
+    <!-- /.section-title -->
+    <div class="wrap goods-wrap">
+      <div class="goods-card">
+        <div class="goods-card_img">
+          <img src="img/goods/bread.png" alt="Хлеб">
+        </div>
+        <!-- /.goods-card_img -->
+        <div class="goods-card_title">Хлеб</div>
+        <!-- /.goods-card_title -->
+        <div class="goods-card_descr">
+          Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так.
+        </div>
+        <!-- /.goods-card_descr -->
+        <button class="button goods-card_button">Просмотреть</button>
+        <!-- /.button -->
+      </div>
+      <!-- /.goods-card -->
+
+      <div class="goods-card">
+        <div class="goods-card_img">
+          <img src="img/goods/buns.png" alt="булочки">
+        </div>
+        <!-- /.goods-card_img -->
+        <div class="goods-card_title">Хлебушки</div>
+        <!-- /.goods-card_title -->
+        <div class="goods-card_descr">
+          Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так.
+        </div>
+        <!-- /.goods-card_descr -->
+        <button class="button goods-card_button">Просмотреть</button>
+        <!-- /.button -->
+      </div>
+      <!-- /.goods-card -->
+
+      <div class="goods-card">
+        <div class="goods-card_img">
+          <img src="img/goods/buns-2.png" alt="булочки">
+        </div>
+        <!-- /.goods-card_img -->
+        <div class="goods-card_title">Булочки</div>
+        <!-- /.goods-card_title -->
+        <div class="goods-card_descr">
+          Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так.
+        </div>
+        <!-- /.goods-card_descr -->
+        <button class="button goods-card_button">Просмотреть</button>
+        <!-- /.button -->
+      </div>
+      <!-- /.goods-card -->
+
+      <div class="goods-card">
+        <div class="goods-card_img">
+          <img src="img/goods/eclair.png" alt="эклеры">
+        </div>
+        <!-- /.goods-card_img -->
+        <div class="goods-card_title">Кондитерские</div>
+        <!-- /.goods-card_title -->
+        <div class="goods-card_descr">
+          Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так.
+        </div>
+        <!-- /.goods-card_descr -->
+        <button class="button goods-card_button">Просмотреть</button>
+        <!-- /.button -->
+      </div>
+      <!-- /.goods-card -->
+
+      <div class="goods-card">
+        <div class="goods-card_img">
+          <img src="img/goods/loavers-of-bread.png" alt="Хлебцы">
+        </div>
+        <!-- /.goods-card_img -->
+        <div class="goods-card_title">Хлебцы</div>
+        <!-- /.goods-card_title -->
+        <div class="goods-card_descr">
+          Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так.
+        </div>
+        <!-- /.goods-card_descr -->
+        <button class="button goods-card_button">Просмотреть</button>
+        <!-- /.button -->
+      </div>
+      <!-- /.goods-card -->
+
+      <div class="goods-card">
+        <div class="goods-card_img">
+          <img src="img/goods/muesli.png" alt="мюсли">
+        </div>
+        <!-- /.goods-card_img -->
+        <div class="goods-card_title">Мюсли</div>
+        <!-- /.goods-card_title -->
+        <div class="goods-card_descr">
+          Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так.
+        </div>
+        <!-- /.goods-card_descr -->
+        <button class="button goods-card_button">Просмотреть</button>
+        <!-- /.button -->
+      </div>
+      <!-- /.goods-card -->
+    </div>
+    <!-- /.wrap -->
+  </section>
+  <!-- /.goods -->
+
+  <section class="about-us">
+    <div class="section-title about-us-title">О "Башашиха Хлеб"</div>
+    <!-- /.section-title -->
+    <div class="wrap about-us-wrap">
+      <div class="about-us-text">
+        <p class="about-us-text_paragraph">Мы изготавливаем хлеб на ОАО «Балашиха Хлею». Это одно из крупнейших предприятий пищевой промышленности Московского региона, входящее в тройку ведущих производителей хлебобулочной продукции.Мощности комбината изо дня в день модернизируются, позволяя сохранять неизменно высокий уровень качества. Наше оборудование – из России, Чехии, Германии, Голландии и Франции. Наша гордость – наша продукция, которая давно стала визитной карточкой края.</p>
+        <p class="about-us-text about-us-text_bold">
+          А это – более 100 видов хлебобулочных изделий, которые ежедневно попадают на стол наших покупателей.
+        </p>
+        <p class="about-us-text about-us-text_paragraph">
+          На нашем комбинате трудится более 700 человек. Это не просто люди, которые  приходят сюда из-за стабильной зарплаты, это – хлебопеки, которые приходят сюда по зову сердца. А потому наш хлеб не только качественный и вкусный, но ещё и изготавливается с любовью.
+        </p>
+      </div>
+      <!-- /.about-us__text -->
+
+      <div class="about-us-slider">
+          <div class="about-us-slider_slide">
+            <img src="img/general-features/preview.png" alt="preview">
+          </div>
+          <div class="about-us-slider_slide">
+            <img src="img/general-features/preview.png" alt="preview">
+          </div>
+          <div class="about-us-slider_slide">
+            <img src="img/general-features/preview.png" alt="preview">
+          </div>
+          <div class="about-us-slider_slide">
+            <img src="img/general-features/preview.png" alt="preview">
+          </div>
+          <div class="about-us-slider_slide">
+             <img src="img/general-features/preview.png" alt="preview">
+          </div>
+      </div>
+      <!-- /.about-us__slider -->
+    </div>
+    <!-- /.wrap -->
+  </section>
+  <!-- /.about-us -->
+
+  <section class="personal-proposal">
+    <h2 class="personal-proposal-title">Получите персональное предложение</h2>
+    <!-- /.section-title -->
+    <div class="wrap personal-proposal-wrap">
+      <form action="mailer/smart.php" method="POST" class="section-form personal-proposal-form">
+        <input type="text" class="section-form__input section-form__input_name personal-proposal-form_input" placeholder="Ваше имя" required>
+        <input type="email" class="section-form__input section-form__input_email personal-proposal-form_input" placeholder="Ваш E-mail">
+        <input type="text" class="section-form__input section-form__input_phone personal-proposal-form_input" placeholder="Ваш номер телефона" required>
+        <button class="section-form__button personal-proposal-form_button" onclick="ym(51690335, 'reachGoal', 'formBtn'); return true;">Получить сейчас!</button>
+        <!-- /.section-form__button -->
+      </form>
+      <!-- /.personal-proposal-form -->
+      <div class="personal-proposal__undertext">
+        Ваши данные не будут переданны <br>
+        третьим лицам, согласно законам РФ
+      </div>
+      <!-- /.personal-proposal__undertext -->
+    </div>
+  </section>
+  <!-- /.personal-proposal -->
+
+  <section class="images">
+    <div class="images-wrap">
+      <div class="images-bread">
+        <img src="img/photogallery/breads.jpg" alt="продукция">
+      </div>
+      <!-- /.image-bread -->
+    
+      <div class="images-bread">
+        <img src="img/photogallery/breads.jpg" alt="продукция">
+      </div>
+      <!-- /.image-bread -->
+    
+      <div class="images-bread">
+        <img src="img/photogallery/breads.jpg" alt="продукция">
+      </div>
+      <!-- /.image-bread -->
+
+      <div class="images-bread">
+        <img src="img/photogallery/buns.jpg" alt="продукция">
+      </div>
+      <!-- /.image-bread -->
+    
+      <div class="images-bread">
+        <img src="img/photogallery/breads.jpg" alt="продукция">
+      </div>
+      <!-- /.image-bread -->
+    
+      <div class="images-bread">
+        <img src="img/photogallery/buns.jpg" alt="продукция">
+      </div>
+      <!-- /.image-bread -->
+    
+      <div class="images-bread">
+        <img src="img/photogallery/breads.jpg" alt="продукция">
+      </div>
+    
+      <!-- /.image-bread -->
+      <div class="images-bread">
+        <img src="img/photogallery/buns.jpg" alt="продукция">
+      </div>
+      <!-- /.image-bread -->
+      <div class="images-bread">
+        <img src="img/photogallery/breads.jpg" alt="продукция">
+      </div>
+      <!-- /.image-bread -->
+    
+      <div class="images-bread">
+        <img src="img/photogallery/buns.jpg" alt="продукция">
+      </div>
+      <!-- /.image-bread -->
+    
+      <div class="images-bread">
+        <img src="img/photogallery/breads.jpg" alt="продукция">
+      </div>
+      <!-- /.image-bread -->
+    
+      <div class="images-bread">
+        <img src="img/photogallery/buns.jpg" alt="продукция">
+      </div>
+      <!-- /.image-bread -->
+    </div>
+    <!-- /.wrap -->
+  </section>
+  <!-- /.images -->
+
+  <section class="yandex-map">
+    <div id="map"></div>
+    <!-- /.map -->
+  </section>
+  <!-- /.yandex-map -->
+
+  <footer class="footer">
+    <div class="wrap footer-wrap">
+      <div class="footer-text">&copy; 1994-2014 «Балашиха Хлеб», ИНН: 7708757552, ОГРН: 1127746150080, 
+      <span class="footer-text footer-text_block">Адрес: г. Москва, ул. Неверовского, д. 9</span>
+      </div>
+      <!-- /.footer-text -->
+      <div class="ya-share2 footer-buttons" data-services="vkontakte,facebook" data-counter=""></div>
+      <!-- /.footer-buttons -->
+    </div>
+    <!-- /.footer-wrap -->
+  </footer>
+  <!-- /.footer -->
+
+  <section class="modal">
+    <div class="modal-block">
+      <div class="modal-block_close">&times;</div>
+      <!-- /.modal-block_close -->
+
+      <h1 class="modal-block_title">
+        Спасибо за обращение!
+      </h1>
+      <!-- /.modal-block_title -->
+
+      <h2 class="modal-block_subtitle">
+        Мы вам перезвоним.
+      </h2>
+      <!-- /.section-block_subtitle -->
+
+      <button type="button" class="section-form__button modal-block_button">Вернуться</button>
+      <!-- /.modal-block_button -->
+    </div>
+    <!-- /.modal-block -->
+  </section>
+  <!-- /.modal -->
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=<452dd301-3d40-4670-a51d-24f5fe28d3e6>&lang=ru_RU">
+  </script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="js/jQueryMaskedInput.min.js"></script>
+  <script src="slick/slick.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+  <script src="//yastatic.net/share2/share.js"></script>
+  <script>
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(51690335, "init", {
+         id:51690335,
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/51690335" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</body>
+</html>

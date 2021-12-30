@@ -1,0 +1,52 @@
+.news
+  padding: 
+    top: 77px
+    bottom: 82px
+  background-color: $section-bg
+  &-title
+    margin: 
+      bottom: 55px
+    &:before
+      left: 50%
+      bottom: 44%
+      transform: translateX(-200px)
+    &:after
+      right: 50%
+      bottom: 44%
+      transform: translateX(200px)
+  &-wrap
+    width: 1206px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &-card
+    padding-bottom: 40px
+    width: 291px
+    background-color: $text-color-light
+    &_image
+      margin-bottom: 40px
+      position: relative
+      &:before
+        position: absolute
+        content: ''
+        top: 0
+        left: 0
+        width: 100%
+        height: 98.3%
+        background-color: rgba(16, 22, 30, 0.5)
+      img
+        width: 100%
+    &_title
+      margin-bottom: 35px
+      text-align: center
+      font-size: 16px
+      font-weight: 700
+      letter-spacing: 0.36px
+      &_break
+        display: block
+    &_date
+      margin-left: 25px
+      font-size: 15px
+      font-weight: 400
+      letter-spacing: 0.3px
+      text-transform: uppercase

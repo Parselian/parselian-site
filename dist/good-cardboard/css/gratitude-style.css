@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.gratitude {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  background: url(../img/gratitude/background.jpg) no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+.gratitude::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+.gratitude-text {
+  width: 600px;
+  height: 300px;
+  background-color: rgba(116, 112, 112, 0.7);
+  border-radius: 10px;
+}
+.gratitude-text__title {
+  margin-bottom: 90px;
+  padding: 18px 0;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 22px;
+  text-transform: uppercase;
+  background-color: #ff9d00;
+  border-radius: 10px 10px 0 0;
+}
+
+.gratitude-text__button{
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
+  padding: 16px 22px;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff9d00;
+}

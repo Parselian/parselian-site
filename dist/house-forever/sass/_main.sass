@@ -1,0 +1,69 @@
+.main
+  padding: 
+    top: 70px
+    bottom: 60px
+  min-height: 600px
+  color: $alt-text-color
+  background: url(../img/main/bg.jpg) center no-repeat
+  background-size: cover
+  &__info
+    display: flex
+    justify-content: space-between
+  &__text
+    &-title
+      margin-bottom: 40px
+      font-family: 'Geometria Bold', sans-serif
+      font-size: 36px
+      line-height: 32px
+      letter-spacing: 0.36px
+    &-subtitle
+      margin-bottom: 45px
+      font-family: 'Geometria Medium', sans-serif
+      font-size: 18px
+      line-height: 26px
+    &-text
+      font-size: 16px
+      line-height: 24px
+  &__features
+    width: 500px
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    &-feature
+      font-family: 'Geometria Medium', sans-serif
+      font-size: 14px
+      .text_light
+        margin-top: 10px
+        display: block
+  &-form
+    position: relative
+    width: 370px
+    height: 420px
+    display: flex
+    flex-direction: column
+    align-items: center
+    color: $text-color
+    &__bg
+      position: absolute
+      width: 370px
+      height: 420px
+      top: 50%
+      left: 50%
+      transform: translate(-185px, -210px)
+      fill: $alt-text-color
+      z-index: 0
+    &__title, &__input
+      z-index: 1
+    &__title
+      margin:
+        top: 85px
+        bottom: 20px
+      font-family: 'Geometria Medium', sans-serif
+      font-size: 16px
+      text-align: center
+    &__input
+      padding: 15px 20px
+      margin-bottom: 10px
+      text-align: center
+      &:last-child
+        margin-bottom: 15px

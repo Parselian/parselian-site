@@ -1,0 +1,150 @@
+@import 'variables.sass'
+
+body
+  font-family: 'Montserrat', sans-serif
+  overflow-x: hidden
+  position: relative
+
+.open
+  right: 0 !important
+  box-shadow: -4px 0px 16px 0px rgba(0,0,0,0.1) !important
+.arrow-slide
+  right: 310px !important
+  transform: rotate(180deg) !important
+
+.text_bold
+  font-size: 30px
+  font-weight: 700
+
+.title
+  margin-bottom: 100px
+  text-align: center
+  font-family: 'Arial', sans-serif
+  font-size: 50px
+  font-weight: 700
+  text-transform: uppercase
+  color: $alt-text-color
+
+.button
+  &-buy
+    padding: 23px 75px
+    position: relative
+    display: inline-block
+    font-size: 18px
+    font-weight: 400
+    color: $text-btn-color
+    background-color: $active-color
+    border-radius: 60px
+    transition: .1s
+    &:hover
+      background-color: $active-lighten-color
+    &:active
+      background-color: $active-darken-color
+
+.socials
+  margin-right: 45px
+  position: relative
+  width: 40px
+  height: 40px
+  display: block
+  opacity: 0.6
+  transition: opacity .2s
+  &:hover
+    opacity: 1
+  &:last-child
+    margin-right: 0
+  &-list
+    display: flex
+    margin-top: 18%
+  &__instagram
+    background: url('../img/social/instagram.svg') no-repeat
+    background-size: cover
+    &_dark
+      background: url('../img/social/instagram-dark.svg') no-repeat  
+      background-size: cover    
+  &__vk
+    background: url('../img/social/vk.svg') no-repeat
+    background-size: cover
+    &_dark
+      background: url('../img/social/vk-dark.svg') no-repeat
+      background-size: cover
+  &__youtube
+    background: url('../img/social/youtube.svg') no-repeat
+    background-size: cover
+    &_dark
+      background: url('../img/social/youtube-dark.svg') no-repeat
+      background-size: cover
+  
+
+/* AUDIO PLAYER STYLES */
+.green
+  &-audio
+    &-player
+      max-width: 430px
+      background: $player-bg-color
+      border-radius: 15px
+      opacity: 0.7
+/* PLAY BUTTON */
+.play
+  &-pause
+    &-btn > svg > path
+      fill: #ffffff 
+/* TIME COUNTERS */
+.controls
+  position: relative
+  &__current, &__total
+    &-time
+      position: absolute
+      bottom: -22px
+      font-family: 'Montserrat', sans-serif
+      font-size: 12px
+      color: #ffffff
+  &__total
+    &-time
+      right: 0
+/* PROGRESS BAR */
+.green
+  &-audio
+    &-player
+      .controls
+        &__slider 
+          .controls__progress 
+            background-color: #ffffff
+            .progress__pin
+              // width: 10px
+              // height: 10px
+              background-color: #ffffff
+/* VOLUME BTN */
+.green
+  &-audio
+    &-player
+      .volume
+        &__button
+          height: 26px
+          width: 26px
+          background-image: url(../img/audio-player/speaker.svg)
+          background-size: cover
+          svg
+            display: none
+        &__controls
+          .volume
+            &__slider
+              .volume
+                &__progress
+                  background-color: #ffffff
+                  .volume
+                    &__pin
+                      background-color: #ffffff
+              
+
+
+// import 'loader.sass'
+@import 'header.sass'
+@import 'headings.sass'
+@import 'burger.sass'
+@import 'byography.sass'
+@import 'music.sass'
+@import 'clips.sass'
+@import 'concerts.sass'
+@import 'contacts.sass'
+@import 'media.sass'

@@ -1,0 +1,144 @@
+.profile {
+  &-main {
+    &__link {
+      &s {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      position: relative;
+      width: 48%;
+      text-decoration: none;
+      &:before {
+        position: absolute;
+        content: '';
+        left: -15px;
+        height: 100%;
+        width: 1px;
+        background-color: $border-color;
+      }
+      &:nth-child(odd) {
+        margin-right: 4%;
+      }
+      &-title {
+        margin-bottom: 3px;
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+        color: $main-text-color;
+      }
+      &-text {
+        color: $border-color;
+      }
+    }
+  }
+
+  &-edit-goods {
+    &__page {
+      &-title {
+        margin-bottom: 40px;
+      }
+    }
+    &__row {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+      &-inputs {
+        padding-bottom: 20px;
+        max-width: 600px;
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid $border-color;
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    &__title {
+      margin-bottom: 5px;
+      font-size: 22px;
+      font-weight: 400;
+    }
+
+    &__select {
+      overflow: hidden;
+      /*----- ДЛЯ ДЕФОЛТНОГО HTML SELECT -------*/
+      padding: 10px 15px;
+      max-width: 450px;
+      width: 100%;
+        background-color: #fff;
+      border: 1px solid $border-color;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      /*----------------------------------------*/
+      &_mobile {
+        display: none;
+      }
+      &-input {
+        &-wrap {
+          position: relative;
+          z-index: 1;
+          max-width: 450px;
+          width: 100%;
+        }
+
+        padding: 7px 15px;
+        width: 100%;
+          background-color: #fff;
+        border: 1px solid $border-color;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        &-icon {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          width: 10px;
+          height: 15px;
+          transform: translateY(-50%);
+          fill: $border-color;
+        }
+      }
+
+      &-list {
+        padding: 30px 10px 3px !important;
+        max-width: 450px;
+        transform: translateY(-30px);
+        border: 1px solid $border-color;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        &-item {
+          padding: 7px 5px;
+          cursor: pointer;
+          transition: .2s;
+          &:hover {
+            background-color: $inactive-color;
+          }
+          &:not(:last-child) {
+            border-bottom: 1px solid $border-color;
+          }
+        }
+      }
+    }
+
+    &__img {
+      max-height: 300px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+    }
+
+    &__input {
+      &-wrap {
+        width: 49%;
+        &:not(:last-child) {
+          margin-right: 2%;
+        }
+      }
+      width: 100%;
+    }
+  }
+}

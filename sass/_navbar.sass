@@ -1,0 +1,40 @@
+.navbar
+  padding: 
+    top: 18px 
+    bottom: 18px
+  position: sticky
+  top: 0
+  background-color: $navbar-color
+  z-index: 9999
+  &-wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-logo
+    font-size: 20px
+    transition: color .2s
+    &:hover
+      color: $darken-link-color
+  &-menu
+    top: -18px
+    &_item
+      margin-right: 15px
+      display: inline-block
+      position: relative
+      &:last-child
+        margin-right: 0
+      &:before, &:after
+        position: absolute
+        content: ''
+        left: 50%
+        transform: translateX(-50%)
+        top: -20.4px
+        width: 0
+        height: 2px
+        background-color: $accent-color
+        transition: all 0.3s
+      &:after
+        top: 39px
+      &:hover
+        &:before, &:after
+          width: 100%

@@ -1,0 +1,41 @@
+.burger
+  display: none
+  position: fixed
+  width: 100%
+  height: 100%
+  right: -100%
+  font-family: 'Museo Sans Medium', sans-serif
+  text-align: right
+  background: url('../img/background.jpg') center no-repeat
+  background-size: cover
+  z-index: 1000000
+  transition: right .5s
+  will-change: right
+  &_show
+    right: 0
+  &__button
+    position: absolute
+    right: calc(100% + 20px)
+    top: 50%
+    width: 20px
+    height: 20px
+    fill: $accent-color
+    transform: rotate(-180deg) translateY(-50%)
+    z-index: 999999999
+    transition: .3s
+    &_toggled
+      transform: rotate(-180deg) translateY(-50%) scale(-1,1)
+      right: calc(100% - 40px)
+  &__menu
+    position: absolute
+    top: 50%
+    right: 0
+    transform: translateY(-60%)
+    &-item
+      margin-bottom: 10px
+      padding-right: 15px
+  &__request
+    &-button
+      position: absolute
+      bottom: 20px
+      right: 20px

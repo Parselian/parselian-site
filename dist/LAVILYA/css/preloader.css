@@ -1,0 +1,51 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  position: relative; }
+.loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #DAECFF;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 9999999;
+  transition: .3s; }
+  .loader_show {
+    visibility: visible;
+    opacity: 1; }
+  .loader .loader-9 .bubble-1, .loader .loader-9 .bubble-2 {
+    position: absolute;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: #4b9cdb;
+    animation: bounce 2s ease-in-out infinite; }
+  .loader .loader-9 .bubble-2 {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1.0s; }
+  .loader .spinner {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    margin: 0 auto;
+    animation: loadingI 2s linear infinite; }
+  .loader .clear {
+    clear: both; }
+
+@keyframes loadingI {
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(0); }
+  50% {
+    transform: scale(1); } }

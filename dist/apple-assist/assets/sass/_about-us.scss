@@ -1,0 +1,52 @@
+.about-us {
+  padding-bottom: 140px;
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+  &__col {
+    position: relative;
+    width: 55%;
+  }
+  &__info {
+    width: 45%;
+  }
+  &__blob {
+    position: absolute;
+    top: 0;
+    right: 80px;
+    width: 160px;
+    &:before {
+      position: absolute;
+      content: '';
+      top: 53%;
+      left: 43%;
+      z-index: -1;
+      width: 200px;
+      height: 200px;
+      background-color: $alt-text-color;
+      -webkit-border-radius: 180px;
+      -moz-border-radius: 180px;
+      border-radius: 180px;
+      transform: translate(-50%, -50%);
+    }
+    &-title {
+      font-size: 14px;
+    }
+    &-subtitle {
+      margin-bottom: 12px;
+      font-size: 12px;
+      font-weight: 300;
+      color: $accent-color;
+    }
+    &-text {
+      font-size: 12px;
+    }
+  }
+  &__img {
+    width: 400px;
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+}

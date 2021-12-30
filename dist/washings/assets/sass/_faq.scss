@@ -1,0 +1,102 @@
+.faq {
+  padding-top: 80px;
+    font-size: 18px;
+    /* padding-bottom: 35px; */
+    text-align: center;
+  .wrapper {
+      max-width: 1280px;
+  }
+  &__title {
+      max-width: 900px;
+      margin: 0 auto;
+      margin-bottom: 35px;
+  }
+  &__list {
+      display: flex;
+      flex-direction: column;
+    &_item {
+        border: 2px solid lighten($inactive-color, 25%);
+        border-radius: 10px;
+        padding: 35px 55px;
+        text-align: left;
+        /* font-size: 22px; */
+        transition: border 0.3s;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+      &-link {
+        color: $main-text-color;
+        text-decoration: none;
+      }
+      &:hover {
+        border: 2px solid $active-color;
+        transition: border 0.3s;
+        cursor: pointer;
+        .faq__right_arrow{
+          background: url('../svg/down-chevron-green.svg') no-repeat right #fff;
+          background-repeat: no-repeat;
+          background-size: 20px;
+        }
+      }
+    }
+  }
+  &__item {
+    &_row {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+    }
+    &_answer {
+        margin-top: 15px;
+        overflow: hidden;
+    }
+    &_question {
+      .faq {
+        &__row {
+          &_center {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+  &__row {
+    &_left {
+      flex-basis: 160px;
+      color: #828d96;
+      font-style: italic;
+    }
+    &_center {
+        flex-basis: 1000px;
+        padding-right: 30px;
+    }
+    &_right {
+        flex-basis: 160px;
+    }
+  }
+  &__right {
+    &_arrow {
+      &_rotated {
+        transform: rotate(0deg) !important;
+      }
+      &-up {
+        background: url('../svg/down-chevron.svg') no-repeat right #fff;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        width: 20px;
+        height: 100%;
+        margin-left: auto;
+        transform: rotate(180deg);
+        transition: .5s;
+      }
+      &-down {
+        background: url('../svg/down-chevron.svg') no-repeat right #fff;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        width: 20px;
+        height: 100%;
+        margin-left: auto;
+      }
+    }
+  }
+}

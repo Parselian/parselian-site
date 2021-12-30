@@ -1,0 +1,192 @@
+@import 'variables.sass' 
+
+body 
+  font-family: 'Roboto', sans-serif
+
+a
+  color: $text-color-light
+  &:hover
+    color: $darken-color
+
+.container
+  padding: 0
+
+.section
+  &-menu
+    margin-bottom: 163px
+    margin-top: 45px
+    list-style: none
+    display: flex
+    justify-content: center
+    &_item
+      margin-right: 42px
+      position: relative
+      font-size: 16px
+      font-weight: 700
+      letter-spacing: 0.32px
+      &:hover
+        &:before
+          position: absolute
+          content: ''
+          width: 38px
+          height: 2px
+          top: 30px
+          background-color: $gradient-color
+          animation: live-tail 0.2s
+      &__last
+        position: relative
+        &:before
+          width: 28px
+          height: 28px
+          content: ''
+          position: absolute
+          top: 9px
+          left: 9px
+          transform: translateX(-50%) translateY(-50%)
+          background-color: $gradient-color
+          background-image: linear-gradient(to top, rgba(11, 94, 143, 0.41) 0%, rgba(109, 161, 192, 0.41) 50%, rgba(11, 94, 143, 0.41) 100%)
+          border-radius: 100%
+        &:after
+          position: absolute
+          content: ''
+          width: 14px
+          height: 14px
+          top: 9px
+          left: 9px
+          transform: translateX(-50%) translateY(-50%)
+          background: url('../img/header/search.png') center no-repeat
+      &:last-child
+        margin-right: 25px
+  &-hamburger
+    font-family: Roboto, sans-serif
+    &-menu
+      position: fixed
+      top: 0
+      left: -1000px
+      width: 270px
+      height: 100%
+      background-color: #fff
+      box-shadow: 10px 0 48px 0px rgba(0,0,0,0.22)
+      list-style: none
+      z-index: 800
+      transition-property: left
+      transition-duration: .5s
+      &__list
+        margin-top: 126px
+        li
+          padding:
+            top: 15px
+            bottom: 15px
+            left: 20px
+          border-top: 1px solid rgba(79, 79, 79, 0.22)
+          &:last-child
+            border-bottom: 1px solid rgba(79, 79, 79, 0.22)
+          a
+            color: $text-color-dark
+.button
+  padding: 16px 30px
+  font-size: 15px
+  font-weight: 700
+  color: $text-color-light
+  letter-spacing: 0.3px
+  border: 0
+  border-radius: 24px
+  background-image: linear-gradient(-18deg, #0b5e8f 0%, #2e76a0 50%, #0b5e8f 100%)
+  &:hover
+    cursor: pointer
+
+.slider-arrow
+  position: absolute
+  width: 24px
+  height: 48px
+  top: 50%
+  transform: translateY(-50%)
+  z-index: 99 
+  &__left
+    left: 25px
+    background: url('../img/common/arrow-left.png') 
+  &__right
+    right: 25px
+    background: url('../img/common/arrow-right.png')
+  &:hover
+    cursor: pointer
+  
+.section-title
+  text-align: center
+  position: relative
+  text-transform: uppercase
+  &:before
+    position: absolute
+    content: ''
+    width: 106px
+    height: 2px
+    bottom: 75%
+    background: url(../img/common/tail.png) no-repeat
+  &:after
+    position: absolute
+    content: ''
+    width: 106px
+    height: 2px
+    bottom: 75%
+    background: url(../img/common/tail.png) no-repeat
+.section-form
+  margin-left: auto
+  margin-right: auto
+  width: 720px
+  &__inputs
+    input
+      padding: 
+        bottom: 12px
+      margin-bottom: 35px
+      width: 337px
+      margin-right: 40px
+      font-weight: 700
+      border-bottom: 1px solid $text-color-dark
+      &:nth-child(-n+2)
+        padding-left: 30px
+        background: url(../img/request/placeholder.svg) no-repeat
+      &:nth-child(2n)
+        margin-right: 0
+      &::-webkit-input-placeholder 
+        color: #303030
+      &::-moz-placeholder
+        color: #303030
+      &:-moz-placeholder
+        color: #303030
+      &:-ms-input-placeholder
+        color: #303030
+  &__button
+    margin-bottom: 28px
+    margin-left: auto
+    margin-right: auto
+    padding: 16px 31px
+    display: block
+    border-radius: 30px
+  &__subtext
+    text-align: center
+    font-family: 'Roboto'
+    font-size: 15px
+    font-weight: 400
+    color: #303030
+    letter-spacing: 0.3px
+.additional-title
+  font-family: Roboto
+  font-size: 20px
+  font-weight: 700
+  text-transform: uppercase
+  letter-spacing: 0.4px
+
+@import 'preloader.sass'
+@import 'animations.sass'
+@import 'header.sass'
+@import 'services.sass'
+@import 'about-us.sass'
+@import 'news.sass'
+@import 'locations.sass'
+@import 'partners.sass'
+@import 'request.sass'
+@import 'footer.sass'
+@import 'section-popups.sass'
+@import 'quick-request.sass'
+@import 'our-location.sass'
+@import 'media.sass'

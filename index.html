@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="ico.ico" type="image/x-icon">
+  <style>
+    .show {
+    visibility: visible !important;
+    opacity: 1 !important; }
+
+    body {
+    overflow-y: hidden; }
+
+    .preloader {
+      padding: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s; }
+      .preloader-wrap {
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #565656;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        animation-delay: 1s; }
+
+    .item-1 {
+      width: 20px;
+      height: 20px;
+      background: #f583a1;
+      border-radius: 50%;
+      background-color: #eed968;
+      margin: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+
+    @keyframes scale {
+      0% {
+        transform: scale(1); }
+      50%,
+      75% {
+        transform: scale(2.5); }
+      78%, 100% {
+        opacity: 0; } }
+      .item-1:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #eed968;
+        opacity: 0.7;
+        animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+        animation-delay: 200ms;
+        transition: 0.5s all ease;
+        transform: scale(1); }
+
+    .item-2 {
+      width: 20px;
+      height: 20px;
+      background: #f583a1;
+      border-radius: 50%;
+      background-color: #eece68;
+      margin: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+
+    @keyframes scale {
+      0% {
+        transform: scale(1); }
+      50%,
+      75% {
+        transform: scale(2.5); }
+      78%, 100% {
+        opacity: 0; } }
+      .item-2:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #eece68;
+        opacity: 0.7;
+        animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+        animation-delay: 400ms;
+        transition: 0.5s all ease;
+        transform: scale(1); }
+
+    .item-3 {
+      width: 20px;
+      height: 20px;
+      background: #f583a1;
+      border-radius: 50%;
+      background-color: #eec368;
+      margin: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+
+    @keyframes scale {
+      0% {
+        transform: scale(1); }
+      50%,
+      75% {
+        transform: scale(2.5); }
+      78%, 100% {
+        opacity: 0; } }
+      .item-3:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #eec368;
+        opacity: 0.7;
+        animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+        animation-delay: 600ms;
+        transition: 0.5s all ease;
+        transform: scale(1); }
+
+    .item-4 {
+      width: 20px;
+      height: 20px;
+      background: #f583a1;
+      border-radius: 50%;
+      background-color: #eead68;
+      margin: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+
+    @keyframes scale {
+      0% {
+        transform: scale(1); }
+      50%,
+      75% {
+        transform: scale(2.5); }
+      78%, 100% {
+        opacity: 0; } }
+      .item-4:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #eead68;
+        opacity: 0.7;
+        animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+        animation-delay: 800ms;
+        transition: 0.5s all ease;
+        transform: scale(1); }
+
+    .item-5 {
+      width: 20px;
+      height: 20px;
+      background: #f583a1;
+      border-radius: 50%;
+      background-color: #ee8c68;
+      margin: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+
+    @keyframes scale {
+      0% {
+        transform: scale(1); }
+      50%,
+      75% {
+        transform: scale(2.5); }
+      78%, 100% {
+        opacity: 0; } }
+      .item-5:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #ee8c68;
+        opacity: 0.7;
+        animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+        animation-delay: 1000ms;
+        transition: 0.5s all ease;
+        transform: scale(1); }
+  </style>
+  <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+    
+       ym(54052090, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true,
+            trackHash:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/54052090" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+  <title>Jellar Web</title>
+</head>
+
+<body>
+
+  <header id="header" class="header" data-vide-bg="video/The-mirage">
+    <div class="header-fullbg"></div>
+    <!-- /.header-fullbg -->
+    <div class="container section-contacts">
+      <ul class="section-contacts__list">
+        <li class="section-contacts__list_item">
+          <a href="https://vk.com/jell_s">
+            <img src="img/general/vk.svg" alt="Vk">
+          </a>
+        </li>
+        <!-- /.section-contacts_item -->
+
+        <li class="section-contacts__list_item">
+          <a href="tg://resolve?domain=WindMyMind">
+            <img src="img/general/telegram.svg" onclick="ym(54052090, 'reachGoal', 'telegram'); return true;" alt="telegram">
+          </a>
+        </li>
+        <!-- /.section-contacts_item -->
+
+        <li class="section-contacts__list_item">
+          <a href="https://web.whatsapp.com/send?phone=79215741542">
+            <img src="img/general/whatsapp.svg" onclick="ym(54052090, 'reachGoal', 'whatsApp'); return true;" alt="whatsapp">
+          </a>
+        </li>
+        <!-- /.section-contacts_item -->
+
+        <li class="section-contacts__list_item">
+          <a href="tel:+79215741542">
+            <img src="img/general/call.svg" alt="phone">
+          </a>
+        </li>
+        <!-- /.section-contacts_item -->
+      </ul>
+      <!-- /.section-contacts -->
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container header-info">
+      <h1 class="header-info__title">
+        Разработаю продающий сайт от 5 дней
+      </h1>
+      <!-- /.header-title -->
+
+      <ul class="header-info__subtitle">
+        <li class="header-info__subtitle_item">
+          Сайты-визитки
+        </li>
+        <!-- /.header-subtitle_item -->
+
+        <li class="header-info__subtitle_item">
+          Landing pages - одностраничные сайты
+        </li>
+        <!-- /.header-subtitle_item -->
+
+        <li class="header-info__subtitle_item">
+          Корпоративные сайты
+        </li>
+        <!-- /.header-subtitle_item -->
+      </ul>
+      <!-- /.header-subtitle -->
+
+      <div class="header-info__buttons">
+        <a href="#portfolio" class="button section-button header-info__buttons_button">
+          Моё портфолио
+        </a>
+        <!-- /.section-button header-button -->
+
+        <a href="#reviews" class="button section-button header-info__buttons_button">
+          Отзывы
+        </a>
+        <!-- /.section-button header-button -->
+      </div>
+      <!-- /.header-buttons -->
+    </div>
+    <!-- /.container -->
+  </header>
+  <!-- /.header -->
+
+  <section class="navbar">
+    <div class="container navbar-wrap">
+      <a href="#header" class="navbar-logo">Jellar <span class="accent">Web</span></a>
+      <!-- /.navbar-logo -->
+
+      <ul class="navbar-menu">
+        <li class="navbar-menu_item">
+          <a href="#about-me">Обо мне</a>
+        </li>
+        <!-- /.navbar-menu_item -->
+
+        <li class="navbar-menu_item">
+          <a href="#services">Услуги</a>
+        </li>
+        <!-- /.navbar-menu_item -->
+
+        <li class="navbar-menu_item">
+          <a href="#portfolio">Портфолио</a>
+        </li>
+        <!-- /.navbar-menu_item -->
+
+        <li class="navbar-menu_item">
+          <a href="#reviews">Отзывы</a>
+        </li>
+        <!-- /.navbar-menu_item -->
+
+        <li class="navbar-menu_item">
+          <a href="#calculator">Калькулятор</a>
+        </li>
+        <!-- /.navbar-menu_item -->
+
+        <li class="navbar-menu_item">
+          <a href="#contacts">Контакты</a>
+        </li>
+        <!-- /.navbar-menu_item -->
+      </ul>
+      <!-- /.navbar-menu -->
+
+      <div class="navbar-burger" id="nav-icon3">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- /.navbar-burger -->
+    </div>
+    <!-- /.container navbar-wrap -->
+  </section>
+  <!-- /.navbar -->
+
+  <section class="preloader show">
+    <div class="preloader-wrap">
+      <div class="item-1"></div>
+      <div class="item-2"></div>
+      <div class="item-3"></div>
+      <div class="item-4"></div>
+      <div class="item-5"></div>
+    </div>    
+  </section>
+  <!-- /.preloader -->
+
+  <section id="about-me" class="section about-me">
+    <h2 class="section-title about-me__title">Обо мне</h2>
+    <!-- /.section-title about-me__title -->
+
+    <div class="container about-me-wrap">
+
+      <div class="about-me__photo">
+        <img src="img/about-me/my-photo.jpg" alt="моё фото">
+      </div>
+      <!-- /.about-me__photo -->
+
+      <p class="about-me__text">
+        Меня зовут Вождаев Вячеслав,  занимаюсь вёрсткой сайтов-визиток, лендигов, а также корпоративных сайтов. Почему же стоит обратиться ко мне: <br>
+        1. Бесплатно проконсультирую вас по вашему заказу, и при необходимости, помогу составить вам техническое задание. <br>
+        2. Я никуда не пропаду: по вашей просьбе можем провести ваш заказ через сервис безопасных сделок, это даёт вам гарантию выполнения вашего заказа.
+      </p>
+      <!-- /.about-me__text -->
+    </div>
+    <!-- /.about-me-wrap -->
+  </section>
+  <!-- /.about-me -->
+
+  <section id="services" class="my-services" data-parallax="scroll" data-image-src="img/my-services/my-services.jpg">
+    <h2 class="section-title my-services-title">Мои Услуги</h2>
+    <!-- /.section-title my-services-title -->
+
+    <div class="container my-services-wrap">
+      <div class="service-card">
+        <div class="service-card__img">
+          <img src="img/my-services/programming-code.svg" alt="разработка">
+        </div>
+        <!-- /.service-card__img -->
+        <h3 class="service-card__title">Разработка</h3>
+        <!-- /.service-card__title -->
+        <div class="service-card__text">
+          Предлагаю понятные и приятные в использовании: <br>
+          Сайты-визитки - от 2х дней <br>
+          landing page - от 3х дней <br>
+          Корпоративные сайты - от 10 дней <br>
+        </div>
+        <!-- /.service-card__text -->
+        <div class="service-card__bg"></div>
+      </div>
+      <!-- /.service-card -->
+
+      <div class="service-card">
+        <div class="service-card__img">
+          <img src="img/my-services/interface.svg" alt="адаптивность">
+        </div>
+        <!-- /.service-card__img -->
+        <h3 class="service-card__title">Адаптивность</h3>
+        <!-- /.service-card__title -->
+        <div class="service-card__text">
+          Проект будет одинаково хорошо смотрятся на разных устройствах, что поднимет конверсию среди пользователей
+          мобильных устройств
+        </div>
+        <!-- /.service-card__text -->
+        <div class="service-card__bg"></div>
+      </div>
+      <!-- /.service-card -->
+
+      <div class="service-card">
+        <div class="service-card__img">
+          <img src="img/my-services/settings.svg" alt="функционал">
+        </div>
+        <!-- /.service-card__img -->
+        <h3 class="service-card__title">Функционал</h3>
+        <!-- /.service-card__title -->
+        <div class="service-card__text">
+          Мои работы всегда набирают высокие баллы по оптимизации, благодаря чему экономится время и трафик ваших
+          потенциальных клиентов
+        </div>
+        <!-- /.service-card__text -->
+        <div class="service-card__bg"></div>
+      </div>
+      <!-- /.service-card -->
+
+      <div class="service-card">
+        <div class="service-card__img">
+          <img src="img/my-services/policy.svg" alt="Управление">
+        </div>
+        <!-- /.service-card__img -->
+        <h3 class="service-card__title">Управление</h3>
+        <!-- /.service-card__title -->
+        <div class="service-card__text">
+          Благодаря простой в управлении панели администратора вы без проблем сможете вносить изменения в ваш сайт, что
+          экономит ваше время и деньги
+        </div>
+        <!-- /.service-card__text -->
+        <div class="service-card__bg"></div>
+      </div>
+      <!-- /.service-card -->
+    </div>
+    <!-- /.container my-services-wrap -->
+  </section>
+  <!-- /.my-services -->
+
+  <section id="portfolio" class="portfolio">
+    <h2 class="section-title portfolio-title">Моё портфолио</h2>
+    <!-- /.section-title portfolio-title -->
+
+    <div class="container portfolio-wrap">
+      <div class="portfolio-subtitle">
+        Несколько последних завершённых проектов
+      </div>
+      <!-- /.portfolio-subtitle -->
+
+      <ul class="portfolio-menu">
+        <li class="portfolio-menu__list_item filter" data-filter="all">Все</li>
+        <!-- /.portfolio-menu__item -->
+        <li class="portfolio-menu__list_item filter" data-filter=".landing">Одностраничные сайты</li>
+        <!-- /.portfolio-menu__item -->
+        <li class="portfolio-menu__list_item filter" data-filter=".corporate">Корпоративные сайты</li>
+        <!-- /.portfolio-menu__item -->
+      </ul>
+      <!-- /.portfolio-menu -->
+
+      <div id="Container" class="container portfolio-works">
+        <div class="mix portfolio-work landing" data-myorder="2">
+          <img src="img/portfolio/study-center.jpg" alt="Учебный центр">
+          <div class="portfolio-work__buttons">
+            <a href="https://study-center.jellar-web.ru/" class="portfolio-work__button portfolio-work__buttons_demo">Смотреть демо</a>
+            <!-- <button class="portfolio-work__button portfolio-work__buttons_about">Подробнее</button> -->
+          </div>
+        </div>
+        <!-- /.portfolio-work -->
+        <div class="mix portfolio-work landing" data-myorder="2">
+          <img src="img/portfolio/houses.jpg" alt="Дома Навека">
+          <div class="portfolio-work__buttons">
+            <a href="https://house-forever.jellar-web.ru/" class="portfolio-work__button portfolio-work__buttons_demo">Смотреть демо</a>
+            <!-- <button class="portfolio-work__button portfolio-work__buttons_about">Подробнее</button> -->
+          </div>
+        </div>
+        <!-- /.portfolio-work -->
+        <div class="mix portfolio-work landing" data-myorder="1">
+          <img src="img/portfolio/loft22.jpg" alt="loft22">
+          <div class="portfolio-work__buttons">
+            <a href="https://loft22.jellar-web.ru/" class="portfolio-work__button portfolio-work__buttons_demo">Смотреть демо</a>
+            <!-- <button class="portfolio-work__button portfolio-work__buttons_about">Подробнее</button> -->
+          </div>
+        </div>
+        <!-- /.portfolio-work -->
+        
+        <div class="mix portfolio-work landing" data-myorder="1">
+          <img src="img/portfolio/23Degree.jpg" alt="23Degree">
+          <div class="portfolio-work__buttons">
+            <a href="http://23degree.jellar-web.ru" class="portfolio-work__button portfolio-work__buttons_demo">Смотреть демо</a>
+            <!-- <button class="portfolio-work__button portfolio-work__buttons_about">Подробнее</button> -->
+          </div>
+        </div>
+        <!-- /.portfolio-work -->
+        
+        <div class="mix portfolio-work corporate" data-myorder="1">
+          <img src="img/portfolio/body-gym.jpg" alt="body-gym">
+          <div class="portfolio-work__buttons">
+            <a href="https://body.jellar-web.ru/" class="portfolio-work__button portfolio-work__buttons_demo">Смотреть демо</a>
+            <!-- <button class="portfolio-work__button portfolio-work__buttons_about">Подробнее</button> -->
+          </div>
+        </div>
+        <!-- /.portfolio-work -->
+
+        <!--<div class="mix portfolio-work landing" data-myorder="1">-->
+        <!--  <img src="img/portfolio/Active.jpg" alt="Active Money">-->
+        <!--  <div class="portfolio-work__buttons">-->
+        <!--    <a href="http://active-money.jellar-web.ru/" class="portfolio-work__button portfolio-work__buttons_demo">Смотреть демо</a>-->
+            <!-- <button class="portfolio-work__button portfolio-work__buttons_about">Подробнее</button> -->
+        <!--  </div>-->
+        <!--</div>-->
+        <!-- /.portfolio-work -->
+
+        <div class="mix portfolio-work corporate" data-myorder="3">
+          <img src="img/portfolio/LTS.jpg" alt="LTS company">
+          <div class="portfolio-work__buttons">
+            <a href="http://lts-company.jellar-web.ru/" class="portfolio-work__button portfolio-work__buttons_demo">Смотреть демо</a>
+            <!-- <button class="portfolio-work__button portfolio-work__buttons_about">Подробнее</button> -->
+          </div>
+        </div>
+        <!-- /.portfolio-work -->
+      </div>
+      <!-- /.portfolio-works -->
+
+    </div>
+    <!-- /.container portfolio-wrap -->
+  </section>
+  <!-- /.portfolio -->
+
+  <section id="reviews" class="reviews" data-parallax="scroll" data-image-src="img/reviews/reviews-bg.jpg">
+    <h2 class="section-title reviews-title">Отзывы клиентов</h2>
+    <!-- /.section-title reviews-title -->
+
+    <div class="ATTENTION">Здесь может оказаться ваш отзыв</div>
+
+    <div class="container reviews-wrap">
+      <div class="review">
+        <div class="review__img">
+          <img src="../img/reviews/fima.jpg" alt="review-img">
+        </div>
+        <!-- /.review__img -->
+
+        <div class="review-information">
+          <div class="review-information__title">Илья Фёдоров</div>
+          <!-- /.review__title -->
+          <a href="https://vk.com/fedorovfima123" class="review-information__link">посмотреть профиль</a>
+          <!-- /.review__link -->
+          <p class="review-information__text">
+            Вячеслав делал мне сайт – <a href="https://lavilya.ru/" class="review-information__link">lavilya.ru</a>
+            Получилось максимально качественно.
+            Человек он отзывчивый, всегда подскажет и сделает работу хорошо!
+            Рекомендую к пользованию его услугами!
+          </p>
+          <!-- /.review__text -->
+          <a href="https://vk.com/topic-182960119_39823369" class="review-information__more">Перейти к отзыву</a>
+          <!-- /.review__more -->
+        </div>
+        <!-- /.review-information -->
+      </div>
+      <!-- /.review -->
+
+      <div class="review">
+        <div class="review__img">
+          <img src="../img/reviews/Saenko.jpg" alt="review-img">
+        </div>
+        <!-- /.review__img -->
+
+        <div class="review-information">
+          <div class="review-information__title">Светлана Саенко</div>
+          <!-- /.review__title -->
+          <a href="https://vk.com/ssaenko56" class="review-information__link">посмотреть профиль</a>
+          <!-- /.review__link -->
+          <p class="review-information__text">
+            Обратилась за помощью в доработке сайта нашего коучинго-тренингового центра к Вячеславу. Оперативно договорились и встретились. Все, что нужно было в сайте изменить и доработать было сделано Вячеславом быстро и ...
+          </p>
+          <!-- /.review__text -->
+          <a href="https://vk.com/topic-182960119_39823369" class="review-information__more">Прочитать полностью</a>
+          <!-- /.review__more -->
+        </div>
+        <!-- /.review-information -->
+      </div>
+      <!-- /.review -->
+    </div>
+    <!-- /.container reviews-wrap -->
+  </section>
+  <!-- /.reviews -->
+
+  <section id="calculator" class="calculation">
+    <h2 class="section-title calculation-title">Калькулятор</h2>
+    <!-- /.section-title calculator-title -->
+
+    <div class="container calculation-wrap">
+      <div class="section-subtitle calculation-subtitle">
+        Рассчитайте стоимость своего проекта, исходя из макета и требований к нему. Если у вас многостраничный сайт, то
+        считайте каждую страницу по отдельности.
+      </div>
+      <!-- /.section-subtitle -->
+
+      <div class="calculator">
+        <div class="calculator-main">
+          <h3 class="calculator-title calculator-main__title">Основное</h3>
+          <!-- /.calculator-main__title -->
+
+          <input type="text" class="calculator-main__input" id="common" placeholder="кол-во экранов (блоков)">
+          <input type="text" class="calculator-main__input" id="hard" placeholder="из них сложных блоков">
+          <input type="text" class="calculator-main__input" id="interactive" placeholder="из них интерактивных блоков">
+          <input type="text" class="calculator-main__input" id="sliders" placeholder="из них слайдеров">
+          <input type="text" class="calculator-main__input" id="modals" placeholder="из них модальных окон">
+          <input type="text" class="calculator-main__input" id="forms" placeholder="из них форм">
+        </div>
+        <!-- /.calculator-main -->
+
+        <div class="calculator-additional">
+          <h3 class="calculator-title calculator-additional__title">Дополнительное</h3>
+          <!-- /.calculator-additional__title -->
+
+          <div class="ckbx-style-8 calculator-additional__input">
+            <input type="checkbox" id="ckbx-style-8-1" value="0" name="ckbx-style-8">
+            <label for="ckbx-style-8-1"></label>
+            Адаптация под планшеты
+          </div>
+
+          <div class="ckbx-style-8 calculator-additional__input">
+            <input type="checkbox" id="ckbx-style-8-2" value="0" name="ckbx-style-8">
+            <label for="ckbx-style-8-2"></label>
+            Адаптация под смартфоны
+          </div>
+
+          <div class="ckbx-style-8 calculator-additional__input">
+            <input type="checkbox" id="ckbx-style-8-3" value="0" name="ckbx-style-8">
+            <label for="ckbx-style-8-3"></label>
+            Счётчик яндекс
+          </div>
+
+          <div class="ckbx-style-8 calculator-additional__input">
+            <input type="checkbox" id="ckbx-style-8-4" value="0" name="ckbx-style-8">
+            <label for="ckbx-style-8-4"></label>
+            Счётчик Google Analytics
+          </div>
+
+          <div class="ckbx-style-8 calculator-additional__input">
+            <input type="checkbox" id="ckbx-style-8-5" value="0" name="ckbx-style-8">
+            <label for="ckbx-style-8-5"></label>
+            Отправка форм
+          </div>
+
+          <div class="calculator-cost">
+              <button class="calculator-cost__button" type="submit">Рассчитать</button>
+
+            <div class="calculator-cost__field"></div>
+            <!-- /.calculator-cost__field -->
+          </div>
+          <!-- /.calculator-cost -->
+        </div>
+        <!-- /.calculator-additional -->
+
+      </div>
+      <!-- /.calculator -->
+
+      <div class="calculator-buttons">
+        <button id="order-button" class="calculator-buttons__button" type="submit">Заказать сайт</button>
+        <button id="help-button" class="calculator-buttons__button" type="submit">Справка</button>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.calculator -->
+
+  <section id="contacts" class="contacts" data-parallax="scroll" data-image-src="img/contacts/contacts.jpg">
+    <h2 class="section-title contacts-title">Остались вопросы?</h2>
+    <!-- /.section-title contacts-title -->
+
+    <div class="container contacts-wrap">
+      <h3 class="contacts-subtitle">
+        По всем интересующим вопросам можете написать на почту или связаться со мной в соц. сетях
+      </h3>
+      <!-- /.contacts-subtitle -->
+
+      <form action="mailer/smart.php" method="POST" class="contacts-form">
+        <div class="contacts-form__inputs">
+          <input type="text" placeholder="Ваше имя" class="contacts-form__input" name="user_name" required>
+          <input type="email" placeholder="Ваш email" class="contacts-form__input" name="user_email" required>
+        </div>
+        <!-- /.contacts-form__contacts -->
+
+        <textarea cols="30" rows="10" placeholder="Ваше сообщение" class="contacts-form__textarea"
+          name="user_message"></textarea>
+        <!-- /.contacts-form__textarea -->
+
+        <button id="send-button" class="section-button contacts-form__button" onclick="ym(54052090, 'reachGoal', 'ordering'); return true;" type="submit">Оставить заявку</button>
+        <!-- /.section-button contacts-form__button -->
+      </form>
+      <!-- /.contacts-form -->
+    </div>
+    <!-- /.container contacts-wrap -->
+  </section>
+  <!-- /.contacts -->
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <a href="#header" class="navbar-logo footer-logo">Jellar <span class="accent">Web</span></a>
+      <!-- /.navbar-logo footer-logo -->
+
+      <ul class="section-contacts__list">
+        <li class="section-contacts__list_item">
+          <a href="https://vk.com/jell_s">
+            <img src="img/general/vk.svg" alt="Vk">
+          </a>
+        </li>
+        <!-- /.section-contacts__list_item -->
+
+        <li class="section-contacts__list_item">
+          <a href="tg://resolve?domain=WindMyMind">
+            <img src="img/general/telegram.svg" onclick="ym(54052090, 'reachGoal', 'telegram'); return true;" alt="Telegram">
+          </a>
+        </li>
+        <!-- /.section-contacts__list_item -->
+        <li class="section-contacts__list_item">
+          <a href="https://web.whatsapp.com/send?phone=79215741542">
+            <img src="img/general/whatsapp.svg" onclick="ym(54052090, 'reachGoal', 'whatsApp'); return true;" alt="WhatsApp">
+          </a>
+        </li>
+        <!-- /.section-contacts__list_item -->
+      </ul>
+      <!-- /.section-contacts__list -->
+      <a href="tel:+79215741542" class="section-phone">8 (921) 574-15-42</a>
+      <!-- /.section-phone -->
+    </div>
+    <!-- /.container footer-wrap -->
+  </footer>
+  <!-- /.footer -->
+
+
+
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
+  <link rel="stylesheet" href="css/checkboxes.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+  
+  
+
+  <section class="popup popup-help">
+    <div class="popup-wrap">
+      <h2 class="section-title popup-title">Cправка</h2>
+      <div class="popup-close">&times;</div>
+
+      <ul class="popup-help__list">
+        <li class="popup-help__list_item">
+          Экран (блок) - смысловой фрагмент страницы
+        </li>
+        <!-- /.popup-help__item -->
+
+        <li class="popup-help__list_item">
+          Сложный блок - сложный в исполнении блок (например: наезжает на другой блок или имеет сложную форму)
+        </li>
+        <!-- /.popup-help__item -->
+
+        <li class="popup-help__list_item">
+          Интерактивный блок - блок, содержащий переключатели, кнопки и пр.
+        </li>
+        <!-- /.popup-help__item -->
+
+        <li class="popup-help__list_item">
+          Модальное окно - блок, появляющийся при нажатии на кнопку
+        </li>
+        <!-- /.popup-help__item -->
+      </ul>
+      <!-- /.popup-help -->
+    </div>
+  </section>
+  <!-- /.popup-help -->
+
+  <section class="popup popup-thanks">
+    <div class="popup-wrap popup-thanks-wrap">
+      <h2 class="section-title popup-thanks-title">Спасибо!</h2>
+      <!-- /.section-title popup-title -->
+
+      <div class="popup-thanks-subtitle"> Ваша заявка будет рассмотрена в течении 12
+        часов. А пока предлагаю подписаться на мой блог:
+      </div>
+      <!-- /.popup-subtitle -->
+
+      <div class="popup-thanks-buttons">
+        <a href="https://vk.com/jellarweb" class="contacts-form__button popup-thanks-buttons__button">Подписаться</a>
+        <!-- /.popup-thanks-buttons__button -->
+
+        <button class="contacts-form__button popup-close-button">Закрыть</button>
+        <!-- /.popup-thanks-buttons__button -->
+      </div>
+      <!-- /.popup-thanks-buttons -->
+    </div>
+    <!-- /.popup-wrap -->
+  </section>
+  <!-- /.popup popup-thanks -->
+
+  <section class="popup popup-order">
+    <div class="popup-wrap popup-order-wrap">
+      <h2 class="section-title popup-order-title">Оставить заявку</h2>
+      <!-- /.section-title popup-order-title -->
+
+      <div class="popup-close popup-order-close">&times;</div>
+
+      <form action="mailer/smart.php" method="POST" class="contacts-form popup-order-form">
+        <input type="text" placeholder="Ваше имя" class="contacts-form__input popup-order-form__input" name="user_name" required>
+        <input type="email" placeholder="Ваш email" class="contacts-form__input popup-order-form__input" name="user_email" required>
+        <input type="text" placeholder="Ваш телефон (опционально)" class="contacts-form__input popup-order-form__input" name="user_phone">
+
+        <button class="section-button contacts-form__button" onclick="ym(54052090, 'reachGoal', 'ordering'); return true;" type="submit">Оставить заявку</button>
+        <!-- /.section-button contacts-form__button -->
+      </form>
+      <!-- /.contacts-form -->
+    </div>
+    <!-- /.popup-wrap popup-order-wrap -->
+  </section>
+  <!-- /.popup popup-order -->
+
+  <script src='https://code.jquery.com/jquery-1.12.4.min.js'
+    integrity='sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=' crossorigin='anonymous'></script>
+  <script src="js/mixitup.min.js"></script>
+  <script src="js/jQueryMaskedInput.min.js"></script>
+  <!--<script src="js/parallax.min.js"></script>-->
+  <script src="js/jquery.vide.min.js"></script>
+  <script src="slick/slick.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

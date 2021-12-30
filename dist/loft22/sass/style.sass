@@ -1,0 +1,105 @@
+@import 'variables.sass'
+
+
+
+html
+  overflow: hidden
+
+.slick-initialized.slick-dotted.slick-slider
+  margin-bottom: 0  
+.slick-slider
+  .slick-dots
+    left: 80%
+    bottom: 10px
+    text-align: right
+
+.uppercase
+  text-transform: uppercase
+.line-break
+  display: block
+  &_weight-bold
+    font-family: 'Muller Bold', sans-serif
+    font-weight: 700
+    font-size: 28px
+  &_weight-regular
+    font-family: 'Muller Regular', sans-serif
+    font-size: 18px
+
+.section
+  &__icon
+    margin:
+      left: auto
+      right: auto
+      bottom: 27px
+    display: block
+    width: 30px
+    height: 30px
+  &__title
+    margin-bottom: 23px
+    text-align: center
+    font-family: "Muller Bold", sans-serif
+    font-size: 34px
+    text-transform: uppercase
+    letter-spacing: 0.85px
+    &_color-white
+      color: $attraction-color
+  &__subtitle
+    margin-bottom: 57px
+    text-align: center
+    font-family: "Muller Light", sans-serif
+    font-size: 20px
+    font-weight: 400
+    &_color-white
+      color: $attraction-color
+  &__heading
+    font-family: "Muller Bold", sans-serif
+    font-size: 20px
+    letter-spacing: 0.5px
+    text-transform: uppercase
+
+.open
+  opacity: 1 !important
+  visibility: visible !important
+
+.wrap
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+button
+  cursor: pointer
+.button
+  &-open-modal
+    padding: 17px 59px
+    font-family: "Muller Bold", sans-serif
+    font-size: 18px
+    font-weight: 400
+    text-transform: uppercase
+    color: $attraction-color
+    background-color: $interactive-color
+    border: 3px solid #000
+    transition: background-color .2s
+    &:hover
+      background-color: transparent
+  &__alternative-action
+    padding: 0
+    font-family: 'Muller Regular', sans-serif
+    color: $interactive-color
+    background-color: transparent
+    border-bottom: 1px solid $interactive-color
+
+
+
+@import 'running-titles.sass'
+@import 'main-section.sass'
+@import 'proposal.sass'
+@import 'photogallery.sass'
+@import 'form.sass'
+@import 'creation-plan.sass'
+@import 'prices.sass'
+@import 'certificates.sass'
+@import 'our-features.sass'
+@import 'reviews.sass'
+@import 'contacts.sass'
+@import 'popup-forms.sass'
+@import 'media.sass'

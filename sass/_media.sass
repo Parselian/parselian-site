@@ -1,0 +1,314 @@
+@media (min-width: 1400px)
+  .header
+    min-height: 800px
+@media (max-width: 1200px) 
+  .header
+    &-info
+      &__title
+        max-width: 645px
+        font-size: 50px
+      &__subtitle
+        font-size: 22px
+  .my-services
+    .service-card
+      width: 214px
+      &__img 
+        width: 50px
+        height: 50px
+      &__text
+        font-size: 14px
+      &__bg
+        width: 230px
+        transform: translate(-115px, -135px)
+  .portfolio
+    &-works
+      flex-wrap: wrap
+    &-work
+      width: 300px
+      height: 150px
+      &:nth-child(-n+2)
+        margin-bottom: 20px
+      &:nth-child(2)
+        margin-right: 0
+@media (width: 992px)
+  .my-services
+    &-wrap
+      width: 720px
+@media (max-width: 992px)
+  section
+    padding: 60px 0
+  .header
+    &-info
+      &__title
+        max-width: 618px
+        font-size: 48px
+      &__buttons
+        &_button
+          &:hover
+            color: #ffffff
+            border: 1px solid #fff
+  .navbar
+    position: sticky
+    top: 0
+    &-logo
+      &:hover
+        color: #ffffff
+    &-menu
+      width: 250px
+      position: absolute
+      top: 63px
+      right: 0
+      text-align: right
+      background-color: #565656
+      border-radius: 0 0 0 5px
+      visibility: hidden
+      opacity: 0
+      transition: .3s
+      &_item
+        margin-right: 0
+        padding: 16px 20px
+        display: block
+        border-bottom: 1px solid rgba(38, 38, 38, 0.5)
+        &:last-child
+          border-bottom: none
+        &:before, &:after
+          display: none
+    &-burger
+      display: block
+  .my-services
+    &-wrap
+      flex-wrap: wrap
+      justify-content: center
+    .service-card
+      margin: 0
+      margin-right: 35px
+      &:nth-child(2)
+        margin-right: 0
+      &:nth-child(-n+2)
+        margin-bottom: 100px
+  .portfolio
+    &-menu
+      &__list
+        &_item
+          &:hover
+            color: $title-color
+    &-works
+      display: flex
+      flex-wrap: wrap
+    &-work
+      &:nth-child(2)
+        margin-right: 0
+      &:nth-child(-n+2)
+        margin-bottom: 20px
+      &__button
+        &:hover
+          border: 1px solid #ffffff
+        &:active
+          color: #ffffff
+  .reviews
+    .review
+      &-information
+        &__link
+          color: $accent-color
+        &__more
+          color: $accent-color
+  .calculation
+    &-subtitle
+      font-size: 18px
+    .calculator
+      &-buttons
+        &__button
+          &:hover
+            background-color: $accent-color
+  .contacts
+    &-form
+      &__button
+        &:hover
+          background-color: $accent-color
+@media (max-width: 768px)
+  .header
+    &-info
+      margin-top: 80px
+      width: 90%
+      text-align: center
+      &__title
+        font-size: 46px
+  .about-me
+    &__photo
+      height: 320px
+    &__text
+      font-size: 16px
+  .portfolio
+    &-work
+      margin-right: 0
+  .reviews
+    .review
+      &-information
+        width: 320px
+        &__link
+          font-size: 14px
+        &__text
+          font-size: 14px
+  .calculation
+    &-subtitle
+      font-size: 16px
+  .contacts
+    &-form
+      max-width: 720px
+      &__input
+        width: 260px
+  .popup-thanks
+    &-wrap
+      max-width: 540px
+@media (max-width: 576px)
+  .ATTENTION
+    font-size: 28px
+  .section
+    &-title
+      font-size: 34px
+    &-contacts
+      &__list
+        margin-bottom: 15px
+  .header
+    &-info
+      &__title
+        font-size: 34px
+      &__subtitle
+        font-size: 14px
+        &_item
+          margin-bottom: 15px
+          &:last-child
+            margin-bottom: 0
+      &__buttons
+        display: flex
+        flex-direction: column
+        align-items: center
+        &_button
+          &:first-child
+            margin: 
+              right: 0
+              bottom: 10px
+          &:hover
+            color: #fff
+            border: 1px solid #fff
+  .navbar
+    &-menu
+      padding: 0px 15px
+  .about-me
+    &-wrap
+      flex-direction: column
+      align-items: center
+    &__photo
+      margin:
+        right: 0
+        bottom: 30px
+    &__text
+      text-align: center
+      font-size: 14px
+  .my-services
+    &-wrap
+      flex-direction: column
+      align-items: center
+    .service-card
+      margin: 0
+      &:nth-child(-n+3)
+        margin-bottom: 100px
+  .portfolio
+    &-subtitle
+      font-size: 18px
+    &-menu
+      &__list
+        &_item
+          font-size: 14px
+          text-align: center
+          display: flex
+          align-items: center
+    &-work
+      &__button
+        &:first-child
+          padding: 14px 15px
+          font-size: 15px
+  .reviews
+    &-wrap
+      width: 90%
+    .review
+      flex-direction: column
+      align-items: center
+      text-align: center
+      &__img
+        margin:
+          right: 0
+          bottom: 20px
+        width: 240px
+      &-information
+        &__title
+          font-size: 18px
+        &__link
+          font-size: 16px
+        &__text
+          width: 240px
+          margin:
+            left: auto
+            right: auto
+  .calculation
+    &-subtitle
+      margin-bottom: 50px
+      font-size: 14px
+    .calculator
+      flex-direction: column
+      align-items: center
+      &-main
+        width: 80%
+        &__input
+          width: 100%
+          &:last-child
+            margin-bottom: 30px
+      &-cost
+        margin: 
+          top: 30px
+          left: auto
+          right: auto
+  .contacts
+    &-subtitle
+      margin: 
+        left: auto
+        right: auto
+      width: 90%
+      font-size: 16px
+    &-form
+      width: 90%
+      &__inputs
+        margin-bottom: 10px
+        flex-direction: column
+        align-items: center
+      &__input
+        margin-bottom: 10px
+        width: 100%
+        &:last-child
+          margin-bottom: 0
+      &__textarea
+        width: 100%
+  .footer
+    &-wrap
+      flex-direction: column
+    &-logo
+      margin-bottom: 15px
+  .popup
+    &-wrap
+      width: 90%
+    &-order
+      &-title
+        font-size: 28px
+        &:before
+          top: 40px
+      &-form
+        width: 100%
+        &__input
+          max-width: 208px
+    &-thanks
+      &-wrap
+        padding: 30px 15px
+        width: 90%
+        font-size: 16px
+      &-subtitle
+        margin-bottom: 40px

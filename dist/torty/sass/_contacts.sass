@@ -1,0 +1,114 @@
+.contacts
+  background-image: linear-gradient(30deg, #fc7d7b 0%, #8e78ff 100%)
+  &-wrap
+    display: flex
+    justify-content: space-between
+  &-info
+    font-size: 30px
+    font-weight: 500
+    color: $text-color-light
+    &__title
+      margin:
+        top: 120px
+        bottom: 23px
+      text-align: left
+      font-size: 60px
+      font-weight: 400
+    &__phone
+      margin:
+        left: 60px
+        bottom: 43px
+      position: relative
+      display: block
+      color: $text-color-light
+      &:before
+        position: absolute
+        content: ''
+        width: 40px
+        height: 40px
+        left: -60px
+        background: url('../img/contacts/telephone.svg') center no-repeat
+        background-size: cover
+    &__email
+      margin:
+        left: 60px
+      position: relative
+      color: $text-color-light
+      &:before
+        position: absolute
+        content: ''
+        width: 40px
+        height: 40px
+        left: -60px
+        background: url('../img/contacts/email.svg') center no-repeat
+        background-size: cover
+    &__address
+      margin:
+        left: 60px
+        top: 43px
+      position: relative
+      &:before
+        position: absolute
+        content: ''
+        width: 40px
+        height: 40px
+        left: -60px
+        background: url('../img/contacts/placeholder.svg') center no-repeat
+        background-size: cover
+
+.ymap-container
+  width: 520px
+  height: 615px
+  position: relative
+  overflow: hidden
+  cursor: pointer
+  background: url('../img/contacts/map.jpg') #ffffff no-repeat
+  background-position: center center
+  background-size: cover
+  #map
+    position: relative
+    z-index: 7
+    width: 100%
+    height: 615px
+    cursor: pointer
+    background-color: transparent
+.loader 
+  position: absolute
+  z-index: 15
+  top: -100%
+  left: 0
+  box-sizing: border-box
+  width: 100%
+  height: 100%
+  overflow: hidden
+  color: #000000
+  transition: opacity .7s ease
+  opacity: 0
+  background-color: rgba(0,0,0,.55) 
+.loader:after,
+.loader:before 
+  box-sizing: border-box 
+.loader.is-active 
+  top: 0
+  opacity: 1 
+.loader-default:after 
+  position: absolute
+  top: calc(50% - 24px)
+  left: calc(50% - 24px)
+  width: 48px
+  height: 48px
+  content: ''
+  animation: rotation 1s linear infinite
+  border: solid 8px #ffffff
+  border-left-color: transparent
+  border-radius: 50% 
+@keyframes rotation
+  from 
+    transform: rotate(0)
+  to 
+    transform: rotate(359deg) 
+@keyframes blink 
+  from 
+    opacity: .5
+  to 
+    opacity: 1
