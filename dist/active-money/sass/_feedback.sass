@@ -1,0 +1,75 @@
+.feedback
+  padding-top: 73px
+  padding-bottom: 80px
+  color: $text-color-dark
+  &-title
+    margin-bottom: 45px
+    position: relative
+    text-align: center
+    font-family: "Proxima Nova semi"
+    font-size: 26px
+    font-weight: 400
+    color: $text-color-dark
+    text-transform: uppercase
+    &::before
+      content: ''
+      width: 48px
+      height: 1px
+      position: absolute
+      left: 50%
+      bottom: -18px
+      transform: translateX(-50%)
+      background-image: linear-gradient(45deg, #1c8fd4 0%, #7e66e7 100%)
+  .container
+    display: flex
+    justify-content: center
+    &:before
+      margin-top: 5%
+      content: ''
+      position: absolute
+      width: 100%
+      height: 255px
+      left: 50%
+      transform: translateX(-50%)
+      background: url(../img/feedback/background.png) center no-repeat
+      background-size: contain
+  &-slider
+    &__top
+      position: relative
+      width: 300px
+      height: 200px
+    &__bottom
+      margin: auto
+      margin-bottom: 3px
+      width: 744px
+  &-slide
+    text-align: center
+    &:focus
+      outline: none
+    &__img
+      margin-bottom: 13px
+      img
+        margin: auto
+    &__title
+      font-family: "Proxima Nova"
+      font-size: 18px
+      font-weight: 700
+    &__subtitle
+      color: #404040
+      font-family: "Proxima Nova light"
+      font-size: 16px
+      font-weight: 300
+    &_text
+      &:focus
+        outline: none
+      p
+        font-family: "Proxima Nova"
+        font-size: 16px
+        font-weight: 300
+        color: $text-color-grey
+        text-align: justify
+        text-align-last: center
+  &-button
+    margin: auto
+    padding: 16px 48px
+    display: block
