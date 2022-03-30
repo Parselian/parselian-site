@@ -1,8 +1,8 @@
 module.exports = () => {
   $.gulp.task('serve', () => {
     $.browserSync.init({
-      server: {
-        baseDir: './build/'
+      proxy: {
+        target: 'http://newparselian.dev'
       }
     });
   });

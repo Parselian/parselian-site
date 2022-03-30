@@ -1,8 +1,8 @@
 module.exports = () => {
-  $.gulp.task('sass', () => {
-    return $.gulp.src('src/assets/sass/main.sass') /* take .sass file */
+  $.gulp.task('scss', () => {
+    return $.gulp.src('src/assets/scss/main.scss') /* take .scss file */
       .pipe($.gp.sourcemaps.init()) /* initialize sourcemaps */
-      .pipe($.gp.sass()) /* compiling sass into css */
+      .pipe($.gp.sass()) /* compiling scss into css */
       .pipe($.gp.autoprefixer({
         overrideBrowserslist: ['last 5 versions']
       }))

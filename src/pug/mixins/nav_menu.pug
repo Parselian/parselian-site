@@ -1,0 +1,4 @@
+mixin navMenu(links, wrapClasses)
+    nav(class=wrapClasses)
+        each link in links
+            a(class=link.isActive ? 'active' : '' href=link.anchor) #{link.title}

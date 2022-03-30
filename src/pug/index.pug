@@ -1,0 +1,27 @@
+include ./mixins/nav_menu
+
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        link(href="./assets/css/main.css" rel="stylesheet")
+        script(src="./assets/scripts/main.js")
+    body
+        section.header
+            div.header__wrap.container
+                picture.logo
+                    source
+                    img(src="./assets/images/logo.png" alt="parselian")
+                +navMenu([
+                  {anchor: "#about_me", title: "About me", isActive: false},
+                  {anchor: "#portfolio", title: "Portfolio", isActive: false},
+                  {anchor: "#reviews", title: "Reviews", isActive: false},
+                  {anchor: "#orders", title: "Order", isActive: false},
+                  {anchor: "#contacts", title: "Contacts", isActive: false}
+                ], 'header__menu nav-menu')
+                div.header__locations
+                    a.header__location(href="#") ru
+                    span.header__locations-separator /
+                    a.header__location.header__location_active(href="#") en
