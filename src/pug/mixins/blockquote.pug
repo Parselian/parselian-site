@@ -1,0 +1,8 @@
+mixin blockquote(extraClasses, text)
+    div(class=extraClasses class="blockquote")
+        svg(class="blockquote__quote blockquote__quote_top")
+            use(xlink:href="./assets/images/svg/symbol/sprite.svg#quotes")
+        p.blockquote__text #{text}
+        svg(class="blockquote__quote blockquote__quote_bottom")
+            use(xlink:href="./assets/images/svg/symbol/sprite.svg#quotes")
+

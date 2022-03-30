@@ -6,14 +6,40 @@ body {
   padding: 0;
   height: 400px;
   font-family: 'Roboto', sans-serif, -apple-system;
+  line-height: 1.4;
   color: $main-text-color;
   background: $bg-color;
   box-sizing: border-box;
 }
 
+button, a {
+  cursor: pointer;
+}
+
 a {
   color: $main-text-color;
   text-decoration: none;
+}
+
+.line-break {
+  display: block;
+}
+
+.button {
+  padding: 12px 30px;
+  font-size: 18px;
+  color: $main-text-color;
+  border-color: transparent;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  &_accent {
+    background-color: $action-color;
+  }
+  &_transparent {
+    background-color: transparent;
+    border-color: $main-text-color;
+  }
 }
 
 .container {
@@ -60,5 +86,51 @@ a {
 
 }
 
+.blockquote {
+  position: relative;
+  padding: 20px 15px 15px 25px;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 1.6;
+  border-left: 2px solid white;
+  &__quote {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    fill: $main-text-color;
+    &_top {
+      left: 10px;
+      top: -5px;
+      transform: rotate(180deg)
+    }
+    &_bottom {
+      right: 10px;
+      bottom: -5px;
+    }
+  }
+}
+
+.socials {
+  &-link {
+    &__label {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      z-index: -1;
+      padding: 0;
+      width: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      background-color: gray;
+      -webkit-border-radius: 0 100px 100px 0;
+      -moz-border-radius: 0 100px 100px 0;
+      border-radius: 0 100px 100px 0;
+      overflow: hidden;
+    }
+  }
+}
+
 @import "_header";
+@import "_promo";
 @import "_media";

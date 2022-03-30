@@ -1,0 +1,6 @@
+mixin button(type, extraClasses, text)
+    - type = type || 'accent'
+    if (type === 'accent')
+        button(class=extraClasses class="button button_accent") #{text}
+    else
+        button(class=extraClasses class="button button_transparent") #{text}

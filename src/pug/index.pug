@@ -1,4 +1,7 @@
 include ./mixins/nav_menu
+include ./mixins/button
+include ./mixins/blockquote
+include ./mixins/social_link
 
 doctype html
 html
@@ -6,6 +9,7 @@ html
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
         meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        link(href="./assets/css/reset.css" rel="stylesheet")
         link(href="./assets/css/main.css" rel="stylesheet")
         script(src="./assets/scripts/main.js")
     body
@@ -25,3 +29,33 @@ html
                     a.header__location(href="#") ru
                     span.header__locations-separator /
                     a.header__location.header__location_active(href="#") en
+        section.promo
+            div.promo__shadow-down
+            div.promo__wrap.container
+                picture.promo__bg
+                    source(srcset="" type="image/webp")
+                    img(src="./assets/images/promo-bg.jpg" alt="background")
+                div.promo__descr.promo__col
+                    h1.promo__title <span class="line-break">Create sites and</span> web applications
+                    div.promo__subtitle Frontend developer. I`m create web sites <br /> and applications for 3 years
+                    div.promo__buttons
+                        +button('accent', 'promo__button', 'Contact Me')
+                        +button('transparent', 'promo__button', 'See portfolio')
+                    +blockquote('promo__blockquote',
+                      `Lorem ipsum dolor sit amet, consectetur adipisicing elit. A laboriosam nam quam repellendus,
+                      voluptates voluptatum.`)
+                div.promo__about.promo__col
+                    picture.promo__img
+                        source(srcset="" type="image/webp")
+                        img(src="./assets/images/promo-img.png" alt="My photo")
+                    div.promo__socials
+                        +social('./assets/images/svg/symbol/sprite.svg#twitter', '#',
+                          ['promo__social', 'promo__social_twitter'], "twitter")
+                        +social('./assets/images/svg/symbol/sprite.svg#github', '#',
+                          ['promo__social', 'promo__social_github'], "github")
+                        +social('./assets/images/svg/symbol/sprite.svg#telegram', '#',
+                          ['promo__social', 'promo__social_telegram'], "telegram")
+                        +social('./assets/images/svg/symbol/sprite.svg#instagram', '#',
+                          ['promo__social', 'promo__social_instagram'], "instagram")
+                        +social('./assets/images/svg/symbol/sprite.svg#vk', '#',
+                          ['promo__social', 'promo__social_vk'], "vkontakte")
