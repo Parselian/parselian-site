@@ -27,7 +27,6 @@ a {
 
 .button {
   padding: 12px 30px;
-  font-size: 18px;
   color: $main-text-color;
   border-color: transparent;
   -webkit-border-radius: 5px;
@@ -38,7 +37,7 @@ a {
   }
   &_transparent {
     background-color: transparent;
-    border-color: $main-text-color;
+    border: 2px solid $main-text-color;
   }
 }
 
