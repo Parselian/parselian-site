@@ -1,0 +1,8 @@
+mixin card (cards)
+    each card in cards
+        div(class=card.extraClasses).card
+            div.card__heading
+                span.card__counter #{card.count}
+                span.card__title !{card.title}
+            div.card__body
+                p.card__text !{card.text}

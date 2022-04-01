@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import "_variables";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+html, body {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -9,7 +13,6 @@ body {
   line-height: 1.4;
   color: $main-text-color;
   background: $bg-color;
-  box-sizing: border-box;
 }
 
 button, a {
@@ -25,19 +28,9 @@ a {
   display: block;
 }
 
-.button {
-  padding: 12px 30px;
-  color: $main-text-color;
-  border-color: transparent;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+.text {
   &_accent {
-    background-color: $action-color;
-  }
-  &_transparent {
-    background-color: transparent;
-    border: 2px solid $main-text-color;
+    color: $accent-color;
   }
 }
 
@@ -47,10 +40,33 @@ a {
   padding: 0 15px;
 }
 
+/* MIXIN button */
+.button {
+  padding: 12px 30px;
+  font-size: 18px;
+  color: $main-text-color;
+  border-color: transparent;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  &_accent {
+    background-color: $action-color;
+  }
+
+  &_transparent {
+    background-color: transparent;
+    border: 2px solid $main-text-color;
+  }
+}
+/* ------------ */
+
+/* MIXIN nav_menu */
 .nav-menu {
   height: 100%;
   display: flex;
   align-items: center;
+
   a {
     position: relative;
     display: flex;
@@ -84,7 +100,9 @@ a {
   }
 
 }
+/* -------------- */
 
+/* MIXIN  blockquote*/
 .blockquote {
   position: relative;
   padding: 20px 15px 15px 25px;
@@ -92,23 +110,28 @@ a {
   font-weight: 100;
   line-height: 1.6;
   border-left: 2px solid white;
+
   &__quote {
     position: absolute;
     width: 20px;
     height: 20px;
     fill: $main-text-color;
+
     &_top {
       left: 10px;
       top: -5px;
       transform: rotate(180deg)
     }
+
     &_bottom {
       right: 10px;
       bottom: -5px;
     }
   }
 }
+/* ---------------- */
 
+/* MIXIN social_link */
 .socials {
   &-link {
     &__label {
@@ -129,7 +152,73 @@ a {
     }
   }
 }
+/* ----------------- */
+
+/* MIXIN title */
+.title {
+  position: relative;
+  text-align: center;
+
+  &__text {
+    &-behind {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+      font-size: 202px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: 4px;
+      transform: translate(-50%, -50%);
+      opacity: 0.1;
+    }
+
+    font-size: 42px;
+    font-weight: 700;
+  }
+}
+/* ----------- */
+
+/* MIXIN card */
+.card {
+  position: relative;
+  overflow: hidden;
+  padding: 17px 15px 15px 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, 0.15);
+  -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, 0.15);
+  &__heading {
+    position: relative;
+    padding-left: 85px;
+    height: 60px;
+  }
+  &__counter {
+    position: absolute;
+    top: 17%;
+    left: -28px;
+    line-height: 0;
+    font-size: 88px;
+    font-weight: 700;
+    opacity: 0.4;
+  }
+  &__title {
+    position: absolute;
+    bottom: 15px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  &__text {
+    padding-top: 17px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-weight: 300;
+  }
+}
+/* ---------- */
 
 @import "_header";
 @import "_promo";
+@import "_advantages";
 @import "_media";

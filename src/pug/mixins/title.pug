@@ -1,0 +1,4 @@
+mixin title(bgText, text, textAccent, extraClasses)
+    h2(class=extraClasses).title
+        span.title__text-behind #{bgText}
+        span.title__text #{text} <span class="text_accent">#{textAccent}</span>

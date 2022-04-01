@@ -2,12 +2,15 @@ include ./mixins/nav_menu
 include ./mixins/button
 include ./mixins/blockquote
 include ./mixins/social_link
+include ./mixins/title
+include ./mixins/card
 
 doctype html
 html
     head
         meta(charset="UTF-8")
-        meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, " +
+        "minimum-scale=1.0")
         meta(http-equiv="X-UA-Compatible" content="ie=edge")
         link(href="./assets/css/reset.css" rel="stylesheet")
         link(href="./assets/css/main.css" rel="stylesheet")
@@ -59,3 +62,48 @@ html
                           ['promo__social', 'promo__social_instagram'], "instagram")
                         +social('./assets/images/svg/symbol/sprite.svg#vk', '#',
                           ['promo__social', 'promo__social_vk'], "vkontakte")
+        section.advantages
+            div.advantages__wrap.container
+                +title('Why', 'am', 'I?', 'advantages__title')
+                div.advantages__cards
+                    +card([
+                      {
+                        extraClasses: 'advantages__card',
+                        count: '01',
+                        title: `We <span class="text_accent">detect</span> your <span class="text_accent">wishes</span>`,
+                        text: `I have a three year experience of creating web sites. Check my finished works below and
+                        take care of it.`,
+                      },
+                      {
+                        extraClasses: 'advantages__card',
+                        count: '02',
+                        title: `I work <span class="text_accent">oficially</span>`,
+                        text: `If you want we can make a pact of our work, so you can be sure i make my work fine and
+                        won\`t vanish with your money`,
+                      },
+                      {
+                        extraClasses: 'advantages__card',
+                        count: '03',
+                        title: `You\`re <span class="text_accent">always aware</span>`,
+                        text: `You can monitor about all my work, because i place all my project results in Trello`,
+                      },
+                      {
+                        extraClasses: 'advantages__card',
+                        count: '04',
+                        title: `I <span class="text_accent">don\`t take </span> prepayment`,
+                        text: `You can monitor about all my work, because i place all my project results in Trello`,
+                      },
+                      {
+                        extraClasses: 'advantages__card',
+                        count: '05',
+                        title: `Follow <span class="text_accent">deadlines</span>`,
+                        text: `You can monitor about all my work, because i place all my project results in Trello`,
+                      },
+                      {
+                        extraClasses: 'advantages__card',
+                        count: '06',
+                        title: `Work <span class="text_accent">personally</span> with every client`,
+                        text: `You can monitor about all my work, because i place all my project results in Trello`,
+                      }
+                    ])
+                +button('accent', 'advantages__button', 'Contact Me')
