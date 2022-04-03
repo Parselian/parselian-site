@@ -179,3 +179,44 @@ html
                       }
                     ])
                 +button('accent', 'advantages__button', 'Contact Me')
+        section.portfolio
+            div.porfolio__wrap
+                +title('My', 'finished', 'works', 'portfolio__title')
+                +filter([
+                  {isActive: false, text:'Web sites'},
+                  {isActive: true, text: 'Web applications'}],
+                  'portfolio__filter'
+                )
+                div.portfolio__sliders
+                    div.info__slider
+                        div.info__slider-controls
+                            svg.info__slider-arrow.info__slider-arrow_prev
+                                use(xlink:href="./assets/images/svg/symbol#")
+                            ul.info__slider-dots
+                                li.info__slider-dot
+                                li.info__slider-dot.info__slider-dot_active
+                                li.info__slider-dot
+                                li.info__slider-dot
+                            svg.info__slider-arrow.info__slider-arrow_next
+                                use(xlink:href="./assets/images/svg/symbol#")
+                        div.info__slides
+                            div.info__slide
+                                h4.info__slide-subtitle project name
+                                h3.info__slide-title House Forever
+                                div.info__slide-block
+                                    p.info__slide-text.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, sit.
+                                    ul.info__slide-list //Made this part with CSS-grid
+                                        li.info__slide-list-item
+                                            span.text_bold
+                                    div.info__slide-technologies
+                                        div.info__slide-tecnhologies-title.
+                                            Used technologies
+                                        ul.info__slide-technologies-list
+                                            li.info__slide-technologies-list-item HTML
+                                            li.info__slide-technologies-list-item CSS
+                                            li.info__slide-technologies-list-item JavaScript
+                                            li.info__slide-technologies-list-item Gulp
+
+
+                    div.gallery__slider
