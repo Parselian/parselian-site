@@ -4,6 +4,7 @@ include ./mixins/blockquote
 include ./mixins/social_link
 include ./mixins/title
 include ./mixins/card
+include ./mixins/filter_block
 
 doctype html
 html
@@ -68,42 +69,113 @@ html
                 div.advantages__cards
                     +card([
                       {
+                        type: 'withoutIcon',
                         extraClasses: 'advantages__card',
                         count: '01',
                         title: `We <span class="text_accent">detect</span> your <span class="text_accent">wishes</span>`,
                         text: `I have a three year experience of creating web sites. Check my finished works below and
-                        take care of it.`,
+                                              take care of it.`,
                       },
                       {
+                        type: 'withoutIcon',
                         extraClasses: 'advantages__card',
                         count: '02',
                         title: `I work <span class="text_accent">oficially</span>`,
                         text: `If you want we can make a pact of our work, so you can be sure i make my work fine and
-                        won\`t vanish with your money`,
+                                              won\`t vanish with your money`,
                       },
                       {
+                        type: 'withoutIcon',
                         extraClasses: 'advantages__card',
                         count: '03',
                         title: `You\`re <span class="text_accent">always aware</span>`,
-                        text: `You can monitor about all my work, because i place all my project results in Trello`,
+                        text: `You can monitor about all my work, because i place all my project results in Trello`
                       },
                       {
+                        type: 'withoutIcon',
                         extraClasses: 'advantages__card',
                         count: '04',
                         title: `I <span class="text_accent">don\`t take </span> prepayment`,
-                        text: `You can monitor about all my work, because i place all my project results in Trello`,
+                        text: `You can monitor about all my work, because i place all my project results in Trello`
                       },
                       {
+                        type: 'withoutIcon',
                         extraClasses: 'advantages__card',
                         count: '05',
                         title: `Follow <span class="text_accent">deadlines</span>`,
-                        text: `You can monitor about all my work, because i place all my project results in Trello`,
+                        text: `You can monitor about all my work, because i place all my project results in Trello`
                       },
                       {
+                        type: 'withoutIcon',
                         extraClasses: 'advantages__card',
                         count: '06',
                         title: `Work <span class="text_accent">personally</span> with every client`,
-                        text: `You can monitor about all my work, because i place all my project results in Trello`,
+                        text: `You can monitor about all my work, because i place all my project results in Trello`
+                      }
+                    ])
+                +button('accent', 'advantages__button', 'Contact Me')
+        section.steps
+            div.steps__wrap.container
+                +title('How', 'do', 'I work?', 'steps__title')
+                +filter([
+                  {
+                    isActive: false,
+                    text: 'You have design template'
+                  },
+                  {
+                    isActive: true,
+                    text: 'You have nothing'
+                  }
+                ], 'steps__filter')
+                div.steps__blocks
+                    +card([
+                      {
+                        type: 'withIcon',
+                        extraClasses: 'steps__block',
+                        count: '01',
+                        title: 'We <span class="text_accent">detect</span> your <span class="text_accent">wishes</span>',
+                        text: 'I ask some questions to you to detect which type of site you need',
+                        iconId: 'vk'
+                      },
+                      {
+                        type: 'withIcon',
+                        extraClasses: 'steps__block',
+                        count: '02',
+                        title: '<span class="text_accent">Choosing</span> a designer',
+                        text: 'After first step based on your budget i choose a designer to create a template for you web-site',
+                        iconId: 'vk'
+                      },
+                      {
+                        type: 'withIcon',
+                        extraClasses: 'steps__block',
+                        count: '03',
+                        title: '<span class="text_accent">Make</span> website',
+                        text: 'When designer complete template, i will make wokred version of your website based on template',
+                        iconId: 'vk'
+                      },
+                      {
+                        type: 'withIcon',
+                        extraClasses: 'steps__block',
+                        count: '04',
+                        title: 'You <span class="text_accent">check</span> the <span class="text_accent">results</span>',
+                        text: 'You check finished site for some tiny <span class="text_accent">(you have 5 free corrections)</span>',
+                        iconId: 'vk'
+                      },
+                      {
+                        type: 'withIcon',
+                        extraClasses: 'steps__block',
+                        count: '05',
+                        title: 'Buy hosting & domain <span class="text_accent">publish</span> your <span class="text_accent">site</span>',
+                        text: 'When i make all fixes, we choose&buy domain name with hosting, then i publish your site and give you all access data',
+                        iconId: 'vk'
+                      },
+                      {
+                        type: 'withIcon',
+                        extraClasses: 'steps__block',
+                        count: '06',
+                        title: 'You <span class="text_accent">write</span> a good <span class="text_accent">review</span> and <span class="text_accent">recommend me</span> :)',
+                        text: 'When i make all fixes, we choose&buy domain name with hosting, then i publish your site and give you all access data',
+                        iconId: 'vk'
                       }
                     ])
                 +button('accent', 'advantages__button', 'Contact Me')

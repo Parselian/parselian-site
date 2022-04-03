@@ -29,6 +29,9 @@
 }
 
 @media (max-width: 1200px) {
+  section {
+    margin-bottom: 160px;
+  }
   .promo {
     &__shadow {
       &-down {
@@ -72,6 +75,7 @@
 @media(max-width: 992px) {
   /* MIXIN title */
   .title {
+    margin-bottom: 110px;
     &__text {
       &-behind {
         font-size: 170px;
@@ -88,6 +92,9 @@
   }
   /* ---------- */
 
+  section {
+    margin-bottom: 130px;
+  }
   .promo {
     margin-bottom: 140px;
     &__bg {
@@ -156,9 +163,6 @@
     }
   }
   .advantages {
-    &__title {
-      margin-bottom: 110px;
-    }
     &__card {
       width: 44.5%;
 
@@ -171,11 +175,23 @@
       }
     }
   }
+  .steps {
+    &__filter {
+      margin-bottom: 60px;
+    }
+    &__block {
+      width: 45%;
+      &:not(:nth-last-child(-n+2)) {
+        margin-bottom: 2%;
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
   /* MIXIN title */
   .title {
+    margin-bottom: 100px;
     &__text {
       &-behind {
         font-size: 150px;
@@ -186,16 +202,31 @@
   }
   /* ----------- */
 
+  .card {
+    &__text {
+      &_short {
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  section {
+    margin-bottom: 120px;
+  }
   .header {
     &__menu {
       display: none;
     }
   }
   .advantages {
-    &__title {
-      margin-bottom: 100px;
-    }
     &__card {
+      width: 43%;
+    }
+  }
+  .steps {
+    &__block {
       width: 43%;
     }
   }
@@ -204,6 +235,7 @@
 @media (max-width: 576px) {
   /* MIXIN title */
   .title {
+    margin-bottom: 90px;
     &__text {
       &-behind {
         font-size: 130px;
@@ -242,15 +274,19 @@
     }
   }
   .advantages {
-    &__title {
-      margin-bottom: 90px;
-    }
-
     &__card {
       width: 100%;
 
       &:not(:last-child) {
         margin-bottom: 4%;
+      }
+    }
+  }
+  .steps {
+    &__block {
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 3%;
       }
     }
   }

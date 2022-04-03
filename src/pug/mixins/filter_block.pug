@@ -1,0 +1,7 @@
+mixin filter(buttons, extraClasses)
+    div(class=extraClasses).filter
+        each button in buttons
+            if (button.isActive)
+                button.filter__button.filter__button_active #{button.text}
+            else
+                button.filter__button.filter__button_inactive #{button.text}

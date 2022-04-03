@@ -15,6 +15,10 @@ body {
   background: $bg-color;
 }
 
+section {
+    margin-bottom: 190px;
+}
+
 button, a {
   cursor: pointer;
 }
@@ -157,6 +161,7 @@ a {
 /* MIXIN title */
 .title {
   position: relative;
+  margin-bottom: 150px;
   text-align: center;
 
   &__text {
@@ -184,6 +189,7 @@ a {
   position: relative;
   overflow: hidden;
   padding: 17px 15px 15px 15px;
+  background-color: $bg-color;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -214,11 +220,49 @@ a {
     padding-top: 17px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     font-weight: 300;
+    &_short {
+      width: 75%;
+      max-width: 250px;
+    }
+  }
+  &__icon {
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    width: 120px;
+    height: 120px;
+    fill: $main-icon-color;
+    opacity: .3;
   }
 }
 /* ---------- */
 
+/* MIXIN filter_block */
+.filter {
+  display: flex;
+  justify-content: center;
+  &__button {
+    padding: 15px 22px;
+    font-size: 16px;
+    font-weight: 500;
+    color: $main-text-color;
+    background-color: transparent;
+    border: 1px solid transparent;
+    &_inactive {
+      border-bottom: 1px solid $main-text-color;
+    }
+    &_active {
+      background-color: $action-color;
+      -webkit-border-radius: 5px 5px 5px 0;
+      -moz-border-radius: 5px 5px 5px 0;
+      border-radius: 5px 5px 5px 0;
+    }
+  }
+}
+/* ------------------ */
+
 @import "_header";
 @import "_promo";
 @import "_advantages";
+@import "_steps";
 @import "_media";
