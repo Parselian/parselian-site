@@ -239,29 +239,37 @@ html
                                         svg.gallery__slide-link-icon
                                             use(xlink:href="./assets/images/svg/symbol/sprite.svg#github")
         section.contacts
-            div.contacts__wrap.container
+            div.container
                 +title("Still", "have", "questions?", "contacts__title")
-                div.contacts__info
-                    div.contacts__socials.contacts__block
-                        h3.contacts__block-title
-                            <span class="text_accent">Find</span> me on
-                        div.contacts__socials-links
-                            +social('./assets/images/svg/symbol/sprite.svg#twitter', '#',
-                              ['contacts__socials-link', 'promo__social_twitter'], "twitter")
-                            +social('./assets/images/svg/symbol/sprite.svg#github', '#',
-                              ['contacts__socials-link', 'promo__social_github'], "github")
-                            +social('./assets/images/svg/symbol/sprite.svg#telegram', '#',
-                              ['contacts__socials-link', 'promo__social_telegram'], "telegram")
-                            +social('./assets/images/svg/symbol/sprite.svg#instagram', '#',
-                              ['contacts__socials-link', 'promo__social_instagram'], "instagram")
-                            +social('./assets/images/svg/symbol/sprite.svg#vk', '#',
-                              ['contacts__socials-link', 'promo__social_vk'], "vkontakte")
-                    div.contacts__cv.contacts__block
-                        h3.contacts__block-title.
-                            <span class="text_accent">Check</span> my CV
-                form(id="contacts-form" action="#" method="POST").contacts-form.form
-                    div.contacts-form__inputs.form__inputs
-                        input(placeholder="Your name").contacts-form__input.form__input
-                        input(placeholder="Your name").contacts-form__input.form__input
-                    textarea(placeholder="Your message").contacts-form__textarea.form__textarea
-                    +button('accent', ['contacts-form__button', 'form__button'], 'Send')
+                div.contacts__wrap
+                    div.contacts__info
+                        div.contacts__socials.contacts__block
+                            h3.contacts__block-title
+                                <span class="text_accent">Find</span> me on
+                            div.contacts__socials-links
+                                +social('./assets/images/svg/symbol/sprite.svg#twitter', '#',
+                                  ['contacts__socials-link', 'promo__social_twitter'], "twitter")
+                                +social('./assets/images/svg/symbol/sprite.svg#github', '#',
+                                  ['contacts__socials-link', 'promo__social_github'], "github")
+                                +social('./assets/images/svg/symbol/sprite.svg#telegram', '#',
+                                  ['contacts__socials-link', 'promo__social_telegram'], "telegram")
+                                +social('./assets/images/svg/symbol/sprite.svg#instagram', '#',
+                                  ['contacts__socials-link', 'promo__social_instagram'], "instagram")
+                                +social('./assets/images/svg/symbol/sprite.svg#vk', '#',
+                                  ['contacts__socials-link', 'promo__social_vk'], "vkontakte")
+                        div.contacts__cv.contacts__block
+                            h3.contacts__block-title.
+                                <span class="text_accent">Check</span> my CV
+                            +button('accent', 'contacts__block-link', 'Check CV', 'link')
+                    form(id="contacts-form" action="#" method="POST").contacts-form.form
+                        div.contacts-form__inputs.form__inputs
+                            div.form__input-wrap
+                                label.form__input-label.form__label Your name
+                                input.contacts-form__input.form__input
+                            div.form__input-wrap
+                                label.form__input-label.form__label.form__input-label_focused Your email<sup>*</sup>
+                                input(required).contacts-form__input.form__input
+                        div.form__textarea-wrap
+                            label.form__textarea-label.form__label.form__textarea-label_focused Your message<sup>*</sup>
+                            textarea(rows="15").contacts-form__textarea.form__textarea
+                        +button('accent', ['contacts-form__button', 'form__button'], 'Send')

@@ -1,0 +1,89 @@
+.form {
+  position: relative;
+
+  &__label {
+    position: absolute;
+    z-index: -1;
+    font-size: 14px;
+    font-weight: 100;
+    opacity: 0.6;
+    transition: .2s ease-out;
+  }
+
+  &__input {
+    &s {
+      margin-bottom: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-wrap {
+      width: 49%;
+      position: relative;
+    }
+
+    &-label {
+      top: 50%;;
+      transform: translate(10px, -50%);
+
+      &_focused {
+        top: 0;
+        transform: translate(0, -10px);
+        font-size: 12px;
+        font-weight: 500;
+        color: $accent-color;
+        opacity: 1;
+      }
+    }
+
+    padding-left: 10px;
+    height: 46px;
+    width: calc(100% - 10px);
+    font-weight: 100;
+    letter-spacing: 0.6px;
+    color: $main-text-color;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: .2s;
+
+    &:focus {
+      color: $accent-color;
+      border-color: $accent-color;
+    }
+  }
+
+  &__textarea {
+    &-wrap {
+      margin-bottom: 20px;
+      width: 100%;
+      position: relative;
+    }
+
+    &-label {
+      top: 15px;
+      transform: translate(10px, 0);
+      &_focused {
+        font-size: 12px;
+        color: $accent-color;
+        font-weight: 500;
+        transform: translate(0, -35px);
+      }
+    }
+
+    width: 100%;
+    color: $main-text-color;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    resize: none;
+    &:focus {
+      color: $accent-color;
+      border-color: $accent-color;
+    }
+  }
+  &__button {
+    width: 100%;
+  }
+}

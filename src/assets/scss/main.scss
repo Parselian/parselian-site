@@ -41,6 +41,16 @@ a {
   text-decoration: none;
 }
 
+input, div, textarea {
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  padding: 0;
+}
+
 .line-break {
   display: block;
 }
@@ -160,6 +170,10 @@ a {
 /* MIXIN social_link */
 .socials {
   &-link {
+    svg {
+      width: inherit;
+      height: inherit;
+    }
     &__label {
       position: absolute;
       top: 0;
@@ -290,4 +304,6 @@ a {
 @import "_gallery-slider";
 @import "_advantages";
 @import "_steps";
+@import "_form";
+@import "_contacts";
 @import "_media";

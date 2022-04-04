@@ -1,6 +1,14 @@
-mixin button(type, extraClasses, text)
-    - type = type || 'accent'
-    if (type === 'accent')
-        button(class=extraClasses class="button button_accent") #{text}
+mixin button(styleType, extraClasses, text, btnType, url)
+    - styleType = styleType || 'accent'
+    - btnType = btnType || 'button'
+    - url = url || "#"
+    if (btnType === 'button')
+        if (styleType === 'accent')
+            button(class=extraClasses class="button button_accent") #{text}
+        else
+            button(class=extraClasses class="button button_transparent") #{text}
     else
-        button(class=extraClasses class="button button_transparent") #{text}
+        if (styleType === 'accent')
+            a(href=url class=extraClasses class="button button_accent") #{text}
+        else
+            a(href=url class=extraClasses class="button button_transparent") #{text}
