@@ -183,7 +183,7 @@ html
             div.porfolio__wrap.container
                 +title('My', 'finished', 'works', 'portfolio__title')
                 +filter([
-                  {isActive: false, text:'Web sites'},
+                  {isActive: false, text: 'Web sites'},
                   {isActive: true, text: 'Web applications'}],
                   'portfolio__filter'
                 )
@@ -238,3 +238,30 @@ html
                                     a(href="#").gallery__slide-link
                                         svg.gallery__slide-link-icon
                                             use(xlink:href="./assets/images/svg/symbol/sprite.svg#github")
+        section.contacts
+            div.contacts__wrap.container
+                +title("Still", "have", "questions?", "contacts__title")
+                div.contacts__info
+                    div.contacts__socials.contacts__block
+                        h3.contacts__block-title
+                            <span class="text_accent">Find</span> me on
+                        div.contacts__socials-links
+                            +social('./assets/images/svg/symbol/sprite.svg#twitter', '#',
+                              ['contacts__socials-link', 'promo__social_twitter'], "twitter")
+                            +social('./assets/images/svg/symbol/sprite.svg#github', '#',
+                              ['contacts__socials-link', 'promo__social_github'], "github")
+                            +social('./assets/images/svg/symbol/sprite.svg#telegram', '#',
+                              ['contacts__socials-link', 'promo__social_telegram'], "telegram")
+                            +social('./assets/images/svg/symbol/sprite.svg#instagram', '#',
+                              ['contacts__socials-link', 'promo__social_instagram'], "instagram")
+                            +social('./assets/images/svg/symbol/sprite.svg#vk', '#',
+                              ['contacts__socials-link', 'promo__social_vk'], "vkontakte")
+                    div.contacts__cv.contacts__block
+                        h3.contacts__block-title.
+                            <span class="text_accent">Check</span> my CV
+                form(id="contacts-form" action="#" method="POST").contacts-form.form
+                    div.contacts-form__inputs.form__inputs
+                        input(placeholder="Your name").contacts-form__input.form__input
+                        input(placeholder="Your name").contacts-form__input.form__input
+                    textarea(placeholder="Your message").contacts-form__textarea.form__textarea
+                    +button('accent', ['contacts-form__button', 'form__button'], 'Send')
