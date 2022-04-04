@@ -19,6 +19,19 @@ section {
     margin-bottom: 190px;
 }
 
+picture {
+  img {
+    width: inherit;
+    height: inherit;
+    max-height: inherit;
+    max-width: inherit;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+    object-fit: inherit;
+  }
+}
+
 button, a {
   cursor: pointer;
 }
@@ -35,6 +48,15 @@ a {
 .text {
   &_accent {
     color: $accent-color;
+  }
+  &_medium {
+    font-weight: 500;
+  }
+  &_bold {
+    font-weight: 700;
+  }
+  &_light {
+    font-weight: 300;
   }
 }
 
@@ -264,6 +286,8 @@ a {
 @import "_header";
 @import "_promo";
 @import "_portfolio";
+@import "_info-slider";
+@import "_gallery-slider";
 @import "_advantages";
 @import "_steps";
 @import "_media";

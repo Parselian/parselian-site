@@ -180,7 +180,7 @@ html
                     ])
                 +button('accent', 'advantages__button', 'Contact Me')
         section.portfolio
-            div.porfolio__wrap
+            div.porfolio__wrap.container
                 +title('My', 'finished', 'works', 'portfolio__title')
                 +filter([
                   {isActive: false, text:'Web sites'},
@@ -188,35 +188,53 @@ html
                   'portfolio__filter'
                 )
                 div.portfolio__sliders
-                    div.info__slider
-                        div.info__slider-controls
-                            svg.info__slider-arrow.info__slider-arrow_prev
-                                use(xlink:href="./assets/images/svg/symbol#")
-                            ul.info__slider-dots
-                                li.info__slider-dot
-                                li.info__slider-dot.info__slider-dot_active
-                                li.info__slider-dot
-                                li.info__slider-dot
-                            svg.info__slider-arrow.info__slider-arrow_next
-                                use(xlink:href="./assets/images/svg/symbol#")
-                        div.info__slides
-                            div.info__slide
-                                h4.info__slide-subtitle project name
-                                h3.info__slide-title House Forever
-                                div.info__slide-block
-                                    p.info__slide-text.
+                    div.info-slider
+                        div.info-slider__controls
+                            svg.info-slider__arrow.info-slider__arrow_prev
+                                use(xlink:href="./assets/images/svg/symbol/sprite.svg#arrow")
+                            ul.info-slider__dots
+                                li.info-slider__dot
+                                li.info-slider__dot.info-slider__dot_active
+                                li.info-slider__dot
+                                li.info-slider__dot
+                                li.info-slider__dot
+                            svg.info-slider__arrow.info-slider__arrow_next
+                                use(xlink:href="./assets/images/svg/symbol/sprite.svg#arrow")
+                        div.info-slider__slides
+                            div.info-slider__slide
+                                h4.info-slider__slide-subtitle project name
+                                h3.info-slider__slide-title House Forever
+                                div.info-slider__slide-block
+                                    p.info-slider__slide-text.
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, sit.
-                                    ul.info__slide-list //Made this part with CSS-grid
-                                        li.info__slide-list-item
-                                            span.text_bold
-                                    div.info__slide-technologies
-                                        div.info__slide-tecnhologies-title.
+                                    div.info-slider__slide-grid
+                                        div.info-slider__slide-column
+                                            div.info-slider__slide-grid-column-item.text_medium.
+                                                Development time:
+                                            div.info-slider__slide-grid-column-item.text_medium.
+                                                Price:
+                                        div.info-slider__slide-column
+                                            div.info-slider__slide-grid-column-item.text_light.
+                                                16 hours
+                                            div.info-slider__slide-grid-column-item.text_light.
+                                                $150
+                                    div.info-slider__slide-technologies
+                                        div.info-slider__slide-technologies-title.
                                             Used technologies
-                                        ul.info__slide-technologies-list
-                                            li.info__slide-technologies-list-item HTML
-                                            li.info__slide-technologies-list-item CSS
-                                            li.info__slide-technologies-list-item JavaScript
-                                            li.info__slide-technologies-list-item Gulp
-
-
+                                        ul.info-slider__slide-technologies-list
+                                            li.info-slider__slide-technologies-list-item HTML
+                                            li.info-slider__slide-technologies-list-item CSS
+                                            li.info-slider__slide-technologies-list-item JavaScript
+                                            li.info-slider__slide-technologies-list-item Gulp
+                                +button('accent', 'info-slider__slide-button', 'Contact Me')
                     div.gallery__slider
+                        div.gallery__slide
+                            picture.gallery__slide-img
+                                source(srcset="./assets/images/webp/project_preview.webp" type="image/webp")
+                                img(src="./assets/images/project_preview.jpg" alt="preview")
+                            div.gallery__slide-links
+                                div.gallery__slide-links-title Open a project in:
+                                nav.gallery__slide-links-list
+                                    a(href="#").gallery__slide-link
+                                        svg.gallery__slide-link-icon
+                                            use(xlink:href="./assets/images/svg/symbol/sprite.svg#github")

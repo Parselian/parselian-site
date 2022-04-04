@@ -1,3 +1,10 @@
 .portfolio {
-
+  &__filter {
+    margin-bottom: 80px;
+  }
+  &__slider {
+    &s {
+      position: relative;
+    }
+  }
 }

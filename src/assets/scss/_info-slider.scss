@@ -1,0 +1,148 @@
+.info-slider {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  width: 52%;
+
+  &__controls {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+  }
+
+  &__arrow {
+    stroke: $main-icon-color;
+    width: 40px;
+    height: 65px;
+    opacity: 0.5;
+    transition: .2s;
+    cursor: pointer;
+
+    &_prev {
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+
+    &_next {
+      transform: rotate(180deg);
+
+      &:hover {
+        transform: rotate(180deg) translateY(-5px);
+      }
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+  }
+
+  &__dot {
+    &s {
+      margin-top: 60px;
+      margin-bottom: 60px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    width: 8px;
+    height: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    cursor: pointer;
+
+    &_active {
+      background-color: $action-color;
+      border-color: $action-color;
+    }
+  }
+
+  &__slide {
+    &s {
+      width: 100%;
+    }
+
+    width: inherit;
+
+    &-subtitle {
+      font-size: 16px;
+      font-weight: 400;
+      opacity: 0.4;
+    }
+
+    &-title {
+      margin-bottom: 25px;
+      font-size: 32px;
+      font-weight: 500;
+    }
+
+    &-block {
+      margin-bottom: 25px;
+      padding: 20px;
+      background-color: $bg-color;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, .15);
+      -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, .15);
+      box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, .15);
+    }
+
+    &-text {
+      margin-bottom: 35px;
+      width: 95%;
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+    &-grid {
+      margin-bottom: 30px;
+      display: grid;
+      grid-template-columns: 37% 30%;
+
+      &-column {
+        &-item {
+          &:not(:last-child) {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+
+    &-technologies {
+      opacity: .5;
+
+      &-title {
+        margin-bottom: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+
+      &-list {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 300;
+
+        &-item {
+          &:not(:last-child) {
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}

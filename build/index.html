@@ -180,51 +180,73 @@
       </div>
     </section>
     <section class="portfolio">
-      <div class="porfolio__wrap">
+      <div class="porfolio__wrap container">
         <h2 class="portfolio__title title"><span class="title__text-behind">My</span><span class="title__text">finished <span class="text_accent">works</span></span></h2>
         <div class="portfolio__filter filter">
           <button class="filter__button filter__button_inactive">Web sites</button>
           <button class="filter__button filter__button_active">Web applications</button>
         </div>
         <div class="portfolio__sliders">
-          <div class="info__slider">
-            <div class="info__slider-controls">
-              <svg class="info__slider-arrow info__slider-arrow_prev">
-                <use xlink:href="./assets/images/svg/symbol#"></use>
+          <div class="info-slider">
+            <div class="info-slider__controls">
+              <svg class="info-slider__arrow info-slider__arrow_prev">
+                <use xlink:href="./assets/images/svg/symbol/sprite.svg#arrow"></use>
               </svg>
-              <ul class="info__slider-dots">
-                <li class="info__slider-dot"></li>
-                <li class="info__slider-dot info__slider-dot_active"></li>
-                <li class="info__slider-dot"></li>
-                <li class="info__slider-dot"></li>
+              <ul class="info-slider__dots">
+                <li class="info-slider__dot"></li>
+                <li class="info-slider__dot info-slider__dot_active"></li>
+                <li class="info-slider__dot"></li>
+                <li class="info-slider__dot"></li>
+                <li class="info-slider__dot"></li>
               </ul>
-              <svg class="info__slider-arrow info__slider-arrow_next">
-                <use xlink:href="./assets/images/svg/symbol#"></use>
+              <svg class="info-slider__arrow info-slider__arrow_next">
+                <use xlink:href="./assets/images/svg/symbol/sprite.svg#arrow"></use>
               </svg>
             </div>
-            <div class="info__slides">
-              <div class="info__slide">
-                <h4 class="info__slide-subtitle">project name</h4>
-                <h3 class="info__slide-title">House Forever</h3>
-                <div class="info__slide-block">
-                  <p class="info__slide-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, sit.</p>
-                  <ul class="info__slide-list">//Made this part with CSS-grid
-                    <li class="info__slide-list-item"><span class="text_bold"></span></li>
-                  </ul>
-                  <div class="info__slide-technologies">
-                    <div class="info__slide-tecnhologies-title">Used technologies</div>
-                    <ul class="info__slide-technologies-list">
-                      <li class="info__slide-technologies-list-item">HTML</li>
-                      <li class="info__slide-technologies-list-item">CSS</li>
-                      <li class="info__slide-technologies-list-item">JavaScript</li>
-                      <li class="info__slide-technologies-list-item">Gulp</li>
+            <div class="info-slider__slides">
+              <div class="info-slider__slide">
+                <h4 class="info-slider__slide-subtitle">project name</h4>
+                <h3 class="info-slider__slide-title">House Forever</h3>
+                <div class="info-slider__slide-block">
+                  <p class="info-slider__slide-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, sit.</p>
+                  <div class="info-slider__slide-grid">
+                    <div class="info-slider__slide-column">
+                      <div class="info-slider__slide-grid-column-item text_medium">Development time:</div>
+                      <div class="info-slider__slide-grid-column-item text_medium">Price:</div>
+                    </div>
+                    <div class="info-slider__slide-column">
+                      <div class="info-slider__slide-grid-column-item text_light">16 hours</div>
+                      <div class="info-slider__slide-grid-column-item text_light">$150</div>
+                    </div>
+                  </div>
+                  <div class="info-slider__slide-technologies">
+                    <div class="info-slider__slide-technologies-title">Used technologies</div>
+                    <ul class="info-slider__slide-technologies-list">
+                      <li class="info-slider__slide-technologies-list-item">HTML</li>
+                      <li class="info-slider__slide-technologies-list-item">CSS</li>
+                      <li class="info-slider__slide-technologies-list-item">JavaScript</li>
+                      <li class="info-slider__slide-technologies-list-item">Gulp</li>
                     </ul>
                   </div>
                 </div>
+                <button class="info-slider__slide-button button button_accent">Contact Me</button>
               </div>
             </div>
           </div>
-          <div class="gallery__slider"></div>
+          <div class="gallery__slider">
+            <div class="gallery__slide">
+              <picture class="gallery__slide-img">
+                <source srcset="./assets/images/webp/project_preview.webp" type="image/webp"><img src="./assets/images/project_preview.jpg" alt="preview">
+              </picture>
+              <div class="gallery__slide-links">
+                <div class="gallery__slide-links-title">Open a project in:</div>
+                <nav class="gallery__slide-links-list"><a class="gallery__slide-link" href="#">
+                    <svg class="gallery__slide-link-icon">
+                      <use xlink:href="./assets/images/svg/symbol/sprite.svg#github"></use>
+                    </svg></a></nav>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
