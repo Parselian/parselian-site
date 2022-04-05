@@ -29,6 +29,11 @@
 }
 
 @media (max-width: 1400px) {
+  .promo {
+    &__bg {
+      left: -350px;
+    }
+  }
   .info-slider {
     width: 55%;
   }
@@ -62,7 +67,9 @@
         bottom: -30px;
       }
     }
-
+    &__bg {
+      left: -440px;
+    }
     &__title {
       font-size: 56px;
     }
@@ -135,6 +142,9 @@
 
   section {
     margin-bottom: 130px;
+  }
+  .nav-menu {
+    display: none;
   }
   .promo {
     margin-bottom: 140px;
@@ -410,7 +420,7 @@
   }
 
   section {
-    margin-bottom: 120px;
+    margin-bottom: 100px;
   }
   .header {
     &__menu {

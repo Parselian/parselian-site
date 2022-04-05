@@ -273,3 +273,17 @@ html
                             label.form__textarea-label.form__label.form__textarea-label_focused Your message<sup>*</sup>
                             textarea.contacts-form__textarea.form__textarea
                         +button('accent', ['contacts-form__button', 'form__button'], 'Send')
+        footer.footer
+            div.footer__wrap.container
+                picture.logo
+                    source
+                    img(src="./assets/images/logo.png" alt="parselian")
+                +navMenu([
+                  {anchor: "#about_me", title: "About me", isActive: false},
+                  {anchor: "#portfolio", title: "Portfolio", isActive: false},
+                  {anchor: "#reviews", title: "Reviews", isActive: false},
+                  {anchor: "#orders", title: "Order", isActive: false},
+                  {anchor: "#contacts", title: "Contacts", isActive: false}
+                ], 'header__menu nav-menu')
+                div.footer__copyright.copyright.
+                    &copy; Copyright &mdash; all rights reserved

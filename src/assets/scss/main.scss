@@ -75,6 +75,12 @@ textarea {
   padding: 0 15px;
 }
 
+.copyright {
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 0.5;
+}
+
 /* MIXIN button */
 .button {
   padding: 12px 30px;
@@ -305,4 +311,5 @@ textarea {
 @import "_steps";
 @import "_form";
 @import "_contacts";
+@import "_footer";
 @import "_media";
