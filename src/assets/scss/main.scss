@@ -2,13 +2,12 @@
 @import "_variables";
 
 html, body {
-  box-sizing: border-box;
+  box-sizing: border-box!important;
 }
 
 body {
   margin: 0;
   padding: 0;
-  height: 400px;
   font-family: 'Roboto', sans-serif, -apple-system;
   line-height: 1.4;
   color: $main-text-color;

@@ -45,5 +45,8 @@
 
   &-form {
     width: 75%;
+    &__textarea {
+      height: 235px;
+    }
   }
 }
