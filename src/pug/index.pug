@@ -179,6 +179,29 @@ html
                       }
                     ])
                 +button('accent', 'advantages__button', 'Contact Me')
+        section.experience
+            div.experience__wrap.container
+                +title("My", "work", "experience", "experience__title")
+                div.experience__slider
+                    div.experience__slider-dots
+                        div.experience__slider-dot
+                            div.experience__slider-dot-subtitle October &mdash; August
+                            div.experience__slider-dot-title 2018 &mdash; 2020
+                        div.experience__slider-dot
+                            div.experience__slider-dot-subtitle August &mdash; August
+                            div.experience__slider-dot-title 2020 &mdash; 2021
+                        div.experience__slider-dot
+                            div.experience__slider-dot-subtitle August &mdash; Present
+                            div.experience__slider-dot-title 2021 &mdash; now
+                    div.experience__slides
+                        div.experience__slide
+                            picture.experience__slide-img
+                                source(srcset="./assets/images/webp" type="image/webp")
+                                img(src="./assets/images" alt="photo")
+                            div.experience__slide-subtitle
+                            h3.experience__slide-title
+                            p.experience__slide-text
+                            +button('accent', 'experience__slide-button', 'check my CV', 'link', '#')
         section.portfolio
             div.porfolio__wrap.container
                 +title('My', 'finished', 'works', 'portfolio__title')
@@ -240,7 +263,7 @@ html
                                             use(xlink:href="./assets/images/svg/symbol/sprite.svg#github")
         section.contacts
             div.container
-                +title("Still", "have", "questions?", "contacts__title")
+                +title("Get", "in", "touch", "contacts__title")
                 div.contacts__wrap
                     div.contacts__info
                         div.contacts__socials.contacts__block
@@ -286,4 +309,4 @@ html
                   {anchor: "#contacts", title: "Contacts", isActive: false}
                 ], 'header__menu nav-menu')
                 div.footer__copyright.copyright.
-                    &copy; Copyright &mdash; all rights reserved
+                    vyacheslav.job@yandex.ru
