@@ -120,14 +120,7 @@
     fill: white;
 
     span {
-      transition: .3s;
-    }
 
-    &:hover {
-      span {
-        width: 100%;
-        padding: 0 29px 0 30px;
-      }
     }
   }
 }

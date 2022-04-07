@@ -12,9 +12,9 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, .15);
-    -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, .15);
-    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, .15);
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
 
     &:not(:last-child) {
       margin-bottom: 25px;

@@ -181,7 +181,7 @@ html
                 +button('accent', 'advantages__button', 'Contact Me')
         section.experience
             div.experience__wrap.container
-                +title("My", "work", "experience", "experience__title")
+                +title("Explore", "my", "experience", "experience__title")
                 div.experience__slider
                     div.experience__slider-dots
                         div.experience__slider-dot
@@ -193,14 +193,43 @@ html
                         div.experience__slider-dot
                             div.experience__slider-dot-subtitle August &mdash; Present
                             div.experience__slider-dot-title 2021 &mdash; now
+                    div.experience__select.select-box
+                        div.experience__select-active.select-box__selected
+                            .select-box__selected-text
+                                span.select-box__list-item-subtitle.
+                                    October &mdash; August
+                                span.select-box__list-item-title.
+                                    2018 &mdash; 2020
+                            svg.select-box__selected-icon
+                                use(xlink:href="./assets/images/svg/symbol/sprite.svg#select-arrow")
+                        ul.experience__select-list.select-box__list
+                            li.select-box__list-item
+                                span.select-box__list-item-subtitle.
+                                    October &mdash; August
+                                span.select-box__list-item-title.
+                                    2018 &mdash; 2020
+                            li.select-box__list-item
+                                span.select-box__list-item-subtitle.
+                                    October &mdash; August
+                                span.select-box__list-item-title.
+                                    2018 &mdash; 2020
+                            li.select-box__list-item
+                                span.select-box__list-item-subtitle.
+                                    October &mdash; August
+                                span.select-box__list-item-title.
+                                    2018 &mdash; 2020
                     div.experience__slides
                         div.experience__slide
                             picture.experience__slide-img
-                                source(srcset="./assets/images/webp" type="image/webp")
-                                img(src="./assets/images" alt="photo")
-                            div.experience__slide-subtitle
-                            h3.experience__slide-title
-                            p.experience__slide-text
+                                source(srcset="./assets/images/webp/experience-img_1.webp" type="image/webp")
+                                img(src="./assets/images/experience-img_1.png" alt="photo")
+                            div.experience__slide-subtitle Company name
+                            h3.experience__slide-title Apple service senter
+                            p.experience__slide-text.
+                                I worked as a junior Frontend developer. My work included in creating new websites for
+                                us and our partners and also maintaince existing projects.<br/><br/>
+                                I worked as a junior Frontend developer. My work included in creating new websites for
+                                us and our partners and also maintaince existing projects.
                             +button('accent', 'experience__slide-button', 'check my CV', 'link', '#')
         section.portfolio
             div.porfolio__wrap.container
@@ -271,15 +300,15 @@ html
                                 <span class="text_accent">Find</span> me on
                             div.contacts__socials-links
                                 +social('./assets/images/svg/symbol/sprite.svg#twitter', '#',
-                                  ['contacts__socials-link', 'promo__social_twitter'], "twitter")
+                                  ['contacts__socials-link'], "twitter")
                                 +social('./assets/images/svg/symbol/sprite.svg#github', '#',
-                                  ['contacts__socials-link', 'promo__social_github'], "github")
+                                  ['contacts__socials-link'], "github")
                                 +social('./assets/images/svg/symbol/sprite.svg#telegram', '#',
-                                  ['contacts__socials-link', 'promo__social_telegram'], "telegram")
+                                  ['contacts__socials-link'], "telegram")
                                 +social('./assets/images/svg/symbol/sprite.svg#instagram', '#',
-                                  ['contacts__socials-link', 'promo__social_instagram'], "instagram")
+                                  ['contacts__socials-link'], "instagram")
                                 +social('./assets/images/svg/symbol/sprite.svg#vk', '#',
-                                  ['contacts__socials-link', 'promo__social_vk'], "vkontakte")
+                                  ['contacts__socials-link'], "vkontakte")
                         div.contacts__cv.contacts__block
                             h3.contacts__block-title.text_medium.
                                 <span class="text_accent">Check</span> my CV

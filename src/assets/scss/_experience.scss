@@ -1,3 +1,106 @@
 .experience {
+  &__select {
+    display: none;
+  }
 
+  &__slide {
+    &r {
+      display: flex;
+      justify-content: space-between;
+
+      &-dot {
+        &s {
+          width: 24%;
+        }
+
+        padding: 22px;
+        text-align: right;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, .15);
+        -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, .15);
+        box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, .15);
+        cursor: pointer;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        &-subtitle, &-title {
+          display: block;
+          opacity: 0.3;
+        }
+
+        &-subtitle {
+          font-size: 14px;
+          font-weight: 300;
+        }
+
+        &-title {
+          font-size: 26px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    &s {
+      position: relative;
+      padding: 25px 20px 20px 30px;
+      width: 74%;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, .15);
+      -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, .15);
+      box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, .15);
+      box-sizing: border-box;
+    }
+
+    &-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 450px;
+      height: 100%;
+      -webkit-border-radius: 0 5px 5px 0;
+      -moz-border-radius: 0 5px 5px 0;
+      border-radius: 0 5px 5px 0;
+      object-fit: cover;
+    }
+
+    &-subtitle {
+      font-size: 14px;
+      opacity: 0.4;
+    }
+
+    &-title {
+      margin-bottom: 25px;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    &-text {
+      position: relative;
+      margin-bottom: 40px;
+      width: 65%;
+      font-weight: 100;
+
+      &:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: -17px;
+        width: 70%;
+        height: 1px;
+        background-color: $main-text-color;
+        opacity: 0.2;
+      }
+    }
+
+    &-button {
+      display: block;
+      width: fit-content;
+    }
+  }
 }

@@ -179,21 +179,31 @@ textarea {
       width: inherit;
       height: inherit;
     }
+    &:hover {
+      span {
+        left: 0;
+        opacity: 1;
+        max-width: 120px;
+        padding: 0 20px 0 50px;
+      }
+    }
     &__label {
       position: absolute;
       top: 0;
       left: 20px;
       z-index: -1;
       padding: 0;
-      width: 0;
+      max-width: 0;
       height: 100%;
       display: flex;
       align-items: center;
       background-color: gray;
-      -webkit-border-radius: 0 100px 100px 0;
-      -moz-border-radius: 0 100px 100px 0;
-      border-radius: 0 100px 100px 0;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      border-radius: 100px;
+      opacity: 0;
       overflow: hidden;
+      transition: .4s opacity, .3s padding, .3s left, .3s max-width;
     }
   }
 }
@@ -301,6 +311,61 @@ textarea {
   }
 }
 /* ------------------ */
+
+/* MIXIN select_box */
+.select-box {
+  position: relative;
+  color: $main-text-color;
+  background-color: $bg-color;
+  &__selected {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: $shadow;
+    &-icon {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      width: 30px;
+      height: 35px;
+      transform: translateY(-50%);
+      transition: .3s;
+      opacity: 0.4;
+      fill: $main-text-color;
+    }
+  }
+  &__list {
+    position: absolute;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 3;
+    width: 100%;
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    transform: translateY(-20px);
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+    background-color: rgba(23,23,29,0.7);
+    backdrop-filter: blur(16px);
+    &-item {
+      padding: 15px 20px;
+      border-bottom: 1px solid rgba(255px, 255px, 255px, 0.2);
+      opacity: 0.4;
+      &-subtitle {
+        font-size: 14px;
+        font-weight: 300;
+        display: block;
+      }
+      &-title {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+/* ---------------- */
 
 @import "_header";
 @import "_promo";
