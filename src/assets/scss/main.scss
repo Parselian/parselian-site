@@ -239,7 +239,7 @@ textarea {
 .card {
   position: relative;
   overflow: hidden;
-  padding: 17px 15px 15px 15px;
+  padding: 0 15px 15px 15px;
   background-color: $bg-color;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -248,13 +248,12 @@ textarea {
   -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, 0.15);
   box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, 0.15);
   &__heading {
+    padding: 20px 0;
     position: relative;
-    padding-left: 85px;
-    height: 60px;
   }
   &__counter {
     position: absolute;
-    top: 17%;
+    top: 25px;
     left: -28px;
     line-height: 0;
     font-size: 88px;
@@ -262,8 +261,9 @@ textarea {
     opacity: 0.4;
   }
   &__title {
-    position: absolute;
-    bottom: 15px;
+    margin-left: 80px;
+    display: block;
+    width: 70%;
     font-size: 20px;
     font-weight: 700;
   }
