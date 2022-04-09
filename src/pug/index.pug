@@ -13,11 +13,11 @@ html
         meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, " +
         "minimum-scale=1.0")
         meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        link(href="https://unpkg.com/swiper@8/swiper-bundle.min.css" rel="stylesheet")
         link(href="./assets/css/reset.css" rel="stylesheet")
         link(href="./assets/css/main.css" rel="stylesheet")
-        script(src="./assets/scripts/main.js")
     body
-        section.header
+        header.header
             div.header__wrap.container
                 picture.logo
                     source
@@ -29,10 +29,11 @@ html
                   {anchor: "#orders", title: "Order", isActive: false},
                   {anchor: "#contacts", title: "Contacts", isActive: false}
                 ], 'header__menu nav-menu')
-                div.header__locations
-                    a.header__location(href="#") ru
-                    span.header__locations-separator /
-                    a.header__location.header__location_active(href="#") en
+                +button('accent_transparent', 'header__link', 'Check CV', 'link', '#')
+                //div.header__locations
+                //    a.header__location(href="#") ru
+                //    span.header__locations-separator /
+                //    a.header__location.header__location_active(href="#") en
         section.promo
             div.promo__shadow-down
             div.promo__wrap.container
@@ -43,7 +44,7 @@ html
                     h1.promo__title <span class="line-break">Create sites and</span> web applications
                     div.promo__subtitle Frontend developer. I`m create web sites <br /> and applications for 3 years
                     div.promo__buttons
-                        +button('accent', 'promo__button', 'Contact Me')
+                        +button('accent', 'promo__button', 'Contact Me', 'link', '#contacts')
                         +button('transparent', 'promo__button', 'See portfolio')
                     +blockquote('promo__blockquote',
                       `Lorem ipsum dolor sit amet, consectetur adipisicing elit. A laboriosam nam quam repellendus,
@@ -95,7 +96,7 @@ html
                         type: 'withoutIcon',
                         extraClasses: 'advantages__card',
                         count: '04',
-                        title: `I <span class="text_accent">don\`t take </span> prepayment`,
+                        title: `I <span class="text_accent">don\`t </span> take prepayment`,
                         text: `You can monitor about all my work, because i place all my project results in Trello`
                       },
                       {
@@ -109,11 +110,11 @@ html
                         type: 'withoutIcon',
                         extraClasses: 'advantages__card',
                         count: '06',
-                        title: `Work <span class="text_accent">personally</span> with every client`,
+                        title: `Work <span class="text_accent">personally</span>`,
                         text: `You can monitor about all my work, because i place all my project results in Trello`
                       }
                     ])
-                +button('accent', 'advantages__button', 'Contact Me')
+                +button('accent', 'advantages__button', 'Contact Me', 'link', '#contacts')
         section.steps
             div.steps__wrap.container
                 +title('How', 'do', 'I work?', 'steps__title')
@@ -174,11 +175,11 @@ html
                         extraClasses: 'steps__block',
                         count: '06',
                         title: '<span class="text_accent">Recommend</span> me :)',
-                        text: 'When i make all fixes, we choose&buy domain name with hosting, then i publish your site and give you all access data',
+                        text: 'If you like work with me, I will be so glad if you recommend me to your friends and leave feeedback about work with me.',
                         iconId: 'heart'
                       }
                     ])
-                +button('accent', 'advantages__button', 'Contact Me')
+                +button('accent', 'advantages__button', 'Contact Me', 'link', '#contacts')
         section.experience
             div.experience__wrap.container
                 +title("Explore", "my", "experience", "experience__title")
@@ -187,7 +188,7 @@ html
                         div.experience__slider-dot
                             div.experience__slider-dot-subtitle October &mdash; August
                             div.experience__slider-dot-title 2018 &mdash; 2020
-                        div.experience__slider-dot
+                        div.experience__slider-dot.experience__slider-dot_active
                             div.experience__slider-dot-subtitle August &mdash; August
                             div.experience__slider-dot-title 2020 &mdash; 2021
                         div.experience__slider-dot
@@ -234,26 +235,26 @@ html
         section.portfolio
             div.porfolio__wrap.container
                 +title('My', 'finished', 'works', 'portfolio__title')
-                +filter([
-                  {isActive: false, text: 'Web sites'},
-                  {isActive: true, text: 'Web applications'}],
-                  'portfolio__filter'
-                )
+                //+filter([
+                //  {isActive: false, text: 'Web sites'},
+                //  {isActive: true, text: 'Web applications'}],
+                //  'portfolio__filter'
+                //)
                 div.portfolio__sliders
-                    div.info-slider
+                    div.swiper.info-slider
                         div.info-slider__controls
-                            svg.info-slider__arrow.info-slider__arrow_prev
+                            svg.swiper-button-prev.info-slider__arrow.info-slider__arrow_prev
                                 use(xlink:href="./assets/images/svg/symbol/sprite.svg#arrow")
-                            ul.info-slider__dots
+                            ul.swiper-pagination.info-slider__dots
                                 li.info-slider__dot
                                 li.info-slider__dot.info-slider__dot_active
                                 li.info-slider__dot
                                 li.info-slider__dot
                                 li.info-slider__dot
-                            svg.info-slider__arrow.info-slider__arrow_next
+                            svg.swiper-button-next.info-slider__arrow.info-slider__arrow_next
                                 use(xlink:href="./assets/images/svg/symbol/sprite.svg#arrow")
-                        div.info-slider__slides
-                            div.info-slider__slide
+                        div.swiper-wrapper.info-slider__slides
+                            div.info-slider__slide.swiper-slide
                                 h4.info-slider__slide-subtitle project name
                                 h3.info-slider__slide-title House Forever
                                 div.info-slider__slide-block
@@ -278,19 +279,56 @@ html
                                             li.info-slider__slide-technologies-list-item CSS
                                             li.info-slider__slide-technologies-list-item JavaScript
                                             li.info-slider__slide-technologies-list-item Gulp
-                                +button('accent', 'info-slider__slide-button', 'Contact Me')
-                    div.gallery__slider
-                        div.gallery__slide
-                            picture.gallery__slide-img
-                                source(srcset="./assets/images/webp/project_preview.webp" type="image/webp")
-                                img(src="./assets/images/project_preview.jpg" alt="preview")
-                            div.gallery__slide-links
-                                div.gallery__slide-links-title Open a project in:
-                                nav.gallery__slide-links-list
-                                    a(href="#").gallery__slide-link
-                                        svg.gallery__slide-link-icon
-                                            use(xlink:href="./assets/images/svg/symbol/sprite.svg#github")
-        section.contacts
+                                +button('accent', 'info-slider__slide-button', 'Contact Me', 'link', '#contacts')
+                            div.info-slider__slide.swiper-slide
+                                h4.info-slider__slide-subtitle project name
+                                h3.info-slider__slide-title "Body" GYM
+                                div.info-slider__slide-block
+                                    p.info-slider__slide-text.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, sit.
+                                    div.info-slider__slide-grid
+                                        div.info-slider__slide-column
+                                            div.info-slider__slide-grid-column-item.text_medium.
+                                                Development time:
+                                            div.info-slider__slide-grid-column-item.text_medium.
+                                                Price:
+                                        div.info-slider__slide-column
+                                            div.info-slider__slide-grid-column-item.text_light.
+                                                48 hours
+                                            div.info-slider__slide-grid-column-item.text_light.
+                                                $270
+                                    div.info-slider__slide-technologies
+                                        div.info-slider__slide-technologies-title.
+                                            Used technologies
+                                        ul.info-slider__slide-technologies-list
+                                            li.info-slider__slide-technologies-list-item HTML
+                                            li.info-slider__slide-technologies-list-item CSS
+                                            li.info-slider__slide-technologies-list-item JavaScript
+                                            li.info-slider__slide-technologies-list-item Gulp
+                                +button('accent', 'info-slider__slide-button', 'Contact Me', 'link', '#contacts')
+                    div.swiper.gallery__slider
+                        div.swiper-wrapper
+                            div.gallery__slide.swiper-slide
+                                picture.gallery__slide-img
+                                    source(srcset="./assets/images/webp/project_preview.webp" type="image/webp")
+                                    img(src="./assets/images/project_preview.jpg" alt="preview")
+                                div.gallery__slide-links
+                                    div.gallery__slide-links-title Open a project in:
+                                    nav.gallery__slide-links-list
+                                        a(href="#").gallery__slide-link
+                                            svg.gallery__slide-link-icon
+                                                use(xlink:href="./assets/images/svg/symbol/sprite.svg#github")
+                            div.gallery__slide.swiper-slide
+                                picture.gallery__slide-img
+                                    source(srcset="./assets/images/webp/project_preview.webp" type="image/webp")
+                                    img(src="./assets/images/project_preview.jpg" alt="preview")
+                                div.gallery__slide-links
+                                    div.gallery__slide-links-title Open a project in:
+                                    nav.gallery__slide-links-list
+                                        a(href="#").gallery__slide-link
+                                            svg.gallery__slide-link-icon
+                                                use(xlink:href="./assets/images/svg/symbol/sprite.svg#github")
+        section(id="contacts").contacts
             div.container
                 +title("Get", "in", "touch", "contacts__title")
                 div.contacts__wrap
@@ -312,7 +350,7 @@ html
                         div.contacts__cv.contacts__block
                             h3.contacts__block-title.text_medium.
                                 <span class="text_accent">Check</span> my CV
-                            +button('accent', 'contacts__block-link', 'Check CV', 'link')
+                            +button('accent_transparent', 'contacts__block-link', 'Check CV', 'link')
                     form(id="contacts-form" action="#" method="POST").contacts-form.form
                         div.contacts-form__inputs.form__inputs
                             div.form__input-wrap
@@ -332,3 +370,5 @@ html
                     img(src="./assets/images/logo.png" alt="parselian")
                 div.footer__copyright.copyright.
                     vyacheslav.job@yandex.ru
+        script(src='https://unpkg.com/swiper@8/swiper-bundle.min.js')
+        script(src="./assets/js/main.js")

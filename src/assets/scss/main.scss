@@ -3,6 +3,7 @@
 
 html, body {
   box-sizing: border-box!important;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -84,6 +85,7 @@ textarea {
 /* MIXIN button */
 .button {
   padding: 12px 30px;
+  width: fit-content;
   font-size: 18px;
   color: $main-text-color;
   border-color: transparent;
@@ -98,6 +100,12 @@ textarea {
   &_transparent {
     background-color: transparent;
     border: 2px solid $main-text-color;
+    &-accent {
+      border-color: $accent-color;
+      border-width: 1px;
+      font-weight: 300;
+      font-size: 16px;
+    }
   }
 }
 /* ------------ */
