@@ -54,15 +54,15 @@ html
                         source(srcset="./assets/images/webp/promo-img.webp" type="image/webp")
                         img(src="./assets/images/promo-img.png" alt="My photo")
                     div.promo__socials
-                        +social('./assets/images/svg/symbol/sprite.svg#twitter', '#',
+                        +social('./assets/images/svg/symbol/sprite.svg#twitter', 'https://twitter.com/holiday_slave',
                           ['promo__social', 'promo__social_twitter'], "twitter")
-                        +social('./assets/images/svg/symbol/sprite.svg#github', '#',
+                        +social('./assets/images/svg/symbol/sprite.svg#github', 'https://github.com/Parselian',
                           ['promo__social', 'promo__social_github'], "github")
-                        +social('./assets/images/svg/symbol/sprite.svg#telegram', '#',
+                        +social('./assets/images/svg/symbol/sprite.svg#telegram', 'https://t.me/Holiday_Slave',
                           ['promo__social', 'promo__social_telegram'], "telegram")
-                        +social('./assets/images/svg/symbol/sprite.svg#instagram', '#',
+                        +social('./assets/images/svg/symbol/sprite.svg#instagram', 'https://www.instagram.com/holiday_slave/',
                           ['promo__social', 'promo__social_instagram'], "instagram")
-                        +social('./assets/images/svg/symbol/sprite.svg#vk', '#',
+                        +social('./assets/images/svg/symbol/sprite.svg#vk', 'https://vk.com/holiday_sl4ve',
                           ['promo__social', 'promo__social_vk'], "vkontakte")
         section.advantages
             div.advantages__wrap.container
@@ -339,7 +339,7 @@ html
                                 div.gallery__slide-links
                                     div.gallery__slide-links-title Open a project in:
                                     nav.gallery__slide-links-list
-                                        a(href="#").gallery__slide-link
+                                        a(href="https://github.com/Parselian" target="_blank").gallery__slide-link
                                             svg.gallery__slide-link-icon
                                                 use(xlink:href="./assets/images/svg/symbol/sprite.svg#github")
                             div.gallery__slide.swiper-slide
@@ -349,7 +349,7 @@ html
                                 div.gallery__slide-links
                                     div.gallery__slide-links-title Open a project in:
                                     nav.gallery__slide-links-list
-                                        a(href="#").gallery__slide-link
+                                        a(href="#" target="_blank").gallery__slide-link
                                             svg.gallery__slide-link-icon
                                                 use(xlink:href="./assets/images/svg/symbol/sprite.svg#github")
         section(id="contacts").contacts
@@ -361,15 +361,15 @@ html
                             h3.contacts__block-title.text_medium
                                 <span class="text_accent">Find</span> me on
                             div.contacts__socials-links
-                                +social('./assets/images/svg/symbol/sprite.svg#twitter', '#',
+                                +social('./assets/images/svg/symbol/sprite.svg#twitter', 'https://twitter.com/holiday_slave',
                                   ['contacts__socials-link'], "twitter")
-                                +social('./assets/images/svg/symbol/sprite.svg#github', '#',
+                                +social('./assets/images/svg/symbol/sprite.svg#github', 'https://github.com/Parselian',
                                   ['contacts__socials-link'], "github")
-                                +social('./assets/images/svg/symbol/sprite.svg#telegram', '#',
+                                +social('./assets/images/svg/symbol/sprite.svg#telegram', 'https://t.me/Holiday_Slave',
                                   ['contacts__socials-link'], "telegram")
-                                +social('./assets/images/svg/symbol/sprite.svg#instagram', '#',
+                                +social('./assets/images/svg/symbol/sprite.svg#instagram', 'https://www.instagram.com/holiday_slave/',
                                   ['contacts__socials-link'], "instagram")
-                                +social('./assets/images/svg/symbol/sprite.svg#vk', '#',
+                                +social('./assets/images/svg/symbol/sprite.svg#vk', 'https://vk.com/holiday_sl4ve',
                                   ['contacts__socials-link'], "vkontakte")
                         div.contacts__cv.contacts__block
                             h3.contacts__block-title.text_medium.

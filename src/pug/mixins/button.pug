@@ -14,4 +14,4 @@ mixin button(styleType, extraClasses, text, btnType, url)
     if (btnType === 'button')
         button(class=extraClasses class="button" class=styleClass) #{text}
     else
-        a(href=url class=extraClasses class="button" class=styleClass) #{text}
+        a(href=url class=extraClasses class="button" class=styleClass target="_blank") #{text}
