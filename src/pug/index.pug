@@ -47,8 +47,8 @@ html
                         +button('accent', 'promo__button', 'Contact Me', 'link', '#contacts')
                         +button('transparent', 'promo__button', 'See portfolio')
                     +blockquote('promo__blockquote',
-                      `Lorem ipsum dolor sit amet, consectetur adipisicing elit. A laboriosam nam quam repellendus,
-                      voluptates voluptatum.`)
+                      'I\`m convinced that every person should find his own life purpose. I found my own, it\`s ' +
+                      'constant studying something new. I just can\`t imagine my life without it.')
                 div.promo__about.promo__col
                     picture.promo__img
                         source(srcset="./assets/images/webp/promo-img.webp" type="image/webp")
@@ -357,10 +357,10 @@ html
                                 label.form__input-label.form__label Your name
                                 input.contacts-form__input.form__input
                             div.form__input-wrap
-                                label.form__input-label.form__label.form__input-label_focused Your email<sup>*</sup>
+                                label.form__input-label.form__label Your email<sup>*</sup>
                                 input(required).contacts-form__input.form__input
                         div.form__textarea-wrap
-                            label.form__textarea-label.form__label.form__textarea-label_focused Your message<sup>*</sup>
+                            label.form__textarea-label.form__labelg Your message<sup>*</sup>
                             textarea.contacts-form__textarea.form__textarea
                         +button('accent', ['contacts-form__button', 'form__button'], 'Send')
         footer.footer

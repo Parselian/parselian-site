@@ -63,12 +63,13 @@
 
     &-label {
       top: 15px;
-      transform: translate(10px, 0);
+      transform: translate(10px, -20px);
       &_focused {
         font-size: 12px;
         color: $accent-color;
         font-weight: 500;
         transform: translate(0, -35px);
+        opacity: 1;
       }
     }
 
