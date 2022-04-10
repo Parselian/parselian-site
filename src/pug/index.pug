@@ -185,10 +185,10 @@ html
                 +title("Explore", "my", "experience", "experience__title")
                 div.experience__slider
                     div.experience__slider-dots
-                        div.experience__slider-dot
+                        div.experience__slider-dot.experience__slider-dot_active
                             div.experience__slider-dot-subtitle October &mdash; August
                             div.experience__slider-dot-title 2018 &mdash; 2020
-                        div.experience__slider-dot.experience__slider-dot_active
+                        div.experience__slider-dot
                             div.experience__slider-dot-subtitle August &mdash; August
                             div.experience__slider-dot-title 2020 &mdash; 2021
                         div.experience__slider-dot
@@ -197,30 +197,30 @@ html
                     div.experience__select.select-box
                         div.experience__select-active.select-box__selected
                             .select-box__selected-text
-                                span.select-box__list-item-subtitle.
+                                span.select-box__selected-text-subtitle.select-box__list-item-subtitle.
                                     October &mdash; August
-                                span.select-box__list-item-title.
+                                span.select-box__selected-text-title.select-box__list-item-title.
                                     2018 &mdash; 2020
                             svg.select-box__selected-icon
                                 use(xlink:href="./assets/images/svg/symbol/sprite.svg#select-arrow")
                         ul.experience__select-list.select-box__list
-                            li.select-box__list-item
+                            li.select-box__list-item.select-box__list-item_selected
                                 span.select-box__list-item-subtitle.
                                     October &mdash; August
                                 span.select-box__list-item-title.
                                     2018 &mdash; 2020
                             li.select-box__list-item
                                 span.select-box__list-item-subtitle.
-                                    October &mdash; August
+                                    August &mdash; August
                                 span.select-box__list-item-title.
-                                    2018 &mdash; 2020
+                                    2020 &mdash; 2021
                             li.select-box__list-item
                                 span.select-box__list-item-subtitle.
-                                    October &mdash; August
+                                    August &mdash; Present
                                 span.select-box__list-item-title.
-                                    2018 &mdash; 2020
+                                    2021 &mdash; Nowadays
                     div.experience__slides
-                        div.experience__slide
+                        div.experience__slide.experience__slide_active
                             picture.experience__slide-img
                                 source(srcset="./assets/images/webp/experience-img_1.webp" type="image/webp")
                                 img(src="./assets/images/experience-img_1.png" alt="photo")
@@ -231,7 +231,31 @@ html
                                 us and our partners and also maintaince existing projects.<br/><br/>
                                 I worked as a junior Frontend developer. My work included in creating new websites for
                                 us and our partners and also maintaince existing projects.
-                            +button('accent', 'experience__slide-button', 'check my CV', 'link', '#')
+                            +button('accent_transparent', 'experience__slide-button', 'check my CV', 'link', '#')
+                        div.experience__slide
+                            picture.experience__slide-img
+                                source(srcset="./assets/images/webp/experience-img_1.webp" type="image/webp")
+                                img(src="./assets/images/experience-img_1.png" alt="photo")
+                            div.experience__slide-subtitle Company name
+                            h3.experience__slide-title  senter
+                            p.experience__slide-text.
+                                I worked as a junior Frontend developer. My work included in creating new websites for
+                                us and our partners and also maintaince existing projects.<br/><br/>
+                                I worked as a junior Frontend developer. My work included in creating new websites for
+                                us and our partners and also maintaince existing projects.
+                            +button('accent_transparent', 'experience__slide-button', 'check my CV', 'link', '#')
+                        div.experience__slide
+                            picture.experience__slide-img
+                                source(srcset="./assets/images/webp/experience-img_1.webp" type="image/webp")
+                                img(src="./assets/images/experience-img_1.png" alt="photo")
+                            div.experience__slide-subtitle Company name
+                            h3.experience__slide-title Apple
+                            p.experience__slide-text.
+                                I worked as a junior Frontend developer. My work included in creating new websites for
+                                us and our partners and also maintaince existing projects.<br/><br/>
+                                I worked as a junior Frontend developer. My work included in creating new websites for
+                                us and our partners and also maintaince existing projects.
+                            +button('accent_transparent', 'experience__slide-button', 'check my CV', 'link', '#')
         section.portfolio
             div.porfolio__wrap.container
                 +title('My', 'finished', 'works', 'portfolio__title')

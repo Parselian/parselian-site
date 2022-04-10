@@ -89,9 +89,9 @@ textarea {
   font-size: 18px;
   color: $main-text-color;
   border-color: transparent;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 
   &_accent {
     background-color: $action-color;
@@ -333,6 +333,7 @@ textarea {
     -moz-border-radius: 5px;
     border-radius: 5px;
     box-shadow: $shadow;
+    cursor: pointer;
     &-icon {
       position: absolute;
       top: 50%;
@@ -340,27 +341,42 @@ textarea {
       width: 30px;
       height: 35px;
       transform: translateY(-50%);
-      transition: .3s;
       opacity: 0.4;
       fill: $main-text-color;
+      transition: .3s;
+      &_rotated {
+        opacity: 1;
+        transform: translateY(-50%) rotate(180deg)
+      }
     }
   }
   &__list {
     position: absolute;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 3;
     width: 100%;
+    max-height: 0;
+    background-color: rgba(23,23,29,0.7);
     -webkit-border-radius: 0 0 5px 5px;
     -moz-border-radius: 0 0 5px 5px;
     border-radius: 0 0 5px 5px;
-    transform: translateY(-20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
-    background-color: rgba(23,23,29,0.7);
+    transform: translateY(-20px);
     backdrop-filter: blur(16px);
+    opacity: 0;
+    transition: .3s max-height, .34s opacity;
+    transition-timing-function: ease-in-out;
+    overflow: hidden;
+    &_visible {
+      opacity: 1;
+      max-height: 300px;
+    }
     &-item {
+      cursor: pointer;
       padding: 15px 20px;
       border-bottom: 1px solid rgba(255px, 255px, 255px, 0.2);
       opacity: 0.4;
+      transition: .3s;
       &-subtitle {
         font-size: 14px;
         font-weight: 300;
@@ -369,6 +385,9 @@ textarea {
       &-title {
         font-size: 20px;
         font-weight: 700;
+      }
+      &_selected {
+        opacity: 1;
       }
     }
   }
