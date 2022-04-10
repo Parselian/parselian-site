@@ -11,10 +11,10 @@
   <body>
     <header class="header">
       <div class="header__wrap container">
-        <picture class="logo">
-          <source><img src="./assets/images/logo.png" alt="parselian">
-        </picture>
-        <nav class="header__menu nav-menu"><a href="#about_me">About me</a><a href="#portfolio">Portfolio</a><a href="#reviews">Reviews</a><a href="#orders">Order</a><a href="#contacts">Contacts</a>
+        <svg class="logo">
+          <use xlink:href="./assets/images/svg/symbol/sprite.svg#logo"></use>
+        </svg>
+        <nav class="header__menu nav-menu"><a href="#about_me">About me</a><a href="#portfolio">Portfolio</a><a href="#advantages">Why me</a><a href="#process">Process</a><a href="#contacts">Contacts</a>
         </nav><a class="header__link button button_transparent button_transparent-accent" href="#" target="_blank">Check CV</a>
         <!--div.header__locations-->
         <!--    a.header__location(href="#") ru-->
@@ -68,7 +68,7 @@
         </div>
       </div>
     </section>
-    <section class="advantages">
+    <section class="advantages" id="advantages">
       <div class="advantages__wrap container">
         <h2 class="advantages__title title"><span class="title__text-behind">Why</span><span class="title__text">am <span class="text_accent">I?</span></span></h2>
         <div class="advantages__cards">
@@ -113,7 +113,7 @@
         </div><a class="advantages__button button button_accent" href="#contacts" target="_blank">Contact Me</a>
       </div>
     </section>
-    <section class="steps">
+    <section class="steps" id="process">
       <div class="steps__wrap container">
         <h2 class="steps__title title"><span class="title__text-behind">How</span><span class="title__text">do <span class="text_accent">I work?</span></span></h2>
         <div class="steps__filter filter">
@@ -178,7 +178,7 @@
         </div><a class="advantages__button button button_accent" href="#contacts" target="_blank">Contact Me</a>
       </div>
     </section>
-    <section class="experience">
+    <section class="experience" id="experience">
       <div class="experience__wrap container">
         <h2 class="experience__title title"><span class="title__text-behind">Explore</span><span class="title__text">my <span class="text_accent">experience</span></span></h2>
         <div class="experience__slider">
@@ -253,7 +253,7 @@
         </div>
       </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="porfolio__wrap container">
         <h2 class="portfolio__title title"><span class="title__text-behind">My</span><span class="title__text">finished <span class="text_accent">works</span></span></h2>
         <!--+filter([-->
@@ -405,7 +405,7 @@
               </div>
             </div>
             <div class="form__textarea-wrap">
-              <label class="form__textarea-label form__labelg">Your message<sup>*</sup></label>
+              <label class="form__textarea-label form__label">Your message<sup>*</sup></label>
               <textarea class="contacts-form__textarea form__textarea"></textarea>
             </div>
             <button class="contacts-form__button form__button button button_accent">Send</button>
@@ -415,9 +415,9 @@
     </section>
     <footer class="footer">
       <div class="footer__wrap container">
-        <picture class="logo">
-          <source><img src="./assets/images/logo.png" alt="parselian">
-        </picture>
+        <svg class="logo">
+          <use xlink:href="./assets/images/svg/symbol/sprite.svg#logo"></use>
+        </svg>
         <div class="footer__copyright copyright">vyacheslav.job@yandex.ru</div>
       </div>
     </footer>

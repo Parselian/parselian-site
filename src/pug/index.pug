@@ -19,14 +19,13 @@ html
     body
         header.header
             div.header__wrap.container
-                picture.logo
-                    source
-                    img(src="./assets/images/logo.png" alt="parselian")
+                svg.logo
+                    use(xlink:href="./assets/images/svg/symbol/sprite.svg#logo")
                 +navMenu([
                   {anchor: "#about_me", title: "About me", isActive: false},
                   {anchor: "#portfolio", title: "Portfolio", isActive: false},
-                  {anchor: "#reviews", title: "Reviews", isActive: false},
-                  {anchor: "#orders", title: "Order", isActive: false},
+                  {anchor: "#advantages", title: "Why me", isActive: false},
+                  {anchor: "#process", title: "Process", isActive: false},
                   {anchor: "#contacts", title: "Contacts", isActive: false}
                 ], 'header__menu nav-menu')
                 +button('accent_transparent', 'header__link', 'Check CV', 'link', '#')
@@ -64,7 +63,7 @@ html
                           ['promo__social', 'promo__social_instagram'], "instagram")
                         +social('./assets/images/svg/symbol/sprite.svg#vk', 'https://vk.com/holiday_sl4ve',
                           ['promo__social', 'promo__social_vk'], "vkontakte")
-        section.advantages
+        section(id="advantages").advantages
             div.advantages__wrap.container
                 +title('Why', 'am', 'I?', 'advantages__title')
                 div.advantages__cards
@@ -115,7 +114,7 @@ html
                       }
                     ])
                 +button('accent', 'advantages__button', 'Contact Me', 'link', '#contacts')
-        section.steps
+        section(id="process").steps
             div.steps__wrap.container
                 +title('How', 'do', 'I work?', 'steps__title')
                 +filter([
@@ -180,7 +179,7 @@ html
                       }
                     ])
                 +button('accent', 'advantages__button', 'Contact Me', 'link', '#contacts')
-        section.experience
+        section(id="experience").experience
             div.experience__wrap.container
                 +title("Explore", "my", "experience", "experience__title")
                 div.experience__slider
@@ -256,7 +255,7 @@ html
                                 I worked as a junior Frontend developer. My work included in creating new websites for
                                 us and our partners and also maintaince existing projects.
                             +button('accent_transparent', 'experience__slide-button', 'check my CV', 'link', '#')
-        section.portfolio
+        section(id="portfolio").portfolio
             div.porfolio__wrap.container
                 +title('My', 'finished', 'works', 'portfolio__title')
                 //+filter([
@@ -384,14 +383,13 @@ html
                                 label.form__input-label.form__label Your email<sup>*</sup>
                                 input(required).contacts-form__input.form__input
                         div.form__textarea-wrap
-                            label.form__textarea-label.form__labelg Your message<sup>*</sup>
+                            label.form__textarea-label.form__label Your message<sup>*</sup>
                             textarea.contacts-form__textarea.form__textarea
                         +button('accent', ['contacts-form__button', 'form__button'], 'Send')
         footer.footer
             div.footer__wrap.container
-                picture.logo
-                    source
-                    img(src="./assets/images/logo.png" alt="parselian")
+                svg.logo
+                    use(xlink:href="./assets/images/svg/symbol/sprite.svg#logo")
                 div.footer__copyright.copyright.
                     vyacheslav.job@yandex.ru
         script(src='https://unpkg.com/swiper@8/swiper-bundle.min.js')

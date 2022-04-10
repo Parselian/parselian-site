@@ -55,6 +55,12 @@ textarea {
   display: block;
 }
 
+.logo {
+  width: 170px;
+  height: 45px;
+  fill: $main-icon-color;
+}
+
 .text {
   &_accent {
     color: $accent-color;
@@ -99,7 +105,8 @@ textarea {
 
   &_transparent {
     background-color: transparent;
-    border: 2px solid $main-text-color;
+    border: 1px solid $main-text-color;
+    font-weight: 300;
     &-accent {
       border-color: $accent-color;
       border-width: 1px;
