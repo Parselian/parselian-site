@@ -10,8 +10,8 @@ module.exports = () => {
   });
 
   $.gulp.task('scripts', () => {
-    return $.gulp.src('src/assets/js/main.js')
-      .pipe($.gulp.dest('build/assets/js/'))
+    return $.gulp.src('src/assets/scripts/**/*')
+      .pipe($.gulp.dest('build/assets/scripts'))
       .pipe($.browserSync.reload({
         'stream': true
       }));

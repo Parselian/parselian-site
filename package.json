@@ -26,7 +26,8 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^2.2.0",
     "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-optipng": "^8.0.0"
+    "imagemin-optipng": "^8.0.0",
+    "swiper": "^8.1.0"
   },
   "optionalDependencies": {}
 }

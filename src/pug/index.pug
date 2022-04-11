@@ -13,26 +13,26 @@ html
         meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, " +
         "minimum-scale=1.0")
         meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        link(href="https://unpkg.com/swiper@8/swiper-bundle.min.css" rel="stylesheet")
         link(href="./assets/css/reset.css" rel="stylesheet")
         link(href="./assets/css/main.css" rel="stylesheet")
-        script(src="./assets/scripts/main.js")
     body
-        section.header
+        header.header
             div.header__wrap.container
-                picture.logo
-                    source
-                    img(src="./assets/images/logo.png" alt="parselian")
+                svg.logo
+                    use(xlink:href="./assets/images/svg/symbol/sprite.svg#logo")
                 +navMenu([
                   {anchor: "#about_me", title: "About me", isActive: false},
                   {anchor: "#portfolio", title: "Portfolio", isActive: false},
-                  {anchor: "#reviews", title: "Reviews", isActive: false},
-                  {anchor: "#orders", title: "Order", isActive: false},
+                  {anchor: "#advantages", title: "Why me", isActive: false},
+                  {anchor: "#process", title: "Process", isActive: false},
                   {anchor: "#contacts", title: "Contacts", isActive: false}
                 ], 'header__menu nav-menu')
-                div.header__locations
-                    a.header__location(href="#") ru
-                    span.header__locations-separator /
-                    a.header__location.header__location_active(href="#") en
+                +button('accent_transparent', 'header__link', 'Check CV', 'link', '#')
+                //div.header__locations
+                //    a.header__location(href="#") ru
+                //    span.header__locations-separator /
+                //    a.header__location.header__location_active(href="#") en
         section.promo
             div.promo__shadow-down
             div.promo__wrap.container
@@ -43,27 +43,27 @@ html
                     h1.promo__title <span class="line-break">Create sites and</span> web applications
                     div.promo__subtitle Frontend developer. I`m create web sites <br /> and applications for 3 years
                     div.promo__buttons
-                        +button('accent', 'promo__button', 'Contact Me')
+                        +button('accent', 'promo__button', 'Contact Me', 'link', '#contacts')
                         +button('transparent', 'promo__button', 'See portfolio')
                     +blockquote('promo__blockquote',
-                      `Lorem ipsum dolor sit amet, consectetur adipisicing elit. A laboriosam nam quam repellendus,
-                      voluptates voluptatum.`)
+                      'I\`m convinced that every person should find his own life purpose. I found my own, it\`s ' +
+                      'constant studying something new. I just can\`t imagine my life without it.')
                 div.promo__about.promo__col
                     picture.promo__img
                         source(srcset="./assets/images/webp/promo-img.webp" type="image/webp")
                         img(src="./assets/images/promo-img.png" alt="My photo")
                     div.promo__socials
-                        +social('./assets/images/svg/symbol/sprite.svg#twitter', '#',
+                        +social('./assets/images/svg/symbol/sprite.svg#twitter', 'https://twitter.com/holiday_slave',
                           ['promo__social', 'promo__social_twitter'], "twitter")
-                        +social('./assets/images/svg/symbol/sprite.svg#github', '#',
+                        +social('./assets/images/svg/symbol/sprite.svg#github', 'https://github.com/Parselian',
                           ['promo__social', 'promo__social_github'], "github")
-                        +social('./assets/images/svg/symbol/sprite.svg#telegram', '#',
+                        +social('./assets/images/svg/symbol/sprite.svg#telegram', 'https://t.me/Holiday_Slave',
                           ['promo__social', 'promo__social_telegram'], "telegram")
-                        +social('./assets/images/svg/symbol/sprite.svg#instagram', '#',
+                        +social('./assets/images/svg/symbol/sprite.svg#instagram', 'https://www.instagram.com/holiday_slave/',
                           ['promo__social', 'promo__social_instagram'], "instagram")
-                        +social('./assets/images/svg/symbol/sprite.svg#vk', '#',
+                        +social('./assets/images/svg/symbol/sprite.svg#vk', 'https://vk.com/holiday_sl4ve',
                           ['promo__social', 'promo__social_vk'], "vkontakte")
-        section.advantages
+        section(id="advantages").advantages
             div.advantages__wrap.container
                 +title('Why', 'am', 'I?', 'advantages__title')
                 div.advantages__cards
@@ -95,7 +95,7 @@ html
                         type: 'withoutIcon',
                         extraClasses: 'advantages__card',
                         count: '04',
-                        title: `I <span class="text_accent">don\`t take </span> prepayment`,
+                        title: `I <span class="text_accent">don\`t </span> take prepayment`,
                         text: `You can monitor about all my work, because i place all my project results in Trello`
                       },
                       {
@@ -109,12 +109,12 @@ html
                         type: 'withoutIcon',
                         extraClasses: 'advantages__card',
                         count: '06',
-                        title: `Work <span class="text_accent">personally</span> with every client`,
+                        title: `Work <span class="text_accent">personally</span>`,
                         text: `You can monitor about all my work, because i place all my project results in Trello`
                       }
                     ])
-                +button('accent', 'advantages__button', 'Contact Me')
-        section.steps
+                +button('accent', 'advantages__button', 'Contact Me', 'link', '#contacts')
+        section(id="process").steps
             div.steps__wrap.container
                 +title('How', 'do', 'I work?', 'steps__title')
                 +filter([
@@ -135,7 +135,7 @@ html
                         count: '01',
                         title: 'We <span class="text_accent">detect</span> your <span class="text_accent">wishes</span>',
                         text: 'I ask some questions to you to detect which type of site you need',
-                        iconId: 'vk'
+                        iconId: 'search'
                       },
                       {
                         type: 'withIcon',
@@ -143,7 +143,7 @@ html
                         count: '02',
                         title: '<span class="text_accent">Choosing</span> a designer',
                         text: 'After first step based on your budget i choose a designer to create a template for you web-site',
-                        iconId: 'vk'
+                        iconId: 'brush'
                       },
                       {
                         type: 'withIcon',
@@ -151,7 +151,7 @@ html
                         count: '03',
                         title: '<span class="text_accent">Make</span> website',
                         text: 'When designer complete template, i will make wokred version of your website based on template',
-                        iconId: 'vk'
+                        iconId: 'gear'
                       },
                       {
                         type: 'withIcon',
@@ -159,32 +159,32 @@ html
                         count: '04',
                         title: 'You <span class="text_accent">check</span> the <span class="text_accent">results</span>',
                         text: 'You check finished site for some tiny <span class="text_accent">(you have 5 free corrections)</span>',
-                        iconId: 'vk'
+                        iconId: 'check'
                       },
                       {
                         type: 'withIcon',
                         extraClasses: 'steps__block',
                         count: '05',
-                        title: 'Buy hosting & domain <span class="text_accent">publish</span> your <span class="text_accent">site</span>',
+                        title: '<span class="text_accent">Publish</span> your <span class="text_accent">site</span>',
                         text: 'When i make all fixes, we choose&buy domain name with hosting, then i publish your site and give you all access data',
-                        iconId: 'vk'
+                        iconId: 'globe'
                       },
                       {
                         type: 'withIcon',
                         extraClasses: 'steps__block',
                         count: '06',
-                        title: 'You <span class="text_accent">write</span> a good <span class="text_accent">review</span> and <span class="text_accent">recommend me</span> :)',
-                        text: 'When i make all fixes, we choose&buy domain name with hosting, then i publish your site and give you all access data',
-                        iconId: 'vk'
+                        title: '<span class="text_accent">Recommend</span> me :)',
+                        text: 'If you like work with me, I will be so glad if you recommend me to your friends and leave feeedback about work with me.',
+                        iconId: 'heart'
                       }
                     ])
-                +button('accent', 'advantages__button', 'Contact Me')
-        section.experience
+                +button('accent', 'advantages__button', 'Contact Me', 'link', '#contacts')
+        section(id="experience").experience
             div.experience__wrap.container
                 +title("Explore", "my", "experience", "experience__title")
                 div.experience__slider
                     div.experience__slider-dots
-                        div.experience__slider-dot
+                        div.experience__slider-dot.experience__slider-dot_active
                             div.experience__slider-dot-subtitle October &mdash; August
                             div.experience__slider-dot-title 2018 &mdash; 2020
                         div.experience__slider-dot
@@ -196,30 +196,30 @@ html
                     div.experience__select.select-box
                         div.experience__select-active.select-box__selected
                             .select-box__selected-text
-                                span.select-box__list-item-subtitle.
+                                span.select-box__selected-text-subtitle.select-box__list-item-subtitle.
                                     October &mdash; August
-                                span.select-box__list-item-title.
+                                span.select-box__selected-text-title.select-box__list-item-title.
                                     2018 &mdash; 2020
                             svg.select-box__selected-icon
                                 use(xlink:href="./assets/images/svg/symbol/sprite.svg#select-arrow")
                         ul.experience__select-list.select-box__list
-                            li.select-box__list-item
+                            li.select-box__list-item.select-box__list-item_selected
                                 span.select-box__list-item-subtitle.
                                     October &mdash; August
                                 span.select-box__list-item-title.
                                     2018 &mdash; 2020
                             li.select-box__list-item
                                 span.select-box__list-item-subtitle.
-                                    October &mdash; August
+                                    August &mdash; August
                                 span.select-box__list-item-title.
-                                    2018 &mdash; 2020
+                                    2020 &mdash; 2021
                             li.select-box__list-item
                                 span.select-box__list-item-subtitle.
-                                    October &mdash; August
+                                    August &mdash; Present
                                 span.select-box__list-item-title.
-                                    2018 &mdash; 2020
+                                    2021 &mdash; Nowadays
                     div.experience__slides
-                        div.experience__slide
+                        div.experience__slide.experience__slide_active
                             picture.experience__slide-img
                                 source(srcset="./assets/images/webp/experience-img_1.webp" type="image/webp")
                                 img(src="./assets/images/experience-img_1.png" alt="photo")
@@ -230,30 +230,54 @@ html
                                 us and our partners and also maintaince existing projects.<br/><br/>
                                 I worked as a junior Frontend developer. My work included in creating new websites for
                                 us and our partners and also maintaince existing projects.
-                            +button('accent', 'experience__slide-button', 'check my CV', 'link', '#')
-        section.portfolio
+                            +button('accent_transparent', 'experience__slide-button', 'check my CV', 'link', '#')
+                        div.experience__slide
+                            picture.experience__slide-img
+                                source(srcset="./assets/images/webp/experience-img_1.webp" type="image/webp")
+                                img(src="./assets/images/experience-img_1.png" alt="photo")
+                            div.experience__slide-subtitle Company name
+                            h3.experience__slide-title  senter
+                            p.experience__slide-text.
+                                I worked as a junior Frontend developer. My work included in creating new websites for
+                                us and our partners and also maintaince existing projects.<br/><br/>
+                                I worked as a junior Frontend developer. My work included in creating new websites for
+                                us and our partners and also maintaince existing projects.
+                            +button('accent_transparent', 'experience__slide-button', 'check my CV', 'link', '#')
+                        div.experience__slide
+                            picture.experience__slide-img
+                                source(srcset="./assets/images/webp/experience-img_1.webp" type="image/webp")
+                                img(src="./assets/images/experience-img_1.png" alt="photo")
+                            div.experience__slide-subtitle Company name
+                            h3.experience__slide-title Apple
+                            p.experience__slide-text.
+                                I worked as a junior Frontend developer. My work included in creating new websites for
+                                us and our partners and also maintaince existing projects.<br/><br/>
+                                I worked as a junior Frontend developer. My work included in creating new websites for
+                                us and our partners and also maintaince existing projects.
+                            +button('accent_transparent', 'experience__slide-button', 'check my CV', 'link', '#')
+        section(id="portfolio").portfolio
             div.porfolio__wrap.container
                 +title('My', 'finished', 'works', 'portfolio__title')
-                +filter([
-                  {isActive: false, text: 'Web sites'},
-                  {isActive: true, text: 'Web applications'}],
-                  'portfolio__filter'
-                )
+                //+filter([
+                //  {isActive: false, text: 'Web sites'},
+                //  {isActive: true, text: 'Web applications'}],
+                //  'portfolio__filter'
+                //)
                 div.portfolio__sliders
-                    div.info-slider
+                    div.swiper.info-slider
                         div.info-slider__controls
-                            svg.info-slider__arrow.info-slider__arrow_prev
+                            svg.swiper-button-prev.info-slider__arrow.info-slider__arrow_prev
                                 use(xlink:href="./assets/images/svg/symbol/sprite.svg#arrow")
-                            ul.info-slider__dots
+                            ul.swiper-pagination.info-slider__dots
                                 li.info-slider__dot
                                 li.info-slider__dot.info-slider__dot_active
                                 li.info-slider__dot
                                 li.info-slider__dot
                                 li.info-slider__dot
-                            svg.info-slider__arrow.info-slider__arrow_next
+                            svg.swiper-button-next.info-slider__arrow.info-slider__arrow_next
                                 use(xlink:href="./assets/images/svg/symbol/sprite.svg#arrow")
-                        div.info-slider__slides
-                            div.info-slider__slide
+                        div.swiper-wrapper.info-slider__slides
+                            div.info-slider__slide.swiper-slide
                                 h4.info-slider__slide-subtitle project name
                                 h3.info-slider__slide-title House Forever
                                 div.info-slider__slide-block
@@ -278,19 +302,56 @@ html
                                             li.info-slider__slide-technologies-list-item CSS
                                             li.info-slider__slide-technologies-list-item JavaScript
                                             li.info-slider__slide-technologies-list-item Gulp
-                                +button('accent', 'info-slider__slide-button', 'Contact Me')
-                    div.gallery__slider
-                        div.gallery__slide
-                            picture.gallery__slide-img
-                                source(srcset="./assets/images/webp/project_preview.webp" type="image/webp")
-                                img(src="./assets/images/project_preview.jpg" alt="preview")
-                            div.gallery__slide-links
-                                div.gallery__slide-links-title Open a project in:
-                                nav.gallery__slide-links-list
-                                    a(href="#").gallery__slide-link
-                                        svg.gallery__slide-link-icon
-                                            use(xlink:href="./assets/images/svg/symbol/sprite.svg#github")
-        section.contacts
+                                +button('accent_transparent', 'info-slider__slide-button', 'Contact Me', 'link', '#contacts')
+                            div.info-slider__slide.swiper-slide
+                                h4.info-slider__slide-subtitle project name
+                                h3.info-slider__slide-title "Body" GYM
+                                div.info-slider__slide-block
+                                    p.info-slider__slide-text.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, sit.
+                                    div.info-slider__slide-grid
+                                        div.info-slider__slide-column
+                                            div.info-slider__slide-grid-column-item.text_medium.
+                                                Development time:
+                                            div.info-slider__slide-grid-column-item.text_medium.
+                                                Price:
+                                        div.info-slider__slide-column
+                                            div.info-slider__slide-grid-column-item.text_light.
+                                                48 hours
+                                            div.info-slider__slide-grid-column-item.text_light.
+                                                $270
+                                    div.info-slider__slide-technologies
+                                        div.info-slider__slide-technologies-title.
+                                            Used technologies
+                                        ul.info-slider__slide-technologies-list
+                                            li.info-slider__slide-technologies-list-item HTML
+                                            li.info-slider__slide-technologies-list-item CSS
+                                            li.info-slider__slide-technologies-list-item JavaScript
+                                            li.info-slider__slide-technologies-list-item Gulp
+                                +button('accent_transparent', 'info-slider__slide-button', 'Contact Me', 'link', '#contacts')
+                    div.swiper.gallery__slider
+                        div.swiper-wrapper
+                            div.gallery__slide.swiper-slide
+                                picture.gallery__slide-img
+                                    source(srcset="./assets/images/webp/project_preview.webp" type="image/webp")
+                                    img(src="./assets/images/project_preview.jpg" alt="preview")
+                                div.gallery__slide-links
+                                    div.gallery__slide-links-title Open a project in:
+                                    nav.gallery__slide-links-list
+                                        a(href="https://github.com/Parselian" target="_blank").gallery__slide-link
+                                            svg.gallery__slide-link-icon
+                                                use(xlink:href="./assets/images/svg/symbol/sprite.svg#github")
+                            div.gallery__slide.swiper-slide
+                                picture.gallery__slide-img
+                                    source(srcset="./assets/images/webp/project_preview.webp" type="image/webp")
+                                    img(src="./assets/images/project_preview.jpg" alt="preview")
+                                div.gallery__slide-links
+                                    div.gallery__slide-links-title Open a project in:
+                                    nav.gallery__slide-links-list
+                                        a(href="#" target="_blank").gallery__slide-link
+                                            svg.gallery__slide-link-icon
+                                                use(xlink:href="./assets/images/svg/symbol/sprite.svg#github")
+        section(id="contacts").contacts
             div.container
                 +title("Get", "in", "touch", "contacts__title")
                 div.contacts__wrap
@@ -299,43 +360,37 @@ html
                             h3.contacts__block-title.text_medium
                                 <span class="text_accent">Find</span> me on
                             div.contacts__socials-links
-                                +social('./assets/images/svg/symbol/sprite.svg#twitter', '#',
+                                +social('./assets/images/svg/symbol/sprite.svg#twitter', 'https://twitter.com/holiday_slave',
                                   ['contacts__socials-link'], "twitter")
-                                +social('./assets/images/svg/symbol/sprite.svg#github', '#',
+                                +social('./assets/images/svg/symbol/sprite.svg#github', 'https://github.com/Parselian',
                                   ['contacts__socials-link'], "github")
-                                +social('./assets/images/svg/symbol/sprite.svg#telegram', '#',
+                                +social('./assets/images/svg/symbol/sprite.svg#telegram', 'https://t.me/Holiday_Slave',
                                   ['contacts__socials-link'], "telegram")
-                                +social('./assets/images/svg/symbol/sprite.svg#instagram', '#',
+                                +social('./assets/images/svg/symbol/sprite.svg#instagram', 'https://www.instagram.com/holiday_slave/',
                                   ['contacts__socials-link'], "instagram")
-                                +social('./assets/images/svg/symbol/sprite.svg#vk', '#',
+                                +social('./assets/images/svg/symbol/sprite.svg#vk', 'https://vk.com/holiday_sl4ve',
                                   ['contacts__socials-link'], "vkontakte")
                         div.contacts__cv.contacts__block
                             h3.contacts__block-title.text_medium.
                                 <span class="text_accent">Check</span> my CV
-                            +button('accent', 'contacts__block-link', 'Check CV', 'link')
+                            +button('accent_transparent', 'contacts__block-link', 'Check CV', 'link')
                     form(id="contacts-form" action="#" method="POST").contacts-form.form
                         div.contacts-form__inputs.form__inputs
                             div.form__input-wrap
                                 label.form__input-label.form__label Your name
-                                input.contacts-form__input.form__input
+                                input(name="client_name").contacts-form__input.form__input
                             div.form__input-wrap
-                                label.form__input-label.form__label.form__input-label_focused Your email<sup>*</sup>
-                                input(required).contacts-form__input.form__input
+                                label.form__input-label.form__label Your email<sup>*</sup>
+                                input(name="client_email" required).contacts-form__input.form__input
                         div.form__textarea-wrap
-                            label.form__textarea-label.form__label.form__textarea-label_focused Your message<sup>*</sup>
-                            textarea.contacts-form__textarea.form__textarea
+                            label.form__textarea-label.form__label Your message<sup>*</sup>
+                            textarea(name="client_message").contacts-form__textarea.form__textarea
                         +button('accent', ['contacts-form__button', 'form__button'], 'Send')
         footer.footer
             div.footer__wrap.container
-                picture.logo
-                    source
-                    img(src="./assets/images/logo.png" alt="parselian")
-                +navMenu([
-                  {anchor: "#about_me", title: "About me", isActive: false},
-                  {anchor: "#portfolio", title: "Portfolio", isActive: false},
-                  {anchor: "#reviews", title: "Reviews", isActive: false},
-                  {anchor: "#orders", title: "Order", isActive: false},
-                  {anchor: "#contacts", title: "Contacts", isActive: false}
-                ], 'header__menu nav-menu')
+                svg.logo
+                    use(xlink:href="./assets/images/svg/symbol/sprite.svg#logo")
                 div.footer__copyright.copyright.
                     vyacheslav.job@yandex.ru
+        script(src='https://unpkg.com/swiper@8/swiper-bundle.min.js')
+        script(src="./assets/scripts/js/main.js")

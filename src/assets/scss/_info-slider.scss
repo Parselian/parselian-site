@@ -1,5 +1,8 @@
 .info-slider {
   position: relative;
+  top: 0;
+  overflow: visible;
+  margin: 0;
   z-index: 2;
   display: flex;
   align-items: center;
@@ -15,6 +18,8 @@
   }
 
   &__arrow {
+    position: initial;
+    margin: 0;
     stroke: $main-icon-color;
     width: 40px;
     height: 65px;
@@ -44,6 +49,10 @@
 
   &__dot {
     &s {
+      &.swiper-pagination-horizontal {
+        bottom: 0;
+      }
+      position: relative;
       margin-top: 60px;
       margin-bottom: 60px;
       display: flex;
@@ -71,6 +80,7 @@
 
   &__slide {
     &s {
+      top: -10px;
       width: 100%;
     }
 

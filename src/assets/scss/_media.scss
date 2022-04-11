@@ -110,9 +110,6 @@
   }
   .experience {
     &__slide {
-      &s {
-        padding: 20px;
-      }
       &-text {
         width: 85%;
       }
@@ -269,6 +266,7 @@
       &s {
         margin: 0 40px 0 40px;
         flex-direction: row;
+        justify-content: center;
       }
 
       &:not(:last-child) {
@@ -313,10 +311,19 @@
         left: unset;
         width: 100%;
         max-height: 350px;
-        transform: unset
+        transform: unset;
+        overflow: visible;
       }
 
-      max-height: inherit;
+      max-height: 350px;
+
+      &:after {
+        opacity: 1;
+      }
+
+      &-links {
+        opacity: 1;
+      }
 
       &-img {
         position: relative;
@@ -370,7 +377,6 @@
         }
       }
       &s {
-        padding: 20px 40px;
         width: 100%;
       }
 
@@ -579,11 +585,10 @@
   }
   .card {
     &__title {
-      top: 15%;
-      left: 50%;
+      margin-left: auto;
+      margin-right: auto;
       width: 70%;
       text-align: center;
-      transform: translateX(-50%);
     }
 
     &__text {

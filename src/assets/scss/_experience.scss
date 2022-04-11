@@ -23,13 +23,29 @@
         box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, .15);
         cursor: pointer;
 
+        &_active {
+          .experience {
+            &__slider {
+              &-dot {
+                &-title, &-subtitle {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+          opacity: 1;
+        }
+
         &:not(:last-child) {
           margin-bottom: 20px;
         }
 
         &-subtitle, &-title {
+          z-index: -1;
+          position: relative;
           display: block;
           opacity: 0.3;
+          transition: 0.2s;
         }
 
         &-subtitle {
@@ -46,7 +62,6 @@
 
     &s {
       position: relative;
-      padding: 25px 20px 20px 30px;
       width: 74%;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
@@ -56,6 +71,25 @@
       box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, .15);
       box-sizing: border-box;
     }
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+    padding: 25px 20px 20px 30px;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+
+    &_active {
+      position: initial;
+      opacity: 1;
+      z-index: 1;
+      visibility: visible;
+    }
+
 
     &-img {
       position: absolute;
@@ -84,7 +118,8 @@
       position: relative;
       margin-bottom: 40px;
       width: 65%;
-      font-weight: 100;
+      font-weight: 300;
+      opacity: 0.5;
 
       &:after {
         position: absolute;

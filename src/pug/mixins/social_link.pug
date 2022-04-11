@@ -1,5 +1,5 @@
 mixin social(path, url, extraClasses, title)
-    a(href=url class=extraClasses class="socials-link")
+    a(href=url class=extraClasses class="socials-link" target="_blank")
         svg
             use(xlink:href=path)
         span(class="socials-link__label") #{title}
