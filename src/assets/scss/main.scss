@@ -219,6 +219,7 @@ textarea {
       opacity: 0;
       overflow: hidden;
       transition: .4s opacity, .3s padding, .3s left, .3s max-width;
+      box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, .15);
     }
   }
 }
@@ -258,7 +259,7 @@ textarea {
   background-color: $bg-color;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
-  border-radius: 15px;
+  border-radius: 7px;
   -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, 0.15);
   -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, 0.15);
   box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.15), 0px 0px 10px 0px rgba(255, 255, 255, 0.15);

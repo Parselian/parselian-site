@@ -112,4 +112,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   toggleLabels('input')
   toggleLabels('textarea')
+
+  const formHandler = (selector) => {
+    const form = document.querySelector(selector)
+
+    const sendForm = (formData) => {
+      return fetch('/build/assets/scripts/php/formHandler.php', {
+        method: 'POST',
+        body: formData,
+      })
+        .then(response => {
+          return response
+        })
+        .catch(error => {
+          throw new Error(error)
+        })
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
+      const formData = new FormData(form)
+      sendForm(formData)
+    })
+  }
+  formHandler('#contacts-form')
 })

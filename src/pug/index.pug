@@ -302,7 +302,7 @@ html
                                             li.info-slider__slide-technologies-list-item CSS
                                             li.info-slider__slide-technologies-list-item JavaScript
                                             li.info-slider__slide-technologies-list-item Gulp
-                                +button('accent', 'info-slider__slide-button', 'Contact Me', 'link', '#contacts')
+                                +button('accent_transparent', 'info-slider__slide-button', 'Contact Me', 'link', '#contacts')
                             div.info-slider__slide.swiper-slide
                                 h4.info-slider__slide-subtitle project name
                                 h3.info-slider__slide-title "Body" GYM
@@ -328,7 +328,7 @@ html
                                             li.info-slider__slide-technologies-list-item CSS
                                             li.info-slider__slide-technologies-list-item JavaScript
                                             li.info-slider__slide-technologies-list-item Gulp
-                                +button('accent', 'info-slider__slide-button', 'Contact Me', 'link', '#contacts')
+                                +button('accent_transparent', 'info-slider__slide-button', 'Contact Me', 'link', '#contacts')
                     div.swiper.gallery__slider
                         div.swiper-wrapper
                             div.gallery__slide.swiper-slide
@@ -378,13 +378,13 @@ html
                         div.contacts-form__inputs.form__inputs
                             div.form__input-wrap
                                 label.form__input-label.form__label Your name
-                                input.contacts-form__input.form__input
+                                input(name="client_name").contacts-form__input.form__input
                             div.form__input-wrap
                                 label.form__input-label.form__label Your email<sup>*</sup>
-                                input(required).contacts-form__input.form__input
+                                input(name="client_email" required).contacts-form__input.form__input
                         div.form__textarea-wrap
                             label.form__textarea-label.form__label Your message<sup>*</sup>
-                            textarea.contacts-form__textarea.form__textarea
+                            textarea(name="client_message").contacts-form__textarea.form__textarea
                         +button('accent', ['contacts-form__button', 'form__button'], 'Send')
         footer.footer
             div.footer__wrap.container
@@ -393,4 +393,4 @@ html
                 div.footer__copyright.copyright.
                     vyacheslav.job@yandex.ru
         script(src='https://unpkg.com/swiper@8/swiper-bundle.min.js')
-        script(src="./assets/js/main.js")
+        script(src="./assets/scripts/js/main.js")

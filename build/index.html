@@ -15,7 +15,7 @@
           <use xlink:href="./assets/images/svg/symbol/sprite.svg#logo"></use>
         </svg>
         <nav class="header__menu nav-menu"><a href="#about_me">About me</a><a href="#portfolio">Portfolio</a><a href="#advantages">Why me</a><a href="#process">Process</a><a href="#contacts">Contacts</a>
-        </nav><a class="header__link button button_transparent button_transparent-accent" href="#" target="_blank">Check CV</a>
+        </nav><a class="header__link button button_transparent button_transparent-accent" href="#">Check CV</a>
         <!--div.header__locations-->
         <!--    a.header__location(href="#") ru-->
         <!--    span.header__locations-separator /-->
@@ -31,7 +31,7 @@
         <div class="promo__descr promo__col">
           <h1 class="promo__title"><span class="line-break">Create sites and</span> web applications</h1>
           <div class="promo__subtitle">Frontend developer. I`m create web sites <br /> and applications for 3 years</div>
-          <div class="promo__buttons"><a class="promo__button button button_accent" href="#contacts" target="_blank">Contact Me</a>
+          <div class="promo__buttons"><a class="promo__button button button_accent" href="#contacts">Contact Me</a>
             <button class="promo__button button button_transparent">See portfolio</button>
           </div>
           <div class="promo__blockquote blockquote">
@@ -110,7 +110,7 @@
               <p class="card__text">You can monitor about all my work, because i place all my project results in Trello</p>
             </div>
           </div>
-        </div><a class="advantages__button button button_accent" href="#contacts" target="_blank">Contact Me</a>
+        </div><a class="advantages__button button button_accent" href="#contacts">Contact Me</a>
       </div>
     </section>
     <section class="steps" id="process">
@@ -175,7 +175,7 @@
               </svg>
             </div>
           </div>
-        </div><a class="advantages__button button button_accent" href="#contacts" target="_blank">Contact Me</a>
+        </div><a class="advantages__button button button_accent" href="#contacts">Contact Me</a>
       </div>
     </section>
     <section class="experience" id="experience">
@@ -221,7 +221,7 @@
                 us and our partners and also maintaince existing projects.<br/><br/>
                 I worked as a junior Frontend developer. My work included in creating new websites for
                 us and our partners and also maintaince existing projects.
-              </p><a class="experience__slide-button button button_transparent button_transparent-accent" href="#" target="_blank">check my CV</a>
+              </p><a class="experience__slide-button button button_transparent button_transparent-accent" href="#">check my CV</a>
             </div>
             <div class="experience__slide">
               <picture class="experience__slide-img">
@@ -234,7 +234,7 @@
                 us and our partners and also maintaince existing projects.<br/><br/>
                 I worked as a junior Frontend developer. My work included in creating new websites for
                 us and our partners and also maintaince existing projects.
-              </p><a class="experience__slide-button button button_transparent button_transparent-accent" href="#" target="_blank">check my CV</a>
+              </p><a class="experience__slide-button button button_transparent button_transparent-accent" href="#">check my CV</a>
             </div>
             <div class="experience__slide">
               <picture class="experience__slide-img">
@@ -247,7 +247,7 @@
                 us and our partners and also maintaince existing projects.<br/><br/>
                 I worked as a junior Frontend developer. My work included in creating new websites for
                 us and our partners and also maintaince existing projects.
-              </p><a class="experience__slide-button button button_transparent button_transparent-accent" href="#" target="_blank">check my CV</a>
+              </p><a class="experience__slide-button button button_transparent button_transparent-accent" href="#">check my CV</a>
             </div>
           </div>
         </div>
@@ -303,7 +303,7 @@
                       <li class="info-slider__slide-technologies-list-item">Gulp</li>
                     </ul>
                   </div>
-                </div><a class="info-slider__slide-button button button_accent" href="#contacts" target="_blank">Contact Me</a>
+                </div><a class="info-slider__slide-button button button_transparent button_transparent-accent" href="#contacts">Contact Me</a>
               </div>
               <div class="info-slider__slide swiper-slide">
                 <h4 class="info-slider__slide-subtitle">project name</h4>
@@ -329,7 +329,7 @@
                       <li class="info-slider__slide-technologies-list-item">Gulp</li>
                     </ul>
                   </div>
-                </div><a class="info-slider__slide-button button button_accent" href="#contacts" target="_blank">Contact Me</a>
+                </div><a class="info-slider__slide-button button button_transparent button_transparent-accent" href="#contacts">Contact Me</a>
               </div>
             </div>
           </div>
@@ -390,23 +390,23 @@
               </div>
             </div>
             <div class="contacts__cv contacts__block">
-              <h3 class="contacts__block-title text_medium"><span class="text_accent">Check</span> my CV</h3><a class="contacts__block-link button button_transparent button_transparent-accent" href="#" target="_blank">Check CV</a>
+              <h3 class="contacts__block-title text_medium"><span class="text_accent">Check</span> my CV</h3><a class="contacts__block-link button button_transparent button_transparent-accent" href="#">Check CV</a>
             </div>
           </div>
           <form class="contacts-form form" id="contacts-form" action="#" method="POST">
             <div class="contacts-form__inputs form__inputs">
               <div class="form__input-wrap">
                 <label class="form__input-label form__label">Your name</label>
-                <input class="contacts-form__input form__input">
+                <input class="contacts-form__input form__input" name="client_name">
               </div>
               <div class="form__input-wrap">
                 <label class="form__input-label form__label">Your email<sup>*</sup></label>
-                <input class="contacts-form__input form__input" required>
+                <input class="contacts-form__input form__input" name="client_email" required>
               </div>
             </div>
             <div class="form__textarea-wrap">
               <label class="form__textarea-label form__label">Your message<sup>*</sup></label>
-              <textarea class="contacts-form__textarea form__textarea"></textarea>
+              <textarea class="contacts-form__textarea form__textarea" name="client_message"></textarea>
             </div>
             <button class="contacts-form__button form__button button button_accent">Send</button>
           </form>
@@ -422,6 +422,6 @@
       </div>
     </footer>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/scripts/js/main.js"></script>
   </body>
 </html>
