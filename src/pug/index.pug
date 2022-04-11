@@ -13,6 +13,7 @@ html
         meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, " +
         "minimum-scale=1.0")
         meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        link(href="./favicon.ico" rel="icon" type="image/x-icon")
         link(href="https://unpkg.com/swiper@8/swiper-bundle.min.css" rel="stylesheet")
         link(href="./assets/css/reset.css" rel="stylesheet")
         link(href="./assets/css/main.css" rel="stylesheet")
@@ -392,5 +393,20 @@ html
                     use(xlink:href="./assets/images/svg/symbol/sprite.svg#logo")
                 div.footer__copyright.copyright.
                     vyacheslav.job@yandex.ru
+        div.popups.popups_hidden
+            div.popup-thanks.popup.popup_hidden
+                h2.popup__title Thank you!
+                div.popup-thanks__subtitle.popup__subtitle.
+                    I will contact to you as soon as possible
+                +button('accent_transparent', 'popup__button', 'Close')
+                svg.popup-thanks__icon.popup__icon
+                    use(xlink:href="./assets/images/svg/symbol/sprite.svg#parselian")
+            div.popup-error.popup.popup_hidden
+                h2.popup__title Something wrong!
+                div.popup-thanks__subtitle.popup__subtitle.
+                    Your message has not been sent. Contact me in other socials.
+                +button('accent_transparent', 'popup__button', 'Close')
+                svg.popup-thanks__icon.popup__icon
+                    use(xlink:href="./assets/images/svg/symbol/sprite.svg#parselian")
         script(src='https://unpkg.com/swiper@8/swiper-bundle.min.js')
         script(src="./assets/scripts/js/main.js")

@@ -21,7 +21,7 @@ $.gulp.task('default', $.gulp.series(
 ));
 
 $.gulp.task('build', $.gulp.series(
-  $.gulp.parallel('pug', 'scss', 'css-transfer', /*'scripts:lib',*/ 'scripts', 'img:build'),
+  $.gulp.parallel('pug', 'scss', 'css-transfer', /*'scripts:lib',*/ 'scripts', 'img:build', 'favicon'),
   $.gulp.parallel('watch', 'serve')
 ));
 

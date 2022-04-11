@@ -455,6 +455,15 @@
       }
     }
   }
+  .popup {
+    &-thanks {
+      padding: 45px 25px;
+      text-align: center;
+      &__subtitle {
+        margin-bottom: 40px;
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -686,6 +695,11 @@
       &__textarea {
         height: 120px;
       }
+    }
+  }
+  .popup {
+    &-thanks {
+      width: 90%;
     }
   }
 }

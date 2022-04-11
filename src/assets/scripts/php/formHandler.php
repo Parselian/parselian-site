@@ -9,7 +9,7 @@ print_r($_POST);
 // Переменные, которые отправляет пользователь
 $name = $_POST['client_name'];
 $email = $_POST['client_email'];
-$text = $_POST['client_text'];
+$text = $_POST['client_message'];
 //$file = $_FILES['myfile'];
 
 // Формирование самого письма
