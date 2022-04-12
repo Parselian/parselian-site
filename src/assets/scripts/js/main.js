@@ -100,13 +100,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     inputs.forEach(item => {
       item.addEventListener('focusin', (e) => {
-        e.target.parentNode.querySelector('label').classList.add(`form__${selector}-label_focused`)
+        const label = e.target.parentNode.querySelector('label')
+        label.classList.add(`form__${selector}-label_focused`)
       })
     })
 
     inputs.forEach(item => {
       item.addEventListener('focusout', (e) => {
-        e.target.parentNode.querySelector('label').classList.remove(`form__${selector}-label_focused`)
+        const label = e.target.parentNode.querySelector('label')
+
+        if (e.target.value === '') {
+          label.classList.remove(`form__${selector}-label_focused`)
+        }
       })
     })
   }
@@ -114,7 +119,16 @@ document.addEventListener('DOMContentLoaded', () => {
   toggleLabels('textarea')
 
   const formHandler = (selector) => {
-    const form = document.querySelector(selector)
+    const form = document.querySelector(selector),
+      inputs = form.querySelectorAll('input')
+
+    inputs.push(form.querySelectorAll('textarea'))
+
+    inputs.forEach(item => {
+      item.addEventListener('input', (e) => {
+        target = e.target
+      })
+    })
 
     const sendForm = (formData) => {
       return fetch('/build/assets/scripts/php/formHandler.php', {
