@@ -1,0 +1,16 @@
+mixin popups_section()
+    div.popups.popups_hidden
+        div.popup-thanks.popup.popups_hidden
+            h2.popup__title Thank you!
+            div.popup-thanks__subtitle.popup__subtitle.
+                I will contact to you as soon as possible
+            +button('accent_transparent', 'popup__button', 'Close')
+            svg.popup-thanks__icon.popup__icon
+                use(xlink:href="./assets/images/svg/symbol/sprite.svg#parselian")
+        div.popup-error.popup.popups_hidden
+            h2.popup__title Something wrong!
+            div.popup-thanks__subtitle.popup__subtitle.
+                Your message has not been sent. Contact me in other socials.
+            +button('accent_transparent', 'popup__button', 'Close')
+            svg.popup-thanks__icon.popup__icon
+                use(xlink:href="./assets/images/svg/symbol/sprite.svg#parselian")

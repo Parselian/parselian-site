@@ -122,9 +122,15 @@ document.addEventListener('DOMContentLoaded', () => {
         body: formData,
       })
         .then(response => {
+          if (response.status === 200) {
+            document.querySelector('.popups').classList.remove('popups_hidden')
+            document.querySelector('.popup-thanks').classList.remove('popup_hidden')
+          }
           return response
         })
         .catch(error => {
+          document.querySelector('.popups').classList.remove('popups_hidden')
+          document.querySelector('.popup-error').classList.remove('popup_hidden')
           throw new Error(error)
         })
     }

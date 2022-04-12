@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./favicon.ico" rel="icon" type="image/x-icon">
     <link href="https://unpkg.com/swiper@8/swiper-bundle.min.css" rel="stylesheet">
     <link href="./assets/css/reset.css" rel="stylesheet">
     <link href="./assets/css/main.css" rel="stylesheet">
@@ -26,7 +27,7 @@
       <div class="promo__shadow-down"></div>
       <div class="promo__wrap container">
         <picture class="promo__bg">
-          <source srcset="" type="image/webp"><img src="./assets/images/promo-bg.jpg" alt="background">
+          <source srcset="" type="image/webp"/><img src="./assets/images/promo-bg.jpg" alt="background"/>
         </picture>
         <div class="promo__descr promo__col">
           <h1 class="promo__title"><span class="line-break">Create sites and</span> web applications</h1>
@@ -46,7 +47,7 @@
         </div>
         <div class="promo__about promo__col">
           <picture class="promo__img">
-            <source srcset="./assets/images/webp/promo-img.webp" type="image/webp"><img src="./assets/images/promo-img.png" alt="My photo">
+            <source srcset="./assets/images/webp/promo-img.webp" type="image/webp"/><img src="./assets/images/promo-img.png" alt="My photo"/>
           </picture>
           <div class="promo__socials"><a class="promo__social promo__social_twitter socials-link" href="https://twitter.com/holiday_slave" target="_blank">
               <svg>
@@ -212,7 +213,7 @@
           <div class="experience__slides">
             <div class="experience__slide experience__slide_active">
               <picture class="experience__slide-img">
-                <source srcset="./assets/images/webp/experience-img_1.webp" type="image/webp"><img src="./assets/images/experience-img_1.png" alt="photo">
+                <source srcset="./assets/images/webp/experience-img_1.webp" type="image/webp"/><img src="./assets/images/experience-img_1.png" alt="photo"/>
               </picture>
               <div class="experience__slide-subtitle">Company name</div>
               <h3 class="experience__slide-title">Apple service senter</h3>
@@ -225,7 +226,7 @@
             </div>
             <div class="experience__slide">
               <picture class="experience__slide-img">
-                <source srcset="./assets/images/webp/experience-img_1.webp" type="image/webp"><img src="./assets/images/experience-img_1.png" alt="photo">
+                <source srcset="./assets/images/webp/experience-img_1.webp" type="image/webp"/><img src="./assets/images/experience-img_1.png" alt="photo"/>
               </picture>
               <div class="experience__slide-subtitle">Company name</div>
               <h3 class="experience__slide-title"> senter</h3>
@@ -238,7 +239,7 @@
             </div>
             <div class="experience__slide">
               <picture class="experience__slide-img">
-                <source srcset="./assets/images/webp/experience-img_1.webp" type="image/webp"><img src="./assets/images/experience-img_1.png" alt="photo">
+                <source srcset="./assets/images/webp/experience-img_1.webp" type="image/webp"/><img src="./assets/images/experience-img_1.png" alt="photo"/>
               </picture>
               <div class="experience__slide-subtitle">Company name</div>
               <h3 class="experience__slide-title">Apple</h3>
@@ -337,7 +338,7 @@
             <div class="swiper-wrapper">
               <div class="gallery__slide swiper-slide">
                 <picture class="gallery__slide-img">
-                  <source srcset="./assets/images/webp/project_preview.webp" type="image/webp"><img src="./assets/images/project_preview.jpg" alt="preview">
+                  <source srcset="./assets/images/webp/project_preview.webp" type="image/webp"/><img src="./assets/images/project_preview.jpg" alt="preview"/>
                 </picture>
                 <div class="gallery__slide-links">
                   <div class="gallery__slide-links-title">Open a project in:</div>
@@ -349,7 +350,7 @@
               </div>
               <div class="gallery__slide swiper-slide">
                 <picture class="gallery__slide-img">
-                  <source srcset="./assets/images/webp/project_preview.webp" type="image/webp"><img src="./assets/images/project_preview.jpg" alt="preview">
+                  <source srcset="./assets/images/webp/project_preview.webp" type="image/webp"/><img src="./assets/images/project_preview.jpg" alt="preview"/>
                 </picture>
                 <div class="gallery__slide-links">
                   <div class="gallery__slide-links-title">Open a project in:</div>
@@ -397,11 +398,11 @@
             <div class="contacts-form__inputs form__inputs">
               <div class="form__input-wrap">
                 <label class="form__input-label form__label">Your name</label>
-                <input class="contacts-form__input form__input" name="client_name">
+                <input class="contacts-form__input form__input" name="client_name"/>
               </div>
               <div class="form__input-wrap">
                 <label class="form__input-label form__label">Your email<sup>*</sup></label>
-                <input class="contacts-form__input form__input" name="client_email" required>
+                <input class="contacts-form__input form__input" name="client_email" required="required"/>
               </div>
             </div>
             <div class="form__textarea-wrap">
@@ -421,6 +422,24 @@
         <div class="footer__copyright copyright">vyacheslav.job@yandex.ru</div>
       </div>
     </footer>
+    <div class="popups popups_hidden">
+      <div class="popup-thanks popup popups_hidden">
+        <h2 class="popup__title">Thank you!</h2>
+        <div class="popup-thanks__subtitle popup__subtitle">I will contact to you as soon as possible</div>
+        <button class="popup__button button button_transparent button_transparent-accent">Close</button>
+        <svg class="popup-thanks__icon popup__icon">
+          <use xlink:href="./assets/images/svg/symbol/sprite.svg#parselian"></use>
+        </svg>
+      </div>
+      <div class="popup-error popup popups_hidden">
+        <h2 class="popup__title">Something wrong!</h2>
+        <div class="popup-thanks__subtitle popup__subtitle">Your message has not been sent. Contact me in other socials.</div>
+        <button class="popup__button button button_transparent button_transparent-accent">Close</button>
+        <svg class="popup-thanks__icon popup__icon">
+          <use xlink:href="./assets/images/svg/symbol/sprite.svg#parselian"></use>
+        </svg>
+      </div>
+    </div>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./assets/scripts/js/main.js"></script>
   </body>

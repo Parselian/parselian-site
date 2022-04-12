@@ -1,0 +1,52 @@
+mixin advantages_section()
+    section(id="advantages").advantages
+        div.advantages__wrap.container
+            +title('Why', 'am', 'I?', 'advantages__title')
+            div.advantages__cards
+                +card([
+                  {
+                    type: 'withoutIcon',
+                    extraClasses: 'advantages__card',
+                    count: '01',
+                    title: `We <span class="text_accent">detect</span> your <span class="text_accent">wishes</span>`,
+                    text: `I have a three year experience of creating web sites. Check my finished works below and
+                                              take care of it.`,
+                  },
+                  {
+                    type: 'withoutIcon',
+                    extraClasses: 'advantages__card',
+                    count: '02',
+                    title: `I work <span class="text_accent">oficially</span>`,
+                    text: `If you want we can make a pact of our work, so you can be sure i make my work fine and
+                                              won\`t vanish with your money`,
+                  },
+                  {
+                    type: 'withoutIcon',
+                    extraClasses: 'advantages__card',
+                    count: '03',
+                    title: `You\`re <span class="text_accent">always aware</span>`,
+                    text: `You can monitor about all my work, because i place all my project results in Trello`
+                  },
+                  {
+                    type: 'withoutIcon',
+                    extraClasses: 'advantages__card',
+                    count: '04',
+                    title: `I <span class="text_accent">don\`t </span> take prepayment`,
+                    text: `You can monitor about all my work, because i place all my project results in Trello`
+                  },
+                  {
+                    type: 'withoutIcon',
+                    extraClasses: 'advantages__card',
+                    count: '05',
+                    title: `Follow <span class="text_accent">deadlines</span>`,
+                    text: `You can monitor about all my work, because i place all my project results in Trello`
+                  },
+                  {
+                    type: 'withoutIcon',
+                    extraClasses: 'advantages__card',
+                    count: '06',
+                    title: `Work <span class="text_accent">personally</span>`,
+                    text: `You can monitor about all my work, because i place all my project results in Trello`
+                  }
+                ])
+            +button('accent', 'advantages__button', 'Contact Me', 'link', '#contacts')
