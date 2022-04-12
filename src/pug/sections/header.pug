@@ -1,0 +1,17 @@
+mixin header()
+    header.header
+        div.header__wrap.container
+            svg.logo
+                use(xlink:href="./assets/images/svg/symbol/sprite.svg#logo")
+            +navMenu([
+              {anchor: "#about_me", title: "About me", isActive: false},
+              {anchor: "#portfolio", title: "Portfolio", isActive: false},
+              {anchor: "#advantages", title: "Why me", isActive: false},
+              {anchor: "#process", title: "Process", isActive: false},
+              {anchor: "#contacts", title: "Contacts", isActive: false}
+            ], 'header__menu nav-menu')
+            +button('accent_transparent', 'header__link', 'Check CV', 'link', '#')
+            //div.header__locations
+            //    a.header__location(href="#") ru
+            //    span.header__locations-separator /
+            //    a.header__location.header__location_active(href="#") en

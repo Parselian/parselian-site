@@ -1,0 +1,36 @@
+mixin contacts_section()
+    section(id="contacts").contacts
+        div.container
+            +title("Get", "in", "touch", "contacts__title")
+            div.contacts__wrap
+                div.contacts__info
+                    div.contacts__socials.contacts__block
+                        h3.contacts__block-title.text_medium
+                            <span class="text_accent">Find</span> me on
+                        div.contacts__socials-links
+                            +social('./assets/images/svg/symbol/sprite.svg#twitter', 'https://twitter.com/holiday_slave',
+                              ['contacts__socials-link'], "twitter")
+                            +social('./assets/images/svg/symbol/sprite.svg#github', 'https://github.com/Parselian',
+                              ['contacts__socials-link'], "github")
+                            +social('./assets/images/svg/symbol/sprite.svg#telegram', 'https://t.me/Holiday_Slave',
+                              ['contacts__socials-link'], "telegram")
+                            +social('./assets/images/svg/symbol/sprite.svg#instagram', 'https://www.instagram.com/holiday_slave/',
+                              ['contacts__socials-link'], "instagram")
+                            +social('./assets/images/svg/symbol/sprite.svg#vk', 'https://vk.com/holiday_sl4ve',
+                              ['contacts__socials-link'], "vkontakte")
+                    div.contacts__cv.contacts__block
+                        h3.contacts__block-title.text_medium.
+                            <span class="text_accent">Check</span> my CV
+                        +button('accent_transparent', 'contacts__block-link', 'Check CV', 'link')
+                form(id="contacts-form" action="#" method="POST").contacts-form.form
+                    div.contacts-form__inputs.form__inputs
+                        div.form__input-wrap
+                            label.form__input-label.form__label Your name
+                            input(name="client_name").contacts-form__input.form__input
+                        div.form__input-wrap
+                            label.form__input-label.form__label Your email<sup>*</sup>
+                            input(name="client_email" required).contacts-form__input.form__input
+                    div.form__textarea-wrap
+                        label.form__textarea-label.form__label Your message<sup>*</sup>
+                        textarea(name="client_message").contacts-form__textarea.form__textarea
+                    +button('accent', ['contacts-form__button', 'form__button'], 'Send')

@@ -129,6 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
           return response
         })
         .catch(error => {
+          document.querySelector('.popups').classList.remove('popups_hidden')
+          document.querySelector('.popup-error').classList.remove('popup_hidden')
           throw new Error(error)
         })
     }

@@ -1,0 +1,31 @@
+mixin promo_section()
+    section.promo
+        div.promo__shadow-down
+        div.promo__wrap.container
+            picture.promo__bg
+                source(srcset="" type="image/webp")
+                img(src="./assets/images/promo-bg.jpg" alt="background")
+            div.promo__descr.promo__col
+                h1.promo__title <span class="line-break">Create sites and</span> web applications
+                div.promo__subtitle Frontend developer. I`m create web sites <br /> and applications for 3 years
+                div.promo__buttons
+                    +button('accent', 'promo__button', 'Contact Me', 'link', '#contacts')
+                    +button('transparent', 'promo__button', 'See portfolio')
+                +blockquote('promo__blockquote',
+                  'I\`m convinced that every person should find his own life purpose. I found my own, it\`s ' +
+                  'constant studying something new. I just can\`t imagine my life without it.')
+            div.promo__about.promo__col
+                picture.promo__img
+                    source(srcset="./assets/images/webp/promo-img.webp" type="image/webp")
+                    img(src="./assets/images/promo-img.png" alt="My photo")
+                div.promo__socials
+                    +social('./assets/images/svg/symbol/sprite.svg#twitter', 'https://twitter.com/holiday_slave',
+                      ['promo__social', 'promo__social_twitter'], "twitter")
+                    +social('./assets/images/svg/symbol/sprite.svg#github', 'https://github.com/Parselian',
+                      ['promo__social', 'promo__social_github'], "github")
+                    +social('./assets/images/svg/symbol/sprite.svg#telegram', 'https://t.me/Holiday_Slave',
+                      ['promo__social', 'promo__social_telegram'], "telegram")
+                    +social('./assets/images/svg/symbol/sprite.svg#instagram', 'https://www.instagram.com/holiday_slave/',
+                      ['promo__social', 'promo__social_instagram'], "instagram")
+                    +social('./assets/images/svg/symbol/sprite.svg#vk', 'https://vk.com/holiday_sl4ve',
+                      ['promo__social', 'promo__social_vk'], "vkontakte")

@@ -13,6 +13,21 @@ body {
   line-height: 1.4;
   color: $main-text-color;
   background: $bg-color;
+  &::-webkit-scrollbar {
+    background-color: lighten($bg-color, 10%);
+    box-shadow: $shadow;
+    width: 7px;
+  }
+  &::-webkit-scrollbar-button {
+    height: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $accent-color;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }
 
 section {
@@ -44,6 +59,13 @@ a {
 input, div, textarea {
   &:focus {
     outline: none;
+  }
+}
+
+input {
+    color: $main-text-color !important;
+  &:-webkit-autofill, &:-webkit-autofill:focus {
+    transition: background-color 90000000s 0s, color 90000000s 0s;
   }
 }
 
