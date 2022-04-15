@@ -148,7 +148,17 @@
   /* MIXIN card */
   .card {
     &__title {
+      margin-left: 0;
+      width: 100%;
+      text-align: center;
       font-size: 18px;
+    }
+    &__text {
+      &_short {
+        max-width: 100%;
+        width: 100%;
+      }
+      text-align: center;
     }
   }
   /* ---------- */

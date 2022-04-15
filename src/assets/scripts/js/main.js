@@ -98,8 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   experienceSlider()
 
-  const toggleLabels = (selector) => {
-    const inputs = document.querySelectorAll(selector)
+  const toggleLabels = (formSelector, selector) => {
+    const form = document.querySelector(formSelector),
+      inputs = form.querySelectorAll(selector)
 
     inputs.forEach(item => {
       item.addEventListener('focusin', (e) => {
@@ -118,8 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     })
   }
-  toggleLabels('form input')
-  toggleLabels('form textarea')
+  toggleLabels('form', 'input')
+  toggleLabels('form', 'textarea')
 
   const formHandler = (selector) => {
     const form = document.querySelector(selector),
