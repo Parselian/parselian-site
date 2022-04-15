@@ -1,6 +1,9 @@
 'use-strict'
 
 document.addEventListener('DOMContentLoaded', () => {
+  const burgerMenu = document.querySelector('.burger-menu'),
+    burgerBtnCheckbox = document.querySelector('.burger-btn__checkbox')
+
   const portfolioSliderInit = () => {
     const portfolioSlider = new Swiper('.info-slider', {
       loop: true,
@@ -115,14 +118,12 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     })
   }
-  toggleLabels('input')
-  toggleLabels('textarea')
+  toggleLabels('form input')
+  toggleLabels('form textarea')
 
   const formHandler = (selector) => {
     const form = document.querySelector(selector),
       inputs = form.querySelectorAll('input')
-
-    inputs.push(form.querySelectorAll('textarea'))
 
     inputs.forEach(item => {
       item.addEventListener('input', (e) => {
@@ -156,4 +157,27 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
   formHandler('#contacts-form')
+
+  const toggleBurger = (isOpen) => {
+    if (isOpen) {
+      burgerMenu.classList.remove('burger-menu_visible')
+      burgerBtnCheckbox.checked = !burgerBtnCheckbox.checked
+    } else {
+      burgerMenu.classList.add('burger-menu_visible')
+    }
+  }
+
+  document.addEventListener('click', (e) => {
+    const target = e.target;
+
+
+    switch(true) {
+      case !!target.closest('.burger-btn'):
+        toggleBurger(false)
+        break
+      case target.matches('.burger-menu__links a'):
+        toggleBurger(true)
+        break
+    }
+  })
 })

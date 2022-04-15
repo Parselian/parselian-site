@@ -5,7 +5,9 @@ include ./mixins/social_link
 include ./mixins/title
 include ./mixins/card
 include ./mixins/filter_block
+include ./mixins/burger-btn
 
+include ./sections/burger-menu
 include ./sections/header
 include ./sections/promo
 include ./sections/experience
@@ -13,8 +15,8 @@ include ./sections/portfolio
 include ./sections/process
 include ./sections/advantages
 include ./sections/contacts
-include ./sections/popups
 include ./sections/footer
+include ./sections/popups
 
 doctype html
 html
@@ -28,6 +30,7 @@ html
         link(href="./assets/css/reset.css" rel="stylesheet")
         link(href="./assets/css/main.css" rel="stylesheet")
     body
+        +burger_menu()
         +header()
         +promo_section()
         +advantages_section()
@@ -35,12 +38,7 @@ html
         +experience_section()
         +portfolio_section()
         +contacts_section()
-        footer.footer
-            div.footer__wrap.container
-                svg.logo
-                    use(xlink:href="./assets/images/svg/symbol/sprite.svg#logo")
-                div.footer__copyright.copyright.
-                    vyacheslav.job@yandex.ru
+        +footer()
         +popups_section()
         script(src='https://unpkg.com/swiper@8/swiper-bundle.min.js')
         script(src="./assets/scripts/js/main.js")

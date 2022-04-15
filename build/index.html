@@ -10,17 +10,29 @@
     <link href="./assets/css/main.css" rel="stylesheet">
   </head>
   <body>
+    <div class="burger-menu">
+      <div class="burger-menu__wrap">
+        <nav class="burger-menu__links"><a href="#about_me">About me</a><a href="#portfolio">Portfolio</a><a href="#advantages">Why me</a><a href="#process">Process</a><a href="#contacts">Contacts</a>
+        </nav><a class="burger-menu__button button button_transparent button_transparent-accent" href="#">Check CV</a>
+      </div>
+    </div>
     <header class="header">
       <div class="header__wrap container">
         <svg class="logo">
           <use xlink:href="./assets/images/svg/symbol/sprite.svg#logo"></use>
         </svg>
         <nav class="header__menu nav-menu"><a href="#about_me">About me</a><a href="#portfolio">Portfolio</a><a href="#advantages">Why me</a><a href="#process">Process</a><a href="#contacts">Contacts</a>
-        </nav><a class="header__link button button_transparent button_transparent-accent" href="#">Check CV</a>
-        <!--div.header__locations-->
-        <!--    a.header__location(href="#") ru-->
-        <!--    span.header__locations-separator /-->
-        <!--    a.header__location.header__location_active(href="#") en-->
+        </nav>
+        <div class="header__col"><a class="header__link button button_transparent button_transparent-accent" href="#">Check CV</a>
+          <div class="burger-btn">
+            <input class="burger-btn__checkbox" type="checkbox"/>
+            <div><span></span><span></span></div>
+          </div>
+          <!--div.header__locations-->
+          <!--    a.header__location(href="#") ru-->
+          <!--    span.header__locations-separator /-->
+          <!--    a.header__location.header__location_active(href="#") en-->
+        </div>
       </div>
     </header>
     <section class="promo">
@@ -117,10 +129,16 @@
     <section class="steps" id="process">
       <div class="steps__wrap container">
         <h2 class="steps__title title"><span class="title__text-behind">How</span><span class="title__text">do <span class="text_accent">I work?</span></span></h2>
-        <div class="steps__filter filter">
-          <button class="filter__button filter__button_inactive">You have design template</button>
-          <button class="filter__button filter__button_active">You have nothing</button>
-        </div>
+        <!--+filter([-->
+        <!--  {-->
+        <!--    isActive: false,-->
+        <!--    text: 'You have design template'-->
+        <!--  },-->
+        <!--  {-->
+        <!--    isActive: true,-->
+        <!--    text: 'You have nothing'-->
+        <!--  }-->
+        <!--], 'steps__filter')-->
         <div class="steps__blocks">
           <div class="steps__block card">
             <div class="card__heading"><span class="card__counter">01</span><span class="card__title">We <span class="text_accent">detect</span> your <span class="text_accent">wishes</span></span></div>

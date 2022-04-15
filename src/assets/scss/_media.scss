@@ -20,13 +20,16 @@
   .container {
     max-width: 1140px;
   }
-}
-
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1320px;
+  .burger-btn {
+    display: none;
   }
 }
+
+//@media (min-width: 1400px) {
+//  .container {
+//    max-width: 1320px;
+//  }
+//}
 
 @media (max-width: 1400px) {
   .promo {
@@ -332,7 +335,7 @@
   }
   .advantages {
     &__card {
-      width: 44.5%;
+      width: 49%;
 
       &:not(:nth-last-child(-n+3)) {
         margin-bottom: unset;
@@ -349,7 +352,7 @@
     }
 
     &__block {
-      width: 45%;
+      width: 49%;
 
       &:not(:nth-last-child(-n+2)) {
         margin-bottom: 2%;
@@ -369,7 +372,7 @@
             width: 100%;
           }
 
-          width: 26%;
+          width: 32%;
           text-align: center;
           &:not(:last-child) {
             margin-bottom: 0;
@@ -415,7 +418,7 @@
 
     &__block {
       padding: 30px;
-      width: 40%;
+      width: 49%;
 
       &:not(:last-child) {
         margin-bottom: 0;
@@ -506,16 +509,6 @@
       }
     }
   }
-  .advantages {
-    &__card {
-      width: 43%;
-    }
-  }
-  .steps {
-    &__block {
-      width: 43%;
-    }
-  }
   .experience {
     &__slide {
       &r {
@@ -540,8 +533,7 @@
     }
 
     &__block {
-      width: calc(100% - 60px);
-
+      width: 100%;
       &:not(:last-child) {
         margin-bottom: 20px;
       }
@@ -705,6 +697,18 @@
 }
 
 @media (max-width: 480px) {
+  .burger {
+    &-menu {
+      &__button {
+        display: block;
+      }
+    }
+  }
+  .header {
+    &__link {
+      display: none;
+    }
+  }
   .promo {
     &__title {
       font-size: 46px;
@@ -744,6 +748,14 @@
 }
 
 @media (max-width: 380px) {
+  .burger {
+    &-menu {
+      &__wrap {
+        max-height: 70vh;
+        overflow-y: auto;
+      }
+    }
+  }
   .promo {
     &__button {
       &s {

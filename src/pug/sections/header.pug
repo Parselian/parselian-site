@@ -10,8 +10,10 @@ mixin header()
               {anchor: "#process", title: "Process", isActive: false},
               {anchor: "#contacts", title: "Contacts", isActive: false}
             ], 'header__menu nav-menu')
-            +button('accent_transparent', 'header__link', 'Check CV', 'link', '#')
-            //div.header__locations
-            //    a.header__location(href="#") ru
-            //    span.header__locations-separator /
-            //    a.header__location.header__location_active(href="#") en
+            div.header__col
+                +button('accent_transparent', 'header__link', 'Check CV', 'link', '#')
+                +burger-btn()
+                //div.header__locations
+                //    a.header__location(href="#") ru
+                //    span.header__locations-separator /
+                //    a.header__location.header__location_active(href="#") en

@@ -2,16 +2,16 @@ mixin process_section()
     section(id="process").steps
         div.steps__wrap.container
             +title('How', 'do', 'I work?', 'steps__title')
-            +filter([
-              {
-                isActive: false,
-                text: 'You have design template'
-              },
-              {
-                isActive: true,
-                text: 'You have nothing'
-              }
-            ], 'steps__filter')
+            //+filter([
+            //  {
+            //    isActive: false,
+            //    text: 'You have design template'
+            //  },
+            //  {
+            //    isActive: true,
+            //    text: 'You have nothing'
+            //  }
+            //], 'steps__filter')
             div.steps__blocks
                 +card([
                   {
