@@ -234,12 +234,20 @@
                 <source srcset="./assets/images/webp/experience-img_1.webp" type="image/webp"/><img src="./assets/images/experience-img_1.png" alt="photo"/>
               </picture>
               <div class="experience__slide-subtitle">Company name</div>
-              <h3 class="experience__slide-title">Apple service senter</h3>
+              <h3 class="experience__slide-title">Tried to earn money on freelance</h3>
               <p class="experience__slide-text">
-                I worked as a junior Frontend developer. My work included in creating new websites for
-                us and our partners and also maintaince existing projects.<br/><br/>
-                I worked as a junior Frontend developer. My work included in creating new websites for
-                us and our partners and also maintaince existing projects.
+                There was start my way as a frontend developer. After some frontend courses I decided to
+                continue work as a freelancer: try to find orders, chat with clients and colleagues a lot etc.
+                </br></br>
+                To be honest it was only way how i could to start build my career as a developer because on
+                that moment a studied at college. For that period i made not many projects (about 10-20 sites)
+                because all my attention was directed to getting a middle-specialty degree.
+                </br></br>
+                After college i wanted to continue my study at university, but fail my exams.... So, after
+                this failrue i decided to find a real job because i want to get new experience such as:
+                teamwork, solve unusual tasks etc.
+                </br></br>
+                And the first place where i went to work was Apple Service Center.
               </p><a class="experience__slide-button button button_transparent button_transparent-accent" href="#">check my CV</a>
             </div>
             <div class="experience__slide">
